@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" type="image/png" href="Homepage Images/KIMBRO AVATAR PNG.png">
+  <title>James Kim's Product Design</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/PortfolioSection.css">
+  <script src="JS/main.js"></script>
+</head>
+
+<style>
+  a {/* Changes text color */
+    color: #000000;                        /* Changes text color */
+    text-decoration-line: underline;       /* Ensures the line is visible */
+    text-decoration-color: #0000;       /* Changes underline color independently */
+    text-decoration-thickness: 2px;       /* Optional: changes underline thickness */
+  }
+</style>
+
+<body>
+<!-- CLICKABLE INTERACTION ITEM, Lightboxes -->
+  <div id="lightbox" class="hidden">
+    <span id="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <span id="lightbox-prev" onclick="changeSlide(-1)">&#10094;</span>
+    <div id="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+      <video id="lightbox-video" class="hidden" controls></video>
+      <iframe id="lightbox-youtube" class="hidden" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div id="lightbox-caption"></div>
+      <!-- <div class="gapMaker"></div> -->
+    </div>
+    <span id="lightbox-next" onclick="changeSlide(1)">&#10095;</span>
+  </div>
+  <iframe id="lightbox-youtube" class="hidden" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<!-- CLICKABLE INTERACTION ITEM, lightboxes -->
+
+<!-- Sticky header wrapper: keeps the logo bar and nav bar pinned to the top as the visitor scrolls -->
+<div id="stickyHeader">
+
+<!-- home name KIMBRO AVATAR PNG display: inline-block;--> 
+<div id="anchorTitle">
+<a href="index.html"><img src="Homepage Images/KIMBRO AVATAR PNG.png" alt="Kimbro logo" style="height:65px; width: 65px;" id="mainLogo"/></a>
+<h1>James Kim</h1>
+<h2 id="subTitle">RISD, Graphic Design, 2027</h2>
+</div>
+<!-- home name -->
+
+<ul class="anchorBar">
+  <li class="anchorBarItem"><a href="index.html">Home</a></li>
+  <li class="anchorBarItem"><a href="ProductDesign.html">Product Design</a></li>
+  <li class="anchorBarItem"><a href="Marketing.html">Marketing</a></li>
+  <li class="anchorBarItem"><a href="Programming.html">Programming</a></li>
+  <li class="anchorBarItem"><a href="MotionGraphics.html">Motion Graphics</a></li>
+  <li class="anchorBarItem"><a href="index.html">About</a></li>
+  <li class="anchorBarItem"><a href="#contactMe">Contact Me</a></li>
+</ul>
+
+</div>
+<!-- end sticky header wrapper -->
+
+<div id="pageContent"> <!-- Overhead paint drop -->
+  <img src="Homepage Images/HomePageDrip.png" alt="" id="gifOverlay"> <!-- Overhead paint drop -->
+
+<div class="lobby-image">
+<!-- <img src="Homepage Images/Homepage Image.jpeg" alt="James Kim in Providence" style="height:100%; width: 100%;"/> -->
+<h2 id="sectionName">PROGRAMMING</h2>
+<img src="James Website photos/Programming/Gr Game/Programming Cover.png" alt="Kimbro logo" style="height:80%; width: 50%;" id="mainLogo"/>
+</div>
+<div class="black-bar">
+  <!-- black bar dividing-->
+</div>
+
+
+<h2 class="year">Galactic Ranger</h2>   <!-- --------V Galactic Ranger (Prgram 1) V--------- -->
+<details class="collapsible-card">
+  <summary> </summary>
+<div class="program-thumbnail-background"> <!--________v Portfolio Horzontal scroll v________-->
+<div class="program-thumbnail">
+                <img src="James Website photos/Programming/GR Game/Gr Game 1.png"
+                alt="Video Game" style="height:100%; width: 100%;"  
+                data-images='["James Website photos/Programming/GR Game/GR Game 1.png", 
+                "James Website photos/Programming/GR Game/GR Game 2.png", 
+                "James Website photos/Programming/GR Game/GR Game 3.jpg", 
+                "James Website photos/Programming/GR Game/GR Game 4.jpg", 
+                "James Website photos/Programming/GR Game/GR Game 5.jpg", 
+                "James Website photos/Programming/GR Game/GR Game 6.jpg", 
+                "James Website photos/Programming/GR Game/GR Game 7.jpg"]' 
+                data-caption="<strong>Galactic Ranger</strong><br>Sci-Fi action Shooter developed in Unity game engine. 3D modeling with Unity and Cinema 4D. 2026. <br><a href='https://kimbrocomics.itch.io/galactic-ranger' target='_blank'><strong> GAME LINK </strong></a>" 
+                onclick="openLightbox(this)"/>
+            <div class="item-overlay">
+              <span class="item-title">Galactic Ranger</span>
+            </div>           
+    </div>
+    <p class="description">Sci-Fi action Shooter developed in Unity game engine. The video documentation underneath displays the extent of learning Unity in my Junior year as well as coding and asset design. 3D modeling with Unity and Cinema 4D. 2026. <br><a href='https://kimbrocomics.itch.io/galactic-ranger' target='_blank'><strong> GAME LINK </strong></a></p>
+</div>
+
+<!--________^ Program Images ^________-->
+
+<h2 class="subCategory" class="animated-gradient">Video Documentation</h2>   <!-- --------video documentation--------- -->
+<!--________V Programm Videos Horzontal scroll V________-->
+
+<div class="work-row-wrapper"> <!--<BUTTON>-->
+<button class="scroll-btn scroll-left" onclick="scrollRow(this,-1)">&#10094;</button><!--<BUTTON>--> 
+ 
+<div class="workRow" id="workRow"> 
+<div class="projectDivider">
+    <div class="lobby-image">
+      <!-- IMPORTANT DISPLAY VIDEO -->
+      <iframe
+      width="600" 
+      height="400" 
+      src="https://www.youtube.com/embed/GlHK0Z0HR_k" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+      </iframe>
+    </div>
+</div>
+<div class="black-wall">
+|
+<!-- black bar dividing 1-->
+</div>        
+<div class="projectDivider">
+    <div class="lobby-image">
+      <!-- IMPORTANT DISPLAY VIDEO -->
+      <iframe
+      width="600" 
+      height="400" 
+      src="https://www.youtube.com/embed/l3UGgBzMRsA" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+      </iframe>
+    </div>
+</div>
+<div class="black-wall">
+|
+<!-- black bar dividing 1-->
+</div>  
+    <div class="projectDivider">
+    <div class="lobby-image">
+      <!-- IMPORTANT DISPLAY VIDEO -->
+      <iframe
+      width="600" 
+      height="400" 
+      src="https://www.youtube.com/embed/MntVFU0E4OY" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+      </iframe>
+    </div>
+</div>
+<div class="black-wall">
+|
+<!-- black bar dividing 1-->
+</div>      
+<div class="projectDivider">
+    <div class="lobby-image">
+      <!-- IMPORTANT DISPLAY VIDEO -->
+      <iframe
+      width="600" 
+      height="400" 
+      src="https://www.youtube.com/embed/Q-uL2s1yuKE" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+      </iframe>
+    </div>
+</div>
+<div class="black-wall">
+|
+<!-- black bar dividing 1-->
+</div>      
+<div class="projectDivider">
+    <div class="lobby-image">
+      <!-- IMPORTANT DISPLAY VIDEO -->
+      <iframe
+      width="600" 
+      height="400" 
+      src="https://www.youtube.com/embed/JDC0_axU8lw" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+      </iframe>
+    </div>
+</div>
+<div class="black-wall">
+|
+<!-- black bar dividing 1-->
+</div>      
+<div class="projectDivider">
+    <div class="lobby-image">
+      <!-- IMPORTANT DISPLAY VIDEO -->
+      <iframe
+      width="600" 
+      height="400" 
+      src="https://www.youtube.com/embed/LK__RQ0_pik" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+      </iframe>
+    </div>
+</div> 
+<div class="black-wall">
+|
+<!-- black bar dividing 1-->
+</div>      
+<div class="projectDivider">
+    <div class="lobby-image">
+      <!-- IMPORTANT DISPLAY VIDEO -->
+      <iframe
+      width="600" 
+      height="400" 
+      src="https://www.youtube.com/embed/cFQIV1dSxhc" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+      </iframe>
+    </div>
+</div> 
+<div class="black-wall">
+|
+<!-- black bar dividing 1-->
+</div>      
+<div class="projectDivider">
+    <div class="lobby-image">
+      <!-- IMPORTANT DISPLAY VIDEO -->
+      <iframe
+      width="600" 
+      height="400" 
+      src="https://www.youtube.com/embed/xQvU1h7eVzY" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+      </iframe>
+    </div>
+</div> 
+<div class="black-wall">
+|
+<!-- black bar dividing 1-->
+</div>      
+<div class="projectDivider">
+    <div class="lobby-image">
+      <!-- IMPORTANT DISPLAY VIDEO -->
+      <iframe
+      width="600" 
+      height="400" 
+      src="https://www.youtube.com/embed/yXi58D5y-PU" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+      </iframe>
+    </div>
+</div> 
+<div class="black-wall">
+|
+<!-- black bar dividing 1-->
+</div>      
+<div class="projectDivider">
+    <div class="lobby-image">
+      <!-- IMPORTANT DISPLAY VIDEO -->
+      <iframe
+      width="600" 
+      height="400" 
+      src="https://www.youtube.com/embed/_95DGqI4I_Y" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+      </iframe>
+    </div>
+</div> 
+<div class="black-wall">
+|
+<!-- black bar dividing 1-->
+</div>      
+<div class="projectDivider">
+    <div class="lobby-image">
+      <!-- IMPORTANT DISPLAY VIDEO -->
+      <iframe
+      width="600" 
+      height="400" 
+      src="https://www.youtube.com/embed/R8-tM9xDv4A" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+      </iframe>
+    </div>
+</div> 
+  
+</div>
+
+<button class="scroll-btn scroll-right" onclick="scrollRow(this, 1)">&#10095;</button><!--<BUTTON>-->
+</div><!--<BUTTON>-->
+
+    <!--________^ Programm Image Horzontal scroll ^________-->
+</details>
+ <!-- --------^ Galactic Ranger (Prgram 1) ^--------- -->
+<!--_________________^ PORTFOLIO ITEMS HERE ^_________________-->  
+
+
+
+<!--_________________V PORTFOLIO ITEMS HERE V_________________-->   
+<h2 class="year">Star Voyage</h2>   <!-- --------V Galactic Ranger (Prgram 2) V--------- -->
+<details class="collapsible-card">
+  <summary> </summary>
+<div class="program-thumbnail-background"> <!--________v Portfolio Horzontal scroll v________-->
+<div class="program-thumbnail">
+                <img src="James Website photos/Programming/Old Websites/Star Voyage 1.png"
+                alt="Video Game" style="height:100%; width: 100%;"  
+                data-images='["James Website photos/Programming/Old Websites/Star Voyage 1.png", 
+                "James Website photos/Programming/Old Websites/Star Voyage 2.png", 
+                "James Website photos/Programming/Old Websites/Star Voyage 3.png", 
+                "James Website photos/Programming/Old Websites/Star Voyage 4.png"]' 
+                data-caption="<strong>Star Voyage</strong><br> I programmed my first website from Javascript using p5.js and Github publishing. I learned <strong>how to code games</strong> and 3D effects using Javascript and html. <br><a href='https://creatureo.github.io/Star-Voyage/' target='_blank'><strong> CLICK HERE </strong></a>" 
+                onclick="openLightbox(this)"/>
+            <div class="item-overlay">
+              <span class="item-title">Star Voyage</span>
+            </div>           
+    </div>
+    <p class="description">I programmed my first website from Javascript using p5.js and Github publishing. I learned <strong>how to code games</strong> and 3D effects using Javascript and html. <br><a href='https://creatureo.github.io/Star-Voyage/' target='_blank'><strong> CLICK HERE </strong></a></p>
+</div>
+
+<!--________^ Program Images ^________-->
+</details>
+ <!-- --------^ Galactic Ranger (Prgram 2) ^--------- -->
+<!--_________________^ PORTFOLIO ITEMS HERE ^_________________-->
+
+
+
+
+<!--_________________V PORTFOLIO ITEMS HERE V_________________-->   
+<h2 class="year">Remember (The Elderly Reading App)</h2>   <!-- --------V Galactic Ranger (Prgram 3) V--------- -->
+<details class="collapsible-card">
+  <summary> </summary>
+<div class="program-thumbnail-background"> <!--________v Portfolio Horzontal scroll v________-->
+<div class="program-thumbnail">
+                <img src="https://img.youtube.com/vi/LV227z3b3Ew/maxresdefault.jpg"
+                alt="Growing Up"
+                data-youtube="LV227z3b3Ew"
+                data-caption="<strong>Remember</strong><br>I used Figma to mock up a reading app for elderly people past the age of 60 to comabat memory loss and worsened vision. I wired this data design for easy UI. 2026." 
+                onclick="openLightbox(this)"/>
+            <div class="item-overlay">
+              <span class="item-title">Remember</span>
+            </div>           
+    </div>
+    <p class="description">I used Figma to mock up a reading app for elderly people past the age of 60 to comabat memory loss and worsened vision. I wired this data design for easy UI. 2026.</p>
+</div>
+
+<!--________^ Program Images ^________-->
+</details>
+ <!-- --------^ Galactic Ranger (Prgram 3) ^--------- -->
+<!--_________________^ PORTFOLIO ITEMS HERE ^_________________-->
+
+
+<footer>
+  <h2 id="h2id">CONTACT ME</h2>
+  <ul id="contactMe">
+    <li><strong>Phone</strong>: 650-575-3803</li>
+    <li><a href="mailto:jameskim3808@gmail.com"><strong>My Email</strong>: jameskim3808@gmail.com</a></li>
+    <li><a href="mailto:jkim114@risd.edu"><strong>RISD Email</strong>: jkim114@risd.edu</a></li>
+    <li><a href="https://www.linkedin.com/in/james-kim-6823172b4/" target="_blank"><strong>Linkedin</strong>:  james-kim-6823172b4</a></li>
+  </ul>
+  <ul id="contactMe2">
+  <li><a href="https://www.youtube.com/@jameskim966" target="_blank"><strong>Youtube</strong>:  @jameskim966</a></li>
+  <li><a href="https://www.instagram.com/jameskim460/" target="_blank"><strong>Instagram</strong>:   Jameskim460</a></li>
+  <li><a href="https://github.com/creatureO" target="_blank"><strong>GitHub</strong>:  creatureO</a></li>
+  <li><a href="https://globalcomix.com/a/kimbro-comics" target="_blank"><strong>GlobalComix</strong>:  KimbroComics</a></li>
+</ul>
+<img src="Homepage Images/KIMBRO AVATAR PNG.png" alt="Kimbro logo" style="height:180px; width:180px;" id="mainLogo"/></a>
+</footer>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" type="image/png" href="Homepage Images/KIMBRO AVATAR PNG.png">
+  <title>James Kim's Marketing</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/PortfolioSection.css">
+  <script src="JS/main.js"></script>
+</head>
+
+<style>
+  a {/* Changes text color */
+    color: #000000;                        /* Changes text color */
+    text-decoration-line: underline;       /* Ensures the line is visible */
+    text-decoration-color: #0000;       /* Changes underline color independently */
+    text-decoration-thickness: 2px;       /* Optional: changes underline thickness */
+  }
+</style>
+
+<body>
+<!-- CLICKABLE INTERACTION ITEM, Lightboxes -->
+  <div id="lightbox" class="hidden">
+    <span id="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <span id="lightbox-prev" onclick="changeSlide(-1)">&#10094;</span>
+    <div id="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+      <video id="lightbox-video" class="hidden" controls></video>
+      <iframe id="lightbox-youtube" class="hidden" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div id="lightbox-caption"></div>
+      <!-- <div class="gapMaker"></div> -->
+    </div>
+    <span id="lightbox-next" onclick="changeSlide(1)">&#10095;</span>
+  </div>
+  <iframe id="lightbox-youtube" class="hidden" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<!-- CLICKABLE INTERACTION ITEM, lightboxes -->
+
+<!-- Sticky header wrapper: keeps the logo bar and nav bar pinned to the top as the visitor scrolls -->
+<div id="stickyHeader">
+
+<!-- home name KIMBRO AVATAR PNG display: inline-block;--> 
+<div id="anchorTitle">
+<a href="index.html"><img src="Homepage Images/KIMBRO AVATAR PNG.png" alt="Kimbro logo" style="height:65px; width: 65px;" id="mainLogo"/></a>
+<h1>James Kim</h1>
+<h2 id="subTitle">RISD, Graphic Design, 2027</h2>
+</div>
+<!-- home name -->
+
+<ul class="anchorBar">
+  <li class="anchorBarItem"><a href="index.html">Home</a></li>
+  <li class="anchorBarItem"><a href="ProductDesign.html">Product Design</a></li>
+  <li class="anchorBarItem"><a href="Marketing.html">Marketing</a></li>
+  <li class="anchorBarItem"><a href="Programming.html">Programming</a></li>
+  <li class="anchorBarItem"><a href="MotionGraphics.html">Motion Graphics</a></li>
+  <li class="anchorBarItem"><a href="index.html">About</a></li>
+  <li class="anchorBarItem"><a href="#contactMe">Contact Me</a></li>
+</ul>
+
+</div>
+<!-- end sticky header wrapper -->
+
+<div id="pageContent"> <!-- Overhead paint drop -->
+  <img src="Homepage Images/HomePageDrip.png" alt="" id="gifOverlay"> <!-- Overhead paint drop -->
+
+<div class="gapMaker"></div>
+<div class="lobby-image">
+<!-- <img src="Homepage Images/Homepage Image.jpeg" alt="James Kim in Providence" style="height:100%; width: 100%;"/> -->
+<h2 id="sectionName">MARKETING</h2>
+<img src="James Website photos/Marketing/2025 PAACF//Marketing Cover.png" alt="Kimbro logo" style="height:50%; width: 50%;" id="mainLogo"/>
+</div>
+<div class="black-bar">
+  <!-- black bar dividing-->
+</div>
+
+
+<h2 class="year">2026</h2>   <!-- --------2026--------- -->
+<details class="collapsible-card">
+  <summary> </summary>
+  <div class="work-row-wrapper"> <!--<BUTTON>-->
+  <button class="scroll-btn scroll-left" onclick="scrollRow(this,-1)">&#10094;</button><!--<BUTTON>--> 
+<div class="workRow"> <!--________v Portfolio Horzontal scroll v________-->
+<div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+    <h2 id="projectTitle">Envisioned Events by Suzette</h2>    <!-- projectSection Title-->
+<div class="projectDivider">
+<div class="featured-item-section">
+    <div class="portfolio-item" id="featuredItems">
+        <img src="James Website photos/Marketing/EES.LLC/1.png"
+        alt="Marketing Add" style="height:100%; width: 100%;"  
+        data-images='["James Website photos/Marketing/EES.LLC/1.png", 
+        "James Website photos/Marketing/EES.LLC/2.png", 
+        "James Website photos/Marketing/EES.LLC/3.png", 
+        "James Website photos/Marketing/EES.LLC/4.png", 
+        "James Website photos/Marketing/EES.LLC/5.png"]' 
+        data-caption="<strong>Suzette's Social Media Ads</strong><br> This is the marketing work I did in my spring Junior internship as a Social Media Marketing Intern for the Brooklyn based organization Envisioned Events by Suzette, Etiquette Speaks, and Envisioned Travels. 2026.<br><a href='https://www.instagram.com/p/DWJhTJjDacE/?img_index=1' target='_blank'><strong> CLICK LINK </strong></a>" 
+        onclick="openLightbox(this)"/> 
+        <div class="item-overlay">
+          <span class="item-title">Envisioned Travels</span>
+        </div>
+    </div>
+
+    <div class="portfolio-item" id="featuredItems">
+        <img src="James Website photos/Marketing/EES.LLC/Etiquette 1.png"
+        alt="Marketing Add" style="height:100%; width: 100%;"  
+        data-images='["James Website photos/Marketing/EES.LLC/Etiquette 1.png", 
+        "James Website photos/Marketing/EES.LLC/Etiquette 2.png", 
+        "James Website photos/Marketing/EES.LLC/Etiquette 3.png", 
+        "James Website photos/Marketing/EES.LLC/Etiquette 4.png", 
+        "James Website photos/Marketing/EES.LLC/Etiquette 5.png",
+        "James Website photos/Marketing/EES.LLC/Etiquette 6.png"]' 
+        data-caption="<strong>Suzette's Social Media Ads</strong><br> This is the marketing work I did in my spring Junior internship as a Social Media Marketing Intern for the Brooklyn based organization Envisioned Events by Suzette, Etiquette Speaks, and Envisioned Travels. 2026.<br><a href='https://www.instagram.com/p/DWJhTJjDacE/?img_index=1' target='_blank'><strong> CLICK LINK </strong></a>" 
+          onclick="openLightbox(this)"/>
+          <div class="item-overlay">
+            <span class="item-title">Etiquette Speaks</span>
+          </div>
+      </div>
+
+      <div class="portfolio-item" id="featuredItems">
+        <img src="James Website photos/Marketing/EES.LLC/Events 1.png"
+        alt="Marketing Add" style="height:100%; width: 100%;"  
+        data-images='["James Website photos/Marketing/EES.LLC/Events 1.png", 
+        "James Website photos/Marketing/EES.LLC/Events 2.png", 
+        "James Website photos/Marketing/EES.LLC/Events 3.png", 
+        "James Website photos/Marketing/EES.LLC/Events 4.png", 
+        "James Website photos/Marketing/EES.LLC/Events 5.png",
+        "James Website photos/Marketing/EES.LLC/Events 6.png",
+        "James Website photos/Marketing/EES.LLC/Events 7.png",
+        "James Website photos/Marketing/EES.LLC/Events 8.png",
+        "James Website photos/Marketing/EES.LLC/Events 9.png"]' 
+        data-caption="<strong>Suzette's Social Media Ads</strong><br> This is the marketing work I did in my spring Junior internship as a Social Media Marketing Intern for the Brooklyn based organization Envisioned Events by Suzette, Etiquette Speaks, and Envisioned Travels. 2026.<br><a href='https://www.instagram.com/p/DWJhTJjDacE/?img_index=1' target='_blank'><strong> CLICK LINK </strong></a>" 
+          onclick="openLightbox(this)"/>
+          <div class="item-overlay">
+            <span class="item-title">Envisioned Events</span>
+          </div>
+      </div>
+
+      <div class="portfolio-item" id="featuredItems">
+        <img src="James Website photos/Marketing/EES.LLC/Wedding 1.png"
+        alt="Marketing Add" style="height:100%; width: 100%;"  
+        data-images='["James Website photos/Marketing/EES.LLC/Wedding 1.png", 
+        "James Website photos/Marketing/EES.LLC/Wedding 2.png", 
+        "James Website photos/Marketing/EES.LLC/Wedding 3.png", 
+        "James Website photos/Marketing/EES.LLC/Wedding 4.png", 
+        "James Website photos/Marketing/EES.LLC/Wedding 5.png",
+        "James Website photos/Marketing/EES.LLC/Wedding 6.png",
+        "James Website photos/Marketing/EES.LLC/Wedding 7.png",
+        "James Website photos/Marketing/EES.LLC/Wedding 8.png",
+        "James Website photos/Marketing/EES.LLC/Wedding 9.png",
+        "James Website photos/Marketing/EES.LLC/Wedding 10.png"]' 
+        data-caption="<strong>Suzette's Social Media Ads</strong><br> This is the marketing work I did in my spring Junior internship as a Social Media Marketing Intern for the Brooklyn based organization Envisioned Events by Suzette, Etiquette Speaks, and Envisioned Travels. 2026.<br><a href='https://www.instagram.com/p/DWJhTJjDacE/?img_index=1' target='_blank'><strong> CLICK LINK </strong></a>" 
+          onclick="openLightbox(this)"/>
+          <div class="item-overlay">
+            <span class="item-title">Wedding Planning</span>
+          </div>
+      </div>
+</div>
+    <p class="description">This is the marketing work I did in my spring Junior internship as a Social Media Marketing Intern for the Brooklyn based organization Envisioned Events by Suzette, Etiquette Speaks, and Envisioned Travels. 2026.<br><a href='https://www.instagram.com/p/DWJhTJjDacE/?img_index=1' target='_blank'><strong> CLICK LINK </strong></a></p>
+</div>  
+</div>
+
+
+
+<!--________^ Portfolio Horzontal scroll ^________-->
+<!--_________________^ PORTFOLIO ITEMS HERE ^_________________-->
+</div>
+<button class="scroll-btn scroll-right" onclick="scrollRow(this, 1)">&#10095;</button><!--<BUTTON>-->
+</div><!--<BUTTON>-->
+</details>
+
+
+<h2 class="year">2025</h2>   <!-- --------2025--------- -->
+<details class="collapsible-card">
+  <summary> </summary>
+  <div class="work-row-wrapper"> <!--<BUTTON>-->
+    <button class="scroll-btn scroll-left" onclick="scrollRow(this, -1)">&#10094;</button><!--<BUTTON>-->
+<div class="workRow"> <!--________v Portfolio Horzontal scroll v________-->
+    <div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+    <h2 id="projectTitle">Project Look</h2>    <!-- projectSection Title (youtbe video here)-->
+    <div class="projectDivider">
+    <div class="featured-item-section-video">
+        <div class="portfolio-item-video">
+        <img src="https://img.youtube.com/vi/9WbIgzPXhu8/maxresdefault.jpg" 
+        alt="Project Look"
+        data-youtube="9WbIgzPXhu8"
+        data-caption="<strong>Project Look Promo Video</strong><br> Over my summer internship of 2025 I filmed and edited a series of promotional videos for the Palo Alto Art Center, bolstering the awarness of many of the city's artists.<br> This video is the promotional video for the Project Look program which lets K-5th grade students from local schools take tours through the PAACF exhibitions. This video calls for Docent volunteers to guide the children and foster creativity. 2025. <br><a href='https://www.paloalto.gov/Departments/Community-Services/Arts-Sciences/Palo-Alto-Art-Center/Volunteer/School-Tour-Docents' target='_blank'><strong> CLICK LINK </strong></a>"
+        onclick="openLightbox(this)">
+        <div class="item-overlay">
+          <span class="item-title">Project Look</span>
+        </div>           
+        </div>
+    </div>
+        <p class="description">Over my summer internship of 2025 I filmed and edited a series of promotional videos for the Palo Alto Art Center, bolstering the awarness of many of the city's artists. 2025.<br><a href='https://www.paloalto.gov/Departments/Community-Services/Arts-Sciences/Palo-Alto-Art-Center/Volunteer/School-Tour-Docents' target='_blank'><strong> CLICK LINK </strong></a></p>
+    </div>
+    </div>
+
+
+<div class="black-wall">
+|
+<!-- black bar dividing 1-->
+</div>
+<div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+    <h2 id="projectTitle">3 Exhibition Artists, 2025 PAACF Instagram Videos</h2>    <!-- projectSection Title (youtbe video here)-->
+    <div class="projectDivider">
+    <div class="featured-item-section-video">
+        <div class="portfolio-item-video">
+        <img src="https://img.youtube.com/vi/sbmAD3LfJRo/maxresdefault.jpg" 
+        alt="Project Look"
+        data-youtube="sbmAD3LfJRo"
+        data-caption="<strong>3 Exhibition Artists, 2025 PAACF Instagram Videos</strong><br> This is a promotional video I filmed and edited for 3 Forming Function ceramic artists at my local Palo Alto art center. My internship tasked me with this kind of work to help spread the love of art and design through our community. 2025.<br><a href='https://www.instagram.com/p/DNYo7QxB8fR/?hl=en' target='_blank'><strong> CLICK LINK </strong></a>"
+        onclick="openLightbox(this)">
+        <div class="item-overlay">
+          <span class="item-title">2025 PAACF Instagram Videos</span>
+        </div>           
+        </div>
+    </div>
+        <p class="description">This is a promotional video I filmed and edited for 3 Forming Function ceramic artists at my local Palo Alto art center. My internship tasked me with this kind of work to help spread the love of art and design through our community. 2025.<br><a href='https://www.instagram.com/p/DNYo7QxB8fR/?hl=en' target='_blank'><strong> CLICK LINK </strong></a></p>
+    </div>
+    </div>
+
+
+<div class="black-wall">
+|
+<!-- black bar dividing 1-->
+</div>
+<div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+    <h2 id="projectTitle">Forming Function Artists, 2025 PAACF Instagram Videos</h2>    <!-- projectSection Title (youtbe video here)-->
+    <div class="projectDivider">
+    <div class="featured-item-section-video">
+        <div class="portfolio-item-video">
+        <img src="https://img.youtube.com/vi/w_U2AH3gyAE/maxresdefault.jpg" 
+        alt="Project Look"
+        data-youtube="w_U2AH3gyAE"
+        data-caption="<strong>Forming Function Artists, 2025 PAACF Instagram Videos</strong><br> The 2025 summer exhibition of Forming Functions showcased the work of many Palo Alto artists at the PAACF to honor the creative culture of Silicon Valley.<br>I was incharge of videography, editing, and working with the foundation's directors to compose the videos for instagram advertising of the event and it's art pieces.<br>The artists include Jan Schachter, Salley Jackson, and Edward Paas. 2025."
+        onclick="openLightbox(this)">
+        <div class="item-overlay">
+          <span class="item-title">Forming Function Artists</span>
+        </div>           
+        </div>
+    </div>
+        <p class="description">The 2025 summer exhibition of Forming Functions showcased the work of many Palo Alto artists at the PAACF to honor the creative culture of Silicon Valley.<br>I was incharge of videography, editing, and working with the foundation's directors to compose the videos for instagram advertising of the event and it's art pieces.<br>The artists include Jan Schachter, Salley Jackson, and Edward Paas. 2025.</p>
+    </div>
+    </div>
+
+
+<div class="black-wall">
+|
+<!-- black bar dividing 1-->
+</div>    
+    <div class="projectSection">
+        <h2 id="projectTitle">2025 Buttons PAACF</h2>    <!-- projectSection Title-->
+    <div class="projectDivider">
+    <div class="featured-item-section">
+        <div class="portfolio-item">
+        <img src="James Website photos/Marketing/2025 PAACF/Buttons 1.jpeg"
+        alt="Buttons" style="height:100%; width: 100%;"  
+        data-images='["James Website photos/Marketing/2025 PAACF/Buttons 1.jpeg",
+        "James Website photos/Marketing/2025 PAACF/Buttons 2.jpeg"]' 
+        data-caption="<strong>2025 Buttons PAACF</strong><br> These were buttons I designed and ordered for manufacturing in my 2025 summer internship. They were well crafted from Aluminium and handed out to all of my coworkers and visitors. 2025." 
+        onclick="openLightbox(this)"/>
+        <div class="item-overlay">
+          <span class="item-title">2025 Buttons PAACF</span>
+        </div>        
+        </div>
+
+        <div class="portfolio-item">
+        <img src="James Website photos/Marketing/2025 PAACF/Buttons 3.jpeg"
+        alt="Buttons" style="height:100%; width: 100%;"  
+        data-images='["James Website photos/Marketing/2025 PAACF/Buttons 3.jpeg",
+        "James Website photos/Marketing/2025 PAACF/Buttons 4.jpeg"]' 
+        data-caption="<strong>2025 Buttons PAACF</strong><br> These were buttons I designed and ordered for manufacturing in my 2025 summer internship. They were well crafted from Aluminium and handed out to all of my coworkers and visitors. 2025." 
+        onclick="openLightbox(this)"/>
+        <div class="item-overlay">
+          <span class="item-title">2025 Buttons PAACF</span>
+        </div>        
+        </div>
+
+        <div class="portfolio-item">
+        <img src="James Website photos/Marketing/2025 PAACF/Buttons 5.jpeg"
+        alt="Buttons" style="height:100%; width: 100%;"  
+        data-images='["James Website photos/Marketing/2025 PAACF/Buttons 5.jpeg",
+        "James Website photos/Marketing/2025 PAACF/Buttons 6.jpeg"]' 
+        data-caption="<strong>2025 Buttons PAACF</strong><br> These were buttons I designed and ordered for manufacturing in my 2025 summer internship. They were well crafted from Aluminium and handed out to all of my coworkers and visitors. 2025." 
+        onclick="openLightbox(this)"/>
+        <div class="item-overlay">
+          <span class="item-title">2025 Buttons PAACF</span>
+        </div>        
+        </div>
+
+        <div class="portfolio-item">
+        <img src="James Website photos/Marketing/2025 PAACF/Buttons 7.jpeg"
+        alt="Buttons" style="height:100%; width: 100%;"  
+        data-images='["James Website photos/Marketing/2025 PAACF/Buttons 7.jpeg"]' 
+        data-caption="<strong>2025 Buttons PAACF</strong><br> These were buttons I designed and ordered for manufacturing in my 2025 summer internship. They were well crafted from Aluminium and handed out to all of my coworkers and visitors. 2025." 
+        onclick="openLightbox(this)"/>
+        <div class="item-overlay">
+          <span class="item-title">2025 Buttons PAACF</span>
+        </div>        
+        </div>
+        
+    </div>
+        <p class="description">These were buttons I designed and ordered for manufacturing in my 2025 summer internship. They were well crafted from Aluminium and handed out to all of my coworkers and visitors. 2025.</p>
+    </div>
+    </div>
+
+    
+<div class="black-wall">
+|
+<!-- black bar dividing 2-->
+</div>
+    <div class="projectSection">
+        <h2 id="projectTitle">Catholic Center Ads</h2>    <!-- projectSection Title-->
+    <div class="projectDivider">
+    <div class="featured-item-section">
+        <div class="portfolio-item">
+        <img src="James Website photos/Marketing/BRCC Ads/BRCC General.jpg"
+        alt="Poster" style="height:100%; width: 100%;"  
+        data-images='["James Website photos/Marketing/BRCC Ads/BRCC General.jpg"]'
+        data-caption="<strong>Catholic Center Ads</strong><br> The Brown Risd Catholic Club (BRCC) had given me a place to worship my Lord and Savior and a way to exercise my graphic design skills comercially. Here are some of our university culb ads. 2025." 
+        onclick="openLightbox(this)"/> 
+        <div class="item-overlay">
+          <span class="item-title">General Announcment</span>
+        </div>     
+        </div>
+
+        <div class="portfolio-item">
+        <img src="James Website photos/Marketing/BRCC Ads/Superbowl 2026 Ad BRCC.png"
+        alt="Poster" style="height:100%; width: 100%;"  
+        data-images='["James Website photos/Marketing/BRCC Ads/Superbowl 2026 Ad BRCC.png"]'
+        data-caption="<strong>Catholic Center Ads</strong><br> The Brown Risd Catholic Club (BRCC) had given me a place to worship my Lord and Savior and a way to exercise my graphic design skills comercially. Here are some of our university culb ads. 2025." 
+        onclick="openLightbox(this)"/> 
+        <div class="item-overlay">
+          <span class="item-title">SuperBowl 2026</span>
+        </div>     
+        </div>
+
+        <div class="portfolio-item">
+            <img src="James Website photos/Marketing/BRCC Ads/BRCC Dance 1.png"
+            alt="Poster" style="height:100%; width: 100%;"  
+            data-images='["James Website photos/Marketing/BRCC Ads/BRCC Dance 1.png",
+            "James Website photos/Marketing/BRCC Ads/BRCC Dance 2.png"]'
+            data-caption="<strong>Catholic Center Ads</strong><br> The Brown Risd Catholic Club (BRCC) had given me a place to worship my Lord and Savior and a way to exercise my graphic design skills comercially. Here are some of our university culb ads. 2025." 
+            onclick="openLightbox(this)"/> 
+            <div class="item-overlay">
+              <span class="item-title">Dance Event</span>
+            </div>     
+            </div>
+
+        <div class="portfolio-item">
+        <img src="James Website photos/Marketing/BRCC Ads/BRCC Movie 1.png"
+        alt="Poster" style="height:100%; width: 100%;"  
+        data-images='["James Website photos/Marketing/BRCC Ads/BRCC Movie 1.png"]'
+        data-caption="<strong>Catholic Center Ads</strong><br> The Brown Risd Catholic Club (BRCC) had given me a place to worship my Lord and Savior and a way to exercise my graphic design skills comercially. Here are some of our university culb ads. 2025." 
+        onclick="openLightbox(this)"/> 
+        <div class="item-overlay">
+          <span class="item-title">Movie Event</span>
+        </div>     
+        </div>
+
+    </div>
+        <p class="description">The Brown Risd Catholic Club (BRCC) had given me a place to worship my Lord and Savior and a way to exercise my graphic design skills comercially. Here are some of our university culb ads. 2025.</p>
+    </div>
+    </div>
+
+
+<!--________^ Portfolio Horzontal scroll ^________-->
+<!--_________________^ PORTFOLIO ITEMS HERE ^_________________-->
+</div>
+<button class="scroll-btn scroll-right" onclick="scrollRow(this, 1)">&#10095;</button><!--<BUTTON>-->
+</div><!--<BUTTON>-->
+</details>
+
+<!--________^ Portfolio Horzontal scroll ^________-->
+<!--_________________^ PORTFOLIO ITEMS HERE ^_________________-->
+
+
+
+<footer>
+  <h2 id="h2id">CONTACT ME</h2>
+  <ul id="contactMe">
+    <li><strong>Phone</strong>: 650-575-3803</li>
+    <li><a href="mailto:jameskim3808@gmail.com"><strong>My Email</strong>: jameskim3808@gmail.com</a></li>
+    <li><a href="mailto:jkim114@risd.edu"><strong>RISD Email</strong>: jkim114@risd.edu</a></li>
+    <li><a href="https://www.linkedin.com/in/james-kim-6823172b4/" target="_blank"><strong>Linkedin</strong>:  james-kim-6823172b4</a></li>
+  </ul>
+  <ul id="contactMe2">
+  <li><a href="https://www.youtube.com/@jameskim966" target="_blank"><strong>Youtube</strong>:  @jameskim966</a></li>
+  <li><a href="https://www.instagram.com/jameskim460/" target="_blank"><strong>Instagram</strong>:   Jameskim460</a></li>
+  <li><a href="https://github.com/creatureO" target="_blank"><strong>GitHub</strong>:  creatureO</a></li>
+  <li><a href="https://globalcomix.com/a/kimbro-comics" target="_blank"><strong>GlobalComix</strong>:  KimbroComics</a></li>
+</ul>
+<img src="Homepage Images/KIMBRO AVATAR PNG.png" alt="Kimbro logo" style="height:180px; width:180px;" id="mainLogo"/></a>
+</footer>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" type="image/png" href="Homepage Images/KIMBRO AVATAR PNG.png">
+  <title>James Kim's Motion Graphics</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/PortfolioSection.css">
+  <script src="JS/main.js"></script>
+</head>
+
+<style>
+  a {/* Changes text color */
+    color: #000000;                        /* Changes text color */
+    text-decoration-line: underline;       /* Ensures the line is visible */
+    text-decoration-color: #0000;       /* Changes underline color independently */
+    text-decoration-thickness: 2px;       /* Optional: changes underline thickness */
+  }
+</style>
+
+<body>
+<!-- CLICKABLE INTERACTION ITEM, Lightboxes -->
+  <div id="lightbox" class="hidden">
+    <span id="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <span id="lightbox-prev" onclick="changeSlide(-1)">&#10094;</span>
+    <div id="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+      <video id="lightbox-video" class="hidden" controls></video>
+      <iframe id="lightbox-youtube" class="hidden" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div id="lightbox-caption"></div>
+      <!-- <div class="gapMaker"></div> -->
+    </div>
+    <span id="lightbox-next" onclick="changeSlide(1)">&#10095;</span>
+  </div>
+  <iframe id="lightbox-youtube" class="hidden" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<!-- CLICKABLE INTERACTION ITEM, lightboxes -->
+
+<!-- Sticky header wrapper: keeps the logo bar and nav bar pinned to the top as the visitor scrolls -->
+<div id="stickyHeader">
+
+<!-- home name KIMBRO AVATAR PNG display: inline-block;--> 
+<div id="anchorTitle">
+<a href="index.html"><img src="Homepage Images/KIMBRO AVATAR PNG.png" alt="Kimbro logo" style="height:65px; width: 65px;" id="mainLogo"/></a>
+<h1>James Kim</h1>
+<h2 id="subTitle">RISD, Graphic Design, 2027</h2>
+</div>
+<!-- home name -->
+
+<ul class="anchorBar">
+  <li class="anchorBarItem"><a href="index.html">Home</a></li>
+  <li class="anchorBarItem"><a href="ProductDesign.html">Product Design</a></li>
+  <li class="anchorBarItem"><a href="Marketing.html">Marketing</a></li>
+  <li class="anchorBarItem"><a href="Programming.html">Programming</a></li>
+  <li class="anchorBarItem"><a href="MotionGraphics.html">Motion Graphics</a></li>
+  <li class="anchorBarItem"><a href="index.html">About</a></li>
+  <li class="anchorBarItem"><a href="#contactMe">Contact Me</a></li>
+</ul>
+
+</div>
+<!-- end sticky header wrapper -->
+
+<div id="pageContent"> <!-- Overhead paint drop -->
+  <img src="Homepage Images/HomePageDrip.png" alt="" id="gifOverlay"> <!-- Overhead paint drop -->
+
+<div class="lobby-image">
+<!-- <img src="Homepage Images/Homepage Image.jpeg" alt="James Kim in Providence" style="height:100%; width: 100%;"/> -->
+<h2 id="sectionName">MOTION GRAPHICS</h2>
+<img src="Homepage Images/Kimbro_Gif.png" alt="Kimbro logo" style="height:50%; width: 50%;" id="mainLogo"/>
+</div>
+<div class="black-bar">
+  <!-- black bar dividing-->
+</div>
+
+
+<h2 class="year">Videos</h2>   <!-- --------Videos--------- -->
+<details class="collapsible-card">
+  <summary> </summary>
+  <div class="work-row-wrapper"> <!--<BUTTON>-->
+  <button class="scroll-btn scroll-left" onclick="scrollRow(this,-1)">&#10094;</button><!--<BUTTON>--> 
+<div class="workRow"> <!--________v Portfolio Horzontal scroll v________-->
+  <div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+    <h2 id="projectTitle">TYPOGRAPHY MOTION GRAPHIC</h2>    <!-- projectSection Title (youtbe video here)-->
+    <div class="projectDivider">
+    <div class="featured-item-section-video">
+        <div class="portfolio-item-video">
+        <img src="https://img.youtube.com/vi/aqkhn1hJqeo/maxresdefault.jpg" 
+        alt="Motion Graphic"
+        data-youtube="aqkhn1hJqeo"
+        data-caption="<strong>TYPOGRAPHY MOTION GRAPHIC</strong><br>This is my After Effects Motion Graphic project which I created to give words character. I utilized sound and timing to make a fun but practical display of Text and animation. I discovered my affinity for motion graphics through this video. 2025."
+        onclick="openLightbox(this)">
+        <div class="item-overlay">
+          <span class="item-title">TYPOGRAPHY MOTION GRAPHIC</span>
+        </div>           
+        </div>
+    </div>
+        <p class="description">This is my After Effects Motion Graphic project which I created to give words character. I utilized sound and timing to make a fun but practical display of Text and animation. I discovered my affinity for motion graphics through this video. 2025.</p>
+    </div>
+    </div>
+
+
+<div class="black-wall">
+|
+<!-- black bar dividing 1-->
+</div>
+<div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+    <h2 id="projectTitle">Spider Man 2 (2004) Type Motion Graphic.</h2>    <!-- projectSection Title (youtbe video here)-->
+    <div class="projectDivider">
+    <div class="featured-item-section-video">
+        <div class="portfolio-item-video">
+        <img src="https://img.youtube.com/vi/AMyelYe3A8I/maxresdefault.jpg" 
+        alt="Spider-Man Motion Graphic"
+        data-youtube="AMyelYe3A8I"
+        data-caption="<strong>Spider Man 2 (2004) Type Motion Graphic.</strong><br> This is my work from 2025 in RISD Typography-3. I was assigned to work on any audio clip that would be viewed exclusively through type text and I used Aftereffects to achieve this."
+        onclick="openLightbox(this)">
+        <div class="item-overlay">
+          <span class="item-title">Type Motion Graphic.</span>
+        </div>           
+        </div>
+    </div>
+        <p class="description">This is my work from 2025 in RISD Typography-3. I was assigned to work on any audio clip that would be viewed exclusively through type text and I used Aftereffects to achieve this.</p>
+    </div>
+    </div>
+
+
+<div class="black-wall">
+|
+<!-- black bar dividing 2-->
+</div>
+<div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+    <h2 id="projectTitle">Saffron, the Mysterious Colour</h2>    <!-- projectSection Title (youtbe video here)-->
+    <div class="projectDivider">
+    <div class="featured-item-section-video">
+        <div class="portfolio-item-video">
+        <img src="https://img.youtube.com/vi/SNe8uAb50FM/maxresdefault.jpg" 
+        alt="Saffron Motion Graphic"
+        data-youtube="SNe8uAb50FM"
+        data-caption="<strong>Saffron, the Mysterious Colour</strong><br> After Effects video of the history and science behind the color Saffron. 2025."
+        onclick="openLightbox(this)">
+        <div class="item-overlay">
+          <span class="item-title">Saffron, the Mysterious Colour</span>
+        </div>           
+        </div>
+    </div>
+        <p class="description">After Effects video of the history and science behind the color Saffron. 2025.</p>
+    </div>
+    </div>
+
+
+<div class="black-wall">
+|
+<!-- black bar dividing 3-->
+</div>    
+<div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+  <h2 id="projectTitle">Poppy Eats Jello!</h2>    <!-- projectSection Title (youtbe video here)-->
+  <div class="projectDivider">
+  <div class="featured-item-section-video">
+      <div class="portfolio-item-video">
+      <img src="https://img.youtube.com/vi/MKpCQCdZ728/maxresdefault.jpg" 
+      alt="Motion Graphic"
+      data-youtube="MKpCQCdZ728"
+      data-caption="<strong>Poppy Eats Jello!</strong><br>This is my Project for GRAPH 3318 - WKSHP: DIGITAL 3D DESIGN. I made this by learning to use Cinema 4D. By the way, the dog's name is Poppy! 2026."
+      onclick="openLightbox(this)">
+      <div class="item-overlay">
+        <span class="item-title">Poppy Eats Jello</span>
+      </div>           
+      </div>
+  </div>
+      <p class="description">This is my Project for GRAPH 3318 - WKSHP: DIGITAL 3D DESIGN. I made this by learning to use Cinema 4D. By the way, the dog's name is Poppy! 2026.</p>
+  </div>
+  </div>
+
+
+<div class="black-wall">
+|
+<!-- black bar dividing 4-->
+</div>    
+<div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+  <h2 id="projectTitle">World Hub</h2>    <!-- projectSection Title (youtbe video here)-->
+  <div class="projectDivider">
+  <div class="featured-item-section-video">
+      <div class="portfolio-item-video">
+      <img src="https://img.youtube.com/vi/-sFxixCKOOE/maxresdefault.jpg" 
+      alt="Motion Graphic"
+      data-youtube="-sFxixCKOOE"
+      data-caption="<strong>World Hub</strong><br> This Final Project is my first extensive use of Figma, wiring and designing an entire website for story tellers and world builders using easy interface and community building tactics. This mock up was a multi week project meant to provide a safe space for story tellers to organize their fictional inspirations and ideas with their friends to show their work to script writers and creative teams. Shout out to Gabriel Drozdov for his extremely helpful feedback and wireframing lessons! 2026."
+      onclick="openLightbox(this)">
+      <div class="item-overlay">
+        <span class="item-title">World Hub</span>
+      </div>           
+      </div>
+  </div>
+      <p class="description">This Final Project is my first extensive use of Figma, wiring and designing an entire website for story tellers and world builders using easy interface and community building tactics. 2026.</p>
+  </div>
+  </div>
+
+  <div class="gapMaker"> </div>
+<!--________^ Portfolio Horzontal scroll ^________-->
+<!--_________________^ PORTFOLIO ITEMS HERE ^_________________-->
+</div>
+<button class="scroll-btn scroll-right" onclick="scrollRow(this, 1)">&#10095;</button><!--<BUTTON>-->
+</div><!--<BUTTON>-->
+</details>
+
+
+
+<h2 class="year">GIFs</h2>   <!-- --------GIFs--------- -->
+<details class="collapsible-card">
+  <summary> </summary>
+  <div class="work-row-wrapper"> <!--<BUTTON>-->
+    <button class="scroll-btn scroll-left" onclick="scrollRow(this, -1)">&#10094;</button><!--<BUTTON>-->
+<div class="workRow"> <!--________v Portfolio Horzontal scroll v________-->
+    <div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+    <h2 id="projectTitle">Barksketball</h2>    <!-- projectSection Title (youtbe video here)-->
+    <div class="projectDivider">
+    <div class="featured-item-section-video">
+        <div class="portfolio-item-video">
+        <img src="James Website photos/Motion Graphics/Dog Dunk.gif" 
+        alt="Barksketball Gif"
+        data-caption="<strong>Barksketball</strong><br> In an improvised group project with 3 people, I was tasked with making a motion graphic for our sports/pet product using the only 2 colors a dog could perceive. I specialize in hand drawn GIFs. 2025."
+        onclick="openLightbox(this)">
+        <div class="item-overlay">
+          <span class="item-title">Barksketball</span>
+        </div>           
+        </div>
+    </div>
+        <p class="description">In an improvised group project with 3 people, I was tasked with making a motion graphic for our sports/pet product using the only 2 colors a dog could perceive. I specialize in hand drawn GIFs. 2025.</p>
+    </div>
+    </div>
+
+
+<div class="black-wall">
+|
+<!-- black bar dividing 1-->
+</div>
+<div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+  <h2 id="projectTitle">Growing Up</h2>    <!-- projectSection Title (youtbe video here)-->
+  <div class="projectDivider">
+  <div class="featured-item-section-video">
+      <div class="portfolio-item-video">
+      <img src="James Website photos/Motion Graphics/Growth.gif" 
+      alt="Growing Up"
+      data-caption="<strong>Growing Up</strong><br>Motion graphic animation to promote healthy child care in America. After Effects. 2025."
+      onclick="openLightbox(this)">
+      <div class="item-overlay">
+        <span class="item-title">Growing Up</span>
+      </div>           
+      </div>
+  </div>
+      <p class="description">Motion graphic animation to promote healthy child care in America. After Effects. 2025.</p>
+  </div>
+  </div>
+
+
+<div class="black-wall">
+|
+<!-- black bar dividing 2-->
+</div>
+<div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+  <h2 id="projectTitle">DO NOT TOUCH</h2>    <!-- projectSection Title (youtbe video here)-->
+  <div class="projectDivider">
+  <div class="featured-item-section-video">
+      <div class="portfolio-item-video">
+      <img src="James Website photos/Motion Graphics/Spiker.gif" 
+      alt="Do not touch"
+      data-caption="<strong>DO NOT TOUCH</strong><br> Motion graphic animation to characterize cactus as a concept. After Effects. 2025."
+      onclick="openLightbox(this)">
+      <div class="item-overlay">
+        <span class="item-title">DO NOT TOUCH</span>
+      </div>           
+      </div>
+  </div>
+      <p class="description">Motion graphic animation to characterize cactus as a concept. After Effects. 2025.</p>
+  </div>
+  </div>
+
+
+<div class="black-wall">
+|
+<!-- black bar dividing 3-->
+</div>
+    <div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+      <h2 id="projectTitle">Run My Data</h2>    <!-- projectSection Title (youtbe video here)-->
+      <div class="projectDivider">
+      <div class="featured-item-section-video">
+          <div class="portfolio-item-video">
+          <img src="James Website photos/Motion Graphics/Run Data 1.png" 
+          alt="Run My Data"
+          data-images='["James Website photos/Motion Graphics/Run Data 1.png"]'
+          data-caption="<strong>Run My Data</strong><br>I programmed this Data Design for easy UI. Its to display my marathon training routine online using Javascript and html. Each GIF is hand made. 2025.<br> <a href='https://creatureo.github.io/Happy-2-page-site/' target='_blank'><strong> CLICK LINK </strong></a>."
+          onclick="openLightbox(this)">
+          <div class="item-overlay">
+            <span class="item-title">Run My Data</span>
+          </div>           
+          </div>
+      </div>
+          <p class="description">I programmed this Data Design for easy UI. Its to display my marathon training routine online using Javascript and html. Each GIF is hand made. 2025.</p>
+      </div>
+      </div>
+
+
+<!--________^ Portfolio Horzontal scroll ^________-->
+<!--_________________^ PORTFOLIO ITEMS HERE ^_________________-->
+</div>
+<button class="scroll-btn scroll-right" onclick="scrollRow(this, 1)">&#10095;</button><!--<BUTTON>-->
+</div><!--<BUTTON>-->
+</details>
+
+<!--________^ Portfolio Horzontal scroll ^________-->
+<!--_________________^ PORTFOLIO ITEMS HERE ^_________________-->
+
+
+
+<footer>
+  <h2 id="h2id">CONTACT ME</h2>
+  <ul id="contactMe">
+    <li><strong>Phone</strong>: 650-575-3803</li>
+    <li><a href="mailto:jameskim3808@gmail.com"><strong>My Email</strong>: jameskim3808@gmail.com</a></li>
+    <li><a href="mailto:jkim114@risd.edu"><strong>RISD Email</strong>: jkim114@risd.edu</a></li>
+    <li><a href="https://www.linkedin.com/in/james-kim-6823172b4/" target="_blank"><strong>Linkedin</strong>:  james-kim-6823172b4</a></li>
+  </ul>
+  <ul id="contactMe2">
+  <li><a href="https://www.youtube.com/@jameskim966" target="_blank"><strong>Youtube</strong>:  @jameskim966</a></li>
+  <li><a href="https://www.instagram.com/jameskim460/" target="_blank"><strong>Instagram</strong>:   Jameskim460</a></li>
+  <li><a href="https://github.com/creatureO" target="_blank"><strong>GitHub</strong>:  creatureO</a></li>
+  <li><a href="https://globalcomix.com/a/kimbro-comics" target="_blank"><strong>GlobalComix</strong>:  KimbroComics</a></li>
+</ul>
+<img src="Homepage Images/KIMBRO AVATAR PNG.png" alt="Kimbro logo" style="height:180px; width:180px;" id="mainLogo"/></a>
+</footer>
+
+</div>
+
+</body>
+</html>
