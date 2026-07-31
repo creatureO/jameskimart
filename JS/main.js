@@ -1,45 +1,54 @@
 let currentImages = [];
 let currentIndex = 0;
 //variables and other stuff
-
+//edited July 31 12:40 am
 function openLightbox(el) {
-  document.getElementById('lightbox-img').src = el.src;
-  document.getElementById('lightbox-caption').textContent = el.dataset.caption;
-  document.getElementById('lightbox').classList.remove('hidden');
   document.getElementById('lightbox-caption').innerHTML = el.dataset.caption;
+  document.getElementById('lightbox').classList.remove('hidden');
 
-// Video components
+  // Build the mixed-media array
+  if (el.dataset.images) {
+    currentImages = JSON.parse(el.dataset.images);
+  } else if (el.dataset.youtube) {
+    currentImages = [{ type: 'youtube', src: el.dataset.youtube }];
+  } else if (el.dataset.video) {
+    currentImages = [{ type: 'video', src: el.dataset.video }];
+  } else {
+    currentImages = [{ type: 'image', src: el.src }];
+  }
+
+  currentIndex = 0;
+  showSlide();
+}
+
+function showSlide() {
   const img = document.getElementById('lightbox-img');
   const video = document.getElementById('lightbox-video');
   const youtube = document.getElementById('lightbox-youtube');
 
+  // Reset all media, and pause/clear video so it doesn't keep playing in the background
   img.classList.add('hidden');
   video.classList.add('hidden');
+  video.pause();
+  video.src = '';
   youtube.classList.add('hidden');
+  youtube.src = '';
 
-  if (el.dataset.youtube) {
-    youtube.src = `https://www.youtube.com/embed/${el.dataset.youtube}?autoplay=1`;
+  const slide = currentImages[currentIndex];
+
+  if (slide.type === 'youtube') {
+    youtube.src = `https://www.youtube.com/embed/${slide.src}?autoplay=1`;
     youtube.classList.remove('hidden');
-  } else if (el.dataset.video) {
-    video.src = el.dataset.video;
+  } else if (slide.type === 'video') {
+    video.src = slide.src;
     video.classList.remove('hidden');
     video.play();
   } else {
-    img.src = el.src;
+    img.src = slide.src;
     img.classList.remove('hidden');
   }
-// Video components
 
-    // if data-images exists, use that array; otherwise fall back to the single src
-    currentImages = el.dataset.images ? JSON.parse(el.dataset.images) : [el.src];
-    currentIndex = 0;
-    showSlide();
-}
-
-function showSlide() {
-  document.getElementById('lightbox-img').src = currentImages[currentIndex];
-
-  // hide arrows if there's only one image
+  // hide arrows if there's only one slide
   const showArrows = currentImages.length > 1;
   document.getElementById('lightbox-prev').style.display = showArrows ? 'block' : 'none';
   document.getElementById('lightbox-next').style.display = showArrows ? 'block' : 'none';
@@ -47,20 +56,16 @@ function showSlide() {
 
 function changeSlide(direction) {
   currentIndex += direction;
-  // wrap around: past the last image goes to the first, and vice versa
   if (currentIndex >= currentImages.length) currentIndex = 0;
   if (currentIndex < 0) currentIndex = currentImages.length - 1;
   showSlide();
 }
 
-
 function closeLightbox() {
   document.getElementById('lightbox').classList.add('hidden');
-
- document.getElementById('lightbox-video').pause();
- document.getElementById('lightbox-video').src = '';
- document.getElementById('lightbox-youtube').src = '';   // stops YouTube playback on close
- document.getElementById('lightbox').classList.add('hidden');
+  document.getElementById('lightbox-video').pause();
+  document.getElementById('lightbox-video').src = '';
+  document.getElementById('lightbox-youtube').src = '';
 }
 
 
