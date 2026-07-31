@@ -6,16 +6,16 @@
   <link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">
   <link rel="stylesheet" href="CSS/PortfolioSection.css">
   <script src="JS/main.js"></script>
-
-<style>
-  a {/* Changes text color */
-    color: #000000;                        /* Changes text color */
-    text-decoration-line: underline;       /* Ensures the line is visible */
-    text-decoration-color: #0000;       /* Changes underline color independently */
-    text-decoration-thickness: 2px;       /* Optional: changes underline thickness */
-  }
-</style>
+  <style>
+    a {/* Changes text color */
+      color: #000000;                        /* Changes text color */
+      text-decoration-line: underline;       /* Ensures the line is visible */
+      text-decoration-color: #0000;       /* Changes underline color independently */
+      text-decoration-thickness: 2px;       /* Optional: changes underline thickness */
+    }
+  </style>
 </head>
+
 
 <body>
 <!-- CLICKABLE INTERACTION ITEM, Lightboxes -->
@@ -84,7 +84,7 @@
         <div class="portfolio-item-video">
         <img src="https://img.youtube.com/vi/aqkhn1hJqeo/maxresdefault.jpg" 
         alt="Motion Graphic"
-        data-youtube="aqkhn1hJqeo"
+        data-images='[{"type":"youtube","src":"aqkhn1hJqeo"}]' 
         data-caption="<strong>TYPOGRAPHY MOTION GRAPHIC</strong><br>This is my After Effects Motion Graphic project which I created to give words character. I utilized sound and timing to make a fun but practical display of Text and animation. I discovered my affinity for motion graphics through this video. 2025."
         onclick="openLightbox(this)">
         <div class="item-overlay">
@@ -108,7 +108,7 @@
         <div class="portfolio-item-video">
         <img src="https://img.youtube.com/vi/AMyelYe3A8I/maxresdefault.jpg" 
         alt="Spider-Man Motion Graphic"
-        data-youtube="AMyelYe3A8I"
+        data-images='[{"type":"youtube","src":"AMyelYe3A8I"}]' 
         data-caption="<strong>Spider Man 2 (2004) Type Motion Graphic.</strong><br> This is my work from 2025 in RISD Typography-3. I was assigned to work on any audio clip that would be viewed exclusively through type text and I used Aftereffects to achieve this."
         onclick="openLightbox(this)">
         <div class="item-overlay">
@@ -132,7 +132,7 @@
         <div class="portfolio-item-video">
         <img src="https://img.youtube.com/vi/SNe8uAb50FM/maxresdefault.jpg" 
         alt="Saffron Motion Graphic"
-        data-youtube="SNe8uAb50FM"
+        data-images='[{"type":"youtube","src":"SNe8uAb50FM"}]'
         data-caption="<strong>Saffron, the Mysterious Colour</strong><br> After Effects video of the history and science behind the color Saffron. 2025."
         onclick="openLightbox(this)">
         <div class="item-overlay">
@@ -156,7 +156,7 @@
       <div class="portfolio-item-video">
       <img src="https://img.youtube.com/vi/MKpCQCdZ728/maxresdefault.jpg" 
       alt="Motion Graphic"
-      data-youtube="MKpCQCdZ728"
+      data-images='[{"type":"youtube","src":"MKpCQCdZ728"}]' 
       data-caption="<strong>Poppy Eats Jello!</strong><br>This is my Project for GRAPH 3318 - WKSHP: DIGITAL 3D DESIGN. I made this by learning to use Cinema 4D. By the way, the dog's name is Poppy! 2026."
       onclick="openLightbox(this)">
       <div class="item-overlay">
@@ -180,7 +180,7 @@
       <div class="portfolio-item-video">
       <img src="https://img.youtube.com/vi/-sFxixCKOOE/maxresdefault.jpg" 
       alt="Motion Graphic"
-      data-youtube="-sFxixCKOOE"
+      data-images='[{"type":"youtube","src":"-sFxixCKOOE"}]' 
       data-caption="<strong>World Hub</strong><br> This Final Project is my first extensive use of Figma, wiring and designing an entire website for story tellers and world builders using easy interface and community building tactics. This mock up was a multi week project meant to provide a safe space for story tellers to organize their fictional inspirations and ideas with their friends to show their work to script writers and creative teams. Shout out to Gabriel Drozdov for his extremely helpful feedback and wireframing lessons! 2026."
       onclick="openLightbox(this)">
       <div class="item-overlay">
@@ -215,6 +215,7 @@
         <div class="portfolio-item-video">
         <img src="James Website photos/Motion Graphics/Dog Dunk.gif" 
         alt="Barksketball Gif"
+        data-images='[{"type":"image","src":"James Website photos/Motion Graphics/Dog Dunk.gif"}]' 
         data-caption="<strong>Barksketball</strong><br> In an improvised group project with 3 people, I was tasked with making a motion graphic for our sports/pet product using the only 2 colors a dog could perceive. I specialize in hand drawn GIFs. 2025."
         onclick="openLightbox(this)">
         <div class="item-overlay">
@@ -238,6 +239,7 @@
       <div class="portfolio-item-video">
       <img src="James Website photos/Motion Graphics/Growth.gif" 
       alt="Growing Up"
+      data-images='[{"type":"image","src":"James Website photos/Motion Graphics/Growth.gif"}]' 
       data-caption="<strong>Growing Up</strong><br>Motion graphic animation to promote healthy child care in America. After Effects. 2025."
       onclick="openLightbox(this)">
       <div class="item-overlay">
@@ -261,6 +263,7 @@
       <div class="portfolio-item-video">
       <img src="James Website photos/Motion Graphics/Spiker.gif" 
       alt="Do not touch"
+      data-images='[{"type":"image","src":"James Website photos/Motion Graphics/Spiker.gif"}]' 
       data-caption="<strong>DO NOT TOUCH</strong><br> Motion graphic animation to characterize cactus as a concept. After Effects. 2025."
       onclick="openLightbox(this)">
       <div class="item-overlay">
@@ -271,30 +274,6 @@
       <p class="description">Motion graphic animation to characterize cactus as a concept. After Effects. 2025.</p>
   </div>
   </div>
-
-
-<div class="black-wall">
-|
-<!-- black bar dividing 3-->
-</div>
-    <div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
-      <h2 id="projectTitle">Run My Data</h2>    <!-- projectSection Title (youtbe video here)-->
-      <div class="projectDivider">
-      <div class="featured-item-section-video">
-          <div class="portfolio-item-video">
-          <img src="James Website photos/Motion Graphics/Run Data 1.png" 
-          alt="Run My Data"
-          data-images='["James Website photos/Motion Graphics/Run Data 1.png"]'
-          data-caption="<strong>Run My Data</strong><br>I programmed this Data Design for easy UI. Its to display my marathon training routine online using Javascript and html. Each GIF is hand made. 2025.<br> <a href='https://creatureo.github.io/Happy-2-page-site/' target='_blank'><strong> CLICK LINK </strong></a>."
-          onclick="openLightbox(this)">
-          <div class="item-overlay">
-            <span class="item-title">Run My Data</span>
-          </div>           
-          </div>
-      </div>
-          <p class="description">I programmed this Data Design for easy UI. Its to display my marathon training routine online using Javascript and html. Each GIF is hand made. 2025.</p>
-      </div>
-      </div>
 
 
 <!--________^ Portfolio Horzontal scroll ^________-->
