@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Updated July 30, 2026 11:59 PM -->
   <link rel="icon" type="image/png" href="Homepage Images/KIMBRO AVATAR PNG.png">
   <title>James Kim's Portfolio</title>
   <link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">
   <link rel="stylesheet" href="CSS/style.css">
   <script src="JS/main.js"></script>
-  <!-- Updated July 30, 2026 1:55 PM -->
   <style>
-  a {/* Changes text color */
-    color: #000000;                        /* Changes text color */
-    text-decoration-line: underline;       /* Ensures the line is visible */
-    text-decoration-color: #0000;       /* Changes underline color independently */
-    text-decoration-thickness: 2px;       /* Optional: changes underline thickness */
-  }
-</style>
+    a {/* Changes text color */
+      color: #000000;                        /* Changes text color */
+      text-decoration-line: underline;       /* Ensures the line is visible */
+      text-decoration-color: #0000;       /* Changes underline color independently */
+      text-decoration-thickness: 2px;       /* Optional: changes underline thickness */
+    }
+  </style>
 </head>
+
 
 <body>
 <!-- CLICKABLE INTERACTION ITEM, Lightboxes -->
   <div id="lightbox" class="hidden">
-    <span id="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <span id="lightbox-close" onclick="closeLightbox()">&#10005;</span>
     <span id="lightbox-prev" onclick="changeSlide(-1)">&#10094;</span>
     <div id="lightbox-content">
       <img id="lightbox-img" src="" alt="">
@@ -96,12 +97,12 @@
   <div class="projectDivider">
     <div class="portfolio-item" id="featuredItems">
       <img src="James Website photos/Product Design/Superman/Superman Fanart James Kim.png"  
-      alt="Superman Poster" style="height:100%; width: 100%;"  
-      data-images='["James Website photos/Product Design/Superman/Superman Fanart James Kim.png",
-      "James Website photos/Product Design/Superman/Superman 1.jpeg", 
-      "James Website photos/Product Design/Superman/Superman 2.jpeg",
-      "James Website photos/Product Design/Superman/Superman 3.jpeg"]' 
-      data-caption="<strong>Superman Poster</strong><br> Fanart for the Superman movie by James Gunn. Plotter printed. 2024. <a href='https://www.instagram.com/p/DMBfbnZBhEp/?img_index=1' target='_blank'><strong> CLICK LINK </strong></a>" 
+      alt="Superman Poster" style="height:100%; width: 100%;"
+      data-images='[{"type":"image","src":"James Website photos/Product Design/Superman/Superman Fanart James Kim.png"},
+      {"type":"image","src":"James Website photos/Product Design/Superman/Superman 1.jpeg"}, 
+      {"type":"image","src":"James Website photos/Product Design/Superman/Superman 2.jpeg"},
+      {"type":"image","src":"James Website photos/Product Design/Superman/Superman 3.jpeg"}]'  
+      data-caption="<strong>Superman Poster</strong><br> Fanart for the Superman movie by James Gunn. Plotter printed. 2024. <br><a href='https://www.instagram.com/p/DMBfbnZBhEp/?img_index=1' target='_blank'><strong> CLICK LINK </strong></a>" 
       onclick="openLightbox(this)"/>
       <div class="item-overlay">
         <span class="item-title">Superman Poster</span>
@@ -140,15 +141,16 @@
     <div class="portfolio-item">
       <img src="James Website photos/Product Design/Wrath of Reyath/Cover of WOR.png"
       alt="TTRPG" style="height:100%; width: 100%;"  
-      data-images='["James Website photos/Product Design/Wrath of Reyath/box view 1.png", 
-      "James Website photos/Product Design/Wrath of Reyath/box view 5.png", 
-      "James Website photos/Product Design/Wrath of Reyath/Game View.jpg", 
-      "James Website photos/Product Design/Wrath of Reyath/Cards Stack 1.png", 
-      "James Website photos/Product Design/Wrath of Reyath/Cards Stack 2.png", 
-      "James Website photos/Product Design/Wrath of Reyath/Cards Stack 3.png", 
-      "James Website photos/Product Design/Wrath of Reyath/Cards Stack 4.png", 
-      "James Website photos/Product Design/Wrath of Reyath/Cards Stack 5.png", 
-      "James Website photos/Product Design/Wrath of Reyath/Cards Stack 6.png"]' 
+      data-images='[{"type":"youtube","src":"EP4CL4SOmm8"},
+      {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/box view 1.png"},
+      {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/box view 5.png"}, 
+      {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Game View.jpg"},
+      {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Cards Stack 1.png"},
+      {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Cards Stack 2.png"},
+      {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Cards Stack 3.png"},
+      {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Cards Stack 4.png"},
+      {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Cards Stack 5.png"},
+      {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Cards Stack 6.png"}]'  
       data-caption="<strong>Wrath of Reyath</strong><br> This was a collaborative project between Me, Emerald Jiang, and my roomate Andrew Liao. We were tasked with visualizing sound data on the street I live, Thayer street, and turn it into an interesting delivery method. My group devised that we make a table top RPG game out of it. We made a project even Wizards of the Coast or Hasbro would be proud of. I was in charge of video documentation and making the cards and part time game rule creation. 2025.<br><a href='https://www.youtube.com/watch?v=EP4CL4SOmm8' target='_blank'><strong> VIDEO LINK </strong></a>" 
       onclick="openLightbox(this)"/>    
       <div class="item-overlay">
@@ -161,12 +163,12 @@
     <div class="portfolio-item">
       <img src="James Website photos/Product Design/Run to Resist/cover of book.png"
       alt="Comic" style="height:100%; width: 100%;"  
-      data-images='["James Website photos/Product Design/Run to Resist/cover of book 3.jpeg", 
-      "James Website photos/Product Design/Run to Resist/pages 3.jpeg", 
-      "James Website photos/Product Design/Run to Resist/pages 8.jpeg", 
-      "James Website photos/Product Design/Run to Resist/pages 9.jpeg", 
-      "James Website photos/Product Design/Run to Resist/pages 12.jpeg", 
-      "James Website photos/Product Design/Run to Resist/pages 14.jpeg"]' 
+      data-images='[{"type":"image","src":"James Website photos/Product Design/Run to Resist/cover of book 3.jpeg"},
+      {"type":"image","src":"James Website photos/Product Design/Run to Resist/pages 3.jpeg"}, 
+      {"type":"image","src":"James Website photos/Product Design/Run to Resist/pages 8.jpeg"},
+      {"type":"image","src":"James Website photos/Product Design/Run to Resist/pages 9.jpeg"},
+      {"type":"image","src":"James Website photos/Product Design/Run to Resist/pages 12.jpeg"},
+      {"type":"image","src":"James Website photos/Product Design/Run to Resist/pages 14.jpeg"}]' 
       data-caption="<strong>Run to Resist</strong><br> This was my interactive narritive driven campaign to encourage kids aged 12-17 to take up running as a cardio fitness support for heart health. This was my attempt at assisting the NIH (National Institute of Health) at encouraging teenagers to resist the increasingly sedentary culture of modern day life. Inspired by Osmosis Jones and Lazy town combined with Genndy Tartakovsky's action illustrations, I made a narritive that would attarct kids to the cause. 2025.<br><a href='https://globalcomix.com/read/19faf3a7-1b66-4077-bf3a-349fb4370829/1' target='_blank'><strong> CLICK LINK </strong></a>" 
       onclick="openLightbox(this)"/>    
       <div class="item-overlay">
@@ -178,13 +180,12 @@
   <div class="projectDivider">
     <div class="portfolio-item">
       <img src="James Website photos/Product Design/HiTop Films Magazine/Magazine 4.png"
-      alt="Magazine" style="height:100%; width: 100%;"  
-      data-images='["James Website photos/Product Design/HiTop Films Magazine/Magazine 1.png", 
-      "James Website photos/Product Design/HiTop Films Magazine/Magazine 4.png", 
-      "James Website photos/Product Design/HiTop Films Magazine/Gum box 3.jpeg", 
-      "James Website photos/Product Design/HiTop Films Magazine/Gum box 4.jpeg", 
-      "James Website photos/Product Design/HiTop Films Magazine/Page Spread in Hand.jpeg", 
-      "James Website photos/Product Design/HiTop Films Magazine/Page Spread in Hand.jpeg"]' 
+      alt="Magazine" style="height:100%; width: 100%;"   
+      data-images='[{"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Magazine 1.png"},
+      {"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Magazine 4.png"}, 
+      {"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Gum box 3.jpeg"},
+      {"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Gum box 4.jpeg"},
+      {"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Page Spread in Hand.jpeg"}]' 
       data-caption="<strong>Superman Video Essay Magazine</strong><br> I translated a video essay - HITOP FILMS We Needed Superman - to become a film review style magazine. I also included a pack of gum to make the whole thing more pop culture-like. 2025." 
       onclick="openLightbox(this)"/>        
       <div class="item-overlay">
@@ -197,13 +198,14 @@
     <div class="portfolio-item">
       <img src="James Website photos/Programming/Gr Game/GR Game 1.png"
       alt="Video Game" style="height:100%; width: 100%;"  
-      data-images='["James Website photos/Programming/Gr Game/GR Game 1.png", 
-      "James Website photos/Programming/Gr Game/GR Game 2.png", 
-      "James Website photos/Programming/Gr Game/GR Game 3.jpg", 
-      "James Website photos/Programming/Gr Game/GR Game 4.jpg", 
-      "James Website photos/Programming/Gr Game/GR Game 5.jpg", 
-      "James Website photos/Programming/Gr Game/GR Game 6.jpg", 
-      "James Website photos/Programming/Gr Game/GR Game 7.jpg"]' 
+      data-images='[{"type":"youtube","src":"GlHK0Z0HR_k"},
+      {"type":"image","src":"James Website photos/Programming/Gr Game/GR Game 1.png"},
+      {"type":"image","src":"James Website photos/Programming/Gr Game/GR Game 2.png"}, 
+      {"type":"image","src":"James Website photos/Programming/Gr Game/GR Game 3.jpg"},
+      {"type":"image","src":"James Website photos/Programming/Gr Game/GR Game 4.jpg"},
+      {"type":"image","src":"James Website photos/Programming/Gr Game/GR Game 5.jpg"},
+      {"type":"image","src":"James Website photos/Programming/Gr Game/GR Game 6.jpg"},
+      {"type":"image","src":"James Website photos/Programming/Gr Game/GR Game 7.jpg"}]' 
       data-caption="<strong>Galactic Ranger</strong><br>Sci-Fi action Shooter developed in Unity game engine. 3D modeling with Unity and Cinema 4D. 2026. <br><a href='https://kimbrocomics.itch.io/galactic-ranger' target='_blank'><strong> GAME LINK </strong></a>" 
       onclick="openLightbox(this)"/>
       <div class="item-overlay">
@@ -240,11 +242,11 @@
     <div class="portfolio-item">
       <img src="James Website photos/Marketing/EES.LLC/1.png"
       alt="Marketing Add" style="height:100%; width: 100%;"  
-      data-images='["James Website photos/Marketing/EES.LLC/1.png", 
-      "James Website photos/Marketing/EES.LLC/2.png", 
-      "James Website photos/Marketing/EES.LLC/3.png", 
-      "James Website photos/Marketing/EES.LLC/4.png", 
-      "James Website photos/Marketing/EES.LLC/5.png"]' 
+      data-images='[{"type":"image","src":"James Website photos/Marketing/EES.LLC/1.png"},
+      {"type":"image","src":"James Website photos/Marketing/EES.LLC/2.png"}, 
+      {"type":"image","src":"James Website photos/Marketing/EES.LLC/3.png"},
+      {"type":"image","src":"James Website photos/Marketing/EES.LLC/4.png"},
+      {"type":"image","src":"James Website photos/Marketing/EES.LLC/5.png"}]' 
       data-caption="<strong>Suzette's Travel Ad</strong><br> This is the marketing work I did in my spring Junior internship as a Social Media Marketing Intern for the Brooklyn based organization Envisioned Travels by Suzette. 2026.<br><a href='https://www.instagram.com/p/DWJhTJjDacE/?img_index=1' target='_blank'><strong> CLICK LINK </strong></a>" 
       onclick="openLightbox(this)"/>    
       <div class="item-overlay">
@@ -269,12 +271,12 @@
   <div class="projectDivider">
     <div class="portfolio-item" id="featuredItems">
       <img src="James Website photos/Product Design/Superman/Superman Fanart James Kim.png"  
-      alt="Superman Poster" style="height:100%; width: 100%;"  
-      data-images='["James Website photos/Product Design/Superman/Superman Fanart James Kim.png",
-      "James Website photos/Product Design/Superman/Superman 1.jpeg", 
-      "James Website photos/Product Design/Superman/Superman 2.jpeg",
-      "James Website photos/Product Design/Superman/Superman 3.jpeg"]' 
-      data-caption="<strong>Superman Poster</strong><br> Fanart for the Superman movie by James Gunn. Plotter printed. 2024. <a href='https://www.instagram.com/p/DMBfbnZBhEp/?img_index=1' target='_blank'><strong> CLICK LINK </strong></a>" 
+      alt="Superman Poster" style="height:100%; width: 100%;"
+      data-images='[{"type":"image","src":"James Website photos/Product Design/Superman/Superman Fanart James Kim.png"},
+      {"type":"image","src":"James Website photos/Product Design/Superman/Superman 1.jpeg"}, 
+      {"type":"image","src":"James Website photos/Product Design/Superman/Superman 2.jpeg"},
+      {"type":"image","src":"James Website photos/Product Design/Superman/Superman 3.jpeg"}]'  
+      data-caption="<strong>Superman Poster</strong><br> Fanart for the Superman movie by James Gunn. Plotter printed. 2024. <br><a href='https://www.instagram.com/p/DMBfbnZBhEp/?img_index=1' target='_blank'><strong> CLICK LINK </strong></a>" 
       onclick="openLightbox(this)"/>
       <div class="item-overlay">
         <span class="item-title">Superman Poster</span>
