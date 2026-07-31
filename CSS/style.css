@@ -1,0 +1,513 @@
+@font-face {
+    src: url('fonts/unageo/variable/Unageo[wght\,ital].ttf') format("truetype");
+    font-family: 'Unageo';
+    font-style: normal oblique 0deg 15deg;
+    font-weight: 300 700;
+    }
+
+/* Change font for the entire webpage */
+body {
+  font-family: 'Unageo', sans-serif;
+  word-spacing: 5px; /* Adds pixels of extra space between each word */
+  margin: 0px;
+  overflow-x: hidden; /* Stops horizontal side-scrolling */
+}
+
+/* HOMEPAGE HEADER */
+#mainLogo {
+  padding-left: 20px;            /* Removes default list indentation */
+  margin: 0px;             /* Removes default list spacing */
+}
+
+
+#stickyHeader{
+  position: sticky;   /* keeps this block pinned once it hits the top of the viewport */
+  top: 0;
+  z-index: 100;       /* stays above the hero image and page content while scrolling */
+}
+
+#anchorTitle{
+  display:flex;
+  background-color: rgb(255, 255, 255); /* solid background so content scrolling underneath doesn't show through */
+  padding: 0px;
+}
+ 
+/* Change font for specific headings */
+h1 {
+  font-family: Gill Sans, sans-serif;
+  font-weight: 800;
+  scale: 1.2;
+  padding-left: 40px;  
+  padding-top: 10px;          
+  margin: 0px;            
+  white-space: nowrap; /* this makes sure stuff never breaks into 2 lines*/
+  transform: translateY(5px);
+  /*background-color:rgb(255, 255, 255)*/
+}
+
+#subTitle{
+  padding-left: 55%;
+  padding-top: 0px;
+  padding-bottom:0px;
+  font-weight:lighter;
+  white-space: nowrap; /* this makes sure stuff never breaks into 2 lines*/
+}
+
+.anchorBar {
+  display: flex;
+  /* Optional: adds spacing so items do not hug the bars tightly */
+  gap: 0px; 
+  background-color: rgb(220, 220, 220);
+  padding-top: 0px;
+  padding-bottom: 0px;
+  overflow-x: auto;        /* Enables horizontal scrolling when content overflows */
+  overflow-y: hidden;      /* Hides vertical scrolling */
+  white-space: nowrap;     /* Prevents items from wrapping to a new line */
+}
+
+.anchorBarItem {
+  border-right: 1px solid black;
+  align-self: stretch;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.anchorBarItem a { /* The link component of the item */
+  display: block;    /* turns the link into a full box instead of just wrapping its text */
+  height: 100%;       /* stretches to fill the li's full height, including the padding area */
+  offset-position: 0px;
+  margin-top: -30px;
+  padding-top: 30px;
+  margin-bottom: -30px;
+  padding-bottom: 30px;
+  margin-left: -50px;
+  padding-left: 50px;
+  margin-right: -50px;
+  padding-right: 50px;
+}
+
+/* Removes the black bar from the final item */
+.anchorBarItem:last-child {
+  border-right: none;
+}
+
+.anchorBarItem:hover {
+font-weight: 800;
+background-color:rgb(200, 200, 200)
+}
+
+ul{
+  list-style: none;      /* Removes the default bullet points */
+  padding-top: 10px;            /* Removes default list indentation */
+  padding-bottom: 10px;
+  margin: 0px;             /* Removes default list spacing */
+  gap: 40px;             /* Adds space between the list items */
+  font-size: 1.25em;
+}
+
+li{
+  list-style-type: none;
+  padding-top: 0px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+footer li{
+  line-height: 28px;
+}
+/* HOMEPAGE HEADER */
+
+
+/* homepage image or video */
+.lobby-image {
+  position: relative;
+  width: 100%;
+  height: 900px;      /* same height you already have */
+  overflow: hidden;   /* crops whatever spills outside the box */
+  display:block;
+}
+
+.lobby-image video {
+  display: block;   /* removes inline-element whitespace quirks */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.lobby-image iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 56.25vw;      /* maintains 16:9 (9/16 = 0.5625) */
+  min-width: 177.78vh;  /* 16/9 = 1.7778 — ensures full width coverage even on tall/narrow screens */
+  min-height: 100%;
+  transform: translate(-50%, -50%);  /* re-centers after oversizing */
+  border: none;
+  pointer-events: none;
+}
+/* homepage image or video */
+
+.black-bar{
+  height: 1px; /* Adjust thickness as needed */
+  background-color: #000000; /* Pure black */
+  width: 100%; /* Spans the full width */
+  margin: 0px; /* Space above and below the bar */
+}
+
+#about{
+  background: rgb(220, 220, 220);
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+  margin-top:0px;
+  padding-left:40px;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
+h2{
+  padding: 20px;            /* Removes default list indentation */
+  margin: 20px;             /* Removes default list spacing */
+}
+
+#description{
+  line-height: 30px;
+  padding:40px 40px;
+  font-size: 1.3em;
+}
+
+/*THIS IS WEHRE YOU PUT YOUR HOME PAGE SHOW OFFS*/
+
+.workRow{
+  display: flex;
+  gap: 0px;                            /* Adds spacing between items */
+  padding-left: 40px;
+  padding-bottom: 0px;
+  flex-shrink: 0;         /* stops items from shrinking to fit — this is the key line */
+  overflow-x: auto;        /* Enables horizontal scrolling when content overflows */
+  overflow-y: hidden;      /* Hides vertical scrolling */
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(220,220,220) rgb(220, 220, 220);
+}
+
+/*_____________________v SCROLL WHEEL v______________________*/
+.work-row::-webkit-scrollbar {
+  height: 12px;
+}
+
+.work-row::-webkit-scrollbar-track {
+  background: rgb(220, 220, 220);
+  border-radius: 10px;
+}
+
+.work-row::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+
+.work-row::-webkit-scrollbar-thumb:hover {
+  background: rgb(60, 60, 60);
+}
+/*_____________________^ SCROLL WHEEL ^______________________*/
+
+/*_____________________V SCROLL BUTTON V______________________*/
+.work-row-wrapper {
+  position: relative;   /* this is the key line — it anchors the buttons below */
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);   /* centers vertically regardless of row height */
+  background: rgb(220, 220, 220);
+  color: black;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;                    /* keeps buttons above the images, not hidden behind them */
+  border-radius: 0%;
+  opacity: 0.75;
+  height:100%;
+}
+
+.scroll-btn:hover {
+  opacity: 1;
+}
+
+.scroll-left {
+  left: 0px;
+}
+
+.scroll-right {
+  right: 0px;
+}
+/*_____________________^ SCROLL BUTTON ^______________________*/
+
+.workRow img{
+  width: 100%;                          /* Forces image to fill cell width */
+  height: 100%;                         /* Forces image to fill cell height */
+  object-fit: cover;                    /* Crops nicely without stretching */
+}
+
+.projectDivider{
+  display:block; 
+  gap:0px;
+  margin:0px;
+  padding:0px 0px;
+  width:100%;
+  align-content: center;
+  border-right: 20px solid rgb(220, 220, 220);
+
+  }
+
+.portfolio-item{
+  width:max-content;
+  height: 600px;
+  overflow: hidden;
+  /*border: 0.5px solid black;*/
+}
+
+.portfolio-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.portfolio-item {
+  position: relative;   /* anchors the overlay to this box specifically */
+  overflow: hidden;
+}
+
+.item-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);   /* fully transparent by default */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;                      /* invisible until hovered */
+  transition: all 0.3s ease;       /* smooth fade in/out */
+  pointer-events: none;   /* lets clicks pass through to the image underneath */
+}
+
+.portfolio-item:hover .item-overlay {
+  background: rgba(255, 255, 255, 0.75);  /* darkens on hover */
+  opacity: 1;
+}
+
+.item-title {
+  color: black;
+  font-size: 2rem;
+  text-align: center;
+  padding: 10px;
+  font-weight: 100;
+}
+
+/*THIS IS WEHRE YOU PUT YOUR HOME PAGE SHOW OFFS*/
+
+p{
+  font-size: larger;
+  padding-left: 20px;            /* Removes default list indentation */
+  margin: 20px;             /* Removes default list spacing */
+}
+
+
+footer{
+  display:flex;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: rgb(220, 220, 220)
+}
+
+#contactMe{
+  padding-top: 40px;
+  line-height: 28px;
+}
+#contactMe2{
+  padding-top: 40px;
+  line-height: 28px;
+}
+
+/*CLICKABLE IMAGES FUNCTION, Lightboxes*/
+.hidden {
+  display: none;
+}
+
+#lightbox {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255, 255, 255, 0.90);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#lightbox.hidden {
+  display: none;   /* now wins over #lightbox's display: flex */
+}
+
+#lightbox-content {
+  display:flex;
+  gap: 2em;
+  padding: 0em 10em;
+  max-width: 100%;
+  max-height: 100%;
+  align-items: center;
+}
+
+#lightbox-img {
+  max-height: 85vh;
+  max-width: 60vw;
+  object-fit: contain;
+}
+
+#lightbox-caption {
+  color: black;
+  font-size: 1.2rem;
+  max-width: 400px;
+  line-height: 28px;
+}
+
+#lightbox-caption::first-line {/*title line*/
+  font-size: 1.5rem;
+}
+
+
+#lightbox-caption a{
+  text-decoration: none;
+  line-height: 100px;
+  font-size: 1.5rem;
+  transform-origin: center;
+  transition: text-decoration 0.5s ease, font-size 0.5s ease;
+}
+
+#lightbox-caption:hover a{
+  text-decoration: underline;
+  font-size: 2rem;
+}
+
+#lightbox-close {
+  position: absolute;
+  top: 50px; right: 120px;
+  color: #ffffff;
+  font-size:larger;
+  scale: 2;
+  cursor: pointer;
+  border: 0.5px solid #000000;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #000000;
+  transition:scale 0.5s ease, background-color 0.5s ease, border-radius 0.5s ease, color 0.5s ease;
+}
+
+#lightbox-close:hover {
+  color: #000000;
+  background-color: #ffffff;
+  scale:4;
+  border: 0.5px solid #000000;
+  border-radius: 5px;
+}
+
+.gapMaker{
+  height: 20px; /* Adjust thickness as needed */
+  background-color: rgba(255, 255, 255, 0.0);
+  width: 100%; /* Spans the full width */
+  margin: 0px; /* Space above and below the bar */
+}
+
+/*cilckable arrows for multi stack*/
+#lightbox-prev, #lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: black;
+  font-size: 5rem;
+  cursor: pointer;
+  padding: 10px 20px;
+  transform: scale(0.75,1);
+  user-select: none; /* prevents the arrow text from being selected/highlighted on click */
+  transition: transform 0.5s ease;
+}
+
+#lightbox-prev:hover, #lightbox-next:hover {
+  transform: scale(1,2);
+}
+
+#lightbox-prev {
+  left: 20px;
+}
+
+#lightbox-next {
+  right: 20px;
+}
+
+
+#lightbox-youtube{
+  position: relative;
+  width: 1200px;
+  height: 675px;  
+}
+
+/*CLICKABLE IMAGES FUNCTION, Lightboxes*/
+
+/*Animation scroll*/
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 20px;
+  width: fit-content;
+  animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-82%); }
+}
+
+.marquee-wrapper:hover .marquee-track {
+  animation-play-state: paused;
+}
+/*^ animation scroll ^*/
+
+/* Overlay GIF stuff */
+#pageContent {
+  position: relative;   /* this is the anchor point the gif locks onto */
+}
+
+#gifOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* fills the whole page height/width, cropping if needed */
+  pointer-events: none;    /* lets clicks/hovers pass through to your actual content underneath */
+  z-index: 110;             /* above your regular content, but below the sticky header and lightbox */
+}
+/*^ Overlay GIF stuff ^*/
+
+
+/*click animation*/
+.click-splatter {
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  pointer-events: none;   /* so the splatter itself never blocks the next click underneath it */
+  z-index: 9999;           /* sits above everything, including your paint-drip overlay */
+}
+/*click animation*/
