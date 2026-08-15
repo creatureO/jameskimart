@@ -265,7 +265,7 @@ h2{
   }
 
 .portfolio-item{
-  width:max-content;
+  width:50em;
   height: 600px;
   overflow: hidden;
   /*border: 0.5px solid black;*/
