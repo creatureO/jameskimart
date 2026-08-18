@@ -111,6 +111,35 @@ padding-right: 50px;
 /* HOMEPAGE STICKY HEADER STUFF */
 
 /* LOBBY IMAGES or VIDEOS ________________________________________________________________________________________________________________________________________________ */
+.lobby-image-home {
+position: relative;
+width: 100%;
+height: 83%;      /* same height you already have */
+overflow: hidden;   /* crops whatever spills outside the box */
+display:block;
+}
+
+.lobby-image-home video {
+display: block;   /* removes inline-element whitespace quirks */
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center;
+}
+
+.lobby-image-home iframe {
+position: absolute;
+top: 50%;
+left: 50%;
+width: 100vw;
+height: 56.25vw;      /* maintains 16:9 (9/16 = 0.5625) */
+min-width: 177.78vh;  /* 16/9 = 1.7778 — ensures full width coverage even on tall/narrow screens */
+min-height: 100%;
+transform: translate(-50%, -50%);  /* re-centers after oversizing */
+border: none;
+pointer-events: none;
+}
+
 .lobby-image {
 position: relative;
 width: 100%;
@@ -206,6 +235,25 @@ align-items: center;
   font-weight: 100;
   background-color: rgb(220, 220, 220);
 }
+
+#about{
+  background: rgb(220, 220, 220);
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+  margin-top:0px;
+  padding-left:40px;
+  padding-top:20px;
+  padding-bottom:20px;
+  }
+  
+  #description{
+  line-height: 30px;
+  padding:40px 40px;
+  font-size: 1.3em;
+  max-width: 35%;
+  word-spacing: 5px;
+  }
 /* Categorization */
 
 /* Some Text Stuff ________________________________________________________________________________________________________________________________________________ */
@@ -458,10 +506,12 @@ font-weight: 100;
 }
 
 p{
-  font-size: larger;
+  font-size: 1.3em;
   padding-left: 20px;            /* Removes default list indentation */
   margin: 20px;             /* Removes default list spacing */
 }
+
+
 /*______^ PORTFOLIO ITEMS HERE ^______*/
 /*THIS IS WEHRE YOU PUT YOUR HOME PAGE SHOWS OFF WORK */
 
@@ -588,6 +638,80 @@ justify-content: center;
   height: 675px;  
 }
 /*CLICKABLE IMAGES FUNCTION, Lightboxes*/
+
+/*Animation scroll for Home ________________________________________________________________________________________________________________________________________________ */
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+  }
+  
+  .marquee-track {
+  display: flex;
+  gap: 20px;
+  width: fit-content;
+  height:40vh;
+  animation: scroll-left 20s linear infinite;
+  }
+  
+  @keyframes scroll-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-82%); }
+  }
+  
+  .marquee-wrapper:hover .marquee-track {
+  animation-play-state: paused;
+  }
+
+.workRowHome{
+display: flex;
+gap: 0px;                            /* Adds spacing between items */
+padding-left: 40px;
+padding-bottom: 0px;
+flex-shrink: 0;         /* stops items from shrinking to fit — this is the key line */
+overflow-x: auto;        /* Enables horizontal scrolling when content overflows */
+overflow-y: hidden;      /* Hides vertical scrolling */
+scroll-behavior: smooth;
+scrollbar-width: thin;
+scrollbar-color: rgb(220,220,220) rgb(220, 220, 220);
+}
+
+.workRowHome img{
+width: 100%;                          /* Forces image to fill cell width */
+height: 100%;                         /* Forces image to fill cell height */
+object-fit: cover;                    /* Crops nicely without stretching */
+}
+
+.projectDividerHome{
+display:block; 
+gap:0px;
+margin:0px;
+padding:0px 0px;
+width:100%;
+align-content: center;
+border-right: 1vw solid rgb(220, 220, 220);
+
+}
+
+.portfolio-item-home{
+width:41vw;
+height: 40vh;
+overflow: hidden;
+/*border: 0.5px solid black;*/
+}
+
+.portfolio-item-home img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center;
+display: block;
+}
+
+.portfolio-item-home{
+position: relative;   /* anchors the overlay to this box specifically */
+overflow: hidden;
+}
+/*^ animation scroll for Home ^*/
 
 /*FOOTER ________________________________________________________________________________________________________________________________________________ */
 footer{
@@ -784,9 +908,9 @@ causing content to spill past the edge of the screen.
       position: absolute;
       top: 5vh;
       right: 1vw;
-      margin-right: 50vw;
-      padding-left: 10vw;
-      padding-right: 10vw;
+      margin-right: 40vw;/*perfect for phone view of arrows*/
+      margin-left: -10vw;/*perfect for phone view of arrows*/
+      padding:0vw 10vw;
       transform: translateY(-50%);
       color: black;
       font-size: 10vw;
@@ -944,7 +1068,9 @@ white-space: nowrap; /* this makes sure stuff never breaks into 2 lines*/
 }
 #description {
   padding: 20px 20px;
+  max-width: 100%;
   font-size: 1em;
+  line-height: 24px;
 }
 
   #projectTitle{
@@ -1061,7 +1187,7 @@ white-space: nowrap; /* this makes sure stuff never breaks into 2 lines*/
 /*___^ VIDEO ITEM ^___*/
 /* PORTFOLIO ITEM STUFF ON PHONE*/    
 
-/*FOOTER ________________________________________________________________________________________________________________________________________________ */
+/*FOOTER ON PHONE ________________________________________________________________________________________________________________________________________________ */
   footer{
     padding-top:20px;
     padding-bottom: 40px;
@@ -1079,7 +1205,7 @@ white-space: nowrap; /* this makes sure stuff never breaks into 2 lines*/
           line-height: 18px;
           white-space: wrap;
         }
-/*FOOTER*/
+/*FOOTER ON PHONE*/
 
   }
   /*==========================================================*/
