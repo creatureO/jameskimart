@@ -35,7 +35,7 @@ overflow-x: hidden;
 }
  
 /* Change font for specific headings */
-h1 {
+h1{
 font-family: Gill Sans, sans-serif;
 font-weight: 900;  
 font-size: xx-large;
@@ -1066,9 +1066,7 @@ white-space: nowrap; /* this makes sure stuff never breaks into 2 lines*/
     padding-top:20px;
     padding-bottom: 40px;
     background-color: rgb(220, 220, 220); 
-    display: flex; 
-    flex-wrap: wrap;  
-    flex: 1; 
+    display: block; 
     column-gap:0px; 
     margin-left: 0px;
     }
