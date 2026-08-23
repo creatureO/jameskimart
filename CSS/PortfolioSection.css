@@ -242,14 +242,14 @@ align-items: center;
   margin-right:0px;
   margin-bottom:0px;
   margin-top:0px;
-  padding-left:40px;
+  padding-left:75px;
   padding-top:20px;
   padding-bottom:20px;
   }
   
   #description{
   line-height: 30px;
-  padding:40px 40px;
+  padding:40px 55px;
   font-size: 1.3em;
   max-width: 35%;
   word-spacing: 5px;
@@ -756,7 +756,8 @@ footer{
   }
   
   footer h2{
-    padding:0px;
+    padding:0px 25px;
+    font-weight: bold;
   }
   
   #contactMe{
@@ -1103,6 +1104,10 @@ white-space: nowrap; /* this makes sure stuff never breaks into 2 lines*/
   line-height: 24px;
 }
 
+#about{
+  padding-left:40px;
+  }
+
   #projectTitle{
     margin-left:0px;
     margin-right:40%;
@@ -1228,7 +1233,8 @@ white-space: nowrap; /* this makes sure stuff never breaks into 2 lines*/
     }
 
     footer h2{
-    padding-left:35px;
+    padding-left:40px;
+    font-weight: bold;
     }
         footer li{
           font-size: 0.5em;
