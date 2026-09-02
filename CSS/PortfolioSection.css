@@ -13,7 +13,8 @@ html, body {
 
 /* HOMEPAGE STICKY HEADER STUFF ________________________________________________________________________________________________________________________________________________ */
 #mainLogo {
-margin: 0px;             /* Removes default list spacing */
+margin-right: 10px;
+/* margin: 0px;             Removes default list spacing */
 }
 
 
@@ -775,6 +776,11 @@ footer{
     line-height: 28px;
     padding:0px;
     }
+
+  .screenCompatibleFiller{
+    height:100px; 
+    background-color: rgb(220, 220, 220);
+  }
 /*FOOTER*/
 
 /*Collapsible Button Stuff ________________________________________________________________________________________________________________________________________________ */
@@ -988,6 +994,7 @@ causing content to spill past the edge of the screen.
 /* HOMEPAGE STICKY HEADER ON PHONE ________________________________________________________________________________________________________________________________________________ */    
 #mainLogo {
 scale:0.6;             /* Removes default list spacing */
+margin-right: 0px;
 }
 
 #anchorTitle{
@@ -1236,11 +1243,16 @@ white-space: nowrap; /* this makes sure stuff never breaks into 2 lines*/
     padding-left:40px;
     font-weight: bold;
     }
-        footer li{
-          font-size: 0.5em;
-          line-height: 18px;
-          white-space: wrap;
-        }
+    footer li{
+      font-size: 0.5em;
+      line-height: 18px;
+      white-space: wrap;
+    }
+
+    .screenCompatibleFiller{
+      height:20vw; 
+      background-color: rgb(220, 220, 220);
+    }
 /*FOOTER ON PHONE*/
 
   }
