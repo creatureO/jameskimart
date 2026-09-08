@@ -82,7 +82,7 @@ function scrollRow(btn, direction) {
 //click animation
 document.addEventListener('click', function(e) {
   const splatter = document.createElement('img');
-  splatter.src = 'Homepage Images/Kimbro_Click.png';
+  splatter.src = '../Homepage Images/Kimbro_Click.png';
   splatter.className = 'click-splatter';
 
   // position it centered on the exact click point
