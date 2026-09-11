@@ -96,3 +96,19 @@ document.addEventListener('click', function(e) {
     splatter.remove();
   }, 400); // match this to your gif's actual playback length in milliseconds
 });
+
+/*phone home nav button*/
+const clickToOpen=document.getElementById("clickToOpen");
+const menu = document.querySelector('.phoneNavBar');
+clickToOpen.addEventListener('click', (e) => {
+  menu.classList.toggle('clicked');
+  console.log("Phone is active");
+  e.stopPropagation(); // prevents this same click from being seen as an "outside" click below
+});
+document.addEventListener('click', (e) => {
+  const isOpen = menu.classList.contains('is-open');
+  if (isOpen && !clickedInsideMenu) {
+    menu.classList.remove('clicked');
+  }
+});
+/*phone home nav button*/
