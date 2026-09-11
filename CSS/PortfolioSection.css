@@ -109,6 +109,11 @@ list-style-type: none;
 padding-left: 50px;
 padding-right: 50px;
 }
+
+.phoneNavBar{
+  display:none;
+}
+
 /* HOMEPAGE STICKY HEADER STUFF */
 
 /* LOBBY IMAGES or VIDEOS ________________________________________________________________________________________________________________________________________________ */
@@ -992,65 +997,152 @@ causing content to spill past the edge of the screen.
 /* LIGHTBOX STUFF ON PHONE */
 
 /* HOMEPAGE STICKY HEADER ON PHONE ________________________________________________________________________________________________________________________________________________ */    
+/* ======================================= */
+/* ======================================= */
+/* ======================================= */
+/* PHONE NAV BAR ITEMS BELLOW */
+/* ======================================= */
+/* ======================================= */
+/* ======================================= */
 #mainLogo {
-scale:0.6;             /* Removes default list spacing */
-margin-right: 0px;
-}
-
-#anchorTitle{
-  margin-left: -30px;
-  margin-bottom: -10px;
+  scale:0.6;             /* Removes default list spacing */
+  margin-right: 0px;
   }
-
-#stickyHeader li{
-  list-style-type: none;
-  padding-left: 2vw;
-  padding-right: 2vw;
+  
+  #anchorTitle{
+    margin-left: -30px;
+    margin-bottom: -5px;
+    }
+  #stickyHeader {
+    position:sticky;   /* keeps this block pinned once it hits the top of the viewport */
+    }
+  
+  #stickyHeader li{
+    list-style-type: none;
+    padding-left: 8vw;
+    padding-right: 8vw;
+    }
+   
+  h1{
+    font-family: Gill Sans, sans-serif;
+    font-weight: 900;  
+    font-size: 4vw;
+    margin: 0px;        
+    white-space: nowrap;
   }
- 
-h1{
-  font-family: Gill Sans, sans-serif;
-  font-weight: 900;  
-  font-size: 4vw;
-  margin: 0px;        
-  white-space: nowrap;
-}
-
-#subTitle{
-font-weight:lighter;
-font-size: small;
-white-space: nowrap; /* this makes sure stuff never breaks into 2 lines*/
-}
-.anchorBar {
-  display: flex;
-  /* Optional: adds spacing so items do not hug the bars tightly */
-  gap: 0px; 
-  white-space: wrap;     /* Prevents items from wrapping to a new line */
+  
+  #subTitle{
+  font-weight:lighter;
+  font-size: small;
+  white-space: nowrap; /* this makes sure stuff never breaks into 2 lines*/
+  }
+  .anchorBar {
+    display: none;
+  }
+  
+  .anchorBarItem {
+    padding:0.5vh;
+  }
+  
+  .anchorBarItem a{
+    height: 100%;       /* stretches to fill the li's full height, including the padding area */
+    offset-position: 0px;
+    margin: -2vw;
+    padding: 2vw;
+  }
+  
+  /* Removes the black bar from the final item */
+  .anchorBarItem:last-child {
+    border-right: none;
+  }
+  
+  .anchorBarItem:hover {
+    font-weight: 800;
+    background-color:rgb(200, 200, 200)
+    }
+    
+  #clickToOpen{
+    font-size:5vw; 
+    line-height: 2em; 
+    padding-top:1vh; 
+    padding-bottom:1vh; 
+    padding-left:5vw; 
+    padding-right:5vw;
+    background-color:rgb(220, 220, 220);
+    overflow-x:hidden;
+  }
+  
+  #clickToOpen:hover{
+    background-color:rgb(200, 200, 200);
+  }
+  
+  .phoneNavBar{
+  display:block;
   width:100vw;
-  font-size: 1em;
-  align-items: center;
-}
-
-.anchorBarItem {
-  padding:0.5vh;
-}
-
-.anchorBarItem a{
-  height: 100%;       /* stretches to fill the li's full height, including the padding area */
-  offset-position: 0px;
-  margin: -2vw;
-  padding: 2vw;
-}
-
-/* Removes the black bar from the final item */
-.anchorBarItem:last-child {
-  border-right: none;
-}
-
-.anchorBarItem:hover {
-  font-weight: 800;
-  background-color:rgb(200, 200, 200)
+  height:12vw;
+      position: sticky;
+      z-index:105;
+      background-color: white;
+      border-radius:0vw;
+      border-top:1px solid black;
+      border-bottom:1px solid black;
+      overflow:hidden;
+      transition:width 0.25s ease, height 0.25s ease;
   }
+  
+  .phoneNavBar.clicked{
+      position: sticky;
+      z-index:105;
+      background-color: white;
+      width:100vw;
+      height:85vw;
+          border-radius:0vw;
+          overflow:hidden;
+  }
+  
+  .phoneAnchorBar{
+    display: block;
+    /* Optional: adds spacing so items do not hug the bars tightly */
+    white-space: wrap;     /* Prevents items from wrapping to a new line */
+    width:100vw;
+    font-size: 4vw;
+    align-items: center;
+      height:fit-content;
+      width:50vw;
+      margin-left:0vw;
+      margin-right:0vw;
+      margin-top:0vw;
+      margin-bottom:0vw;
+      border-radius:0vw;
+      padding:0vw;
+      
+  }
+  
+  .phoneAnchorBarItem{
+    padding:2vh 2vw;
+    border-bottom: solid black 1px;
+    width:100vw;
+  }
+  
+  .phoneAnchorBarItem:last-child{
+      border-bottom:none;
+  }
+  
+  .phoneAnchorBarItem a{
+    height: 150%;       /* stretches to fill the li's full height, including the padding area */
+    offset-position: 0px;
+    margin:-3.5vw -100vw;
+    padding:3.5vw 100vw;
+  }
+  
+  
+  .phoneAnchorBarItem:hover {
+    font-weight: 800;
+    background-color:rgb(200, 200, 200)
+    }
+  /* ======================================= */
+  /* ======================================= */
+  /* ======================================= */
 /* HOMEPAGE STICKY HEADER ON PHONE */    
 
 /* LOBBY IMAGE STUFF ON PHONE ________________________________________________________________________________________________________________________________________________ */    
