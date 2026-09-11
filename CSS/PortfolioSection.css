@@ -1062,12 +1062,12 @@ causing content to spill past the edge of the screen.
     }
     
   #clickToOpen{
-    font-size:5vw; 
+    font-size:2vh; 
     line-height: 2em; 
-    padding-top:0.5vh; 
-    padding-bottom:0.5vh; 
-    padding-left:5vw; 
-    padding-right:5vw;
+    padding-top:1vh; 
+    padding-bottom:1vh; 
+    padding-left:8vw; 
+    padding-right:8vw;
     background-color:rgb(220, 220, 220);
     overflow-x:hidden;
   }
@@ -1079,7 +1079,7 @@ causing content to spill past the edge of the screen.
   .phoneNavBar{
   display:block;
   width:100vw;
-  height:10vw;
+  height:6vh;
       position: sticky;
       z-index:105;
       background-color: white;
@@ -1095,7 +1095,7 @@ causing content to spill past the edge of the screen.
       z-index:105;
       background-color: white;
       width:100vw;
-      height:85vw;
+      height:90vw;
           border-radius:0vw;
           overflow:hidden;
   }
@@ -1131,8 +1131,8 @@ causing content to spill past the edge of the screen.
   .phoneAnchorBarItem a{
     height: 150%;       /* stretches to fill the li's full height, including the padding area */
     offset-position: 0px;
-    margin:-3.75vw -100vw;
-    padding:3.75vw 100vw;
+    margin:-2.2vh -100vw;
+    padding:2.2vh 100vw;
   }
   
   
