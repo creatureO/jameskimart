@@ -1012,7 +1012,6 @@ causing content to spill past the edge of the screen.
   #anchorTitle{
     position:static;
     margin-left: -30px;
-    border-bottom: 1px solid black;
     }
   #stickyHeader {
     position:static;   /* keeps this block pinned once it hits the top of the viewport */
@@ -1119,6 +1118,7 @@ causing content to spill past the edge of the screen.
       z-index:105;
       background-color: white;
       border-radius:0vw;
+      border-top: 1px solid black;
       border-bottom: 1px solid black;
       overflow:hidden;
       transition:width 0.25s ease, height 0.25s ease;
