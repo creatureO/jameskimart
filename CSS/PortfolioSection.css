@@ -1010,11 +1010,12 @@ causing content to spill past the edge of the screen.
   }
   
   #anchorTitle{
+    position:static;
     margin-left: -30px;
-    margin-bottom: -5px;
+    border-bottom: 1px solid black;
     }
   #stickyHeader {
-    position:sticky;   /* keeps this block pinned once it hits the top of the viewport */
+    position:static;   /* keeps this block pinned once it hits the top of the viewport */
     }
   
   #stickyHeader li{
@@ -1058,44 +1059,78 @@ causing content to spill past the edge of the screen.
   
   .anchorBarItem:hover {
     font-weight: 800;
-    background-color:rgb(200, 200, 200)
+    background-color:rgb(220, 220, 220)
     }
-    
+
+  /*#phoneAnchorTitle{
+    display:flex; 
+    align-items: center; 
+    gap:10px;
+    margin-left: -50px;
+    margin-bottom: 10px;
+  }
+
+  #phoneAnchorTitle h1{
+    font-size:1.25rem;
+    padding-top:5px;
+  }*/
+
   #clickToOpen{
     font-size:2vh; 
     line-height: 2em; 
-    padding-top:1vh; 
-    padding-bottom:1vh; 
-    padding-left:8vw; 
-    padding-right:8vw;
-    background-color:rgb(220, 220, 220);
+    padding-top:1vh; /* VERTICAL POSITION THE PHONE NAV BAR ITEMS */
+    padding-bottom:1vh; /* VERTICAL POSITION THE PHONE NAV BAR ITEMS */
+    padding-left:6vw; 
+    padding-right:6vw;
     overflow-x:hidden;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color:rgb(220, 220, 220);
+  }
+
+  .hamburgerMenu{
+    display:block;
+  }
+
+  .hamburgerMenu.clicked{
+    display:none;
   }
   
-  #clickToOpen:hover{
-    background-color:rgb(200, 200, 200);
+  .hamburgerMenuClose{
+    display:none;
   }
-  
+
+  .hamburgerMenuClose.clicked{
+    display:block;
+    font-weight: 100; 
+    font-size: 2.5rem; 
+    line-height: 0px; 
+    margin:0px;
+    padding: 20px 0px;
+  }
+
   .phoneNavBar{
   display:block;
   width:100vw;
-  height:6vh;
-      position: sticky;
+  height:6.5vh; /*ANCHOR NAVIGATION BAR PHONE HEIGHT*/
+    position: sticky;
+    top: 0;   
       z-index:105;
       background-color: white;
       border-radius:0vw;
-      border-top:1px solid black;
-      border-bottom:1px solid black;
+      border-bottom: 1px solid black;
       overflow:hidden;
       transition:width 0.25s ease, height 0.25s ease;
   }
   
   .phoneNavBar.clicked{
       position: sticky;
+      top: 0;
       z-index:105;
       background-color: white;
       width:100vw;
-      height:90vw;
+      height:100vh;
           border-radius:0vw;
           overflow:hidden;
   }
@@ -1105,7 +1140,7 @@ causing content to spill past the edge of the screen.
     /* Optional: adds spacing so items do not hug the bars tightly */
     white-space: wrap;     /* Prevents items from wrapping to a new line */
     width:100vw;
-    font-size: 4vw;
+    font-size: 1em;
     align-items: center;
       height:fit-content;
       width:50vw;
@@ -1119,7 +1154,7 @@ causing content to spill past the edge of the screen.
   }
   
   .phoneAnchorBarItem{
-    padding:2vh 2vw;
+    padding:5vh 4vw;
     border-bottom: solid black 1px;
     width:100vw;
   }
@@ -1131,8 +1166,8 @@ causing content to spill past the edge of the screen.
   .phoneAnchorBarItem a{
     height: 150%;       /* stretches to fill the li's full height, including the padding area */
     offset-position: 0px;
-    margin:-2.2vh -100vw;
-    padding:2.2vh 100vw;
+    margin:-5vh -100vw;
+    padding:5vh 100vw;
   }
   
   

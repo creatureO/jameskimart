@@ -100,8 +100,12 @@ document.addEventListener('click', function(e) {
 /*phone home nav button*/
 const clickToOpen=document.getElementById("clickToOpen");
 const menu = document.querySelector('.phoneNavBar');
+const hamburgerMenu = document.querySelector('.hamburgerMenu');
+const hamburgerMenuClose = document.querySelector('.hamburgerMenuClose');
 clickToOpen.addEventListener('click', (e) => {
-  menu.classList.toggle('clicked');
+    menu.classList.toggle('clicked');
+    hamburgerMenu.classList.toggle('clicked');
+    hamburgerMenuClose.classList.toggle('clicked');
   console.log("Phone is active");
   e.stopPropagation(); // prevents this same click from being seen as an "outside" click below
 });
