@@ -1002,6 +1002,10 @@ causing content to spill past the edge of the screen.
       font-size: 1em;
       line-height: 24px;
     }
+
+    #lightbox-caption a{
+      font-size: 1em;
+    }
     
     #lightbox-close {
       top: 5.5vh;
