@@ -38,7 +38,7 @@ overflow-x: hidden;
  
 /* Change font for specific headings */
 h1{
-font-family: Gill Sans, sans-serif;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 font-weight: 900;  
 font-size: xx-large;
 margin: 0px;        
@@ -653,21 +653,21 @@ justify-content: center;
   transform: scale(0.75,1);
   user-select: none; /* prevents the arrow text from being selected/highlighted on click */
   transition: transform 0.5s ease;
-  background: rgb(220, 220, 220);
+  background: none;
   z-index: 50;
   }
 
 #lightbox-prev:hover, #lightbox-next:hover {
   transform: scale(1,1.5);
-  background: rgb(200, 200, 200);
+  background: none;
 }
 
 #lightbox-prev {
-  left: -1vw;
+  left: 1vw;
 }
 
 #lightbox-next {
-  right: -1vw;
+  right: 1vw;
 }
 
 
@@ -969,7 +969,7 @@ causing content to spill past the edge of the screen.
       }
     
       #lightbox-prev:hover, #lightbox-next:hover {
-        transform: scale(1,1);
+        transform: scale(0.75,1);
         background:none;
       }
     
@@ -999,6 +999,8 @@ causing content to spill past the edge of the screen.
     #lightbox-caption {
       max-width: 100%;
       margin-block-end: 100vh;
+      font-size: 1em;
+      line-height: 24px;
     }
     
     #lightbox-close {
@@ -1040,7 +1042,7 @@ causing content to spill past the edge of the screen.
     }
    
   h1{
-    font-family: Gill Sans, sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 900;  
     font-size: 1.25rem;
     margin: 0px;        
