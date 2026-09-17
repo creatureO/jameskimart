@@ -952,9 +952,7 @@ causing content to spill past the edge of the screen.
     #lightbox-prev, #lightbox-next {
       position: absolute;
       top: 2.5vh;
-      right: 1vw;
       margin-right: 40vw;
-      margin-left: -10vw;
       padding: 0vw 10vw;
       transform: translateY(-50%);
       color: black;
@@ -973,6 +971,13 @@ causing content to spill past the edge of the screen.
         background:none;
       }
     
+      #lightbox-prev {
+        left: 0vw;
+      }
+      
+      #lightbox-next {
+        right: 0vw;
+      }
     
     #lightbox-youtube {/* The YouTube lightbox iframe was a fixed 1200px wide box, guaranteed to overflow any phone screen */
       position: static;
