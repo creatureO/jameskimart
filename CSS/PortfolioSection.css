@@ -1011,7 +1011,12 @@ causing content to spill past the edge of the screen.
     #lightbox-caption a{
       font-size: 1em;
     }
-    
+
+    #lightbox-caption:hover a{
+      text-decoration: underline;
+      font-size: 1.5em;
+    }    
+
     #lightbox-close {
       top: 5.5vh;
       right: 40px;
