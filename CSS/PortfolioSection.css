@@ -1,14 +1,24 @@
 @font-face {
-  src: url('fonts/unageo/variable/Unageo[wght\,ital].ttf') format("truetype");
+  src: url('fonts/unageo/variable/Unageo[wght,ital].ttf') format("truetype");
   font-family: 'Unageo';
   font-style: normal oblique 0deg 15deg;
   font-weight: 300 700;
+  font-display: swap;
   }
+
+@font-face {
+  src: url('fonts/fruityKiwi/Fruity\ Kiwi.otf') format("opentype");
+  font-family: 'fruityKiwi';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
   /* Change font for the entire webpage */
 html, body {
-  font-family: 'Unageo';
+  font-family: 'Unageo', sans-serif;
   margin: 0px;
+  background-color: rgb(255, 255, 255);
 }
 
 /* HOMEPAGE STICKY HEADER STUFF ________________________________________________________________________________________________________________________________________________ */
@@ -38,9 +48,9 @@ overflow-x: hidden;
  
 /* Change font for specific headings */
 h1{
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-family:'fruityKiwi', sans-serif;
 font-weight: 900;  
-font-size: xx-large;
+font-size: 2em;
 margin: 0px;        
 white-space: nowrap; /* this makes sure stuff never breaks into 2 lines*/
 /*background-color:rgb(255, 255, 255)*/
@@ -954,7 +964,6 @@ causing content to spill past the edge of the screen.
       top: 2.5vh;
       margin-right: 40vw;
       padding: 0vw 10vw;
-      transform: translateY(-50%);
       color: black;
       font-size: 8vh;
       cursor: pointer;
@@ -1056,9 +1065,9 @@ causing content to spill past the edge of the screen.
     }
    
   h1{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'fruityKiwi', sans-serif;
     font-weight: 900;  
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     margin: 0px;        
     white-space: nowrap;
   }
