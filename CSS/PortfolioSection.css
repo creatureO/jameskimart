@@ -80,21 +80,15 @@ white-space: nowrap; /* this makes sure stuff never breaks into 2 lines*/
 .anchorBarItem {
   border-right: 1px solid black;
   align-self: stretch;
-  padding:1vh 0px;
+  padding:1vh 50px;
 }
 
 .anchorBarItem a{
   display: block;    /* turns the link into a full box instead of just wrapping its text */
   height: 100%;       /* stretches to fill the li's full height, including the padding area */
   offset-position: 0px;
-  margin-top: -30px;
-  padding-top: 30px;
-  margin-bottom: -30px;
-  padding-bottom: 30px;
-  margin-left: -50px;
-  padding-left: 50px;
-  margin-right: -50px;
-  padding-right: 50px;
+  padding:1vh 50px;
+  margin:-1vh -50px;
 }
 
 /* Removes the black bar from the final item */
@@ -117,8 +111,6 @@ font-size: 1.25em;
 
 #stickyHeader li{
 list-style-type: none;
-padding-left: 50px;
-padding-right: 50px;
 }
 
 .phoneNavBar{
@@ -605,7 +597,11 @@ justify-content: center;
   line-height: 2em;
 }
 
-#lightbox-caption::first-line {/*title line*/
+.captionTitle{
+  font-size: 1.5rem;
+}
+
+#lightbox-caption strong{/*title line*/
   font-size: 1.5rem;
 }
 
@@ -614,12 +610,14 @@ justify-content: center;
   text-decoration: none;
   line-height: 100px;
   font-size: 2.5vh;
+  font-weight: bold;
   transform-origin: center;
   transition: text-decoration 0.5s ease, font-size 0.5s ease;
 }
 
 #lightbox-caption:hover a{
   text-decoration: underline;
+  font-weight: bold;
   font-size: 2.75vh;
 }
 
@@ -939,20 +937,8 @@ widths and just override the few properties that were
 causing content to spill past the edge of the screen.
 ==========================================================*/
 @media (max-width: 900px) {
+  /* #subTitle's 55% left padding was measured against a wide desktop container. On a phone that same 55% still shoves the (nowrap) text far enough right that it overflows the screen. Let it wrap and sit closer to the title instead. Slightly tighter nav bar so items aren't unnecessarily wide, the row still scrolls horizontally by design (that part is fine) Body text/list padding was tuned for a wide desktop canvas The YouTube lightbox iframe was a fixed 1200px wide box, guaranteed to overflow any phone screen */
 
-  /* #subTitle's 55% left padding was measured against a wide
-     desktop container. On a phone that same 55% still shoves
-     the (nowrap) text far enough right that it overflows the
-     screen. Let it wrap and sit closer to the title instead. */
-  
-  /* Slightly tighter nav bar so items aren't unnecessarily wide,
-     the row still scrolls horizontally by design (that part is fine) */
-  
-  /* Body text/list padding was tuned for a wide desktop canvas */
-  
-  
-  /* The YouTube lightbox iframe was a fixed 1200px wide box,
-     guaranteed to overflow any phone screen */
 /* LIGHTBOX STUFF ON PHONE ________________________________________________________________________________________________________________________________________________ */
     #lightbox {
       overflow-y: auto;    /* Adds a scrollbar only when content overflows */
@@ -1068,7 +1054,7 @@ causing content to spill past the edge of the screen.
     font-family:'fruityKiwi', sans-serif;
     font-weight: 900;  
     font-size: 1.3rem;
-    margin: 0px;        
+    margin: 0px -0.4em;        
     white-space: nowrap;
   }
   
@@ -1077,6 +1063,7 @@ causing content to spill past the edge of the screen.
   font-size: 0.75rem;
   white-space: nowrap; /* this makes sure stuff never breaks into 2 lines*/
   }
+
   .anchorBar {
     display: none;
   }
