@@ -6,7 +6,7 @@
   <link rel="icon" type="image/svg+xml" href="../Homepage Images/Kimbro Logo.svg">
   <title>James Kim's Motion Graphics</title>
   <link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">
-  <link rel="stylesheet" href="../CSS/PortfolioSection.css">
+  <link rel="stylesheet" href="../CSS/style.css">
   <script src="../JS/main.js" defer></script>
   <style>
     a {/* Changes text color */
@@ -32,7 +32,6 @@
     </div>
     <span id="lightbox-next" onclick="changeSlide(1)">&#10095;</span>
   </div>
-  <iframe id="lightbox-youtube" class="hidden" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 <!-- CLICKABLE INTERACTION ITEM, lightboxes -->
 
 <!-- Sticky header wrapper: keeps the logo bar and nav bar pinned to the top as the visitor scrolls -->
@@ -41,7 +40,7 @@
 <!-- home name KIMBRO AVATAR display: inline-block;--> 
 <div id="anchorTitle">
 <div style="display:flex; align-items: center; gap:1vw;">
-<a href="../"><img src="../Homepage Images/Kimbro Logo.svg" alt="Kimbro logo" style="height:50px; width: 50px;" id="mainLogo"/></a>
+<a href="../"><img src="../Homepage Images/Kimbro Logo.svg" alt="Kimbro logo" style="height:50px; width: 50px;" class="mainLogo"/></a>
 <h1>James Kim</h1>
 </div>
 <h2 id="subTitle" style="margin-right: 5vw;">RISD, Graphic Design, 2027</h2>
@@ -95,7 +94,7 @@
 <div class="lobby-image">
 <!-- <img src="Homepage Images/Homepage Image.jpeg" alt="James Kim in Providence" style="height:100%; width: 100%;"/> -->
 <h2 id="sectionName" style="font-size: 4vw;">MOTION GRAPHICS</h2>
-<img src="../Homepage Images/Kimbro_Gif.png" alt="Kimbro logo" style="height:50%; width: 50%;" id="mainLogo"/>
+<img src="../Homepage Images/Kimbro_Gif.png" alt="Kimbro logo" style="height:50%; width: 50%;"/>
 </div>
 <div class="black-bar">
   <!-- black bar dividing-->
@@ -109,7 +108,7 @@
   <button class="scroll-btn scroll-left" onclick="scrollRow(this,-1)">&#10094;</button><!--<BUTTON>--> 
 <div class="workRow"> <!--________v Portfolio Horzontal scroll v________-->
   <div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
-    <h2 id="projectTitle">TYPOGRAPHY MOTION GRAPHIC</h2>    <!-- projectSection Title (youtbe video here)-->
+    <h2 class="projectTitle">TYPOGRAPHY MOTION GRAPHIC</h2>    <!-- projectSection Title (youtbe video here)-->
     <div class="projectDivider">
     <div class="featured-item-section-video">
         <div class="portfolio-item-video">
@@ -133,7 +132,7 @@
 <!-- black bar dividing 1-->
 </div>
 <div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
-    <h2 id="projectTitle">Spider Man 2 (2004) Type Motion Graphic.</h2>    <!-- projectSection Title (youtbe video here)-->
+    <h2 class="projectTitle">Spider Man 2 (2004) Type Motion Graphic.</h2>    <!-- projectSection Title (youtbe video here)-->
     <div class="projectDivider">
     <div class="featured-item-section-video">
         <div class="portfolio-item-video">
@@ -157,7 +156,7 @@
 <!-- black bar dividing 2-->
 </div>
 <div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
-    <h2 id="projectTitle">Saffron, the Mysterious Colour</h2>    <!-- projectSection Title (youtbe video here)-->
+    <h2 class="projectTitle">Saffron, the Mysterious Colour</h2>    <!-- projectSection Title (youtbe video here)-->
     <div class="projectDivider">
     <div class="featured-item-section-video">
         <div class="portfolio-item-video">
@@ -181,7 +180,7 @@
 <!-- black bar dividing 3-->
 </div>    
 <div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
-  <h2 id="projectTitle">Poppy Eats Jello!</h2>    <!-- projectSection Title (youtbe video here)-->
+  <h2 class="projectTitle">Poppy Eats Jello!</h2>    <!-- projectSection Title (youtbe video here)-->
   <div class="projectDivider">
   <div class="featured-item-section-video">
       <div class="portfolio-item-video">
@@ -205,7 +204,7 @@
 <!-- black bar dividing 4-->
 </div>    
 <div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
-  <h2 id="projectTitle">World Hub</h2>    <!-- projectSection Title (youtbe video here)-->
+  <h2 class="projectTitle">World Hub</h2>    <!-- projectSection Title (youtbe video here)-->
   <div class="projectDivider">
   <div class="featured-item-section-video">
       <div class="portfolio-item-video">
@@ -240,7 +239,7 @@
     <button class="scroll-btn scroll-left" onclick="scrollRow(this, -1)">&#10094;</button><!--<BUTTON>-->
 <div class="workRow"> <!--________v Portfolio Horzontal scroll v________-->
     <div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
-    <h2 id="projectTitle">Barksketball</h2>    <!-- projectSection Title (youtbe video here)-->
+    <h2 class="projectTitle">Barksketball</h2>    <!-- projectSection Title (youtbe video here)-->
     <div class="projectDivider">
     <div class="featured-item-section-video">
         <div class="portfolio-item-video">
@@ -264,7 +263,7 @@
 <!-- black bar dividing 1-->
 </div>
 <div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
-  <h2 id="projectTitle">Growing Up</h2>    <!-- projectSection Title (youtbe video here)-->
+  <h2 class="projectTitle">Growing Up</h2>    <!-- projectSection Title (youtbe video here)-->
   <div class="projectDivider">
   <div class="featured-item-section-video">
       <div class="portfolio-item-video">
@@ -288,7 +287,7 @@
 <!-- black bar dividing 2-->
 </div>
 <div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
-  <h2 id="projectTitle">DO NOT TOUCH</h2>    <!-- projectSection Title (youtbe video here)-->
+  <h2 class="projectTitle">DO NOT TOUCH</h2>    <!-- projectSection Title (youtbe video here)-->
   <div class="projectDivider">
   <div class="featured-item-section-video">
       <div class="portfolio-item-video">
@@ -323,19 +322,19 @@
   <br>
   <h2>CONTACT ME</h2>
  
-  <ul id="contactMe">
+  <ul class="contactMe" id="contactMe">
     <li><strong>Phone</strong>: 650-575-3803</li>
     <li><a href="mailto:jameskim3808@gmail.com"><strong>My Email</strong>: jameskim3808@gmail.com</a></li>
     <li><a href="mailto:jkim114@risd.edu"><strong>RISD Email</strong>: jkim114@risd.edu</a></li>
     <li><a href="https://www.linkedin.com/in/james-kim-6823172b4/" target="_blank"><strong>Linkedin</strong>:  james-kim-6823172b4</a></li>
   </ul>
-  <ul id="contactMe2">
+  <ul class="contactMe2">
   <li><a href="https://www.youtube.com/@jameskim966" target="_blank"><strong>Youtube</strong>:  @jameskim966</a></li>
   <li><a href="https://www.instagram.com/jameskim460/" target="_blank"><strong>Instagram</strong>:   Jameskim460</a></li>
   <li><a href="https://github.com/creatureO" target="_blank"><strong>GitHub</strong>:  creatureO</a></li>
   <li><a href="https://globalcomix.com/a/kimbro-comics" target="_blank"><strong>GlobalComix</strong>:  KimbroComics</a></li>
   </ul>
-<img src="../Homepage Images/Kimbro Logo.svg" alt="Kimbro logo" style="height:120px; width:120px; margin-top:10px;" id="mainLogo"/>
+<img src="../Homepage Images/Kimbro Logo.svg" alt="Kimbro logo" style="height:120px; width:120px; margin-top:10px;" class="mainLogo"/>
 </footer>
 <div class="screenCompatibleFiller"></div><!--for phone pages that are too tall, use this-->
 </div>
