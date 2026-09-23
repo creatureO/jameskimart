@@ -209,14 +209,6 @@ align-items: center;
   margin: 0px; /* Space above and below the bar */
 }
 
-.black-wall{
-  height: fill; /* Adjust thickness as needed */
-  background-color: #000000; /* Pure black */
-  width: 1px; /* Spans the full width */
-  margin: 0px; /* Space above and below the bar */
-  color:#00000000;
-}
-
 .year{
   font-weight: 100;
   margin:0px;
@@ -228,13 +220,9 @@ align-items: center;
 }
 
 .subCategory{ /*so far only used in Programming.html*/
-  margin-top: 0x;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin:0px;
   padding-left:75px;
-  padding-top: 0px;
-  padding-bottom:0px;
+  padding-top:20px;
   font-weight: 100;
   background-color: rgb(220, 220, 220);
 }
@@ -290,26 +278,22 @@ align-items: center;
   width:100%;
 }
 
-#workRow{
-  height:400px;
-}
-
 /*_____________________v SCROLL WHEEL v______________________*/
-.work-row::-webkit-scrollbar {
+.workRow::-webkit-scrollbar {
   height: 12px;
 }
 
-.work-row::-webkit-scrollbar-track {
+.workRow::-webkit-scrollbar-track {
   background: rgb(220, 220, 220);
   border-radius: 10px;
 }
 
-.work-row::-webkit-scrollbar-thumb {
+.workRow::-webkit-scrollbar-thumb {
   background: black;
   border-radius: 10px;
 }
 
-.work-row::-webkit-scrollbar-thumb:hover {
+.workRow::-webkit-scrollbar-thumb:hover {
   background: rgb(60, 60, 60);
 }
 /*_____________________^ SCROLL WHEEL ^______________________*/
@@ -364,8 +348,13 @@ width:1400px;
 }*/
 
 .projectSection{
-padding:0px;
-margin-bottom:100px;
+padding-top:0px;
+padding-bottom:100px;
+border-right: 1px solid black;
+}
+
+.projectSection:last-child{
+border-right: none;
 }
 
 .projectTitle{
@@ -591,12 +580,9 @@ justify-content: center;
   line-height: 2em;
 }
 
-.captionTitle{
-  font-size: 1.5rem;
-}
-
 #lightbox-caption strong{/*title line*/
-  font-size: 1.5rem;
+  font-size: 1.5em;
+  line-height: 1em;
 }
 
 
@@ -997,6 +983,11 @@ causing content to spill past the edge of the screen.
       line-height: 24px;
     }
 
+    #lightbox-caption strong{/*title line*/
+      font-size: 1.25em;
+      line-height: 1em;
+    }
+
     #lightbox-caption a{
       font-size: 1em;
     }
@@ -1249,6 +1240,11 @@ causing content to spill past the edge of the screen.
 .scroll-btn {
   display:none;
 }
+
+.subCategory{ /*so far only used in Programming.html*/
+  padding-bottom:20px;
+}
+
 #description {
   padding: 20px 20px;
   max-width: 100%;
@@ -1293,13 +1289,16 @@ causing content to spill past the edge of the screen.
         line-height: 24px;
         /*border: 2px solid red;*/
         }
-      
-      
+
       .projectSection{
-      padding:0px;
-      margin-bottom:0px;
+      padding-top:0px;
+      padding-bottom:0px;
+      border-right: 1px solid black;
       width:100vw;
-      
+      }
+
+      .projectSection:last-child{
+        border-right: none;
       }
 
     .featured-item-section{
@@ -1311,7 +1310,7 @@ causing content to spill past the edge of the screen.
       padding-bottom: 0px;
       margin-top: 20px;
       margin-bottom: 40px;
-      margin-left: 75pxs;
+      margin-left: 75px;
       width: 60vw;
     }
 
