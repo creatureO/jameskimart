@@ -20,50 +20,50 @@
 
 <body>
 <!-- CLICKABLE INTERACTION ITEM, Lightboxes -->
-  <div id="lightbox" class="hidden">
-    <span id="lightbox-close" onclick="closeLightbox()">&times;</span>
-    <span id="lightbox-prev" onclick="changeSlide(-1)">&#10094;</span>
-    <div id="lightbox-content">
-      <img id="lightbox-img" src="" alt="">
-      <video id="lightbox-video" class="hidden" controls></video>
-      <iframe id="lightbox-youtube" class="hidden" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      <div id="lightbox-caption"></div>
-      <!-- <div class="gapMaker"></div> -->
-    </div>
-    <span id="lightbox-next" onclick="changeSlide(1)">&#10095;</span>
+<dialog id="lightbox" class="hidden">
+  <span id="lightbox-close" onclick="closeLightbox()">&times;</span>
+  <span id="lightbox-prev" onclick="changeSlide(-1)">&#10094;</span>
+  <div id="lightbox-content">
+    <img id="lightbox-img" src="" alt="">
+    <video id="lightbox-video" class="hidden" controls></video>
+    <iframe id="lightbox-youtube" class="hidden" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div id="lightbox-caption"></div>
+    <!-- <div class="gapMaker"></div> -->
   </div>
+  <span id="lightbox-next" onclick="changeSlide(1)">&#10095;</span>
+</dialog>
 <!-- CLICKABLE INTERACTION ITEM, lightboxes -->
 
 <!-- Sticky header wrapper: keeps the logo bar and nav bar pinned to the top as the visitor scrolls -->
-<div id="stickyHeader">
+<header>
 
-<!-- home name KIMBRO AVATAR display: inline-block;--> 
-<div id="anchorTitle">
-<div style="display:flex; align-items: center; gap:1vw;">
-<a href="../"><img src="../Homepage Images/Kimbro Logo.svg" alt="Kimbro logo" style="height:50px; width: 50px;" class="mainLogo"/></a>
-<h1>James Kim</h1>
-</div>
-<h2 id="subTitle" style="margin-right: 5vw;">RISD, Graphic Design, 2027</h2>
-</div>
-<!-- home name -->
-
-<ul class="anchorBar">
-  <li class="anchorBarItem"><a href="../">Home</a></li>
-  <li class="anchorBarItem"><a href="../ProductDesign/">Product Design</a></li>
-  <li class="anchorBarItem"><a href="../Marketing/">Marketing</a></li>
-  <li class="anchorBarItem"><a href="../Programming/">Programming</a></li>
-  <li class="anchorBarItem"><a href="../MotionGraphics/">Motion Graphics</a></li>
-  <li class="anchorBarItem"><a href="../">About</a></li>
-  <li class="anchorBarItem"><a href="#contactMe">Contact Me</a></li>
-</ul>
-</div>
+  <!-- home name KIMBRO AVATAR display: inline-block;--> 
+  <div id="anchorTitle">
+  <div style="display:flex; align-items: center; gap:1vw;">
+  <a href="../"><img src="../Homepage Images/Kimbro Logo.svg" alt="Kimbro logo" style="height:50px; width: 50px;" class="mainLogo"/></a>
+  <h1>James Kim</h1>
+  </div>
+  <h2 id="subTitle" style="margin-right: 5vw;">RISD, Graphic Design, 2027</h2>
+  </div>
+  <!-- home name -->
+  
+  <ul>
+    <li><a href="../">Home</a></li>
+    <li><a href="../ProductDesign/">Product Design</a></li>
+    <li><a href="../Marketing/">Marketing</a></li>
+    <li><a href="../Programming/">Programming</a></li>
+    <li><a href="../MotionGraphics/">Motion Graphics</a></li>
+    <li><a href="../">About</a></li>
+    <li><a href="#contactMe">Contact Me</a></li>
+  </ul>
+</header>
 <!-- end sticky header wrapper -->
 
 <!-- ====================== -->
 <!-- ====================== -->
 <!-- ====================== -->
 <!-- phone's nav bar -->
-<div class="phoneNavBar">
+<nav>
   <div id="clickToOpen">
       <div class="hamburgerMenu">
         <svg viewBox="0 0 100 80" width="40" fill="currentColor" style="height:4vh;">
@@ -74,21 +74,20 @@
       </div>
         <h2 class="hamburgerMenuClose">X</h2>
   </div><!--CLOSE/OPEN BUTTON-->
-    <div style="height:1px; background-color: black;"> </div>
-  <ul class="phoneAnchorBar">
-    <li class="phoneAnchorBarItem"><a href="../">Home</a></li>
-    <li class="phoneAnchorBarItem"><a href="../ProductDesign/">Product Design</a></li>
-    <li class="phoneAnchorBarItem"><a href="../Marketing/">Marketing</a></li>
-    <li class="phoneAnchorBarItem"><a href="../Programming/">Programming</a></li>
-    <li class="phoneAnchorBarItem"><a href="../MotionGraphics/">Motion Graphics</a></li>
+  <ul>
+    <li><a href="../">Home</a></li>
+    <li><a href="../ProductDesign/">Product Design</a></li>
+    <li><a href="../Marketing/">Marketing</a></li>
+    <li><a href="../Programming/">Programming</a></li>
+    <li><a href="../MotionGraphics/">Motion Graphics</a></li>
   </ul>
-</div>
+</nav>
   <!-- end of phone's nav bar -->
   <!-- ====================== -->
   <!-- ====================== -->
   <!-- ====================== -->
 
-<div id="pageContent"> <!-- Overhead paint drop -->
+<main> <!-- Overhead paint drop -->
   <img src="../Homepage Images/HomePageDrip.png" alt="" id="gifOverlay"> <!-- Overhead paint drop -->
 
 <div class="lobby-image">
@@ -102,12 +101,12 @@
 
 
 <h2 class="year">Videos</h2>   <!-- --------Videos--------- -->
-<details class="collapsible-card">
+<details>
   <summary> </summary>
   <div class="work-row-wrapper"> <!--<BUTTON>-->
   <button class="scroll-btn scroll-left" onclick="scrollRow(this,-1)">&#10094;</button><!--<BUTTON>--> 
 <div class="workRow"> <!--________v Portfolio Horzontal scroll v________-->
-  <div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+  <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
     <h2 class="projectTitle">TYPOGRAPHY MOTION GRAPHIC</h2>    <!-- projectSection Title (youtbe video here)-->
     <div class="projectDivider">
     <div class="featured-item-section-video">
@@ -117,20 +116,20 @@
         data-images='[{"type":"youtube","src":"aqkhn1hJqeo"}]' 
         data-caption="<strong>TYPOGRAPHY MOTION GRAPHIC</strong><br>This is my After Effects Motion Graphic project which I created to give words character. I utilized sound and timing to make a fun but practical display of Text and animation. I discovered my affinity for motion graphics through this video. 2025."
         onclick="openLightbox(this)">
-        <div class="item-overlay">
+        <figcaption>
           <span class="item-title">TYPOGRAPHY MOTION GRAPHIC</span>
-        </div>           
+        </figcaption>           
         </div>
     </div>
         <p class="description">This is my After Effects Motion Graphic project which I created to give words character. I utilized sound and timing to make a fun but practical display of Text and animation. I discovered my affinity for motion graphics through this video. 2025.</p>
     </div>
-    </div>
+    </section>
 
 
 
 <!-- black bar dividing 1-->
 
-<div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+<section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
     <h2 class="projectTitle">Spider Man 2 (2004) Type Motion Graphic.</h2>    <!-- projectSection Title (youtbe video here)-->
     <div class="projectDivider">
     <div class="featured-item-section-video">
@@ -140,20 +139,20 @@
         data-images='[{"type":"youtube","src":"AMyelYe3A8I"}]' 
         data-caption="<strong>Spider Man 2 (2004) Type Motion Graphic.</strong><br> This is my work from 2025 in RISD Typography-3. I was assigned to work on any audio clip that would be viewed exclusively through type text and I used Aftereffects to achieve this."
         onclick="openLightbox(this)">
-        <div class="item-overlay">
+        <figcaption>
           <span class="item-title">Type Motion Graphic.</span>
-        </div>           
+        </figcaption>           
         </div>
     </div>
         <p class="description">This is my work from 2025 in RISD Typography-3. I was assigned to work on any audio clip that would be viewed exclusively through type text and I used Aftereffects to achieve this.</p>
     </div>
-    </div>
+    </section>
 
 
 
 <!-- black bar dividing 2-->
 
-<div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+<section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
     <h2 class="projectTitle">Saffron, the Mysterious Colour</h2>    <!-- projectSection Title (youtbe video here)-->
     <div class="projectDivider">
     <div class="featured-item-section-video">
@@ -163,20 +162,20 @@
         data-images='[{"type":"youtube","src":"SNe8uAb50FM"}]'
         data-caption="<strong>Saffron, the Mysterious Colour</strong><br> After Effects video of the history and science behind the color Saffron. 2025."
         onclick="openLightbox(this)">
-        <div class="item-overlay">
+        <figcaption>
           <span class="item-title">Saffron, the Mysterious Colour</span>
-        </div>           
+        </figcaption>           
         </div>
     </div>
         <p class="description">After Effects video of the history and science behind the color Saffron. 2025.</p>
     </div>
-    </div>
+    </section>
 
 
 
 <!-- black bar dividing 3-->
 
-<div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+<section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
   <h2 class="projectTitle">Poppy Eats Jello!</h2>    <!-- projectSection Title (youtbe video here)-->
   <div class="projectDivider">
   <div class="featured-item-section-video">
@@ -186,20 +185,20 @@
       data-images='[{"type":"youtube","src":"MKpCQCdZ728"}]' 
       data-caption="<strong>Poppy Eats Jello!</strong><br>This is my Project for GRAPH 3318 - WKSHP: DIGITAL 3D DESIGN. I made this by learning to use Cinema 4D. By the way, the dog's name is Poppy! 2026."
       onclick="openLightbox(this)">
-      <div class="item-overlay">
+      <figcaption>
         <span class="item-title">Poppy Eats Jello</span>
-      </div>           
+      </figcaption>           
       </div>
   </div>
       <p class="description">This is my Project for GRAPH 3318 - WKSHP: DIGITAL 3D DESIGN. I made this by learning to use Cinema 4D. By the way, the dog's name is Poppy! 2026.</p>
   </div>
-  </div>
+  </section>
 
 
 
 <!-- black bar dividing 4-->
   
-<div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+<section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
   <h2 class="projectTitle">World Hub</h2>    <!-- projectSection Title (youtbe video here)-->
   <div class="projectDivider">
   <div class="featured-item-section-video">
@@ -209,14 +208,14 @@
       data-images='[{"type":"youtube","src":"-sFxixCKOOE"}]' 
       data-caption="<strong>World Hub</strong><br> This Final Project is my first extensive use of Figma, wiring and designing an entire website for story tellers and world builders using easy interface and community building tactics. This mock up was a multi week project meant to provide a safe space for story tellers to organize their fictional inspirations and ideas with their friends to show their work to script writers and creative teams. Shout out to Gabriel Drozdov for his extremely helpful feedback and wireframing lessons! 2026."
       onclick="openLightbox(this)">
-      <div class="item-overlay">
+      <figcaption>
         <span class="item-title">World Hub</span>
-      </div>           
+      </figcaption>           
       </div>
   </div>
       <p class="description">This Final Project is my first extensive use of Figma, wiring and designing an entire website for story tellers and world builders using easy interface and community building tactics. 2026.</p>
   </div>
-  </div>
+  </section>
 
 <!--<div class="gapMaker"> </div>-->
 <!--________^ Portfolio Horzontal scroll ^________-->
@@ -229,12 +228,12 @@
 
 
 <h2 class="year">GIFs</h2>   <!-- --------GIFs--------- -->
-<details class="collapsible-card">
+<details>
   <summary> </summary>
   <div class="work-row-wrapper"> <!--<BUTTON>-->
     <button class="scroll-btn scroll-left" onclick="scrollRow(this, -1)">&#10094;</button><!--<BUTTON>-->
 <div class="workRow"> <!--________v Portfolio Horzontal scroll v________-->
-    <div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+    <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
     <h2 class="projectTitle">Barksketball</h2>    <!-- projectSection Title (youtbe video here)-->
     <div class="projectDivider">
     <div class="featured-item-section-video">
@@ -244,20 +243,20 @@
         data-images='[{"type":"image","src":"../James Website photos/Motion Graphics/Dog Dunk.gif"}]' 
         data-caption="<strong>Barksketball</strong><br> In an improvised group project with 3 people, I was tasked with making a motion graphic for our sports/pet product using the only 2 colors a dog could perceive. I specialize in hand drawn GIFs. 2025."
         onclick="openLightbox(this)">
-        <div class="item-overlay">
+        <figcaption>
           <span class="item-title">Barksketball</span>
-        </div>           
+        </figcaption>           
         </div>
     </div>
         <p class="description">In an improvised group project with 3 people, I was tasked with making a motion graphic for our sports/pet product using the only 2 colors a dog could perceive. I specialize in hand drawn GIFs. 2025.</p>
     </div>
-    </div>
+    </section>
 
 
 
 <!-- black bar dividing 1-->
 
-<div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+<section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
   <h2 class="projectTitle">Growing Up</h2>    <!-- projectSection Title (youtbe video here)-->
   <div class="projectDivider">
   <div class="featured-item-section-video">
@@ -267,20 +266,20 @@
       data-images='[{"type":"image","src":"../James Website photos/Motion Graphics/Growth.gif"}]' 
       data-caption="<strong>Growing Up</strong><br>Motion graphic animation to promote healthy child care in America. After Effects. 2025."
       onclick="openLightbox(this)">
-      <div class="item-overlay">
+      <figcaption>
         <span class="item-title">Growing Up</span>
-      </div>           
+      </figcaption>           
       </div>
   </div>
       <p class="description">Motion graphic animation to promote healthy child care in America. After Effects. 2025.</p>
   </div>
-  </div>
+  </section>
 
 
 
 <!-- black bar dividing 2-->
 
-<div class="projectSection"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+<section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
   <h2 class="projectTitle">DO NOT TOUCH</h2>    <!-- projectSection Title (youtbe video here)-->
   <div class="projectDivider">
   <div class="featured-item-section-video">
@@ -290,14 +289,14 @@
       data-images='[{"type":"image","src":"../James Website photos/Motion Graphics/Spiker-compressed.gif"}]' 
       data-caption="<strong>DO NOT TOUCH</strong><br> Motion graphic animation to characterize cactus as a concept. After Effects. 2025."
       onclick="openLightbox(this)">
-      <div class="item-overlay">
+      <figcaption>
         <span class="item-title">DO NOT TOUCH</span>
-      </div>           
+      </figcaption>           
       </div>
   </div>
       <p class="description">Motion graphic animation to characterize cactus as a concept. After Effects. 2025.</p>
   </div>
-  </div>
+  </section>
 
 
 <!--________^ Portfolio Horzontal scroll ^________-->
@@ -316,22 +315,22 @@
   <br>
   <h2>CONTACT ME</h2>
  
-  <ul class="contactMe" id="contactMe">
+  <ul id="contactMe">
     <li><strong>Phone</strong>: 650-575-3803</li>
     <li><a href="mailto:jameskim3808@gmail.com"><strong>My Email</strong>: jameskim3808@gmail.com</a></li>
     <li><a href="mailto:jkim114@risd.edu"><strong>RISD Email</strong>: jkim114@risd.edu</a></li>
     <li><a href="https://www.linkedin.com/in/james-kim-6823172b4/" target="_blank"><strong>Linkedin</strong>:  james-kim-6823172b4</a></li>
   </ul>
-  <ul class="contactMe2">
+  <ul>
   <li><a href="https://www.youtube.com/@jameskim966" target="_blank"><strong>Youtube</strong>:  @jameskim966</a></li>
   <li><a href="https://www.instagram.com/jameskim460/" target="_blank"><strong>Instagram</strong>:   Jameskim460</a></li>
   <li><a href="https://github.com/creatureO" target="_blank"><strong>GitHub</strong>:  creatureO</a></li>
   <li><a href="https://globalcomix.com/a/kimbro-comics" target="_blank"><strong>GlobalComix</strong>:  KimbroComics</a></li>
   </ul>
-<img src="../Homepage Images/Kimbro Logo.svg" alt="Kimbro logo" style="height:120px; width:120px; margin-top:10px;" class="mainLogo"/>
+<img src="../Homepage Images/Kimbro Logo.svg" alt="Kimbro logo" style="height:120px; width:120px; margin:0px 2vw;" class="mainLogo"/>
 </footer>
 <div class="screenCompatibleFiller"></div><!--for phone pages that are too tall, use this-->
-</div>
+</main>
 
 </body>
 </html>

@@ -29,7 +29,7 @@ margin-left:35px;
 }
 
 
-#stickyHeader{
+header{
 position: sticky;   /* keeps this block pinned once it hits the top of the viewport */
 top: 0;
 z-index: 100;       /* stays above the hero image and page content while scrolling */
@@ -63,7 +63,10 @@ font-weight:lighter;
 white-space: nowrap; /* this makes sure stuff never breaks into 2 lines*/
 }
 
-.anchorBar {
+header ul{
+  list-style: none;      /* Removes the default bullet points */
+  font-size: 1.25em;
+  
   display: flex;
   /* Optional: adds spacing so items do not hug the bars tightly */
   gap: 0px; 
@@ -75,14 +78,15 @@ white-space: nowrap; /* this makes sure stuff never breaks into 2 lines*/
   overflow-x: auto;        /* Enables horizontal scrolling when content overflows */
   overflow-y: hidden;      /* Hides vertical scrolling */
   white-space: nowrap;     /* Prevents items from wrapping to a new line */
-}
+  }
 
-.anchorBarItem {
+header li {
   border-right: 1px solid black;
   align-self: stretch;
+  list-style-type: none;
 }
 
-.anchorBarItem a{
+header li a{
   display: block;    /* turns the link into a full box instead of just wrapping its text */
   height: fit-content;       /* stretches to fill the li's full height, including the padding area */
   offset-position: 0px;
@@ -90,28 +94,16 @@ white-space: nowrap; /* this makes sure stuff never breaks into 2 lines*/
 }
 
 /* Removes the black bar from the final item */
-.anchorBarItem:last-child {
+header li :last-child {
   border-right: none;
 }
 
-.anchorBarItem:hover {
+header li :hover {
   font-weight: 800;
   background-color:rgb(200, 200, 200)
   }
 
-ul{
-list-style: none;      /* Removes the default bullet points */
-padding-top: 10px;            /* Removes default list indentation */
-padding-bottom: 10px;
-gap: 40px;             /* Adds space between the list items */
-font-size: 1.25em;
-}
-
-#stickyHeader li{
-list-style-type: none;
-}
-
-.phoneNavBar{
+nav{
   display:none;
 }
 
@@ -217,6 +209,7 @@ align-items: center;
   padding-bottom: 0px;
   background-color: rgb(220, 220, 220);
   overflow-x: hidden; /* Stops horizontal side-scrolling */
+  pointer-events: none; /* Keeps text from blocking the details */
 }
 
 .subCategory{ /*so far only used in Programming.html*/
@@ -347,13 +340,13 @@ width:1400px;
     object-fit: cover;
 }*/
 
-.projectSection{
+section{
 padding-top:0px;
 padding-bottom:100px;
 border-right: 1px solid black;
 }
 
-.projectSection:last-child{
+section:last-child{
 border-right: none;
 }
 
@@ -412,16 +405,17 @@ font-weight: 100;
 
 
 
-.portfolio-item{
+figure{
   width: 100%;
   height: 225px;
   position: relative;   /* this line is the key to letting the overlay work on each grid image */
   overflow: hidden;
   border: 0.5px solid black;
   aspect-ratio: 1 / 1; /* Makes the height always match the shrinking width */
+  margin:0px; /* VERY imporatnt to avoid default spacing */
 }
 
-.portfolio-item img{
+figure img{
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -453,7 +447,7 @@ font-weight: 100;
 
 
 
-.item-overlay {
+figcaption {
   position: absolute;
   top: 0;
   left: 0;
@@ -468,21 +462,21 @@ font-weight: 100;
   pointer-events: none;   /* lets clicks pass through to the image underneath */
 }
 
-.portfolio-item:hover .item-overlay {
+figure:hover figcaption{
   background: rgba(255, 255, 255, 0.8);  /* darkens on hover */
   opacity: 1;
   width: 100%;
   height: 100%;
 }
 
-.portfolio-item-video:hover .item-overlay {
+.portfolio-item-video:hover figcaption{
   background: rgba(255, 255, 255, 0.8);  /* darkens on hover */
   opacity: 1;
   width: 100%;
   height: 100%;
 }
 
-.program-thumbnail:hover .item-overlay {
+.program-thumbnail:hover figcaption{
   background: rgba(255, 255, 255, 0.8);  /* darkens on hover */
   opacity: 1;
   width: 100%;
@@ -497,35 +491,11 @@ font-weight: 100;
   font-weight: 100;
 }
 
-/*For Homepage*/
-.item-overlay-home {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0);   /* fully transparent by default */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;                      /* invisible until hovered */
-  transition: all 0.3s ease;       /* smooth fade in/out */
-  pointer-events: none;   /* lets clicks pass through to the image underneath */
-  }
-  
-  .portfolio-item-home:hover .item-overlay-home {
+/*For Homepage*/  
+  .portfolio-item-home:hover figcaption {
   background: rgba(255, 255, 255, 0.75);  /* darkens on hover */
   opacity: 1;
   }
-  
-  .item-title-home {
-  color: black;
-  font-size: 2rem;
-  text-align: center;
-  padding: 10px;
-  font-weight: 100;
-  }
-  /*For Homepage*/
 
 p{
   font-size: 1.25em;
@@ -542,7 +512,12 @@ p{
   display: none;
 }
 
-#lightbox {
+dialog{ /*for the lightbox overlay*/
+  border:none;
+  padding:0px;
+}
+
+#lightbox { /*for the lightbox overlay*/
 position: fixed;
 top: 0; left: 0;
 width: 100%; height: 100%;
@@ -716,12 +691,13 @@ padding:0px 0px;
 width:100%;
 align-content: center;
 border-right: 1vw solid rgb(220, 220, 220);
-
 }
 
 .portfolio-item-home{
 width:41vw;
 height: 40vh;
+overflow: hidden;
+position: relative;   /* anchors the overlay to this box specifically */
 overflow: hidden;
 /*border: 0.5px solid black;*/
 }
@@ -733,39 +709,31 @@ object-fit: cover;
 object-position: center;
 display: block;
 }
-
-.portfolio-item-home{
-position: relative;   /* anchors the overlay to this box specifically */
-overflow: hidden;
-}
 /*^ animation scroll for Home ^*/
 
 /*FOOTER ________________________________________________________________________________________________________________________________________________ */
 footer{
-  padding-top:20px;
-  padding-bottom: 40px;
+  padding:40px 0px;
   background-color: rgb(220, 220, 220); 
   display: flex; 
-  flex-wrap: wrap;  
   flex: 1; 
-  column-gap:50px; 
+  column-gap:2vw; 
   margin-left: 0px;
+  overflow-x: hidden;
   }
   
   footer h2{
-    padding:0px 25px;
+    padding:0px 2vw;
     font-weight: bold;
   }
   
-  .contactMe{
-  line-height: 28px;
-  max-width: max-content;
-  margin:0px 0px;
-  }
-  .contactMe2{
-  line-height: 28px;
-  max-width: max-content;
-  margin:0px 0px;
+  footer ul{
+    font-size: 1.25em;
+    list-style: none;
+    line-height: 28px;
+    max-width: max-content;
+    padding:15px 25px;
+    margin:0px 0px;
   }
 
   footer li{
@@ -780,7 +748,7 @@ footer{
 /*FOOTER*/
 
 /*Collapsible Button Stuff ________________________________________________________________________________________________________________________________________________ */
-.collapsible-card {
+details{
   background: rgb(220, 220, 220);
   border-bottom: 1px solid black;
   border-radius: 0px;
@@ -791,7 +759,7 @@ footer{
 }
 
 /* Clickable heading styling */
-.collapsible-card summary {
+details summary {
   cursor: pointer;
   outline: none;
   margin-top:-59px;
@@ -800,7 +768,7 @@ footer{
 }
 
 /* Optional hover state */
-.collapsible-card summary:hover {
+details summary:hover {
   font-weight:bold;
       /* 1. Define the gradient with a steep angle */
       background: linear-gradient(0deg, rgb(160,160,160), white, rgb(160,160,160), white);
@@ -817,11 +785,11 @@ footer{
 }
 
 /* Styling applied ONLY when the block is expanded */
-.collapsible-card[open] {
+details[open] {
   border-color: none;
 }
 
-.collapsible-card .content {
+details .content {
   padding-top: 10px;
   margin-top: 10px;
 }
@@ -884,7 +852,7 @@ details[open] summary::before {
 /*(Progarmming Design) Programming.HTML Main Project thumnail stuff*/
 
 /* Overlay GIF stuff ________________________________________________________________________________________________________________________________________________ */
-#pageContent {
+main {
   position: relative;   /* this is the anchor point the gif locks onto */
 }
 
@@ -1025,11 +993,11 @@ causing content to spill past the edge of the screen.
     position:static;
     margin-left: -30px;
     }
-  #stickyHeader {
+    header{
     position:static;   /* keeps this block pinned once it hits the top of the viewport */
     }
   
-  #stickyHeader li{
+    header li{
     list-style-type: none;
     padding-left: 8vw;
     padding-right: 8vw;
@@ -1049,15 +1017,15 @@ causing content to spill past the edge of the screen.
   white-space: nowrap; /* this makes sure stuff never breaks into 2 lines*/
   }
 
-  .anchorBar {
+  header ul {
     display: none;
   }
   
-  .anchorBarItem {
+  header li {
     padding:0.5vh;
   }
   
-  .anchorBarItem a{
+  header li a{
     height: 100%;       /* stretches to fill the li's full height, including the padding area */
     offset-position: 0px;
     margin: -2vw;
@@ -1065,11 +1033,11 @@ causing content to spill past the edge of the screen.
   }
   
   /* Removes the black bar from the final item */
-  .anchorBarItem:last-child {
+  header li:last-child {
     border-right: none;
   }
   
-  .anchorBarItem:hover {
+  header li:hover {
     font-weight: 800;
     background-color:rgb(220, 220, 220)
     }
@@ -1099,6 +1067,7 @@ causing content to spill past the edge of the screen.
     align-items: center;
     justify-content: flex-end;
     background-color:rgb(220, 220, 220);
+    border-bottom: 1px solid black;
   }
 
   .hamburgerMenu{
@@ -1122,7 +1091,7 @@ causing content to spill past the edge of the screen.
     padding: 20px 0px;
   }
 
-  .phoneNavBar{
+  nav{
   display:block;
   max-width:100vw;
   height:5.5vh; /*ANCHOR NAVIGATION BAR PHONE HEIGHT*/
@@ -1137,7 +1106,7 @@ causing content to spill past the edge of the screen.
       transition:width 0.25s ease, height 0.25s ease;
   }
   
-  .phoneNavBar.clicked{
+  nav.clicked{
       position: sticky;
       top: 0;
       z-index:105;
@@ -1148,7 +1117,7 @@ causing content to spill past the edge of the screen.
           overflow:hidden;
   }
   
-  .phoneAnchorBar{
+  nav ul{
     display: block;
     /* Optional: adds spacing so items do not hug the bars tightly */
     white-space: wrap;     /* Prevents items from wrapping to a new line */
@@ -1162,17 +1131,18 @@ causing content to spill past the edge of the screen.
       border-radius:0vw;      
   }
   
-  .phoneAnchorBarItem{
+  nav li{
     padding:5vh 4vw;
     border-bottom: solid black 1px;
     width:100vw;
+    white-space:nowrap;
   }
   
-  .phoneAnchorBarItem:last-child{
+  nav li:last-child{
       border-bottom:none;
   }
   
-  .phoneAnchorBarItem a{
+  nav li a{
     height: 150%;       /* stretches to fill the li's full height, including the padding area */
     offset-position: 0px;
     margin:-5vh -100vw;
@@ -1180,7 +1150,7 @@ causing content to spill past the edge of the screen.
   }
   
   
-  .phoneAnchorBarItem:hover {
+  nav li:hover {
     font-weight: 800;
     background-color:rgb(200, 200, 200)
     }
@@ -1290,14 +1260,14 @@ causing content to spill past the edge of the screen.
         /*border: 2px solid red;*/
         }
 
-      .projectSection{
+      section{
       padding-top:0px;
       padding-bottom:0px;
       border-right: 1px solid black;
       width:100vw;
       }
 
-      .projectSection:last-child{
+      section:last-child{
         border-right: none;
       }
 
@@ -1314,7 +1284,7 @@ causing content to spill past the edge of the screen.
       width: 60vw;
     }
 
-    .portfolio-item{
+    figure{
       min-width: 60vw;
       max-height: 10vh;
       position: relative;   /* this line is the key to letting the overlay work on each grid image */
@@ -1323,7 +1293,7 @@ causing content to spill past the edge of the screen.
       aspect-ratio: 1 / 1; /* Makes the height always match the shrinking width */
     }
       
-      .portfolio-item img{
+    figure img{
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -1387,6 +1357,12 @@ causing content to spill past the edge of the screen.
     padding-left:40px;
     font-weight: bold;
     }
+
+    footer ul{
+      padding:10px 40px;
+      margin:0px 0px;
+    }
+
     footer li{
       font-size: 0.75em;
       line-height: 28px;
