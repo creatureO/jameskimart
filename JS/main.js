@@ -99,7 +99,7 @@ document.addEventListener('click', function(e) {
 
 /*phone home nav button*/
 const clickToOpen=document.getElementById("clickToOpen");
-const menu = document.querySelector('.phoneNavBar');
+const menu = document.querySelector('nav');
 const hamburgerMenu = document.querySelector('.hamburgerMenu');
 const hamburgerMenuClose = document.querySelector('.hamburgerMenuClose');
 clickToOpen.addEventListener('click', (e) => {

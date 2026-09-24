@@ -20,50 +20,50 @@
 
 <body>
 <!-- CLICKABLE INTERACTION ITEM, Lightboxes -->
-  <div id="lightbox" class="hidden">
-    <span id="lightbox-close" onclick="closeLightbox()">&times;</span>
-    <span id="lightbox-prev" onclick="changeSlide(-1)">&#10094;</span>
-    <div id="lightbox-content">
-      <img id="lightbox-img" src="" alt="">
-      <video id="lightbox-video" class="hidden" controls></video>
-      <iframe id="lightbox-youtube" class="hidden" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      <div id="lightbox-caption"></div>
-      <!-- <div class="gapMaker"></div> -->
-    </div>
-    <span id="lightbox-next" onclick="changeSlide(1)">&#10095;</span>
+<dialog id="lightbox" class="hidden">
+  <span id="lightbox-close" onclick="closeLightbox()">&times;</span>
+  <span id="lightbox-prev" onclick="changeSlide(-1)">&#10094;</span>
+  <div id="lightbox-content">
+    <img id="lightbox-img" src="" alt="">
+    <video id="lightbox-video" class="hidden" controls></video>
+    <iframe id="lightbox-youtube" class="hidden" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div id="lightbox-caption"></div>
+    <!-- <div class="gapMaker"></div> -->
   </div>
+  <span id="lightbox-next" onclick="changeSlide(1)">&#10095;</span>
+</dialog>
 <!-- CLICKABLE INTERACTION ITEM, lightboxes -->
 
 <!-- Sticky header wrapper: keeps the logo bar and nav bar pinned to the top as the visitor scrolls -->
-<div id="stickyHeader">
+<header>
 
-<!-- home name KIMBRO AVATAR display: inline-block;--> 
-<div id="anchorTitle">
-<div style="display:flex; align-items: center; gap:1vw;">
-<a href="../"><img src="../Homepage Images/Kimbro Logo.svg" alt="Kimbro logo" style="height:50px; width: 50px;" class="mainLogo"/></a>
-<h1>James Kim</h1>
-</div>
-<h2 id="subTitle" style="margin-right: 5vw;">RISD, Graphic Design, 2027</h2>
-</div>
-<!-- home name -->
-
-<ul class="anchorBar">
-  <li class="anchorBarItem"><a href="../">Home</a></li>
-  <li class="anchorBarItem"><a href="../ProductDesign/">Product Design</a></li>
-  <li class="anchorBarItem"><a href="../Marketing/">Marketing</a></li>
-  <li class="anchorBarItem"><a href="../Programming/">Programming</a></li>
-  <li class="anchorBarItem"><a href="../MotionGraphics/">Motion Graphics</a></li>
-  <li class="anchorBarItem"><a href="../">About</a></li>
-  <li class="anchorBarItem"><a href="#contactMe">Contact Me</a></li>
-</ul>
-</div>
+  <!-- home name KIMBRO AVATAR display: inline-block;--> 
+  <div id="anchorTitle">
+  <div style="display:flex; align-items: center; gap:1vw;">
+  <a href="../"><img src="../Homepage Images/Kimbro Logo.svg" alt="Kimbro logo" style="height:50px; width: 50px;" class="mainLogo"/></a>
+  <h1>James Kim</h1>
+  </div>
+  <h2 id="subTitle" style="margin-right: 5vw;">RISD, Graphic Design, 2027</h2>
+  </div>
+  <!-- home name -->
+  
+  <ul>
+    <li><a href="../">Home</a></li>
+    <li><a href="../ProductDesign/">Product Design</a></li>
+    <li><a href="../Marketing/">Marketing</a></li>
+    <li><a href="../Programming/">Programming</a></li>
+    <li><a href="../MotionGraphics/">Motion Graphics</a></li>
+    <li><a href="../">About</a></li>
+    <li><a href="#contactMe">Contact Me</a></li>
+  </ul>
+</header>
 <!-- end sticky header wrapper -->
  
 <!-- ====================== -->
 <!-- ====================== -->
 <!-- ====================== -->
 <!-- phone's nav bar -->
-<div class="phoneNavBar">
+<nav>
   <div id="clickToOpen">
       <div class="hamburgerMenu">
         <svg viewBox="0 0 100 80" width="40" fill="currentColor" style="height:4vh;">
@@ -74,38 +74,39 @@
       </div>
         <h2 class="hamburgerMenuClose">X</h2>
   </div><!--CLOSE/OPEN BUTTON-->
-    <div style="height:1px; background-color: black;"> </div>
-  <ul class="phoneAnchorBar">
-    <li class="phoneAnchorBarItem"><a href="../">Home</a></li>
-    <li class="phoneAnchorBarItem"><a href="../ProductDesign/">Product Design</a></li>
-    <li class="phoneAnchorBarItem"><a href="../Marketing/">Marketing</a></li>
-    <li class="phoneAnchorBarItem"><a href="../Programming/">Programming</a></li>
-    <li class="phoneAnchorBarItem"><a href="../MotionGraphics/">Motion Graphics</a></li>
+  <ul>
+    <li><a href="../">Home</a></li>
+    <li><a href="../ProductDesign/">Product Design</a></li>
+    <li><a href="../Marketing/">Marketing</a></li>
+    <li><a href="../Programming/">Programming</a></li>
+    <li><a href="../MotionGraphics/">Motion Graphics</a></li>
   </ul>
-</div>
+</nav>
   <!-- end of phone's nav bar -->
   <!-- ====================== -->
   <!-- ====================== -->
   <!-- ====================== -->
 
-<div id="pageContent"> <!-- Overhead paint drop -->
+<main> <!-- Overhead paint drop -->
   <img src="../Homepage Images/HomePageDrip.png" alt="" id="gifOverlay"> <!-- Overhead paint drop -->
 
+<div style="height:2em;"></div> <!--gap for spacing-->
 <div class="lobby-image">
 <!-- <img src="Homepage Images/Homepage Image.jpeg" alt="James Kim in Providence" style="height:100%; width: 100%;"/> -->
 <h2 id="sectionName" style="font-size: 4vw;">PROGRAMMING</h2>
 <img src="../James Website photos/Programming/Gr Game/Programming Cover.png" alt="Kimbro logo" style="height:80%; width: 50%;"/>
 </div>
+<div style="height:2em;"></div> <!--gap for spacing-->
 <div class="black-bar">
   <!-- black bar dividing-->
 </div>
 
 
 <h2 class="year">Galactic Ranger</h2>   <!-- --------V Galactic Ranger (Prgram 1) V--------- -->
-<details class="collapsible-card">
+<details>
   <summary> </summary>
 <div class="program-thumbnail-background"> <!--________v Portfolio Horzontal scroll v________-->
-<div class="program-thumbnail">
+  <div class="program-thumbnail">
                 <img src="../James Website photos/Programming/Gr Game/GR Game 1.jpg"
                 alt="Video Game" style="height:100%; width: 100%;"  
                 data-images='[{"type":"image","src":"../James Website photos/Programming/Gr Game/GR Game 1.jpg"},
@@ -118,9 +119,9 @@
                 {"type":"youtube","src":"GlHK0Z0HR_k"}]' 
                 data-caption="<strong>Galactic Ranger</strong><br>Sci-Fi action Shooter developed in Unity game engine. 3D modeling with Unity and Cinema 4D. 2026. <br><a href='https://kimbrocomics.itch.io/galactic-ranger' target='_blank'> GAME LINK </a>" 
                 onclick="openLightbox(this)"/>
-            <div class="item-overlay">
+            <figcaption>
               <span class="item-title">Galactic Ranger</span>
-            </div>           
+            </figcaption>           
     </div>
     <p class="description">Sci-Fi action Shooter developed in Unity game engine. The video documentation underneath displays the extent of learning Unity in my Junior year as well as coding and asset design. 3D modeling with Unity and Cinema 4D. 2026. <br><a href='https://kimbrocomics.itch.io/galactic-ranger' target='_blank'><strong> GAME LINK </strong></a></p>
 </div>
@@ -311,7 +312,7 @@
 
 <!--_________________V PORTFOLIO ITEMS HERE V_________________-->   
 <h2 class="year">Star Voyage</h2>   <!-- --------V Galactic Ranger (Prgram 2) V--------- -->
-<details class="collapsible-card">
+<details>
   <summary> </summary>
 <div class="program-thumbnail-background"> <!--________v Portfolio Horzontal scroll v________-->
 <div class="program-thumbnail">
@@ -323,9 +324,9 @@
                 {"type":"image","src":"../James Website photos/Programming/Old Websites/Star Voyage 4.jpg"}]' 
                 data-caption="<strong>Star Voyage</strong><br> I programmed my first website from Javascript using p5.js and Github publishing. I learned how to code games and 3D effects using Javascript and html. <br><a href='https://creatureo.github.io/Star-Voyage/' target='_blank'> CLICK HERE </a>" 
                 onclick="openLightbox(this)"/>
-            <div class="item-overlay">
+            <figcaption>
               <span class="item-title">Star Voyage</span>
-            </div>           
+            </figcaption>           
     </div>
     <p class="description">I programmed my first website from Javascript using p5.js and Github publishing. I learned <strong>how to code games</strong> and 3D effects using Javascript and html. <br><a href='https://creatureo.github.io/Star-Voyage/' target='_blank'><strong> CLICK HERE </strong></a></p>
 </div>
@@ -340,7 +341,7 @@
 
 <!--_________________V PORTFOLIO ITEMS HERE V_________________-->   
 <h2 class="year" style="white-space: nowrap;">Remember (The Elderly Reading App)</h2>   <!-- --------V Galactic Ranger (Prgram 3) V--------- -->
-<details class="collapsible-card">
+<details>
   <summary> </summary>
 <div class="program-thumbnail-background"> <!--________v Portfolio Horzontal scroll v________-->
 <div class="program-thumbnail">
@@ -349,9 +350,9 @@
                 data-images='[{"type":"youtube","src":"LV227z3b3Ew"}]'
                 data-caption="<strong>Remember</strong><br>I used Figma to mock up a reading app for elderly people past the age of 60 to comabat memory loss and worsened vision. I wired this data design for easy UI. 2026." 
                 onclick="openLightbox(this)"/>
-            <div class="item-overlay">
+            <figcaption>
               <span class="item-title">Remember</span>
-            </div>           
+            </figcaption>           
     </div>
     <p class="description">I used Figma to mock up a reading app for elderly people past the age of 60 to comabat memory loss and worsened vision. I wired this data design for easy UI. 2026.</p>
 </div>
@@ -366,22 +367,22 @@
   <br>
   <h2>CONTACT ME</h2>
  
-  <ul class="contactMe" id="contactMe">
+  <ul id="contactMe">
     <li><strong>Phone</strong>: 650-575-3803</li>
     <li><a href="mailto:jameskim3808@gmail.com"><strong>My Email</strong>: jameskim3808@gmail.com</a></li>
     <li><a href="mailto:jkim114@risd.edu"><strong>RISD Email</strong>: jkim114@risd.edu</a></li>
     <li><a href="https://www.linkedin.com/in/james-kim-6823172b4/" target="_blank"><strong>Linkedin</strong>:  james-kim-6823172b4</a></li>
   </ul>
-  <ul class="contactMe2">
+  <ul>
   <li><a href="https://www.youtube.com/@jameskim966" target="_blank"><strong>Youtube</strong>:  @jameskim966</a></li>
   <li><a href="https://www.instagram.com/jameskim460/" target="_blank"><strong>Instagram</strong>:   Jameskim460</a></li>
   <li><a href="https://github.com/creatureO" target="_blank"><strong>GitHub</strong>:  creatureO</a></li>
   <li><a href="https://globalcomix.com/a/kimbro-comics" target="_blank"><strong>GlobalComix</strong>:  KimbroComics</a></li>
   </ul>
-<img src="../Homepage Images/Kimbro Logo.svg" alt="Kimbro logo" style="height:120px; width:120px; margin-top:10px;" class="mainLogo"/>
+<img src="../Homepage Images/Kimbro Logo.svg" alt="Kimbro logo" style="height:120px; width:120px; margin:0px 2vw;" class="mainLogo"/>
 </footer>
 <div class="screenCompatibleFiller"></div><!--for phone pages that are too tall, use this-->
-</div>
+</main>
 
 </body>
 </html>
