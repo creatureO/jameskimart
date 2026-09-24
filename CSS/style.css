@@ -1,7 +1,7 @@
 @font-face {
   src: url('fonts/unageo/variable/Unageo[wght,ital].ttf') format("truetype");
   font-family: 'Unageo';
-  font-style: normal oblique 0deg 15deg;
+  font-style: normal;
   font-weight: 300 700;
   font-display: swap;
   }
@@ -89,16 +89,15 @@ header li {
 header li a{
   display: block;    /* turns the link into a full box instead of just wrapping its text */
   height: fit-content;       /* stretches to fill the li's full height, including the padding area */
-  offset-position: 0px;
   padding:1vh 50px;
 }
 
 /* Removes the black bar from the final item */
-header li :last-child {
+header li:last-child {
   border-right: none;
 }
 
-header li :hover {
+header li:hover {
   font-weight: 800;
   background-color:rgb(200, 200, 200)
   }
@@ -786,7 +785,7 @@ details summary:hover {
 
 /* Styling applied ONLY when the block is expanded */
 details[open] {
-  border-color: none;
+  border-color: transparent;
 }
 
 details .content {
@@ -839,14 +838,16 @@ details[open] summary::before {
 
 .program-thumbnail{
   width: 75%;
+  height:40vw;
   position:relative;
+  border: none;
 }
 
 .program-thumbnail img{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: top;
   display: block;
 }
 /*(Progarmming Design) Programming.HTML Main Project thumnail stuff*/
@@ -997,11 +998,31 @@ causing content to spill past the edge of the screen.
     position:static;   /* keeps this block pinned once it hits the top of the viewport */
     }
   
+    header ul {
+      display: none;
+    }
+    
     header li{
     list-style-type: none;
-    padding-left: 8vw;
-    padding-right: 8vw;
+    padding: 0.5vh 8vw;
     }
+
+    header li a{
+      height: 100%;       /* stretches to fill the li's full height, including the padding area */
+      margin: -2vw;
+      padding: 2vw;
+    }
+
+  /* Removes the black bar from the final item */
+  header li:last-child {
+    border-right: none;
+  }
+  
+  header li:hover {
+    font-weight: 800;
+    background-color:rgb(220, 220, 220)
+  }
+
    
   h1{
     font-family:'fruityKiwi', sans-serif;
@@ -1016,32 +1037,7 @@ causing content to spill past the edge of the screen.
   font-size: 0.75rem;
   white-space: nowrap; /* this makes sure stuff never breaks into 2 lines*/
   }
-
-  header ul {
-    display: none;
-  }
   
-  header li {
-    padding:0.5vh;
-  }
-  
-  header li a{
-    height: 100%;       /* stretches to fill the li's full height, including the padding area */
-    offset-position: 0px;
-    margin: -2vw;
-    padding: 2vw;
-  }
-  
-  /* Removes the black bar from the final item */
-  header li:last-child {
-    border-right: none;
-  }
-  
-  header li:hover {
-    font-weight: 800;
-    background-color:rgb(220, 220, 220)
-    }
-
   /*#phoneAnchorTitle{
     display:flex; 
     align-items: center; 
@@ -1143,14 +1139,13 @@ causing content to spill past the edge of the screen.
   }
   
   nav li a{
-    height: 150%;       /* stretches to fill the li's full height, including the padding area */
-    offset-position: 0px;
+    height: fit-content;       /* stretches to fill the li's full height, including the padding area */
     margin:-5vh -100vw;
     padding:5vh 100vw;
   }
   
   
-  nav li:hover {
+  nav li:hover{
     font-weight: 800;
     background-color:rgb(200, 200, 200)
     }
@@ -1172,6 +1167,15 @@ causing content to spill past the edge of the screen.
   }
 /* LOBBY IMAGE STUFF ON PHONE */    
 
+/* Home specific items ________________________________________________________________________________________________________________________________________________ */
+.portfolio-item-home{
+  width:41vw;
+  max-height: 40vh;
+  overflow: hidden;
+  position: relative; 
+  overflow: hidden;
+  }
+  
 /*(Progarmming Design) Programming.HTML Main Project thumnail stuff ________________________________________________________________________________________________________________________________________________ */
 .program-thumbnail-background{
   background-color: white;
@@ -1181,14 +1185,16 @@ causing content to spill past the edge of the screen.
 
 .program-thumbnail{
   width: 100%;
+  max-height:100%;
   position:relative;
+  border: none;
 }
 
 .program-thumbnail img{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: top;
   display: block;
 }
 
@@ -1326,7 +1332,7 @@ causing content to spill past the edge of the screen.
 .portfolio-item-video{
   display:flex;
   width: 60vw;
-  height: 20vh;
+  max-height: 20vh;
   border: 0.5px solid black;
   aspect-ratio: 1 / 1; /* Makes the height always match the shrinking width */
   position: relative;   /* this is the missing piece — anchors the overlay here specifically */
