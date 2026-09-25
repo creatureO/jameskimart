@@ -232,7 +232,7 @@ align-items: center;
   
   #description{
   line-height: 30px;
-  padding:40px 55px;
+  padding:40px 75px;
   font-size: 1.25em;
   max-width: 35%;
   word-spacing: 5px;
@@ -252,6 +252,11 @@ align-items: center;
   font-size: 1.25em;
   /*border: 2px solid red;*/
   }
+
+  p{
+    font-size: 1.25em;
+  }
+
 /* Some Text Stuff */
 
 /*THIS IS WEHRE YOU PUT YOUR HOME PAGE SHOWS OFF WORK ________________________________________________________________________________________________________________________________________________ */
@@ -495,13 +500,6 @@ figure:hover figcaption{
   background: rgba(255, 255, 255, 0.75);  /* darkens on hover */
   opacity: 1;
   }
-
-p{
-  font-size: 1.25em;
-  padding-left: 20px;            /* Removes default list indentation */
-  margin: 20px;             /* Removes default list spacing */
-}
-
 
 /*______^ PORTFOLIO ITEMS HERE ^______*/
 /*THIS IS WEHRE YOU PUT YOUR HOME PAGE SHOWS OFF WORK */
@@ -838,7 +836,8 @@ details[open] summary::before {
 
 .program-thumbnail{
   width: 75%;
-  height:40vw;
+  height: auto;
+  aspect-ratio: auto; /* Makes the height always match the shrinking width */
   position:relative;
   border: none;
 }
@@ -847,7 +846,7 @@ details[open] summary::before {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top;
+  object-position: center;
   display: block;
 }
 /*(Progarmming Design) Programming.HTML Main Project thumnail stuff*/
@@ -1128,7 +1127,7 @@ causing content to spill past the edge of the screen.
   }
   
   nav li{
-    padding:5vh 4vw;
+    padding:5vh 0vw;
     border-bottom: solid black 1px;
     width:100vw;
     white-space:nowrap;
@@ -1140,8 +1139,7 @@ causing content to spill past the edge of the screen.
   
   nav li a{
     height: fit-content;       /* stretches to fill the li's full height, including the padding area */
-    margin:-5vh -100vw;
-    padding:5vh 100vw;
+    padding: 5vh 100vw 5vh 4vw;   /*top, right, bottom, and left*/
   }
   
   
