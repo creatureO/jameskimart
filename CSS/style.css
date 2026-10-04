@@ -192,8 +192,8 @@ align-items: center;
 }
 
 /* homepage image or video */
-
-.black-bar{
+hr{
+  border: none;
   height: 1px; /* Adjust thickness as needed */
   background-color: #000000; /* Pure black */
   width: 100%; /* Spans the full width */
@@ -243,9 +243,7 @@ align-items: center;
 .description{
   margin-top: 15px;
   margin-bottom: 40px;
-  margin-left: 40px;
-  margin-right:40px;
-  padding-left: 0px;
+  padding-left: 40px;
   line-height: 30px;
   max-width: 25%;
   white-space: wrap;
@@ -329,14 +327,6 @@ align-items: center;
 }
 /*_____________________^ SCROLL BUTTON ^______________________*/
 
-.projectDivider{
-display:flex; 
-gap:0px;
-margin:0px;
-padding:0px;
-width:1400px;
-}
-
 /*.sideImage{
     width: 100%;
     height: 100%;
@@ -354,29 +344,29 @@ section:last-child{
 border-right: none;
 }
 
+.projectDivider{
+  display:flex; 
+  gap:0px;
+  margin:0px;
+  padding:0px;
+  width:1400px;
+  }
+
 .projectTitle{
-margin-left:0px;
-margin-right:40%;
 margin-bottom:20px;
-margin-top:20px;
+margin-top:40px;
 padding-left:75px;
-padding-top:20px;
-padding-bottom:0px;
 font-weight: 100;
 /*background: linear-gradient(to right, rgb(220, 220, 220, 100%),rgb(220, 220, 220, 90%), rgba(220, 220, 220, 0));*/
 }
-
 
 .featured-item-section{
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Creates 3 equal columns */
   gap: 10px;                            /* Adds spacing between items */
-  padding-left: 0px;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-left: 75px;
   margin-top: 20px;
   margin-bottom: 40px;
-  margin-left: 75px;
   width: 50%;
 }
 
@@ -386,17 +376,13 @@ font-weight: 100;
   aspect-ratio: 1 / 1; /* Makes the height always match the shrinking width */
 }
 
-
 /*___V VIDEO SECTION V___*/
 .featured-item-section-video{
   display: grid;
   grid-template-columns: repeat(1, 1fr); 
-  padding-left: 0px;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-left: 75px;
   margin-top: 20px;
   margin-bottom: 40px;
-  margin-left: 75px;
   width: 50%;
 }
 
@@ -511,19 +497,19 @@ figure:hover figcaption{
 
 dialog{ /*for the lightbox overlay*/
   border:none;
-  padding:0px;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255, 255, 255, 0.90);
+  z-index: 1000;
+  display: flex;
+  flex-wrap: wrap;     /* Enables items to wrap onto new lines */
+  align-items: center;
+  justify-content: center;
 }
 
 #lightbox { /*for the lightbox overlay*/
-position: fixed;
-top: 0; left: 0;
-width: 100%; height: 100%;
-background: rgba(255, 255, 255, 0.90);
-z-index: 1000;
-display: flex;
-flex-wrap: wrap;     /* Enables items to wrap onto new lines */
-align-items: center;
-justify-content: center;
+  padding:0px;
 }
 
 #lightbox.hidden {
@@ -531,6 +517,7 @@ justify-content: center;
 }
 
 #lightbox-content {
+  border: none;
   display:flex;
   gap: 2em;
   padding: 0vw 10vw;
@@ -888,8 +875,12 @@ causing content to spill past the edge of the screen.
   /* #subTitle's 55% left padding was measured against a wide desktop container. On a phone that same 55% still shoves the (nowrap) text far enough right that it overflows the screen. Let it wrap and sit closer to the title instead. Slightly tighter nav bar so items aren't unnecessarily wide, the row still scrolls horizontally by design (that part is fine) Body text/list padding was tuned for a wide desktop canvas The YouTube lightbox iframe was a fixed 1200px wide box, guaranteed to overflow any phone screen */
 
 /* LIGHTBOX STUFF ON PHONE ________________________________________________________________________________________________________________________________________________ */
+
+    dialog{ /*for the lightbox overlay*/
+    overflow-y: auto;    /* Adds a scrollbar only when content overflows */
+    }
+
     #lightbox {
-      overflow-y: auto;    /* Adds a scrollbar only when content overflows */
       margin-bottom: 100px;
       }
     
@@ -1052,11 +1043,8 @@ causing content to spill past the edge of the screen.
 
   #clickToOpen{
     font-size:2vh; 
-    line-height: 2em; 
-    padding-top:1.5vh; /* VERTICAL POSITION THE PHONE NAV BAR ITEMS */
-    padding-bottom:1.5vh; /* VERTICAL POSITION THE PHONE NAV BAR ITEMS */
-    padding-left:6vw; 
-    padding-right:6vw;
+    line-height: 2em;
+    padding:1.5vh 6vw;
     overflow-x:hidden;
     display:flex;
     align-items: center;
@@ -1230,33 +1218,27 @@ causing content to spill past the edge of the screen.
   padding-left:40px;
   }
 
+  .projectDivider{
+    display:block; 
+    column-gap:15vw;
+    margin:0px;
+    padding:0px;
+    width:100vw;
+    }
+
   .projectTitle{
-    margin-left:0px;
-    margin-right:40%;
     margin-bottom:20px;
-    margin-top:20px;
+    margin-top:40px;
     padding-left:75px;
-    padding-top:20px;
-    padding-bottom:0px;
     width:60%;
     white-space: wrap;
     font-size: 1.5em;
     }
 
-    .projectDivider{
-      display:block; 
-      column-gap:15vw;
-      margin:0px;
-      padding:0px;
-      width:100vw;
-      }
-
       .description{
         margin-top: 20px;
         margin-bottom: 40px;
-        margin-left: 75px;
-        margin-right:40px;
-        padding-left: 0px;
+        padding-left: 75px;
         max-width: 60%;
         white-space: wrap;
         font-size: 1em;
@@ -1279,12 +1261,9 @@ causing content to spill past the edge of the screen.
       display: grid;
       grid-template-columns: repeat(1, 1fr); /* Creates 3 equal columns */
       gap: 1vh 1vw; /* 10px vertical gap, 20px horizontal gap */
-      padding-left: 0px;
-      padding-top: 0px;
-      padding-bottom: 0px;
       margin-top: 20px;
       margin-bottom: 40px;
-      margin-left: 75px;
+      padding-left: 75px;
       width: 60vw;
     }
 
@@ -1305,16 +1284,11 @@ causing content to spill past the edge of the screen.
         display: block;
       }
 
-
-
-
       /*___V VIDEO SECTION V___*/
 .featured-item-section-video{
   display: grid;
   grid-template-columns: repeat(1, 1fr); 
-  padding-left: 0px;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-left: 75px;
   width: 60vw;
 }
 

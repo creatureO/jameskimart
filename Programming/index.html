@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Modified Oct 4, 2026, 1:30 AM --> <!--Programming-->
+<!-- Modified Oct 4, 2026, 5:30 PM --> <!--Programming-->
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">  
 
-<!-- 1. For Desktop Safari & Modern Browser Tabs (Keeps your vector logo sharp) -->
-<link rel="icon" type="image/png" href="../Homepage%20Images/Kimbro%20Logo.png" sizes="32x32">
+<!-- Fallback PNG (browsers without SVG favicon support, e.g. Safari) -->
+<link rel="icon" type="image/png" href="../Homepage%20Images/Kimbro%20Logo.png" sizes="48x48">
+<!-- Preferred: scalable SVG -->
 <link rel="icon" type="image/svg+xml" href="../Homepage%20Images/Kimbro%20Logo.svg" sizes="any">
-
 <!-- 2. For iOS Home Screen and Safari Favorites Grid (The solid PNG version) -->
-<link rel="apple-touch-icon" href="../Homepage%20Images/Kimbro%20Logo-Touch.png">
+<link rel="apple-touch-icon" href="../Homepage%20Images/Kimbro%20Logo.png">
   
   <title>James Kim's Programming Design</title>
   <!--<link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">-->
@@ -31,13 +31,13 @@
 <dialog id="lightbox" class="hidden">
   <span id="lightbox-close" onclick="closeLightbox()">&times;</span>
   <span id="lightbox-prev" onclick="changeSlide(-1)">&#10094;</span>
-  <div id="lightbox-content">
+  <section id="lightbox-content">
     <img id="lightbox-img" src="" alt="">
     <video id="lightbox-video" class="hidden" controls></video>
     <iframe id="lightbox-youtube" class="hidden" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     <div id="lightbox-caption"></div>
     <!-- <div class="gapMaker"></div> -->
-  </div>
+  </section>
   <span id="lightbox-next" onclick="changeSlide(1)">&#10095;</span>
 </dialog>
 <!-- CLICKABLE INTERACTION ITEM, lightboxes -->
@@ -105,9 +105,7 @@
 <img src="../James Website photos/Programming/Gr Game/Programming Cover.png" alt="Kimbro logo" style="height:80%; width: 50%;"/>
 </div>
 <div style="height:2em;"></div> <!--gap for spacing-->
-<div class="black-bar">
-  <!-- black bar dividing-->
-</div>
+<hr><!--BAR OF SEPARATION-->
 
 
 <h2 class="year">Galactic Ranger</h2>   <!-- --------V Galactic Ranger (Prgram 1) V--------- -->
