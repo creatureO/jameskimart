@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Modified Oct 4, 2026, 1:30 AM --> <!--ProductDesign-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Modified Oct 4, 2026, 5:30 PM --> <!--ProductDesign-->
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- 1. For Desktop Safari & Modern Browser Tabs (Keeps your vector logo sharp) -->
-<link rel="icon" type="image/png" href="../Homepage%20Images/Kimbro%20Logo.png" sizes="32x32">
+<!-- Fallback PNG (browsers without SVG favicon support, e.g. Safari) -->
+<link rel="icon" type="image/png" href="../Homepage%20Images/Kimbro%20Logo.png" sizes="48x48">
+<!-- Preferred: scalable SVG -->
 <link rel="icon" type="image/svg+xml" href="../Homepage%20Images/Kimbro%20Logo.svg" sizes="any">
-
 <!-- 2. For iOS Home Screen and Safari Favorites Grid (The solid PNG version) -->
-<link rel="apple-touch-icon" href="../Homepage%20Images/Kimbro%20Logo-Touch.png">
+<link rel="apple-touch-icon" href="../Homepage%20Images/Kimbro%20Logo.png">
   
   <title>James Kim's Product Design</title>
   <!--<link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">-->
@@ -31,13 +31,13 @@
 <dialog id="lightbox" class="hidden">
   <span id="lightbox-close" onclick="closeLightbox()">&times;</span>
   <span id="lightbox-prev" onclick="changeSlide(-1)">&#10094;</span>
-  <div id="lightbox-content">
+  <section id="lightbox-content">
     <img id="lightbox-img" src="" alt="">
     <video id="lightbox-video" class="hidden" controls></video>
     <iframe id="lightbox-youtube" class="hidden" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     <div id="lightbox-caption"></div>
     <!-- <div class="gapMaker"></div> -->
-  </div>
+  </section>
   <span id="lightbox-next" onclick="changeSlide(1)">&#10095;</span>
 </dialog>
 <!-- CLICKABLE INTERACTION ITEM, lightboxes -->
@@ -103,9 +103,7 @@
 <h2 id="sectionName" style="white-space: wrap;">PRODUCT DESIGN</h2>
 <img src="../James Website photos/Product Design/Run to Resist/book and hand-compressed.png" alt="Kimbro logo" style="height:80%; width: 50%;   margin-bottom:-10px;"/>
 </div>
-<div class="black-bar">
-  <!-- black bar dividing-->
-</div>
+<hr><!--BAR OF SEPARATION-->
 
 
 <h2 class="year">2026</h2>   <!-- --------2026--------- -->

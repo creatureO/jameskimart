@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Modified Oct 4, 2026, 1:30 AM --> <!--James Kim Graphic Designer and Programmer 2027-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<!-- Modified Oct 4, 2026, 5:30 PM --> <!--James Kim Graphic Designer and Programmer 2027-->
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
 
-<!-- 1. For Desktop Safari & Modern Browser Tabs (Keeps your vector logo sharp) -->
-<link rel="icon" type="image/png" href="Homepage%20Images/Kimbro%20Logo.png" sizes="32x32">
+<!-- Fallback PNG (browsers without SVG favicon support, e.g. Safari) -->
+<link rel="icon" type="image/png" href="Homepage%20Images/Kimbro%20Logo.png" sizes="48x48">
+<!-- Preferred: scalable SVG -->
 <link rel="icon" type="image/svg+xml" href="Homepage%20Images/Kimbro%20Logo.svg" sizes="any">
-
 <!-- 2. For iOS Home Screen and Safari Favorites Grid (The solid PNG version) -->
-<link rel="apple-touch-icon" href="Homepage%20Images/Kimbro%20Logo-Touch.png">
+<link rel="apple-touch-icon" href="Homepage%20Images/Kimbro%20Logo.png">
 
   <title>James Kim's Portfolio</title>
   <!--<link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">-->
@@ -34,13 +34,13 @@
   <dialog id="lightbox" class="hidden">
     <span id="lightbox-close" onclick="closeLightbox()">&times;</span>
     <span id="lightbox-prev" onclick="changeSlide(-1)">&#10094;</span>
-    <div id="lightbox-content">
+    <section id="lightbox-content">
       <img id="lightbox-img" src="" alt="">
       <video id="lightbox-video" class="hidden" controls></video>
       <iframe id="lightbox-youtube" class="hidden" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       <div id="lightbox-caption"></div>
       <!-- <div class="gapMaker"></div> -->
-    </div>
+    </section>
     <span id="lightbox-next" onclick="changeSlide(1)">&#10095;</span>
   </dialog>
 <!-- CLICKABLE INTERACTION ITEM, lightboxes -->
@@ -107,23 +107,15 @@
   <source src="James Website photos/Lobby Slides/Lobby Slides-compressed.mp4" type="video/mp4">
   </video>
 </div>
-<div class="black-bar">
-  <!-- black bar dividing-->
-</div>
+<hr><!--BAR OF SEPARATION-->
 
 <h2 class="about" id="about">ABOUT</h2>
-<div class="black-bar">
-  <!-- black bar dividing-->
-</div>
+<hr><!--BAR OF SEPARATION-->
 <p id="description">I am a Senior graphic design student and aspire to work with <strong>design studios</strong> in commerce, media, and marketing. I apply my visual and typography experience to UI/UX design, code, production, and concept development for digital platforms, social media marketing, ads, merchandise, and prints.</p>
 
-<div class="black-bar">
-  <!-- black bar dividing-->
-</div>
+<hr><!--BAR OF SEPARATION-->
 <h2 class="about">FEATURED</h2>
-<div class="black-bar">
-  <!-- black bar dividing-->
-</div>
+<hr><!--BAR OF SEPARATION-->
 
 
 <!-- <div class="work-row-wrapper"> <BUTTON>-->
@@ -357,9 +349,7 @@
 <!-- </div> BUTTON>-->
 
 
-<div class="black-bar">
-  <!-- black bar dividing-->
-</div>
+<hr><!--BAR OF SEPARATION-->
 
 </main><!-- page content -->
 <footer>
@@ -381,6 +371,6 @@
 <img src="../Homepage Images/Kimbro Logo.svg" alt="Kimbro logo" style="height:120px; width:120px; margin:0px 2vw;" class="mainLogo"/>
 </footer>
 <div class="screenCompatibleFiller"></div><!--for phone pages that are too tall, use this-->
-<div style="position:relative;"> <p style="font-size: 0.5em; position: absolute; bottom:20px; left:4vh; opacity: 50%;">Edited October 4, 2026, 1:30AM</p>  </div><!-- Visible text blob of edits -->
+<div style="position:relative;"> <p style="font-size: 0.5em; position: absolute; bottom:20px; left:4vh; opacity: 50%;">Edited October 4, 2026, 5:30PM</p>  </div><!-- Visible text blob of edits -->
 </body>
 </html>
