@@ -244,6 +244,7 @@ hr{
   margin-top: 15px;
   margin-bottom: 40px;
   padding-left: 40px;
+  padding-right: 40px;
   line-height: 30px;
   max-width: 25%;
   white-space: wrap;
@@ -1044,7 +1045,7 @@ causing content to spill past the edge of the screen.
   #clickToOpen{
     font-size:2vh; 
     line-height: 2em;
-    padding:1.5vh 6vw;
+    padding:1.5vh 6vw; /* specs can be changed depending on device*/
     overflow-x:hidden;
     display:flex;
     align-items: center;
