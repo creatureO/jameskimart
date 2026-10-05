@@ -1073,6 +1073,7 @@ causing content to spill past the edge of the screen.
     line-height: 0px; 
     margin:0px;
     padding: 20px 0px;
+    transform: scaleY(0.75);
   }
 
   nav{
@@ -1097,6 +1098,7 @@ causing content to spill past the edge of the screen.
       background-color: white;
       max-width:100vw;
       height:100vh;
+      border-bottom: none;
           border-radius:0vw;
           overflow:hidden;
   }
