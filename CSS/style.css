@@ -45,6 +45,10 @@ align-items: center;
 flex-wrap: nowrap;
 overflow-x: hidden;
 }
+
+.phonePageTitle{
+  display:none;
+}
  
 /* Change font for specific headings */
 h1{
@@ -63,48 +67,61 @@ font-weight:lighter;
 white-space: nowrap; /* this makes sure stuff never breaks into 2 lines*/
 }
 
-header ul{
-  list-style: none;      /* Removes the default bullet points */
-  font-size: 1.25em;
+  #clickToOpen{
+    display:none;
+  }
+
+  .hamburgerMenu{
+    display:none;
+  }
   
-  display: flex;
-  /* Optional: adds spacing so items do not hug the bars tightly */
-  gap: 0px; 
-  background-color: rgb(220, 220, 220);
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  margin:0px;
-  overflow-x: auto;        /* Enables horizontal scrolling when content overflows */
-  overflow-y: hidden;      /* Hides vertical scrolling */
-  white-space: nowrap;     /* Prevents items from wrapping to a new line */
+  .hamburgerMenuClose{
+    display:none;
   }
 
-header li {
-  border-right: 1px solid black;
-  align-self: stretch;
-  list-style-type: none;
-}
-
-header li a{
-  display: block;    /* turns the link into a full box instead of just wrapping its text */
-  height: fit-content;       /* stretches to fill the li's full height, including the padding area */
-  padding:1vh 50px;
-}
-
-/* Removes the black bar from the final item */
-header li:last-child {
-  border-right: none;
-}
-
-header li:hover {
-  font-weight: 800;
-  background-color:rgb(200, 200, 200)
+  nav{
+  display:block;
+  max-width:100vw;
+  height: fit-content;
+      z-index:110;
+      background-color: rgb(220, 220, 220);
+      overflow:hidden;
+  padding:0px;
   }
 
-nav{
-  display:none;
-}
+  nav ul{
+    display: flex;
+    list-style: none;
+    white-space: wrap;    
+    width:100vw;
+    font-size: 1.25em;
+    align-items: center;
+    padding:0px;
+    margin:0px;
+  }
+  
+  nav li{
+    display:block;
+    white-space:nowrap;
+    border-right:solid 1px black;
+    padding:0px;
+  }
+  
+  nav li:last-child{
+      border-right:none;
+  }
+  
+  nav li a{
+    display:block;
+    height: fit-content;       /* stretches to fill the li's full height, including the padding area */
+    padding: 1vh 50px;   /*top, right, bottom, and left*/
+  }
+  
+  
+  nav li a:hover{
+    font-weight: 900;
+    background-color:rgb(200, 200, 200)
+    }
 
 /* HOMEPAGE STICKY HEADER STUFF */
 
@@ -335,9 +352,91 @@ hr{
     object-fit: cover;
 }*/
 
+/*Collapsible Button Stuff */
+details{
+  background: rgb(220, 220, 220);
+  border-bottom: 1px solid black;
+  border-radius: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  padding-top: 10px;
+  max-width: 100%;
+}
+
+/* Clickable heading styling */
+details summary {
+  cursor: pointer;
+  outline: none;
+  margin-top:-59px;
+  padding-left: 75px;
+  padding-top:70px
+}
+
+/* Optional hover state */
+details summary:hover {
+  font-weight:bold;
+      /* 1. Define the gradient with a steep angle */
+      background: linear-gradient(0deg, rgb(160,160,160), white, rgb(160,160,160), white);
+  
+      /* 2. Scale up the background so parts of it are hidden */
+      background-size: 400% 400%;
+      
+      /* 3. Apply an infinite, smooth loop animation */
+      animation: gradientShift 1s ease-out;
+  
+      /* Optional sizing properties
+      width: 100%;
+      height: 100vh;*/
+}
+
+/* Styling applied ONLY when the block is expanded */
+details[open] {
+  border-color: transparent;
+}
+
+details .content {
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+/*summary animation*/
+summary {
+  list-style: none;        /* removes default marker in Firefox/most browsers */
+  cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+  display: none;            /* removes default marker specifically in Chrome/Safari */
+}
+
+summary::before {
+  content: ">";              /* your custom arrow/pointer character */
+  font-size: xx-large;
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 10px;
+  transition: transform 0.5s ease;
+}
+
+details[open] summary::before {
+  transform: rotate(90deg);  /* rotates ▶ to point downward when expanded */
+}
+
+/*Animated Gradient Option*/
+
+/* 4. Shift the background positions to reveal different colors */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+/*Animated Gradient Option*/
+/*Collapsible Button Stuff */
+
 section{
-padding-top:0px;
-padding-bottom:100px;
 border-right: 1px solid black;
 }
 
@@ -349,7 +448,7 @@ border-right: none;
   display:flex; 
   gap:0px;
   margin:0px;
-  padding:0px;
+  padding-bottom:100px;
   width:1400px;
   }
 
@@ -451,6 +550,11 @@ figcaption {
   opacity: 0;                      /* invisible until hovered */
   transition: all 0.3s ease;       /* smooth fade in/out */
   pointer-events: none;   /* lets clicks pass through to the image underneath */
+
+  color: black;
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: 100;
 }
 
 figure:hover figcaption{
@@ -474,13 +578,13 @@ figure:hover figcaption{
   height: 100%;
 }
 
-.item-title {
+/*.item-title {
   color: black;
   font-size: 1.4rem;
   text-align: center;
   padding: 10px;
   font-weight: 100;
-}
+}*/
 
 /*For Homepage*/  
   .portfolio-item-home:hover figcaption {
@@ -732,90 +836,6 @@ footer{
   }
 /*FOOTER*/
 
-/*Collapsible Button Stuff ________________________________________________________________________________________________________________________________________________ */
-details{
-  background: rgb(220, 220, 220);
-  border-bottom: 1px solid black;
-  border-radius: 0px;
-  padding-left: 0px;
-  padding-bottom: 0px;
-  padding-top: 10px;
-  max-width: 100%;
-}
-
-/* Clickable heading styling */
-details summary {
-  cursor: pointer;
-  outline: none;
-  margin-top:-59px;
-  padding-left: 75px;
-  padding-top:70px
-}
-
-/* Optional hover state */
-details summary:hover {
-  font-weight:bold;
-      /* 1. Define the gradient with a steep angle */
-      background: linear-gradient(0deg, rgb(160,160,160), white, rgb(160,160,160), white);
-  
-      /* 2. Scale up the background so parts of it are hidden */
-      background-size: 400% 400%;
-      
-      /* 3. Apply an infinite, smooth loop animation */
-      animation: gradientShift 1s ease-out;
-  
-      /* Optional sizing properties
-      width: 100%;
-      height: 100vh;*/
-}
-
-/* Styling applied ONLY when the block is expanded */
-details[open] {
-  border-color: transparent;
-}
-
-details .content {
-  padding-top: 10px;
-  margin-top: 10px;
-}
-
-/*summary animation*/
-summary {
-  list-style: none;        /* removes default marker in Firefox/most browsers */
-  cursor: pointer;
-}
-
-summary::-webkit-details-marker {
-  display: none;            /* removes default marker specifically in Chrome/Safari */
-}
-
-summary::before {
-  content: ">";              /* your custom arrow/pointer character */
-  font-size: xx-large;
-  display: inline-block;
-  margin-right: 8px;
-  margin-bottom: 10px;
-  transition: transform 0.5s ease;
-}
-
-details[open] summary::before {
-  transform: rotate(90deg);  /* rotates ▶ to point downward when expanded */
-}
-
-/*Animated Gradient Option*/
-
-/* 4. Shift the background positions to reveal different colors */
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 100%;
-  }
-  100% {
-    background-position: 100% 0%;
-  }
-}
-/*Animated Gradient Option*/
-/*Collapsible Button Stuff */
-
 /*(Progarmming Design) Programming.HTML Main Project thumnail stuff ________________________________________________________________________________________________________________________________________________ */
 .program-thumbnail-background{
   background-color: white;
@@ -981,39 +1001,36 @@ causing content to spill past the edge of the screen.
   margin-left:35px;
   }
   
-  #anchorTitle{
+  .phonePageTitle{/*only visible on phone scenarios*/
     position:static;
     margin-left: -30px;
-    }
-    header{
-    position:static;   /* keeps this block pinned once it hits the top of the viewport */
-    }
-  
-    header ul {
-      display: none;
-    }
-    
-    header li{
-    list-style-type: none;
-    padding: 0.5vh 8vw;
-    }
-
-    header li a{
-      height: 100%;       /* stretches to fill the li's full height, including the padding area */
-      margin: -2vw;
-      padding: 2vw;
-    }
-
-  /* Removes the black bar from the final item */
-  header li:last-child {
-    border-right: none;
-  }
-  
-  header li:hover {
-    font-weight: 800;
-    background-color:rgb(220, 220, 220)
+    padding: 0px;
+    display:flex;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
   }
 
+  .phoneSubTitle{
+    font-weight: lighter;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+
+  #anchorTitle{
+    display:none;
+  }
+  
+  header{
+  position:sticky;   /* keeps this block pinned once it hits the top of the viewport */
+  top: 0;
+  }
+  
+  .desktopOption{
+    display:none;
+  }
    
   h1{
     font-family:'fruityKiwi', sans-serif;
@@ -1051,7 +1068,6 @@ causing content to spill past the edge of the screen.
     align-items: center;
     justify-content: flex-end;
     background-color:rgb(220, 220, 220);
-    border-bottom: 1px solid black;
   }
 
   .hamburgerMenu{
@@ -1080,8 +1096,6 @@ causing content to spill past the edge of the screen.
   display:block;
   max-width:100vw;
   height:5.5vh; /*ANCHOR NAVIGATION BAR PHONE HEIGHT*/
-    position: sticky;
-    top: 0;   
       z-index:105;
       background-color: white;
       border-radius:0vw;
@@ -1118,8 +1132,8 @@ causing content to spill past the edge of the screen.
   }
   
   nav li{
-    padding:5vh 0vw;
-    border-bottom: solid black 1px;
+    padding:0vw;
+    border-top: solid black 1px;
     width:100vw;
     white-space:nowrap;
   }
@@ -1202,6 +1216,13 @@ causing content to spill past the edge of the screen.
 /*(Progarmming Design) Programming.HTML Main Project thumnail stuff */
 
 /* PORTFOLIO ITEM STUFF ON PHONE ________________________________________________________________________________________________________________________________________________ */    
+details summary {
+  padding-left: 40px;
+}
+
+.year{
+  padding-left:40px;
+}
 .scroll-btn {
   display:none;
 }
@@ -1250,8 +1271,6 @@ causing content to spill past the edge of the screen.
         }
 
       section{
-      padding-top:0px;
-      padding-bottom:0px;
       border-right: 1px solid black;
       width:100vw;
       }

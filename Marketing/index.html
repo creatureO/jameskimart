@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Modified Oct 5, 2026, 1:30 AM --> <!--Marketing-->
+<!-- Modified Oct 12, 2026, 10:30 PM --> <!--Marketing-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
   
@@ -41,37 +41,26 @@
   <span id="lightbox-next" onclick="changeSlide(1)">&#10095;</span>
 </dialog>
 <!-- CLICKABLE INTERACTION ITEM, lightboxes -->
-
-<!-- Sticky header wrapper: keeps the logo bar and nav bar pinned to the top as the visitor scrolls -->
-<header>
-
-  <!-- home name KIMBRO AVATAR display: inline-block;--> 
-  <div id="anchorTitle">
+<div class="phonePageTitle">
   <div style="display:flex; align-items: center; gap:1vw;">
   <a href="../"><img src="../Homepage Images/Kimbro Logo.svg" alt="Kimbro logo" style="height:50px; width: 50px;" class="mainLogo"/></a>
   <h1>James Kim</h1>
   </div>
-  <h2 id="subTitle" style="margin-right: 5vw;">RISD, Graphic Design, 2027</h2>
-  </div>
-  <!-- home name -->
-  
-  <ul>
-    <li><a href="../">Home</a></li>
-    <li><a href="../ProductDesign/">Product Design</a></li>
-    <li><a href="../Marketing/">Marketing</a></li>
-    <li><a href="../Programming/">Programming</a></li>
-    <li><a href="../MotionGraphics/">Motion Graphics</a></li>
-    <li><a href="../#about">About</a></li>
-    <li><a href="#contactMe">Contact Me</a></li>
-  </ul>
-</header>
-<!-- end sticky header wrapper -->
+  <h2 class="phoneSubTitle" style="margin-right: 5vw;">RISD, Graphic Design, 2027</h2>
+</div>
+<!-- Sticky header wrapper: keeps the logo bar and nav bar pinned to the top as the visitor scrolls -->
+<header>
 
-<!-- ====================== -->
-<!-- ====================== -->
-<!-- ====================== -->
-<!-- phone's nav bar -->
-<nav>
+<!-- home name KIMBRO AVATAR display: inline-block;--> 
+<div id="anchorTitle">
+<div style="display:flex; align-items: center; gap:1vw;">
+<a href="../"><img src="../Homepage Images/Kimbro Logo.svg" alt="Kimbro logo" style="height:50px; width: 50px;" class="mainLogo"/></a>
+<h1>James Kim</h1>
+</div>
+<h2 id="subTitle" style="margin-right: 5vw;">RISD, Graphic Design, 2027</h2>
+</div>
+<!-- home name -->
+ <nav>
   <div id="clickToOpen">
       <div class="hamburgerMenu">
         <svg viewBox="0 0 100 80" width="40" fill="currentColor" style="height:4vh;">
@@ -88,12 +77,12 @@
     <li><a href="../Marketing/">Marketing</a></li>
     <li><a href="../Programming/">Programming</a></li>
     <li><a href="../MotionGraphics/">Motion Graphics</a></li>
+    <li class="desktopOption"><a href="../#about">About</a></li>
+    <li class="desktopOption"><a href="#contactMe">Contact Me</a></li>
   </ul>
 </nav>
-  <!-- end of phone's nav bar -->
-  <!-- ====================== -->
-  <!-- ====================== -->
-  <!-- ====================== -->
+</header>
+<!-- end sticky header wrapper -->
 
 <main> <!-- Overhead paint drop -->
   <img src="../Homepage Images/HomePageDrip.png" alt="" id="gifOverlay"> <!-- Overhead paint drop -->
@@ -128,7 +117,7 @@
         data-caption="<strong>Suzette's Social Media Ads</strong><br> This is the marketing work I did in my spring Junior internship as a Social Media Marketing Intern for the Brooklyn based organization Envisioned Events by Suzette, Etiquette Speaks, and Envisioned Travels. 2026.<br><a href='https://www.instagram.com/p/DWJhTJjDacE/?img_index=1' target='_blank'> CLICK LINK </a>" 
         onclick="openLightbox(this)"/> 
         <figcaption>
-          <span class="item-title">Envisioned Travels</span>
+          Envisioned Travels
         </figcaption>
       </figure>
 
@@ -144,7 +133,7 @@
         data-caption="<strong>Suzette's Social Media Ads</strong><br> This is the marketing work I did in my spring Junior internship as a Social Media Marketing Intern for the Brooklyn based organization Envisioned Events by Suzette, Etiquette Speaks, and Envisioned Travels. 2026.<br><a href='https://www.instagram.com/p/DWJhTJjDacE/?img_index=1' target='_blank'> CLICK LINK </a>" 
           onclick="openLightbox(this)"/>
           <figcaption>
-            <span class="item-title">Etiquette Speaks</span>
+            Etiquette Speaks
           </figcaption>
       </figure>
 
@@ -163,7 +152,7 @@
         data-caption="<strong>Suzette's Social Media Ads</strong><br> This is the marketing work I did in my spring Junior internship as a Social Media Marketing Intern for the Brooklyn based organization Envisioned Events by Suzette, Etiquette Speaks, and Envisioned Travels. 2026.<br><a href='https://www.instagram.com/p/DWJhTJjDacE/?img_index=1' target='_blank'> CLICK LINK </a>" 
           onclick="openLightbox(this)"/>
           <figcaption>
-            <span class="item-title">Envisioned Events</span>
+            Envisioned Events
           </figcaption>
       </figure>
 
@@ -183,7 +172,7 @@
         data-caption="<strong>Suzette's Social Media Ads</strong><br> This is the marketing work I did in my spring Junior internship as a Social Media Marketing Intern for the Brooklyn based organization Envisioned Events by Suzette, Etiquette Speaks, and Envisioned Travels. 2026.<br><a href='https://www.instagram.com/p/DWJhTJjDacE/?img_index=1' target='_blank'> CLICK LINK </a>" 
           onclick="openLightbox(this)"/>
           <figcaption>
-            <span class="item-title">Wedding Planning</span>
+            Wedding Planning
           </figcaption>
       </figure>
 </div>
@@ -218,7 +207,7 @@
         data-caption="<strong>Project Look Promo Video</strong><br> Over my summer internship of 2025 I filmed and edited a series of promotional videos for the Palo Alto Art Center, bolstering the awarness of many of the city's artists.<br> This video is the promotional video for the Project Look program which lets K-5th grade students from local schools take tours through the PAACF exhibitions. This video calls for Docent volunteers to guide the children and foster creativity. 2025. <br><a href='https://www.paloalto.gov/Departments/Community-Services/Arts-Sciences/Palo-Alto-Art-Center/Volunteer/School-Tour-Docents' target='_blank'> CLICK LINK </a>"
         onclick="openLightbox(this)">
         <figcaption>
-          <span class="item-title">Project Look</span>
+          Project Look
         </figcaption>           
         </figure>
     </div>
@@ -241,7 +230,7 @@
         data-caption="<strong>3 Exhibition Artists, 2025 PAACF Instagram Videos</strong><br> This is a promotional video I filmed and edited for 3 Forming Function ceramic artists at my local Palo Alto art center. My internship tasked me with this kind of work to help spread the love of art and design through our community. 2025.<br><a href='https://www.instagram.com/p/DNYo7QxB8fR/?hl=en' target='_blank'> CLICK LINK </a>"
         onclick="openLightbox(this)">
         <figcaption>
-          <span class="item-title">2025 PAACF Instagram Videos</span>
+          2025 PAACF Instagram Videos
         </figcaption>           
         </figure>
     </div>
@@ -266,7 +255,7 @@
         data-caption="<strong>Forming Function Artists, 2025 PAACF Instagram Videos</strong><br> The 2025 summer exhibition of Forming Functions showcased the work of many Palo Alto artists at the PAACF to honor the creative culture of Silicon Valley.<br>I was incharge of videography, editing, and working with the foundation's directors to compose the videos for instagram advertising of the event and it's art pieces.<br>The artists include Jan Schachter, Salley Jackson, and Edward Paas. 2025."
         onclick="openLightbox(this)">
         <figcaption>
-          <span class="item-title">Forming Function Artists</span>
+          Forming Function Artists
         </figcaption>           
         </figure>
     </div>
@@ -290,7 +279,7 @@
         data-caption="<strong>2025 Buttons PAACF</strong><br> These were buttons I designed and ordered for manufacturing in my 2025 summer internship. They were well crafted from Aluminium and handed out to all of my coworkers and visitors. 2025." 
         onclick="openLightbox(this)"/>
         <figcaption>
-          <span class="item-title">2025 Buttons PAACF</span>
+          2025 Buttons PAACF
         </figcaption>        
         </figure>
 
@@ -302,7 +291,7 @@
         data-caption="<strong>2025 Buttons PAACF</strong><br> These were buttons I designed and ordered for manufacturing in my 2025 summer internship. They were well crafted from Aluminium and handed out to all of my coworkers and visitors. 2025." 
         onclick="openLightbox(this)"/>
         <figcaption>
-          <span class="item-title">2025 Buttons PAACF</span>
+          2025 Buttons PAACF
         </figcaption>        
         </figure>
 
@@ -314,7 +303,7 @@
         data-caption="<strong>2025 Buttons PAACF</strong><br> These were buttons I designed and ordered for manufacturing in my 2025 summer internship. They were well crafted from Aluminium and handed out to all of my coworkers and visitors. 2025." 
         onclick="openLightbox(this)"/>
         <figcaption>
-          <span class="item-title">2025 Buttons PAACF</span>
+          2025 Buttons PAACF
         </figcaption>        
         </figure>
 
@@ -325,7 +314,7 @@
         data-caption="<strong>2025 Buttons PAACF</strong><br> These were buttons I designed and ordered for manufacturing in my 2025 summer internship. They were well crafted from Aluminium and handed out to all of my coworkers and visitors. 2025." 
         onclick="openLightbox(this)"/>
         <figcaption>
-          <span class="item-title">2025 Buttons PAACF</span>
+          2025 Buttons PAACF
         </figcaption>        
         </figure>
     </div>
