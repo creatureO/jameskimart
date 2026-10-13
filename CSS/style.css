@@ -876,12 +876,27 @@ main {
 /* Overlay GIF stuff */
 
 /* click animation ________________________________________________________________________________________________________________________________________________ */
-.click-splatter {
+#click-layer {
+  position: fixed;
+  inset: 0;                /* covers just the visible screen */
+  pointer-events: none;    /* never blocks clicks */
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.splat {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 360px;
   height: 360px;
-  pointer-events: none;   /* so the splatter itself never blocks the next click underneath it */
-  z-index: 9999;           /* sits above everything, including your paint-drip overlay */
+  will-change: transform;  /* moves it onto its own GPU layer */
+}
+
+.splat img {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 /*click animation*/
 
