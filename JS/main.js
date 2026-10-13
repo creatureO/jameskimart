@@ -88,22 +88,31 @@ function scrollRow(btn, direction) {
   });
 }
 
-//click animation
-document.addEventListener('click', function(e) {
-  const splatter = document.createElement('img');
-  splatter.src = '../Homepage Images/Kimbro_Click.png';
-  splatter.className = 'click-splatter';
+// click animation
+const clickLayer = document.getElementById('click-layer');
+const SPLAT_SRC = '../Homepage Images/Kimbro_Click.png';   // make sure this is the real .gif
+const SPLAT_SIZE = 360;
+const SPLAT_DURATION = 400;   // match your gif's length in ms
 
-  // position it centered on the exact click point
-  splatter.style.left = (e.pageX - 180) + 'px';   // 40 = half your splatter's width, to center it
-  splatter.style.top = (e.pageY - 180) + 'px';
+// preload once so the first click doesn't wait on the download
+const preload = new Image();
+preload.src = SPLAT_SRC;
 
-  document.body.appendChild(splatter);
+document.addEventListener('click', function (e) {
+  const splat = document.createElement('div');
+  splat.className = 'splat';
 
-  // remove it after the gif's animation duration finishes
-  setTimeout(() => {
-    splatter.remove();
-  }, 400); // match this to your gif's actual playback length in milliseconds
+  // clientX/Y = position on screen (not the whole page), matching the fixed layer
+  const x = e.clientX - SPLAT_SIZE / 2;
+  const y = e.clientY - SPLAT_SIZE / 2;
+  splat.style.transform = `translate(${x}px, ${y}px)`;
+
+  const img = document.createElement('img');
+  img.src = SPLAT_SRC;   // cached after preload, so no refetch
+  splat.appendChild(img);
+
+  clickLayer.appendChild(splat);
+  setTimeout(() => splat.remove(), SPLAT_DURATION);
 });
 
 /*phone home nav button*/
