@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Modified Oct 5, 2026, 1:30 AM --> <!--James Kim Graphic Designer and Programmer 2027-->
+<!-- Modified Oct 12, 2026, 10:30 PM --> <!--James Kim Graphic Designer and Programmer 2027-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
 
@@ -23,7 +23,7 @@
       text-decoration-color: #0000;       /* Changes underline color independently */
       text-decoration-thickness: 2px;       /* Optional: changes underline thickness */
     }
-    .item-title{
+    .workRowHome figcaption{
       font-size:2rem;
     } 
   </style>
@@ -44,7 +44,13 @@
     <span id="lightbox-next" onclick="changeSlide(1)">&#10095;</span>
   </dialog>
 <!-- CLICKABLE INTERACTION ITEM, lightboxes -->
-
+<div class="phonePageTitle">
+  <div style="display:flex; align-items: center; gap:1vw;">
+  <a href="./"><img src="Homepage Images/Kimbro Logo.svg" alt="Kimbro logo" style="height:50px; width: 50px;" class="mainLogo"/></a>
+  <h1>James Kim</h1>
+  </div>
+  <h2 class="phoneSubTitle" style="margin-right: 5vw;">RISD, Graphic Design, 2027</h2>
+</div>
 <!-- Sticky header wrapper: keeps the logo bar and nav bar pinned to the top as the visitor scrolls -->
 <header>
 
@@ -57,46 +63,29 @@
 <h2 id="subTitle" style="margin-right: 5vw;">RISD, Graphic Design, 2027</h2>
 </div>
 <!-- home name -->
-
-<ul>
-  <li><a href="./">Home</a></li>
-  <li><a href="./ProductDesign/">Product Design</a></li>
-  <li><a href="./Marketing/">Marketing</a></li>
-  <li><a href="./Programming/">Programming</a></li>
-  <li><a href="./MotionGraphics/">Motion Graphics</a></li>
-  <li><a href="#about">About</a></li>
-  <li><a href="#contactMe">Contact Me</a></li>
-</ul>
+ <nav>
+  <div id="clickToOpen">
+      <div class="hamburgerMenu">
+        <svg viewBox="0 0 100 80" width="40" fill="currentColor" style="height:4vh;">
+          <rect y="0" width="400" height="6" rx="0"></rect>
+          <rect y="20" width="400" height="6" rx="0"></rect>
+          <rect y="40" width="400" height="6" rx="0"></rect>
+        </svg>
+      </div>
+        <h2 class="hamburgerMenuClose">X</h2>
+  </div><!--CLOSE/OPEN BUTTON-->
+  <ul>
+    <li><a href="./">Home</a></li>
+    <li><a href="./ProductDesign/">Product Design</a></li>
+    <li><a href="./Marketing/">Marketing</a></li>
+    <li><a href="./Programming/">Programming</a></li>
+    <li><a href="./MotionGraphics/">Motion Graphics</a></li>
+    <li class="desktopOption"><a href="#about">About</a></li>
+    <li class="desktopOption"><a href="#contactMe">Contact Me</a></li>
+  </ul>
+</nav>
 </header>
 <!-- end sticky header wrapper -->
-
-<!-- ====================== -->
-<!-- ====================== -->
-<!-- ====================== -->
-<!-- phone's nav bar -->
-  <nav>
-    <div id="clickToOpen">
-        <div class="hamburgerMenu">
-          <svg viewBox="0 0 100 80" width="40" fill="currentColor" style="height:4vh;">
-            <rect y="0" width="400" height="6" rx="0"></rect>
-            <rect y="20" width="400" height="6" rx="0"></rect>
-            <rect y="40" width="400" height="6" rx="0"></rect>
-          </svg>
-        </div>
-          <h2 class="hamburgerMenuClose">X</h2>
-    </div><!--CLOSE/OPEN BUTTON-->
-    <ul>
-      <li><a href="./">Home</a></li>
-      <li><a href="./ProductDesign/">Product Design</a></li>
-      <li><a href="./Marketing/">Marketing</a></li>
-      <li><a href="./Programming/">Programming</a></li>
-      <li><a href="./MotionGraphics/">Motion Graphics</a></li>
-    </ul>
-  </nav>
-    <!-- end of phone's nav bar -->
-    <!-- ====================== -->
-    <!-- ====================== -->
-    <!-- ====================== -->
 
 <main> <!-- Overhead paint drop -->
   <img src="Homepage Images/HomePageDrip.png" alt="" id="gifOverlay"> <!-- Overhead paint drop -->
@@ -136,7 +125,7 @@
       data-caption="<strong>Superman Poster</strong><br> Fanart for the Superman movie by James Gunn. Plotter printed. 2024. <br><a href='https://www.instagram.com/p/DMBfbnZBhEp/?img_index=1' target='_blank'> CLICK LINK </a>" 
       onclick="openLightbox(this)"/>
       <figcaption>
-        <span class="item-title">Superman Poster</span>
+        Superman Poster
       </figcaption>
     </figure>
   </div>
@@ -149,7 +138,7 @@
       data-caption="<strong>Barksketball</strong><br> In an improvised group project with 3 people, I was tasked with making a motion graphic for our sports/pet product using the only 2 colors a dog could perceive. 2025." 
       onclick="openLightbox(this)"/>
       <figcaption>
-        <span class="item-title">Barksketball</span>
+        Barksketball
       </figcaption>
     </figure>
   </div>
@@ -163,7 +152,7 @@
          data-caption="<strong>TYPOGRAPHY MOTION GRAPHIC</strong><br> This is my After Effects Motion Graphic project which I created to give words character.<br> I utilized sound and timing to make a fun but practical display of Text and animation. I discovered my affinity for motion graphics through this video. 2025."
         onclick="openLightbox(this)">
         <figcaption>
-          <span class="item-title">TYPOGRAPHY MOTION GRAPHIC</span>
+          TYPOGRAPHY MOTION GRAPHIC
         </figcaption>
     </figure>
   </div>
@@ -185,7 +174,7 @@
       data-caption="<strong>Wrath of Reyath</strong><br> This was a collaborative project between Me, Emerald Jiang, and my roomate Andrew Liao. We were tasked with visualizing sound data on the street I live, Thayer street, and turn it into an interesting delivery method. My group devised that we make a table top RPG game out of it. We made a project even Wizards of the Coast or Hasbro would be proud of. I was in charge of video documentation and making the cards and part time game rule creation. 2025.<br><a href='https://www.youtube.com/watch?v=EP4CL4SOmm8' target='_blank'> VIDEO LINK </a>" 
       onclick="openLightbox(this)"/>    
       <figcaption>
-        <span class="item-title">Wrath of Reyath</span>
+        Wrath of Reyath
       </figcaption>
     </figure>
   </div>
@@ -203,7 +192,7 @@
       data-caption="<strong>Run to Resist</strong><br> This was my interactive narritive driven campaign to encourage kids aged 12-17 to take up running as a cardio fitness support for heart health. This was my attempt at assisting the NIH (National Institute of Health) at encouraging teenagers to resist the increasingly sedentary culture of modern day life. Inspired by Osmosis Jones and Lazy town combined with Genndy Tartakovsky's action illustrations, I made a narritive that would attarct kids to the cause. 2025.<br><a href='https://globalcomix.com/read/19faf3a7-1b66-4077-bf3a-349fb4370829/1' target='_blank'> CLICK LINK </a>" 
       onclick="openLightbox(this)"/>    
       <figcaption>
-        <span class="item-title">Run to Resist</span>
+        Run to Resist
       </figcaption>
     </figure>
   </div>
@@ -220,7 +209,7 @@
       data-caption="<strong>Superman Video Essay Magazine</strong><br> I translated a video essay - HITOP FILMS We Needed Superman - to become a film review style magazine. I also included a pack of gum to make the whole thing more pop culture-like. 2025." 
       onclick="openLightbox(this)"/>        
       <figcaption>
-        <span class="item-title">Superman Video Essay Magazine</span>
+        Superman Video Essay Magazine
       </figcaption>
     </figure>
   </div>
@@ -240,7 +229,7 @@
       data-caption="<strong>Galactic Ranger</strong><br>Sci-Fi action Shooter developed in Unity game engine. 3D modeling with Unity and Cinema 4D. 2026. <br><a href='https://kimbrocomics.itch.io/galactic-ranger' target='_blank'> GAME LINK </a>" 
       onclick="openLightbox(this)"/>
       <figcaption>
-        <span class="item-title">Galactic Ranger</span>
+        Galactic Ranger
       </figcaption>
     </figure>
   </div>
@@ -252,7 +241,7 @@
       data-caption="<strong>Growing Up</strong><br>Motion graphic animation to promote healthy child care in America. After Effects. 2025." 
       onclick="openLightbox(this)"/>
       <figcaption>
-        <span class="item-title">Growing Up</span>
+        Growing Up
       </figcaption>
     </figure>
   </div>
@@ -264,7 +253,7 @@
       data-caption="<strong>DO NOT TOUCH</strong><br>Motion graphic animation to characterize cactus as a concept. After Effects. 2025" 
       onclick="openLightbox(this)"/>    
       <figcaption>
-        <span class="item-title">DO NOT TOUCH</span>
+        DO NOT TOUCH
       </figcaption>
     </figure>
   </div>
@@ -281,7 +270,7 @@
       data-caption="<strong>Suzette's Travel Ad</strong><br> This is the marketing work I did in my spring Junior internship as a Social Media Marketing Intern for the Brooklyn based organization Envisioned Travels by Suzette. 2026.<br><a href='https://www.instagram.com/p/DWJhTJjDacE/?img_index=1' target='_blank'> CLICK LINK </a>" 
       onclick="openLightbox(this)"/>    
       <figcaption>
-        <span class="item-title">Suzette's Travel Ad</span>
+        Suzette's Travel Ad
       </figcaption>
     </figure>
   </div>
@@ -294,7 +283,7 @@
        data-caption="<strong>Project Look Promo Video</strong><br> Over my summer internship of 2025 I filmed and edited a series of promotional videos for the Palo Alto Art Center, bolstering the awarness of many of the city's artists.<br> This video is the promotional video for the Project Look program which lets K-5th grade students from local schools take tours through the PAACF exhibitions. This video calls for Docent volunteers to guide the children and foster creativity. <br><a href='https://www.paloalto.gov/Departments/Community-Services/Arts-Sciences/Palo-Alto-Art-Center/Volunteer/School-Tour-Docents' target='_blank'> CLICK LINK </a>"
       onclick="openLightbox(this)">
       <figcaption>
-        <span class="item-title">Project Look Promo Video</span>
+        Project Look Promo Video
       </figcaption>
     </figure>
   </div>
@@ -310,7 +299,7 @@
       data-caption="<strong>Superman Poster</strong><br> Fanart for the Superman movie by James Gunn. Plotter printed. 2024. <br><a href='https://www.instagram.com/p/DMBfbnZBhEp/?img_index=1' target='_blank'> CLICK LINK </a>" 
       onclick="openLightbox(this)"/>
       <figcaption>
-        <span class="item-title">Superman Poster</span>
+        Superman Poster
       </figcaption>
     </figure>
   </div>
@@ -322,7 +311,7 @@
       data-caption="<strong>Barksketball</strong><br> In an improvised group project with 3 people, I was tasked with making a motion graphic for our sports/pet product using the only 2 colors a dog could perceive. 2025." 
       onclick="openLightbox(this)"/>
       <figcaption>
-        <span class="item-title">Barksketball</span>
+        Barksketball
       </figcaption>
     </figure>
   </div>
@@ -336,7 +325,7 @@
          data-caption="<strong>TYPOGRAPHY MOTION GRAPHIC</strong><br> This is my After Effects Motion Graphic project which I created to give words character.<br> I utilized sound and timing to make a fun but practical display of Text and animation. I discovered my affinity for motion graphics through this video. 2025."
         onclick="openLightbox(this)">
         <figcaption>
-          <span class="item-title">TYPOGRAPHY MOTION GRAPHIC</span>
+          TYPOGRAPHY MOTION GRAPHIC
         </figcaption>
     </figure>
   </div>
@@ -348,8 +337,827 @@
 <!-- <button class="scroll-btn scroll-right" onclick="scrollRow(this, 1)">&#10095;</button> <BUTTON>-->
 <!-- </div> BUTTON>-->
 
-
+<!-- V THIS WHOLE SECTION WILL GIVE ACCESS TO ALL PROJECTS AS A WHOLE V -->
 <hr><!--BAR OF SEPARATION-->
+<h2 class="about">PROJECTS</h2>
+<hr><!--BAR OF SEPARATION-->
+
+<h2 class="year">Product Design</h2>   <!-- --------2026--------- -->
+<details>
+  <summary> </summary>
+  <div class="work-row-wrapper"> <!--<BUTTON>-->
+  <button class="scroll-btn scroll-left" onclick="scrollRow(this,-1)">&#10094;</button><!--<BUTTON>--> 
+<div class="workRow"> <!--________v Portfolio Horzontal scroll v________-->
+<section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+    <h2 class="projectTitle">Outlook</h2>    <!-- projectSection Title-->
+<div class="projectDivider">
+<div class="featured-item-section">
+    <figure>
+      <img src="James Website photos/Product Design/Outlook/Display 3.png"  
+        alt="Displayed Work" style="height:100%; width: 100%;"  
+        data-images='[{"type":"image","src":"James Website photos/Product Design/Outlook/Display 1.jpg"},
+        {"type":"image","src":"James Website photos/Product Design/Outlook/Display 2.png"}, 
+        {"type":"image","src":"James Website photos/Product Design/Outlook/Display 3.png"},
+        {"type":"image","src":"James Website photos/Product Design/Outlook/Iphone Video.png"},
+        {"type":"youtube","src":"NfV_HxrOCEQ"}]' 
+        data-caption="<strong>Outlook</strong><br> This was a behavioral therapy promotional campaign designed to market the benefits of Exposure Therapy as a treatment, fighting stigma around OCD.<br> I was in charge of the caracter and asset design, PAMPHLETS, POSTERS, and the STYLE GUIDE. 2026." 
+        onclick="openLightbox(this)"/>
+        <figcaption>
+          Outlook Display
+        </figcaption>
+    </figure>
+
+    <figure>
+        <img src="James Website photos/Product Design/Outlook/Low Res Cover 1.png"  
+          alt="Posters" style="height:100%; width: 100%;"  
+          data-images='[{"type":"image","src":"James Website photos/Product Design/Outlook/Poster 1.jpg"},
+          {"type":"image","src":"James Website photos/Product Design/Outlook/Poster 2.jpg"}, 
+          {"type":"image","src":"James Website photos/Product Design/Outlook/Poster 3.png"},
+          {"type":"image","src":"James Website photos/Product Design/Outlook/Poster 4.jpg"}]' 
+          data-caption="<strong>Outlook</strong><br> This was a behavioral therapy promotional campaign designed to market the benefits of Exposure Therapy as a treatment, fighting stigma around OCD.<br> I was in charge of the caracter and asset design, PAMPHLETS, POSTERS, and the STYLE GUIDE. 2026." 
+          onclick="openLightbox(this)"/>
+          <figcaption>
+            Outlook Posters
+          </figcaption>
+      </figure>
+
+      <figure>
+        <img src="James Website photos/Product Design/Outlook/Pamphlet 1.jpg"  
+          alt="Pamphlets" style="height:100%; width: 100%;"  
+          data-images='[{"type":"image","src":"James Website photos/Product Design/Outlook/Pamphlet 1.jpg"},
+          {"type":"image","src":"James Website photos/Product Design/Outlook/Pamphlet 2.jpg"}, 
+          {"type":"image","src":"James Website photos/Product Design/Outlook/Pamphlet 3.jpg"},
+          {"type":"image","src":"James Website photos/Product Design/Outlook/Pamphlet 4.jpg"}]' 
+          data-caption="<strong>Outlook</strong><br> This was a behavioral therapy promotional campaign designed to market the benefits of Exposure Therapy as a treatment, fighting stigma around OCD.<br> I was in charge of the caracter and asset design, PAMPHLETS, POSTERS, and the STYLE GUIDE. 2026." 
+          onclick="openLightbox(this)"/>
+          <figcaption>
+            Pamphlets
+          </figcaption>
+      </figure>
+
+      <figure>
+        <img src="James Website photos/Product Design/Outlook/Low Res Cover 3.jpg"  
+          alt="Style Guide" style="height:100%; width: 100%;"  
+          data-images='[{"type":"image","src":"James Website photos/Product Design/Outlook/Style Guide Spread 1.jpg"},
+          {"type":"image","src":"James Website photos/Product Design/Outlook/Style Guide Spread 2.jpg"}, 
+          {"type":"image","src":"James Website photos/Product Design/Outlook/Style Guide Spread 3.jpg"},
+          {"type":"image","src":"James Website photos/Product Design/Outlook/Style Guide Spread 4.jpg"},
+          {"type":"image","src":"James Website photos/Product Design/Outlook/Style Guide Spread 5.jpg"}, 
+          {"type":"image","src":"James Website photos/Product Design/Outlook/Style Guide Spread 6.jpg"},
+          {"type":"image","src":"James Website photos/Product Design/Outlook/Style Guide Spread 7.jpg"},
+          {"type":"image","src":"James Website photos/Product Design/Outlook/Style Guide Spread 8.jpg"},
+          {"type":"image","src":"James Website photos/Product Design/Outlook/Style Guide Spread 9.jpg"}]'
+          data-caption="<strong>Outlook</strong><br> This was a behavioral therapy promotional campaign designed to market the benefits of Exposure Therapy as a treatment, fighting stigma around OCD.<br> I was in charge of the caracter and asset design, PAMPHLETS, POSTERS, and the STYLE GUIDE. 2026." 
+          onclick="openLightbox(this)"/>
+          <figcaption>
+            Outlook Style Guide
+          </figcaption>
+      </figure>
+</div>
+    <p class="description">This was a behavioral therapy promotional campaign designed to market the benefits of Exposure Therapy as a treatment, fighting stigma around OCD.<br> I was in charge of the caracter and asset design, <strong>PAMPHLETS, POSTERS, and the STYLE GUIDE</strong>. 2026.</p>
+</div>  
+</section>
+
+    <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+    <h2 class="projectTitle">Wrath of Reyath</h2>    <!-- projectSection Title-->
+    <div class="projectDivider">
+    <div class="featured-item-section">
+        <figure>
+        <img src="James Website photos/Product Design/Wrath of Reyath/Cover of WOR.jpg"
+        alt="TTRPG" style="height:100%; width: 100%;"  
+        data-images='[{"type":"youtube","src":"EP4CL4SOmm8"},
+        {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/box view 1-compressed.png"},
+        {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/box view 2-compressed.png"}, 
+        {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/box view 3.png"},
+        {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/box view 4-compressed.png"},
+        {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/box view 5-compressed.png"},
+        {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Game View.jpg"},
+        {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Cover of WOR.jpg"}]'  
+        data-caption="<strong>Wrath of Reyath</strong><br> This was a collaborative project between Me, Emerald Jiang, and my roomate Andrew Liao. We were tasked with visualizing sound data on the street I live, Thayer street, and turn it into an interesting delivery method. My group devised that we make a table top RPG game out of it. We made a project even Wizards of the Coast or Hasbro would be proud of. I was in charge of video documentation and making the cards and part time game rule creation. 2025.<br><a href='https://www.youtube.com/watch?v=EP4CL4SOmm8' target='_blank'> VIDEO LINK </a>" 
+        onclick="openLightbox(this)"/>
+        <figcaption>
+          Box
+        </figcaption>    
+         </figure>
+
+        <figure>
+    <img src="James Website photos/Product Design/Wrath of Reyath/Line up of Characters on board.jpg"
+    alt="TTRPG" style="height:100%; width: 100%;"  
+    data-images='[{"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Line up of Characters on board.jpg"},
+    {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Boardgame showdown.jpg"}, 
+    {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Chips 1-compressed.png"},
+    {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Chips 2-compressed.png"},
+    {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Chips 3.png"},
+    {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Chips 4-compressed.png"},
+    {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/dice in hand.png"},
+    {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Dice-compressed.png"}]'
+    data-caption="<strong>Wrath of Reyath</strong><br> This was a collaborative project between Me, Emerald Jiang, and my roomate Andrew Liao. We were tasked with visualizing sound data on the street I live, Thayer street, and turn it into an interesting delivery method. My group devised that we make a table top RPG game out of it. We made a project even Wizards of the Coast or Hasbro would be proud of. I was in charge of video documentation and making the cards and part time game rule creation. 2025.<br><a href='https://www.youtube.com/watch?v=EP4CL4SOmm8' target='_blank'> VIDEO LINK </a>" 
+    onclick="openLightbox(this)"/>    
+    <figcaption>
+      Game Pieces
+    </figcaption>
+        </figure>
+        
+        <figure>
+        <img src="James Website photos/Product Design/Wrath of Reyath/Card Spread 4.png"  
+        alt="CARDS" style="height:100%; width: 100%;"  
+        data-images='[{"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Cards Stack 1.jpg"},
+        {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Cards Stack 2.jpg"}, 
+        {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Cards Stack 3.jpg"},
+        {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Cards Stack 4.jpg"},
+        {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Cards Stack 5.jpg"},
+        {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Cards Stack 6.jpg"},
+        {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Cards 2.jpg"},
+        {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Cards 4.jpg"},
+        {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Cards 6.jpg"},
+        {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Cards 8.jpg"},
+        {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Cards 10.jpg"},
+        {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Cards 12.jpg"},
+        {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Cards Spread 1.png"}]'
+        data-caption="<strong>Wrath of Reyath</strong><br> This was a collaborative project between Me, Emerald Jiang, and my roomate Andrew Liao. We were tasked with visualizing sound data on the street I live, Thayer street, and turn it into an interesting delivery method. My group devised that we make a table top RPG game out of it. We made a project even Wizards of the Coast or Hasbro would be proud of. I was in charge of video documentation and making the cards and part time game rule creation. 2025.<br><a href='https://www.youtube.com/watch?v=EP4CL4SOmm8' target='_blank'> VIDEO LINK </a>" 
+        onclick="openLightbox(this)"/>
+        <figcaption>
+          Card Stack
+        </figcaption>    
+        </figure>
+        
+        <figure>
+        <img src="James Website photos/Product Design/Wrath of Reyath/Cards Spread 3.png" 
+        alt="CARDS" style="height:100%; width: 100%;"  
+        data-images='[{"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Cards 1.jpg"},
+        {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Cards 3.jpg"}, 
+        {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Cards 5.jpg"}, 
+        {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Cards 7.jpg"}, 
+        {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Cards 9.jpg"}, 
+        {"type":"image","src":"James Website photos/Product Design/Wrath of Reyath/Cards 11.jpg"}]'
+        data-caption="<strong>Wrath of Reyath</strong><br> This was a collaborative project between Me, Emerald Jiang, and my roomate Andrew Liao. We were tasked with visualizing sound data on the street I live, Thayer street, and turn it into an interesting delivery method. My group devised that we make a table top RPG game out of it. We made a project even Wizards of the Coast or Hasbro would be proud of. I was in charge of video documentation and making the cards and part time game rule creation. 2025.<br><a href='https://www.youtube.com/watch?v=EP4CL4SOmm8' target='_blank'> VIDEO LINK </a>" 
+        onclick="openLightbox(this)"/>
+        <figcaption>
+          Cards
+        </figcaption>    
+      </figure>
+    </div>
+        <p class="description">This was a collaborative project between Me, Emerald Jiang, and my roomate Andrew Liao. We were tasked with visualizing sound data on the street I live, Thayer street, and turn it into an interesting delivery method. 2025.</p>
+    </div>
+    </section>
+
+
+<!-- black bar dividing 1-->
+
+    <section>
+        <h2 class="projectTitle">Superman Video Essay Magazine</h2>    <!-- projectSection Title-->
+    <div class="projectDivider">
+    <div class="featured-item-section">
+        <figure>
+        <img src="James Website photos/Product Design/HiTop Films Magazine/Magazine 4.webp"
+        alt="Magazine" style="height:100%; width: 100%;"  
+        data-images='[{"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Magazine 1.webp"}, 
+        {"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Magazine 2.webp"}, 
+        {"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Magazine 3.webp"}, 
+        {"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Magazine 4.webp"}]'
+        data-caption="<strong>Superman Video Essay Magazine</strong><br> I translated a video essay - HITOP FILMS We Needed Superman - to become a film review style magazine. I also included a pack of gum to make the whole thing more pop culture-like. 2025." 
+        onclick="openLightbox(this)"/>
+        <figcaption>
+          Magazine Display
+        </figcaption>        
+        </figure>
+
+        <figure>
+        <img src="James Website photos/Product Design/HiTop Films Magazine/Page Spread in Hand.webp"
+        alt="Magazine Page Spreads" style="height:100%; width: 100%;"  
+        data-images='[{"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Page Spread 1.webp"}, 
+        {"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Page Spread 2.webp"}, 
+        {"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Page Spread 3.webp"}, 
+        {"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Page Spread 4.webp"}, 
+        {"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Page Spread 5.webp"}, 
+        {"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Page Spread 6.webp"}, 
+        {"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Page Spread 7.webp"}, 
+        {"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Page Spread 8.webp"}, 
+        {"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Page Spread 9.webp"}, 
+        {"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Page Spread 10.webp"}, 
+        {"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Page Spread 11.webp"}, 
+        {"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Page Spread 12.webp"}, 
+        {"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Page Spread 13.webp"}]'
+        data-caption="<strong>Superman Video Essay Magazine</strong><br> I translated a video essay - HITOP FILMS We Needed Superman - to become a film review style magazine. I also included a pack of gum to make the whole thing more pop culture-like. 2025." 
+        onclick="openLightbox(this)"/>
+        <figcaption>
+          Pages
+        </figcaption>  
+        </figure>
+
+        <figure>
+        <img src="James Website photos/Product Design/HiTop Films Magazine/Gum box 3.webp" 
+        alt="CARDS" style="height:100%; width: 100%;"  
+        data-images='[{"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Gum box 3.webp"}, 
+        {"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Gum box 4.webp"}, 
+        {"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Gum box 5.webp"}, 
+        {"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Gum box 6.webp"}, 
+        {"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Gum box 7.webp"}]'
+        data-caption="<strong>Superman Video Essay Magazine</strong><br> I translated a video essay - HITOP FILMS We Needed Superman - to become a film review style magazine. I also included a pack of gum to make the whole thing more pop culture-like. 2025." 
+        onclick="openLightbox(this)"/>
+        <figcaption>
+          Gum Box Display
+        </figcaption>    
+        </figure>
+
+        <figure>
+        <img src="James Website photos/Product Design/HiTop Films Magazine/Gum box 1.webp" 
+        alt="CARDS" style="height:100%; width: 100%;"  
+        data-images='[{"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Gum box 1.webp"},
+        {"type":"image","src":"James Website photos/Product Design/HiTop Films Magazine/Gum box 2.webp"}]'
+        data-caption="<strong>Superman Video Essay Magazine</strong><br> I translated a video essay - HITOP FILMS We Needed Superman - to become a film review style magazine. I also included a pack of gum to make the whole thing more pop culture-like. 2025." 
+        onclick="openLightbox(this)"/>
+        <figcaption>
+          Box Design
+        </figcaption>    
+        </figure>
+    </div>
+        <p class="description">I translated a video essay - HITOP FILMS We Needed Superman - to become a film review style magazine. I also included a pack of gum to make the whole thing more pop culture-like. 2025.</p>
+    </div>
+    </section>
+
+    
+<!-- black bar dividing 2-->
+
+    <section>
+        <h2 class="projectTitle">Run to Resist</h2>    <!-- projectSection Title-->
+    <div class="projectDivider">
+    <div class="featured-item-section">
+        <figure>
+        <img src="James Website photos/Product Design/Run to Resist/cover of book.png"
+        alt="Comic" style="height:100%; width: 100%;"  
+        data-images='[{"type":"image","src":"James Website photos/Product Design/Run to Resist/cover of book.png"},
+        {"type":"image","src":"James Website photos/Product Design/Run to Resist/cover of book 3.jpeg"},
+        {"type":"image","src":"James Website photos/Product Design/Run to Resist/cover of book 2.jpeg"},
+        {"type":"image","src":"James Website photos/Product Design/Run to Resist/book and hand-compressed.png"}]'
+        data-caption="<strong>Run to Resist</strong><br> This was my interactive narritive driven campaign to encourage kids aged 12-17 to take up running as a cardio fitness support for heart health. This was my attempt at assisting the NIH (National Institute of Health) at encouraging teenagers to resist the increasingly sedentary culture of modern day life. Inspired by Osmosis Jones and Lazy town combined with Genndy Tartakovsky's action illustrations, I made a narritive that would attarct kids to the cause. 2025.<br><a href='https://globalcomix.com/read/19faf3a7-1b66-4077-bf3a-349fb4370829/1' target='_blank'> CLICK LINK </a>" 
+        onclick="openLightbox(this)"/> 
+        <figcaption>
+          Book Display
+        </figcaption>     
+        </figure>
+
+        <figure>
+            <img src="James Website photos/Product Design/Run to Resist/pages cover.jpeg"
+            alt="Comic" style="height:100%; width: 100%;"  
+            data-images='[{"type":"image","src":"James Website photos/Product Design/Run to Resist/pages 0.jpeg"},
+            {"type":"image","src":"James Website photos/Product Design/Run to Resist/pages 1.jpeg"},
+            {"type":"image","src":"James Website photos/Product Design/Run to Resist/pages 2.jpeg"},
+            {"type":"image","src":"James Website photos/Product Design/Run to Resist/pages 3.jpeg"},
+            {"type":"image","src":"James Website photos/Product Design/Run to Resist/pages 4.jpeg"},
+            {"type":"image","src":"James Website photos/Product Design/Run to Resist/pages 5.jpeg"},
+            {"type":"image","src":"James Website photos/Product Design/Run to Resist/pages 6.jpeg"},
+            {"type":"image","src":"James Website photos/Product Design/Run to Resist/pages 7.jpeg"},
+            {"type":"image","src":"James Website photos/Product Design/Run to Resist/pages 8.jpeg"},
+            {"type":"image","src":"James Website photos/Product Design/Run to Resist/pages 9.jpeg"},
+            {"type":"image","src":"James Website photos/Product Design/Run to Resist/pages 10.jpeg"},
+            {"type":"image","src":"James Website photos/Product Design/Run to Resist/pages 11.jpeg"},
+            {"type":"image","src":"James Website photos/Product Design/Run to Resist/pages 12.jpeg"},
+            {"type":"image","src":"James Website photos/Product Design/Run to Resist/pages 13-compressed.jpg"},
+            {"type":"image","src":"James Website photos/Product Design/Run to Resist/pages 14.jpeg"}]'
+            data-caption="<strong>Run to Resist</strong><br> This was my interactive narritive driven campaign to encourage kids aged 12-17 to take up running as a cardio fitness support for heart health. This was my attempt at assisting the NIH (National Institute of Health) at encouraging teenagers to resist the increasingly sedentary culture of modern day life. Inspired by Osmosis Jones and Lazy town combined with Genndy Tartakovsky's action illustrations, I made a narritive that would attarct kids to the cause. 2025.<br><a href='https://globalcomix.com/read/19faf3a7-1b66-4077-bf3a-349fb4370829/1' target='_blank'> CLICK LINK </a>" 
+            onclick="openLightbox(this)"/>    
+            <figcaption>
+              Pages
+            </figcaption>  
+            </figure>
+    </div>
+        <p class="description">This was my interactive narritive driven campaign to encourage kids aged 12-17 to take up running as a cardio fitness support for heart health. 2025.<br><a href='https://globalcomix.com/read/19faf3a7-1b66-4077-bf3a-349fb4370829/1' target='_blank'><strong> CLICK LINK </strong></a></p>
+    </div>
+    </section>
+
+
+
+<!-- black bar dividing 5-->
+
+<section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+    <h2 class="projectTitle">Got Milk?</h2>    <!-- projectSection Title-->
+    <div class="projectDivider">
+        <div class="featured-item-section">
+            <figure>
+            <img src="James Website photos/Product Design/Got Milk/Milk 5.jpeg"  
+            alt="Got Milk" style="height:100%; width: 100%;"  
+            data-images='[{"type":"image","src":"James Website photos/Product Design/Got Milk/Milk 1-compressed.png"},
+            {"type":"image","src":"James Website photos/Product Design/Got Milk/Milk 2.jpeg"},
+            {"type":"image","src":"James Website photos/Product Design/Got Milk/Milk 3.jpeg"},
+            {"type":"image","src":"James Website photos/Product Design/Got Milk/Milk 4.jpeg"},
+            {"type":"image","src":"James Website photos/Product Design/Got Milk/Milk 5.jpeg"}]'
+            data-caption="<strong>Got Milk?</strong><br>This was my media adaptation project. I used my card making skills from Wrath of Reyath (collaborative board game project) and composed my own parody game of the 90s' TV Got Milk campaign ads. I did this to play into my interest and strength in working with pop culture, mass production, entertainment, and old Americana goods. It's a game that functions similar to Yugioh and uses every character fro mthe 90s' advertisments. 2025.<br><a href='https://youtu.be/xMyls2J2Ydg' target='_blank'> VIDEO LINK </a>" 
+            onclick="openLightbox(this)"/>
+            <figcaption>
+              Box
+            </figcaption>  
+            </figure>
+        
+            <figure>
+            <img src="James Website photos/Product Design/Got Milk/Milk Cards 1.jpeg"  
+            alt="Superman Poster" style="height:100%; width: 100%;"          
+            data-images='[{"type":"image","src":"James Website photos/Product Design/Got Milk/Milk Cards 1.jpeg"},
+            {"type":"image","src":"James Website photos/Product Design/Got Milk/Milk Cards 2.jpeg"},
+            {"type":"youtube","src":"xMyls2J2Ydg"}]'
+            data-caption="<strong>Got Milk?</strong><br>This was my media adaptation project. I used my card making skills from Wrath of Reyath (collaborative board game project) and composed my own parody game of the 90s' TV Got Milk campaign ads. I did this to play into my interest and strength in working with pop culture, mass production, entertainment, and old Americana goods. It's a game that functions similar to Yugioh and uses every character fro mthe 90s' advertisments. 2025.<br><a href='https://youtu.be/xMyls2J2Ydg' target='_blank'> VIDEO LINK </a>" 
+            onclick="openLightbox(this)"/>
+            <figcaption>
+              Cards
+            </figcaption>  
+            </figure>
+        </div>
+        <p class="description">This was my media adaptation project. I used my card making skills from Wrath of Reyath (collaborative board game project) and composed my own parody game of the 90s' TV Got Milk campaign ads. 2025.</p>
+    </div>  
+    </section>
+
+    <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+      <h2 class="projectTitle">Superman Poster</h2>    <!-- projectSection Title-->
+    <div class="projectDivider">
+    <div class="featured-item-section">
+      <figure>
+          <img src="James Website photos/Product Design/Superman/Superman Fanart James Kim.jpg"  
+            alt="Superman Poster" style="height:100%; width: 100%;"  
+            data-images='[{"type":"image","src":"James Website photos/Product Design/Superman/Superman Fanart James Kim.jpg"},
+            {"type":"image","src":"James Website photos/Product Design/Superman/Superman 1.jpeg"}]'
+            data-caption="<strong>Superman Poster</strong><br> Fanart for the Superman movie by James Gunn. Plotter printed. 2024. <br><a href='https://www.instagram.com/p/DMBfbnZBhEp/?img_index=1' target='_blank'> CLICK LINK </a>" 
+            onclick="openLightbox(this)"/>
+            <figcaption>
+              Superman Poster
+            </figcaption>  
+        </figure>
+    
+      <figure>
+          <img src="James Website photos/Product Design/Superman/Superman 2.jpeg"  
+            alt="Superman Poster" style="height:100%; width: 100%;"  
+            data-images='[{"type":"image","src":"James Website photos/Product Design/Superman/Superman 2.jpeg"},
+            {"type":"image","src":"James Website photos/Product Design/Superman/Superman 3.jpeg"}]'
+            data-caption="<strong>Superman Poster</strong><br> Fanart for the Superman movie by James Gunn. Plotter printed. 2024. <br><a href='https://www.instagram.com/p/DMBfbnZBhEp/?img_index=1' target='_blank'> CLICK LINK </a>" 
+            onclick="openLightbox(this)"/>
+            <figcaption>
+              Super Poster Display
+            </figcaption>  
+        </figure>
+    </div>
+      <p class="description"> Fanart for the Superman movie by James Gunn. Plotter printed. 2024. <br><a href='https://www.instagram.com/p/DMBfbnZBhEp/?img_index=1' target='_blank'><strong> CLICK LINK </strong></a></p>
+    </div>  
+    </section>
+
+<!--________^ Portfolio Horzontal scroll ^________-->
+<!--_________________^ PORTFOLIO ITEMS HERE ^_________________-->
+</div>
+<button class="scroll-btn scroll-right" onclick="scrollRow(this, 1)">&#10095;</button><!--<BUTTON>-->
+</div><!--<BUTTON>-->
+</details> <!-- PRODUCT DESIGN DETAILS -->
+
+
+<h2 class="year">Marketing</h2>   <!-- --------2025--------- -->
+<details>
+  <summary> </summary>
+  <div class="work-row-wrapper"> <!--<BUTTON>-->
+    <button class="scroll-btn scroll-left" onclick="scrollRow(this, -1)">&#10094;</button><!--<BUTTON>-->
+    <div class="workRow"> <!--________v Portfolio Horzontal scroll v________-->
+
+      <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+        <h2 class="projectTitle">Envisioned Events by Suzette</h2>    <!-- projectSection Title-->
+    <div class="projectDivider">
+    <div class="featured-item-section">
+        <figure>
+            <img src="James Website photos/Marketing/EES.LLC/1.jpg"
+            alt="Marketing Add" style="height:100%; width: 100%;"  
+            data-images='[{"type":"image","src":"James Website photos/Marketing/EES.LLC/1.jpg"},
+            {"type":"image","src":"James Website photos/Marketing/EES.LLC/2.jpg"},
+            {"type":"image","src":"James Website photos/Marketing/EES.LLC/3.jpg"},
+            {"type":"image","src":"James Website photos/Marketing/EES.LLC/4.jpg"},
+            {"type":"image","src":"James Website photos/Marketing/EES.LLC/5.jpg"}]'
+            data-caption="<strong>Suzette's Social Media Ads</strong><br> This is the marketing work I did in my spring Junior internship as a Social Media Marketing Intern for the Brooklyn based organization Envisioned Events by Suzette, Etiquette Speaks, and Envisioned Travels. 2026.<br><a href='https://www.instagram.com/p/DWJhTJjDacE/?img_index=1' target='_blank'> CLICK LINK </a>" 
+            onclick="openLightbox(this)"/> 
+            <figcaption>
+              Envisioned Travels
+            </figcaption>
+          </figure>
+    
+        <figure>
+            <img src="James Website photos/Marketing/EES.LLC/Etiquette 1.jpg"
+            alt="Marketing Add" style="height:100%; width: 100%;"  
+            data-images='[{"type":"image","src":"James Website photos/Marketing/EES.LLC/Etiquette 1.jpg"},
+            {"type":"image","src":"James Website photos/Marketing/EES.LLC/Etiquette 2.jpg"},
+            {"type":"image","src":"James Website photos/Marketing/EES.LLC/Etiquette 3.jpg"},
+            {"type":"image","src":"James Website photos/Marketing/EES.LLC/Etiquette 4.jpg"},
+            {"type":"image","src":"James Website photos/Marketing/EES.LLC/Etiquette 5.jpg"},
+            {"type":"image","src":"James Website photos/Marketing/EES.LLC/Etiquette 6.jpg"}]'
+            data-caption="<strong>Suzette's Social Media Ads</strong><br> This is the marketing work I did in my spring Junior internship as a Social Media Marketing Intern for the Brooklyn based organization Envisioned Events by Suzette, Etiquette Speaks, and Envisioned Travels. 2026.<br><a href='https://www.instagram.com/p/DWJhTJjDacE/?img_index=1' target='_blank'> CLICK LINK </a>" 
+              onclick="openLightbox(this)"/>
+              <figcaption>
+                Etiquette Speaks
+              </figcaption>
+          </figure>
+    
+          <figure>
+            <img src="James Website photos/Marketing/EES.LLC/Events 1.jpg"
+            alt="Marketing Add" style="height:100%; width: 100%;"  
+            data-images='[{"type":"image","src":"James Website photos/Marketing/EES.LLC/Events 1.jpg"},
+            {"type":"image","src":"James Website photos/Marketing/EES.LLC/Events 2.jpg"},
+            {"type":"image","src":"James Website photos/Marketing/EES.LLC/Events 3.jpg"},
+            {"type":"image","src":"James Website photos/Marketing/EES.LLC/Events 4.jpg"},
+            {"type":"image","src":"James Website photos/Marketing/EES.LLC/Events 5.jpg"},
+            {"type":"image","src":"James Website photos/Marketing/EES.LLC/Events 6.jpg"},
+            {"type":"image","src":"James Website photos/Marketing/EES.LLC/Events 7.jpg"},
+            {"type":"image","src":"James Website photos/Marketing/EES.LLC/Events 8.jpg"},
+            {"type":"image","src":"James Website photos/Marketing/EES.LLC/Events 9.jpg"}]'
+            data-caption="<strong>Suzette's Social Media Ads</strong><br> This is the marketing work I did in my spring Junior internship as a Social Media Marketing Intern for the Brooklyn based organization Envisioned Events by Suzette, Etiquette Speaks, and Envisioned Travels. 2026.<br><a href='https://www.instagram.com/p/DWJhTJjDacE/?img_index=1' target='_blank'> CLICK LINK </a>" 
+              onclick="openLightbox(this)"/>
+              <figcaption>
+                Envisioned Events
+              </figcaption>
+          </figure>
+    
+          <figure>
+            <img src="James Website photos/Marketing/EES.LLC/Wedding 1.jpg"
+            alt="Marketing Add" style="height:100%; width: 100%;"  
+            data-images='[{"type":"image","src":"James Website photos/Marketing/EES.LLC/Wedding 1.jpg"},
+            {"type":"image","src":"James Website photos/Marketing/EES.LLC/Wedding 2.jpg"},
+            {"type":"image","src":"James Website photos/Marketing/EES.LLC/Wedding 3.jpg"},
+            {"type":"image","src":"James Website photos/Marketing/EES.LLC/Wedding 4.jpg"},
+            {"type":"image","src":"James Website photos/Marketing/EES.LLC/Wedding 5.jpg"},
+            {"type":"image","src":"James Website photos/Marketing/EES.LLC/Wedding 6.jpg"},
+            {"type":"image","src":"James Website photos/Marketing/EES.LLC/Wedding 7.jpg"},
+            {"type":"image","src":"James Website photos/Marketing/EES.LLC/Wedding 8.jpg"},
+            {"type":"image","src":"James Website photos/Marketing/EES.LLC/Wedding 9.jpg"},
+            {"type":"image","src":"James Website photos/Marketing/EES.LLC/Wedding 10.jpg"}]'
+            data-caption="<strong>Suzette's Social Media Ads</strong><br> This is the marketing work I did in my spring Junior internship as a Social Media Marketing Intern for the Brooklyn based organization Envisioned Events by Suzette, Etiquette Speaks, and Envisioned Travels. 2026.<br><a href='https://www.instagram.com/p/DWJhTJjDacE/?img_index=1' target='_blank'> CLICK LINK </a>" 
+              onclick="openLightbox(this)"/>
+              <figcaption>
+                Wedding Planning
+              </figcaption>
+          </figure>
+    </div>
+        <p class="description">This is the marketing work I did in my spring Junior internship as a Social Media Marketing Intern for the Brooklyn based organization Envisioned Events by Suzette, Etiquette Speaks, and Envisioned Travels. 2026.<br><a href='https://www.instagram.com/p/DWJhTJjDacE/?img_index=1' target='_blank'><strong> CLICK LINK </strong></a></p>
+    </div>  
+    </section>
+
+    <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+      <h2 class="projectTitle">Project Look</h2>    <!-- projectSection Title (youtbe video here)-->
+      <div class="projectDivider" style="column-gap:1vw;">
+      <div class="featured-item-section-video">
+          <figure class="portfolio-item-video">
+          <img src="https://img.youtube.com/vi/9WbIgzPXhu8/maxresdefault.jpg" 
+          alt="Project Look"
+          data-youtube="9WbIgzPXhu8"
+          data-caption="<strong>Project Look Promo Video</strong><br> Over my summer internship of 2025 I filmed and edited a series of promotional videos for the Palo Alto Art Center, bolstering the awarness of many of the city's artists.<br> This video is the promotional video for the Project Look program which lets K-5th grade students from local schools take tours through the PAACF exhibitions. This video calls for Docent volunteers to guide the children and foster creativity. 2025. <br><a href='https://www.paloalto.gov/Departments/Community-Services/Arts-Sciences/Palo-Alto-Art-Center/Volunteer/School-Tour-Docents' target='_blank'> CLICK LINK </a>"
+          onclick="openLightbox(this)">
+          <figcaption>
+            Project Look
+          </figcaption>           
+          </figure>
+      </div>
+          <p class="description">Over my summer internship of 2025 I filmed and edited a series of promotional videos for the Palo Alto Art Center, bolstering the awarness of many of the city's artists. 2025.<br><a href='https://www.paloalto.gov/Departments/Community-Services/Arts-Sciences/Palo-Alto-Art-Center/Volunteer/School-Tour-Docents' target='_blank'><strong> CLICK LINK </strong></a></p>
+      </div>
+    </section>    
+
+    <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+      <h2 class="projectTitle">3 Exhibition Artists, 2025 PAACF Instagram Videos</h2>    <!-- projectSection Title (youtbe video here)-->
+      <div class="projectDivider" style="column-gap:0vw;">
+      <div class="featured-item-section-video">
+          <figure class="portfolio-item-video">
+          <img src="https://img.youtube.com/vi/sbmAD3LfJRo/maxresdefault.jpg" 
+          alt="Project Look"
+          data-youtube="sbmAD3LfJRo"
+          data-caption="<strong>3 Exhibition Artists, 2025 PAACF Instagram Videos</strong><br> This is a promotional video I filmed and edited for 3 Forming Function ceramic artists at my local Palo Alto art center. My internship tasked me with this kind of work to help spread the love of art and design through our community. 2025.<br><a href='https://www.instagram.com/p/DNYo7QxB8fR/?hl=en' target='_blank'> CLICK LINK </a>"
+          onclick="openLightbox(this)">
+          <figcaption>
+            2025 PAACF Instagram Videos
+          </figcaption>           
+          </figure>
+      </div>
+          <p class="description">This is a promotional video I filmed and edited for 3 Forming Function ceramic artists at my local Palo Alto art center. My internship tasked me with this kind of work to help spread the love of art and design through our community. 2025.<br><a href='https://www.instagram.com/p/DNYo7QxB8fR/?hl=en' target='_blank'><strong> CLICK LINK </strong></a></p>
+      </div>
+    </section>
+
+    <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+      <h2 class="projectTitle">Forming Function Artists, 2025 PAACF Instagram Videos</h2>    <!-- projectSection Title (youtbe video here)-->
+      <div class="projectDivider" style="column-gap:0vw;">
+      <div class="featured-item-section-video">
+          <figure class="portfolio-item-video">
+          <img src="https://img.youtube.com/vi/w_U2AH3gyAE/maxresdefault.jpg" 
+          alt="Project Look"
+          data-images='[{"type":"youtube","src":"w_U2AH3gyAE"},
+          {"type":"youtube","src":"QTeC5K7gqIc"},
+          {"type":"youtube","src":"b8RxiirN7ak"}]'
+          data-caption="<strong>Forming Function Artists, 2025 PAACF Instagram Videos</strong><br> The 2025 summer exhibition of Forming Functions showcased the work of many Palo Alto artists at the PAACF to honor the creative culture of Silicon Valley.<br>I was incharge of videography, editing, and working with the foundation's directors to compose the videos for instagram advertising of the event and it's art pieces.<br>The artists include Jan Schachter, Salley Jackson, and Edward Paas. 2025."
+          onclick="openLightbox(this)">
+          <figcaption>
+            Forming Function Artists
+          </figcaption>           
+          </figure>
+      </div>
+          <p class="description">The 2025 summer exhibition of Forming Functions showcased the work of many Palo Alto artists at the PAACF to honor the creative culture of Silicon Valley.<br>I was incharge of videography, editing, and working with the foundation's directors to compose the videos for instagram advertising of the event and it's art pieces.<br>The artists include Jan Schachter, Salley Jackson, and Edward Paas. 2025.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="projectTitle">2025 Buttons PAACF</h2>    <!-- projectSection Title-->
+  <div class="projectDivider">
+  <div class="featured-item-section">
+      <figure>
+      <img src="James Website photos/Marketing/2025 PAACF/Buttons 1-compressed.jpg"
+      alt="Buttons" style="height:100%; width: 100%;"  
+      data-images='[{"type":"image","src":"James Website photos/Marketing/2025 PAACF/Buttons 1-compressed.jpg"},
+      {"type":"image","src":"James Website photos/Marketing/2025 PAACF/Buttons 2.jpeg"}]'
+      data-caption="<strong>2025 Buttons PAACF</strong><br> These were buttons I designed and ordered for manufacturing in my 2025 summer internship. They were well crafted from Aluminium and handed out to all of my coworkers and visitors. 2025." 
+      onclick="openLightbox(this)"/>
+      <figcaption>
+        2025 Buttons PAACF
+      </figcaption>        
+      </figure>
+
+      <figure>
+      <img src="James Website photos/Marketing/2025 PAACF/Buttons 3.jpeg"
+      alt="Buttons" style="height:100%; width: 100%;"  
+      data-images='[{"type":"image","src":"James Website photos/Marketing/2025 PAACF/Buttons 3.jpeg"},
+      {"type":"image","src":"James Website photos/Marketing/2025 PAACF/Buttons 4.jpeg"}]'
+      data-caption="<strong>2025 Buttons PAACF</strong><br> These were buttons I designed and ordered for manufacturing in my 2025 summer internship. They were well crafted from Aluminium and handed out to all of my coworkers and visitors. 2025." 
+      onclick="openLightbox(this)"/>
+      <figcaption>
+        2025 Buttons PAACF
+      </figcaption>        
+      </figure>
+
+      <figure>
+      <img src="James Website photos/Marketing/2025 PAACF/Buttons 5.jpeg"
+      alt="Buttons" style="height:100%; width: 100%;"  
+      data-images='[{"type":"image","src":"James Website photos/Marketing/2025 PAACF/Buttons 5.jpeg"},
+      {"type":"image","src":"James Website photos/Marketing/2025 PAACF/Buttons 6.jpeg"}]'
+      data-caption="<strong>2025 Buttons PAACF</strong><br> These were buttons I designed and ordered for manufacturing in my 2025 summer internship. They were well crafted from Aluminium and handed out to all of my coworkers and visitors. 2025." 
+      onclick="openLightbox(this)"/>
+      <figcaption>
+        2025 Buttons PAACF
+      </figcaption>        
+      </figure>
+
+      <figure>
+      <img src="James Website photos/Marketing/2025 PAACF/Buttons 7.jpeg"
+      alt="Buttons" style="height:100%; width: 100%;"  
+      data-images='[{"type":"image","src":"James Website photos/Marketing/2025 PAACF/Buttons 7.jpeg"}]'
+      data-caption="<strong>2025 Buttons PAACF</strong><br> These were buttons I designed and ordered for manufacturing in my 2025 summer internship. They were well crafted from Aluminium and handed out to all of my coworkers and visitors. 2025." 
+      onclick="openLightbox(this)"/>
+      <figcaption>
+        2025 Buttons PAACF
+      </figcaption>        
+      </figure>
+  </div>
+
+      <p class="description">These were buttons I designed and ordered for manufacturing in my 2025 summer internship. They were well crafted from Aluminium and handed out to all of my coworkers and visitors. 2025.</p>
+  </div>
+  </section>
+
+<!--________^ Portfolio Horzontal scroll ^________-->
+<!--_________________^ PORTFOLIO ITEMS HERE ^_________________-->
+</div>
+<button class="scroll-btn scroll-right" onclick="scrollRow(this, 1)">&#10095;</button><!--<BUTTON>-->
+</div><!--<BUTTON>-->
+</details>  <!-- MARKETING DETAILS -->
+
+<h2 class="year">Programming</h2>    <!-- --------2024--------- -->
+<details>
+  <summary> </summary>
+  <div class="work-row-wrapper"> <!--<BUTTON>-->
+  <button class="scroll-btn scroll-left" onclick="scrollRow(this, -1)">&#10094;</button><!--<BUTTON>-->
+<div class="workRow"> <!--________v Portfolio Horzontal scroll v________-->
+
+  <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+    <h2 class="projectTitle">Galactic Ranger</h2>    <!-- projectSection Title (youtbe video here)-->
+    <div class="projectDivider">
+    <div class="featured-item-section-video">
+        <figure class="portfolio-item-video">
+        <img src="James Website photos/Programming/Gr Game/GR Game 1.jpg" 
+        alt="Galactic Ranger"
+        data-images='[{"type":"image","src":"James Website photos/Programming/Gr Game/GR Game 1.jpg"},
+        {"type":"image","src":"James Website photos/Programming/Gr Game/GR Game 2.jpg"}, 
+        {"type":"image","src":"James Website photos/Programming/Gr Game/GR Game 3.jpg"},
+        {"type":"image","src":"James Website photos/Programming/Gr Game/GR Game 4.jpg"},
+        {"type":"image","src":"James Website photos/Programming/Gr Game/GR Game 5.jpg"},
+        {"type":"image","src":"James Website photos/Programming/Gr Game/GR Game 6.jpg"},
+        {"type":"image","src":"James Website photos/Programming/Gr Game/GR Game 7.jpg"},
+        {"type":"youtube","src":"GlHK0Z0HR_k"}]' 
+        data-caption="<strong>Galactic Ranger</strong><br>Sci-Fi action Shooter developed in Unity game engine. 3D modeling with Unity and Cinema 4D. 2026. <br><a href='https://kimbrocomics.itch.io/galactic-ranger' target='_blank'> GAME LINK </a>" 
+        onclick="openLightbox(this)">
+        <figcaption>
+          Galactic Ranger
+        </figcaption>           
+        </figure>
+    </div>
+        <p class="description">Sci-Fi action Shooter developed in Unity game engine. The video documentation underneath displays the extent of learning Unity in my Junior year as well as coding and asset design. 3D modeling with Unity and Cinema 4D. 2026. <br><a href='https://kimbrocomics.itch.io/galactic-ranger' target='_blank'><strong> GAME LINK </strong></a></p>
+    </div>
+    </section>
+
+    <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+      <h2 class="projectTitle">Star Voyage</h2>    <!-- projectSection Title (youtbe video here)-->
+      <div class="projectDivider">
+      <div class="featured-item-section-video">
+          <figure class="portfolio-item-video">
+          <img src="James Website photos/Programming/Old Websites/Star Voyage 1.jpg" 
+          alt="Star Voyage"
+          data-images='[{"type":"image","src":"James Website photos/Programming/Old Websites/Star Voyage 1.jpg"},
+          {"type":"image","src":"James Website photos/Programming/Old Websites/Star Voyage 2.jpg"}, 
+          {"type":"image","src":"James Website photos/Programming/Old Websites/Star Voyage 3.jpg"}, 
+          {"type":"image","src":"James Website photos/Programming/Old Websites/Star Voyage 4.jpg"}]' 
+          data-caption="<strong>Star Voyage</strong><br> I programmed my first website from Javascript using p5.js and Github publishing. I learned how to code games and 3D effects using Javascript and html. <br><a href='https://creatureo.github.io/Star-Voyage/' target='_blank'> CLICK HERE </a>" 
+          onclick="openLightbox(this)">
+          <figcaption>
+            Star Voyage
+          </figcaption>           
+          </figure>
+      </div>
+        <p class="description">I programmed my first website from Javascript using p5.js and Github publishing. I learned <strong>how to code games</strong> and 3D effects using Javascript and html. <br><a href='https://creatureo.github.io/Star-Voyage/' target='_blank'><strong> CLICK HERE </strong></a></p>
+    </div>
+      </section>
+
+      <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+        <h2 class="projectTitle">Remember (The Elderly Reading App)</h2>    <!-- projectSection Title (youtbe video here)-->
+        <div class="projectDivider">
+        <div class="featured-item-section-video">
+            <figure class="portfolio-item-video">
+            <img src="https://img.youtube.com/vi/LV227z3b3Ew/maxresdefault.jpg" 
+            alt="Remember"
+            data-images='[{"type":"youtube","src":"LV227z3b3Ew"}]' 
+                data-caption="<strong>Remember</strong><br>I used Figma to mock up a reading app for elderly people past the age of 60 to comabat memory loss and worsened vision. I wired this data design for easy UI. 2026." 
+            onclick="openLightbox(this)">
+            <figcaption>
+              Remember
+            </figcaption>           
+            </figure>
+        </div>
+          <p class="description">I used Figma to mock up a reading app for elderly people past the age of 60 to comabat memory loss and worsened vision. I wired this data design for easy UI. 2026.</p>
+      </div>
+        </section>
+</div>
+<button class="scroll-btn scroll-right" onclick="scrollRow(this, 1)">&#10095;</button><!--<BUTTON>-->
+</div><!--<BUTTON>-->
+</details> <!-- PROGRAMMING DETAILS -->
+<!--________^ Portfolio Horzontal scroll ^________-->
+<!--_________________^ PORTFOLIO ITEMS HERE ^_________________-->
+
+<!--_________________v PORTFOLIO VIDEOS HERE v_________________-->
+  <h2 class="year">Motion Graphics</h2>    <!-- projectSection Title-->
+  <details>
+    <summary> </summary>
+<div class="work-row-wrapper"> <!--<BUTTON>-->
+  <button class="scroll-btn scroll-left" onclick="scrollRow(this, -1)">&#10094;</button><!--<BUTTON>-->
+  <div class="workRow">
+
+    <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+      <h2 class="projectTitle">TYPOGRAPHY MOTION GRAPHIC</h2>    <!-- projectSection Title (youtbe video here)-->
+      <div class="projectDivider">
+      <div class="featured-item-section-video">
+          <figure class="portfolio-item-video">
+          <img src="https://img.youtube.com/vi/aqkhn1hJqeo/maxresdefault.jpg" 
+          alt="Motion Graphic"
+          data-images='[{"type":"youtube","src":"aqkhn1hJqeo"}]' 
+          data-caption="<strong>TYPOGRAPHY MOTION GRAPHIC</strong><br>This is my After Effects Motion Graphic project which I created to give words character. I utilized sound and timing to make a fun but practical display of Text and animation. I discovered my affinity for motion graphics through this video. 2025."
+          onclick="openLightbox(this)">
+          <figcaption>
+            TYPOGRAPHY MOTION GRAPHIC
+          </figcaption>           
+          </figure>
+      </div>
+          <p class="description">This is my After Effects Motion Graphic project which I created to give words character. I utilized sound and timing to make a fun but practical display of Text and animation. I discovered my affinity for motion graphics through this video. 2025.</p>
+      </div>
+    </section>
+
+    <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+      <h2 class="projectTitle">Spider Man 2 (2004) Type Motion Graphic.</h2>    <!-- projectSection Title (youtbe video here)-->
+      <div class="projectDivider">
+      <div class="featured-item-section-video">
+          <figure class="portfolio-item-video">
+          <img src="https://img.youtube.com/vi/AMyelYe3A8I/maxresdefault.jpg" 
+          alt="Spider-Man Motion Graphic"
+          data-images='[{"type":"youtube","src":"AMyelYe3A8I"}]' 
+          data-caption="<strong>Spider Man 2 (2004) Type Motion Graphic.</strong><br> This is my work from 2025 in RISD Typography-3. I was assigned to work on any audio clip that would be viewed exclusively through type text and I used Aftereffects to achieve this."
+          onclick="openLightbox(this)">
+          <figcaption>
+            Type Motion Graphic.
+          </figcaption>           
+          </figure>
+      </div>
+          <p class="description">This is my work from 2025 in RISD Typography-3. I was assigned to work on any audio clip that would be viewed exclusively through type text and I used Aftereffects to achieve this.</p>
+      </div>
+    </section>
+
+    <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+      <h2 class="projectTitle">Saffron, the Mysterious Colour</h2>    <!-- projectSection Title (youtbe video here)-->
+      <div class="projectDivider">
+      <div class="featured-item-section-video">
+          <figure class="portfolio-item-video">
+          <img src="https://img.youtube.com/vi/SNe8uAb50FM/maxresdefault.jpg" 
+          alt="Saffron Motion Graphic"
+          data-images='[{"type":"youtube","src":"SNe8uAb50FM"}]'
+          data-caption="<strong>Saffron, the Mysterious Colour</strong><br> After Effects video of the history and science behind the color Saffron. 2025."
+          onclick="openLightbox(this)">
+          <figcaption>
+            Saffron, the Mysterious Colour
+          </figcaption>           
+          </figure>
+      </div>
+          <p class="description">After Effects video of the history and science behind the color Saffron. 2025.</p>
+      </div>
+    </section>
+
+    <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+      <h2 class="projectTitle">Poppy Eats Jello!</h2>    <!-- projectSection Title (youtbe video here)-->
+      <div class="projectDivider">
+      <div class="featured-item-section-video">
+          <figure class="portfolio-item-video">
+          <img src="https://img.youtube.com/vi/MKpCQCdZ728/maxresdefault.jpg" 
+          alt="Motion Graphic"
+          data-images='[{"type":"youtube","src":"MKpCQCdZ728"}]' 
+          data-caption="<strong>Poppy Eats Jello!</strong><br>This is my Project for GRAPH 3318 - WKSHP: DIGITAL 3D DESIGN. I made this by learning to use Cinema 4D. By the way, the dog's name is Poppy! 2026."
+          onclick="openLightbox(this)">
+          <figcaption>
+            Poppy Eats Jello
+          </figcaption>           
+          </figure>
+      </div>
+          <p class="description">This is my Project for GRAPH 3318 - WKSHP: DIGITAL 3D DESIGN. I made this by learning to use Cinema 4D. By the way, the dog's name is Poppy! 2026.</p>
+      </div>
+    </section>
+
+    <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+      <h2 class="projectTitle">World Hub</h2>    <!-- projectSection Title (youtbe video here)-->
+      <div class="projectDivider">
+      <div class="featured-item-section-video">
+          <figure class="portfolio-item-video">
+          <img src="https://img.youtube.com/vi/-sFxixCKOOE/maxresdefault.jpg" 
+          alt="Motion Graphic"
+          data-images='[{"type":"youtube","src":"-sFxixCKOOE"}]' 
+          data-caption="<strong>World Hub</strong><br> This Final Project is my first extensive use of Figma, wiring and designing an entire website for story tellers and world builders using easy interface and community building tactics. This mock up was a multi week project meant to provide a safe space for story tellers to organize their fictional inspirations and ideas with their friends to show their work to script writers and creative teams. Shout out to Gabriel Drozdov for his extremely helpful feedback and wireframing lessons! 2026."
+          onclick="openLightbox(this)">
+          <figcaption>
+            World Hub
+          </figcaption>           
+          </figure>
+      </div>
+          <p class="description">This Final Project is my first extensive use of Figma, wiring and designing an entire website for story tellers and world builders using easy interface and community building tactics. 2026.</p>
+      </div>
+    </section>
+
+    <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+      <h2 class="projectTitle">Barksketball</h2>    <!-- projectSection Title (youtbe video here)-->
+      <div class="projectDivider">
+      <div class="featured-item-section-video">
+          <figure class="portfolio-item-video">
+          <img src="James Website photos/Motion Graphics/Dog Dunk.gif" 
+          alt="Barksketball Gif"
+          data-images='[{"type":"image","src":"James Website photos/Motion Graphics/Dog Dunk.gif"}]' 
+          data-caption="<strong>Barksketball</strong><br> In an improvised group project with 3 people, I was tasked with making a motion graphic for our sports/pet product using the only 2 colors a dog could perceive. I specialize in hand drawn GIFs. 2025."
+          onclick="openLightbox(this)">
+          <figcaption>
+            Barksketball
+          </figcaption>           
+          </figure>
+      </div>
+          <p class="description">In an improvised group project with 3 people, I was tasked with making a motion graphic for our sports/pet product using the only 2 colors a dog could perceive. I specialize in hand drawn GIFs. 2025.</p>
+      </div>
+    </section>
+
+    <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+      <h2 class="projectTitle">Growing Up</h2>    <!-- projectSection Title (youtbe video here)-->
+      <div class="projectDivider">
+      <div class="featured-item-section-video">
+          <figure class="portfolio-item-video">
+          <img src="James Website photos/Motion Graphics/Growth.gif" 
+          alt="Growing Up"
+          data-images='[{"type":"image","src":"James Website photos/Motion Graphics/Growth.gif"}]' 
+          data-caption="<strong>Growing Up</strong><br>Motion graphic animation to promote healthy child care in America. After Effects. 2025."
+          onclick="openLightbox(this)">
+          <figcaption>
+            Growing Up
+          </figcaption>           
+          </figure>
+      </div>
+          <p class="description">Motion graphic animation to promote healthy child care in America. After Effects. 2025.</p>
+      </div>
+    </section>
+    
+    <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+      <h2 class="projectTitle">DO NOT TOUCH</h2>    <!-- projectSection Title (youtbe video here)-->
+      <div class="projectDivider">
+      <div class="featured-item-section-video">
+          <figure class="portfolio-item-video">
+          <img src="James Website photos/Motion Graphics/Spiker-compressed.gif" 
+          alt="Do not touch"
+          data-images='[{"type":"image","src":"James Website photos/Motion Graphics/Spiker-compressed.gif"}]' 
+          data-caption="<strong>DO NOT TOUCH</strong><br> Motion graphic animation to characterize cactus as a concept. After Effects. 2025."
+          onclick="openLightbox(this)">
+          <figcaption>
+            DO NOT TOUCH
+          </figcaption>           
+          </figure>
+      </div>
+          <p class="description">Motion graphic animation to characterize cactus as a concept. After Effects. 2025.</p>
+      </div>
+    </section>
+       
+  </div>
+  <button class="scroll-btn scroll-right" onclick="scrollRow(this, 1)">&#10095;</button><!--<BUTTON>-->
+  </div><!--<BUTTON>-->
+  </details> <!-- MOTION GRAPHICS DETAILS -->
+
 
 </main><!-- page content -->
 <footer>
@@ -368,9 +1176,9 @@
   <li><a href="https://github.com/creatureO" target="_blank"><strong>GitHub</strong>:  creatureO</a></li>
   <li><a href="https://globalcomix.com/a/kimbro-comics" target="_blank"><strong>GlobalComix</strong>:  KimbroComics</a></li>
   </ul>
-<img src="../Homepage Images/Kimbro Logo.svg" alt="Kimbro logo" style="height:120px; width:120px; margin:0px 2vw;" class="mainLogo"/>
+<img src="Homepage Images/Kimbro Logo.svg" alt="Kimbro logo" style="height:120px; width:120px; margin:0px 2vw;" class="mainLogo"/>
 </footer>
 <div class="screenCompatibleFiller"></div><!--for phone pages that are too tall, use this-->
-<div style="position:relative;"> <p style="font-size: 0.5em; position: absolute; bottom:20px; left:4vh; opacity: 50%;">Edited October 5, 2026, 1:30AM</p>  </div><!-- Visible text blob of edits -->
+<div style="position:relative;"> <p style="font-size: 0.5em; position: absolute; bottom:20px; left:4vh; opacity: 50%;">Edited October 12, 2026, 10:30PM</p>  </div><!-- Visible text blob of edits -->
 </body>
 </html>

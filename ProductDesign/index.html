@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Modified Oct 5, 2026, 1:30 AM --> <!--ProductDesign-->
+<!-- Modified Oct 12, 2026, 10:30 PM --> <!--ProductDesign-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -41,37 +41,26 @@
   <span id="lightbox-next" onclick="changeSlide(1)">&#10095;</span>
 </dialog>
 <!-- CLICKABLE INTERACTION ITEM, lightboxes -->
-
-<!-- Sticky header wrapper: keeps the logo bar and nav bar pinned to the top as the visitor scrolls -->
-<header>
-
-  <!-- home name KIMBRO AVATAR display: inline-block;--> 
-  <div id="anchorTitle">
+<div class="phonePageTitle">
   <div style="display:flex; align-items: center; gap:1vw;">
   <a href="../"><img src="../Homepage Images/Kimbro Logo.svg" alt="Kimbro logo" style="height:50px; width: 50px;" class="mainLogo"/></a>
   <h1>James Kim</h1>
   </div>
-  <h2 id="subTitle" style="margin-right: 5vw;">RISD, Graphic Design, 2027</h2>
-  </div>
-  <!-- home name -->
-  
-  <ul>
-    <li><a href="../">Home</a></li>
-    <li><a href="../ProductDesign/">Product Design</a></li>
-    <li><a href="../Marketing/">Marketing</a></li>
-    <li><a href="../Programming/">Programming</a></li>
-    <li><a href="../MotionGraphics/">Motion Graphics</a></li>
-    <li><a href="../#about">About</a></li>
-    <li><a href="#contactMe">Contact Me</a></li>
-  </ul>
-</header>
-<!-- end sticky header wrapper -->
+  <h2 class="phoneSubTitle" style="margin-right: 5vw;">RISD, Graphic Design, 2027</h2>
+</div>
+<!-- Sticky header wrapper: keeps the logo bar and nav bar pinned to the top as the visitor scrolls -->
+<header>
 
-<!-- ====================== -->
-<!-- ====================== -->
-<!-- ====================== -->
-<!-- phone's nav bar -->
-<nav>
+<!-- home name KIMBRO AVATAR display: inline-block;--> 
+<div id="anchorTitle">
+<div style="display:flex; align-items: center; gap:1vw;">
+<a href="../"><img src="../Homepage Images/Kimbro Logo.svg" alt="Kimbro logo" style="height:50px; width: 50px;" class="mainLogo"/></a>
+<h1>James Kim</h1>
+</div>
+<h2 id="subTitle" style="margin-right: 5vw;">RISD, Graphic Design, 2027</h2>
+</div>
+<!-- home name -->
+ <nav>
   <div id="clickToOpen">
       <div class="hamburgerMenu">
         <svg viewBox="0 0 100 80" width="40" fill="currentColor" style="height:4vh;">
@@ -88,12 +77,12 @@
     <li><a href="../Marketing/">Marketing</a></li>
     <li><a href="../Programming/">Programming</a></li>
     <li><a href="../MotionGraphics/">Motion Graphics</a></li>
+    <li class="desktopOption"><a href="../#about">About</a></li>
+    <li class="desktopOption"><a href="#contactMe">Contact Me</a></li>
   </ul>
 </nav>
-  <!-- end of phone's nav bar -->
-  <!-- ====================== -->
-  <!-- ====================== -->
-  <!-- ====================== -->
+</header>
+<!-- end sticky header wrapper -->
 
 <main> <!-- Overhead paint drop -->
   <img src="../Homepage Images/HomePageDrip.png" alt="" id="gifOverlay"> <!-- Overhead paint drop -->
@@ -127,7 +116,7 @@
         data-caption="<strong>Outlook</strong><br> This was a behavioral therapy promotional campaign designed to market the benefits of Exposure Therapy as a treatment, fighting stigma around OCD.<br> I was in charge of the caracter and asset design, PAMPHLETS, POSTERS, and the STYLE GUIDE. 2026." 
         onclick="openLightbox(this)"/>
         <figcaption>
-          <span class="item-title">Outlook Display</span>
+          Outlook Display
         </figcaption>
     </figure>
 
@@ -141,7 +130,7 @@
           data-caption="<strong>Outlook</strong><br> This was a behavioral therapy promotional campaign designed to market the benefits of Exposure Therapy as a treatment, fighting stigma around OCD.<br> I was in charge of the caracter and asset design, PAMPHLETS, POSTERS, and the STYLE GUIDE. 2026." 
           onclick="openLightbox(this)"/>
           <figcaption>
-            <span class="item-title">Outlook Posters</span>
+            Outlook Posters
           </figcaption>
       </figure>
 
@@ -155,7 +144,7 @@
           data-caption="<strong>Outlook</strong><br> This was a behavioral therapy promotional campaign designed to market the benefits of Exposure Therapy as a treatment, fighting stigma around OCD.<br> I was in charge of the caracter and asset design, PAMPHLETS, POSTERS, and the STYLE GUIDE. 2026." 
           onclick="openLightbox(this)"/>
           <figcaption>
-            <span class="item-title">Pamphlets</span>
+            Pamphlets
           </figcaption>
       </figure>
 
@@ -174,7 +163,7 @@
           data-caption="<strong>Outlook</strong><br> This was a behavioral therapy promotional campaign designed to market the benefits of Exposure Therapy as a treatment, fighting stigma around OCD.<br> I was in charge of the caracter and asset design, PAMPHLETS, POSTERS, and the STYLE GUIDE. 2026." 
           onclick="openLightbox(this)"/>
           <figcaption>
-            <span class="item-title">Outlook Style Guide</span>
+            Outlook Style Guide
           </figcaption>
       </figure>
 </div>
@@ -215,7 +204,7 @@
         data-caption="<strong>Wrath of Reyath</strong><br> This was a collaborative project between Me, Emerald Jiang, and my roomate Andrew Liao. We were tasked with visualizing sound data on the street I live, Thayer street, and turn it into an interesting delivery method. My group devised that we make a table top RPG game out of it. We made a project even Wizards of the Coast or Hasbro would be proud of. I was in charge of video documentation and making the cards and part time game rule creation. 2025.<br><a href='https://www.youtube.com/watch?v=EP4CL4SOmm8' target='_blank'> VIDEO LINK </a>" 
         onclick="openLightbox(this)"/>
         <figcaption>
-          <span class="item-title">Box</span>
+          Box
         </figcaption>    
          </figure>
 
@@ -233,7 +222,7 @@
     data-caption="<strong>Wrath of Reyath</strong><br> This was a collaborative project between Me, Emerald Jiang, and my roomate Andrew Liao. We were tasked with visualizing sound data on the street I live, Thayer street, and turn it into an interesting delivery method. My group devised that we make a table top RPG game out of it. We made a project even Wizards of the Coast or Hasbro would be proud of. I was in charge of video documentation and making the cards and part time game rule creation. 2025.<br><a href='https://www.youtube.com/watch?v=EP4CL4SOmm8' target='_blank'> VIDEO LINK </a>" 
     onclick="openLightbox(this)"/>    
     <figcaption>
-      <span class="item-title">Game Pieces</span>
+      Game Pieces
     </figcaption>
         </figure>
         
@@ -256,7 +245,7 @@
         data-caption="<strong>Wrath of Reyath</strong><br> This was a collaborative project between Me, Emerald Jiang, and my roomate Andrew Liao. We were tasked with visualizing sound data on the street I live, Thayer street, and turn it into an interesting delivery method. My group devised that we make a table top RPG game out of it. We made a project even Wizards of the Coast or Hasbro would be proud of. I was in charge of video documentation and making the cards and part time game rule creation. 2025.<br><a href='https://www.youtube.com/watch?v=EP4CL4SOmm8' target='_blank'> VIDEO LINK </a>" 
         onclick="openLightbox(this)"/>
         <figcaption>
-          <span class="item-title">Card Stack</span>
+          Card Stack
         </figcaption>    
         </figure>
         
@@ -272,7 +261,7 @@
         data-caption="<strong>Wrath of Reyath</strong><br> This was a collaborative project between Me, Emerald Jiang, and my roomate Andrew Liao. We were tasked with visualizing sound data on the street I live, Thayer street, and turn it into an interesting delivery method. My group devised that we make a table top RPG game out of it. We made a project even Wizards of the Coast or Hasbro would be proud of. I was in charge of video documentation and making the cards and part time game rule creation. 2025.<br><a href='https://www.youtube.com/watch?v=EP4CL4SOmm8' target='_blank'> VIDEO LINK </a>" 
         onclick="openLightbox(this)"/>
         <figcaption>
-          <span class="item-title">Cards</span>
+          Cards
         </figcaption>    
       </figure>
     </div>
@@ -297,7 +286,7 @@
         data-caption="<strong>Superman Video Essay Magazine</strong><br> I translated a video essay - HITOP FILMS We Needed Superman - to become a film review style magazine. I also included a pack of gum to make the whole thing more pop culture-like. 2025." 
         onclick="openLightbox(this)"/>
         <figcaption>
-          <span class="item-title">Magazine Display</span>
+          Magazine Display
         </figcaption>        
         </figure>
 
@@ -320,7 +309,7 @@
         data-caption="<strong>Superman Video Essay Magazine</strong><br> I translated a video essay - HITOP FILMS We Needed Superman - to become a film review style magazine. I also included a pack of gum to make the whole thing more pop culture-like. 2025." 
         onclick="openLightbox(this)"/>
         <figcaption>
-          <span class="item-title">Pages</span>
+          Pages
         </figcaption>  
         </figure>
 
@@ -335,7 +324,7 @@
         data-caption="<strong>Superman Video Essay Magazine</strong><br> I translated a video essay - HITOP FILMS We Needed Superman - to become a film review style magazine. I also included a pack of gum to make the whole thing more pop culture-like. 2025." 
         onclick="openLightbox(this)"/>
         <figcaption>
-          <span class="item-title">Gum Box Display</span>
+          Gum Box Display
         </figcaption>    
         </figure>
 
@@ -347,7 +336,7 @@
         data-caption="<strong>Superman Video Essay Magazine</strong><br> I translated a video essay - HITOP FILMS We Needed Superman - to become a film review style magazine. I also included a pack of gum to make the whole thing more pop culture-like. 2025." 
         onclick="openLightbox(this)"/>
         <figcaption>
-          <span class="item-title">Box Design</span>
+          Box Design
         </figcaption>    
         </figure>
     </div>
@@ -372,7 +361,7 @@
         data-caption="<strong>Run to Resist</strong><br> This was my interactive narritive driven campaign to encourage kids aged 12-17 to take up running as a cardio fitness support for heart health. This was my attempt at assisting the NIH (National Institute of Health) at encouraging teenagers to resist the increasingly sedentary culture of modern day life. Inspired by Osmosis Jones and Lazy town combined with Genndy Tartakovsky's action illustrations, I made a narritive that would attarct kids to the cause. 2025.<br><a href='https://globalcomix.com/read/19faf3a7-1b66-4077-bf3a-349fb4370829/1' target='_blank'> CLICK LINK </a>" 
         onclick="openLightbox(this)"/> 
         <figcaption>
-          <span class="item-title">Book Display</span>
+          Book Display
         </figcaption>     
         </figure>
 
@@ -397,7 +386,7 @@
             data-caption="<strong>Run to Resist</strong><br> This was my interactive narritive driven campaign to encourage kids aged 12-17 to take up running as a cardio fitness support for heart health. This was my attempt at assisting the NIH (National Institute of Health) at encouraging teenagers to resist the increasingly sedentary culture of modern day life. Inspired by Osmosis Jones and Lazy town combined with Genndy Tartakovsky's action illustrations, I made a narritive that would attarct kids to the cause. 2025.<br><a href='https://globalcomix.com/read/19faf3a7-1b66-4077-bf3a-349fb4370829/1' target='_blank'> CLICK LINK </a>" 
             onclick="openLightbox(this)"/>    
             <figcaption>
-              <span class="item-title">Pages</span>
+              Pages
             </figcaption>  
             </figure>
     </div>
@@ -424,7 +413,7 @@
             data-caption="<strong>Got Milk?</strong><br>This was my media adaptation project. I used my card making skills from Wrath of Reyath (collaborative board game project) and composed my own parody game of the 90s' TV Got Milk campaign ads. I did this to play into my interest and strength in working with pop culture, mass production, entertainment, and old Americana goods. It's a game that functions similar to Yugioh and uses every character fro mthe 90s' advertisments. 2025.<br><a href='https://youtu.be/xMyls2J2Ydg' target='_blank'> VIDEO LINK </a>" 
             onclick="openLightbox(this)"/>
             <figcaption>
-              <span class="item-title">Box</span>
+              Box
             </figcaption>  
             </figure>
         
@@ -437,7 +426,7 @@
             data-caption="<strong>Got Milk?</strong><br>This was my media adaptation project. I used my card making skills from Wrath of Reyath (collaborative board game project) and composed my own parody game of the 90s' TV Got Milk campaign ads. I did this to play into my interest and strength in working with pop culture, mass production, entertainment, and old Americana goods. It's a game that functions similar to Yugioh and uses every character fro mthe 90s' advertisments. 2025.<br><a href='https://youtu.be/xMyls2J2Ydg' target='_blank'> VIDEO LINK </a>" 
             onclick="openLightbox(this)"/>
             <figcaption>
-              <span class="item-title">Cards</span>
+              Cards
             </figcaption>  
             </figure>
         </div>
@@ -472,7 +461,7 @@
         data-caption="<strong>Superman Poster</strong><br> Fanart for the Superman movie by James Gunn. Plotter printed. 2024. <br><a href='https://www.instagram.com/p/DMBfbnZBhEp/?img_index=1' target='_blank'> CLICK LINK </a>" 
         onclick="openLightbox(this)"/>
         <figcaption>
-          <span class="item-title">Superman Poster</span>
+          Superman Poster
         </figcaption>  
     </figure>
 
@@ -484,7 +473,7 @@
         data-caption="<strong>Superman Poster</strong><br> Fanart for the Superman movie by James Gunn. Plotter printed. 2024. <br><a href='https://www.instagram.com/p/DMBfbnZBhEp/?img_index=1' target='_blank'> CLICK LINK </a>" 
         onclick="openLightbox(this)"/>
         <figcaption>
-          <span class="item-title">Super Poster Display</span>
+          Super Poster Display
         </figcaption>  
     </figure>
 </div>
