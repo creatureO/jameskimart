@@ -1,12 +1,18 @@
-/* ===== LIGHTBOX (paste over your existing lightbox section in main.js) ===== */
+/* ==================== LIGHTBOX ==================== */
+const lightbox = document.getElementById('lightbox');
+const mediaBox = document.getElementById('lightbox-media');
+const captionBox = document.getElementById('lightbox-caption');
+const prevBtn = document.getElementById('lightbox-prev');
+const nextBtn = document.getElementById('lightbox-next');
+
 let currentImages = [];
 let currentIndex = 0;
- 
+let lastTrigger = null;
+
 function openLightbox(el) {
-  document.getElementById('lightbox-caption').innerHTML = el.dataset.caption;
-  document.getElementById('lightbox').classList.remove('hidden');
- 
-  // Build the mixed-media array
+  lastTrigger = el;
+  captionBox.innerHTML = el.dataset.caption || ''; // caption HTML is your own, so trusted
+
   if (el.dataset.images) {
     currentImages = JSON.parse(el.dataset.images);
   } else if (el.dataset.youtube) {
@@ -14,89 +20,111 @@ function openLightbox(el) {
   } else if (el.dataset.video) {
     currentImages = [{ type: 'video', src: el.dataset.video }];
   } else {
-    currentImages = [{ type: 'image', src: el.src }];
+    currentImages = [{ type: 'image', src: el.currentSrc || el.src }];
   }
- 
+
   currentIndex = 0;
   showSlide();
+  lightbox.showModal();
+  raiseClickLayer(); // keeps click splatter at the very top
 }
- 
-function showSlide() {
-  const img = document.getElementById('lightbox-img');
-  const video = document.getElementById('lightbox-video');
-  const youtube = document.getElementById('lightbox-youtube');
- 
-  // Reset all media, and pause/clear video so it doesn't keep playing in the background
-  img.classList.add('hidden');
-  video.classList.add('hidden');
-  video.pause();
-  video.src = '';
-  youtube.classList.add('hidden');
-  youtube.src = '';
- 
-  const slide = currentImages[currentIndex];
- 
+
+function buildMedia(slide) {
   if (slide.type === 'youtube') {
-    youtube.src = `https://www.youtube.com/embed/${slide.src}?autoplay=1`;
-    youtube.classList.remove('hidden');
-  } else if (slide.type === 'video') {
-    video.src = slide.src;
-    video.classList.remove('hidden');
-    video.play();
-  } else {
-    img.src = slide.src;
-    img.classList.remove('hidden');
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://www.youtube.com/embed/${slide.src}?autoplay=1`;
+    iframe.title = 'YouTube video player';
+    iframe.allow = 'autoplay; encrypted-media; picture-in-picture';
+    iframe.allowFullscreen = true;
+    return iframe;
   }
- 
-  // hide arrows if there's only one slide
-  const showArrows = currentImages.length > 1;
-  document.getElementById('lightbox-prev').style.display = showArrows ? 'block' : 'none';
-  document.getElementById('lightbox-next').style.display = showArrows ? 'block' : 'none';
+  if (slide.type === 'video') {
+    const video = document.createElement('video');
+    video.src = slide.src;
+    video.controls = true;
+    video.autoplay = true;
+    return video;
+  }
+  const img = document.createElement('img');
+  img.src = slide.src;
+  img.alt = captionBox.textContent.trim().slice(0, 100) || 'Gallery image';
+  return img;
 }
- 
+
+function showSlide() {
+  // Removing the old element stops video/YouTube playback and never leaves an element sitting around with an empty src
+  mediaBox.replaceChildren(buildMedia(currentImages[currentIndex]));
+
+  const multiple = currentImages.length > 1;
+  prevBtn.classList.toggle('hidden', !multiple);
+  nextBtn.classList.toggle('hidden', !multiple);
+
+  // Preload the neighbors so flipping is instant
+  if (multiple) {
+    [1, -1].forEach(step => {
+      const i = (currentIndex + step + currentImages.length) % currentImages.length;
+      if (currentImages[i].type === 'image') new Image().src = currentImages[i].src;
+    });
+  }
+}
+
 function changeSlide(direction) {
-  currentIndex += direction;
-  if (currentIndex >= currentImages.length) currentIndex = 0;
-  if (currentIndex < 0) currentIndex = currentImages.length - 1;
+  currentIndex = (currentIndex + direction + currentImages.length) % currentImages.length;
   showSlide();
 }
- 
-function closeLightbox() {
-  document.getElementById('lightbox').classList.add('hidden');
-  document.getElementById('lightbox-video').pause();
-  document.getElementById('lightbox-video').src = '';
-  document.getElementById('lightbox-youtube').src = '';
-}
- 
-// NEW: Escape key closes the lightbox (only when it's actually open)
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && !document.getElementById('lightbox').classList.contains('hidden')) {
-    closeLightbox();
-  }
-});
-/* ===== END LIGHTBOX ===== */
 
-
-//scrollrow stuff
-function scrollRow(btn, direction) {
-  const wrapper = btn.closest('.work-row-wrapper');
-  const row = wrapper.querySelector('.workRow');
-  const scrollAmount = 1400;
-  row.scrollBy({
-    left: direction * scrollAmount,
-    behavior: 'smooth'
+/* ---- Events ---- */
+document.querySelectorAll('.lightbox-trigger').forEach(el => {
+  el.addEventListener('click', () => openLightbox(el));
+  el.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      openLightbox(el);
+    }
   });
-}
+});
+
+document.getElementById('lightbox-close').addEventListener('click', () => lightbox.close());
+prevBtn.addEventListener('click', () => changeSlide(-1));
+nextBtn.addEventListener('click', () => changeSlide(1));
+
+// Click on the empty area (the dialog itself, not its contents) closes it
+//lightbox.addEventListener('click', e => {
+//  if (e.target === lightbox) lightbox.close();
+//});
+
+// Arrow keys (Escape is handled natively by the dialog)
+lightbox.addEventListener('keydown', e => {
+  if (currentImages.length < 2) return;
+  if (e.key === 'ArrowLeft') changeSlide(-1);
+  if (e.key === 'ArrowRight') changeSlide(1);
+});
+
+// Runs however the dialog closes: button, Escape, or backdrop click
+  lightbox.addEventListener('close', () => {
+  mediaBox.replaceChildren();
+  captionBox.innerHTML = '';
+  console.log('closed'); //testing works!
+  if (lastTrigger) lastTrigger.focus();
+});
+/* ==================== END LIGHTBOX ==================== */
+
 
 // click animation
 const clickLayer = document.getElementById('click-layer');
-const SPLAT_SRC = '../Homepage Images/Kimbro_Click.png';   // make sure this is the real .gif
+const SPLAT_SRC = '../Homepage%20Images/Kimbro_Click.png';   // make sure this is the real .apng
 const SPLAT_SIZE = 360;
-const SPLAT_DURATION = 400;   // match your gif's length in ms
+const SPLAT_DURATION = 400;   // match apng's length in ms
 
 // preload once so the first click doesn't wait on the download
 const preload = new Image();
 preload.src = SPLAT_SRC;
+
+function raiseClickLayer() { //meant to keep the click splatter above everything in the page.
+  if (clickLayer.matches(':popover-open')) clickLayer.hidePopover();
+  clickLayer.showPopover();
+}
+raiseClickLayer(); //meant to keep the click splatter above everything in the page.
 
 document.addEventListener('click', function (e) {
   const splat = document.createElement('div');
@@ -114,6 +142,17 @@ document.addEventListener('click', function (e) {
   clickLayer.appendChild(splat);
   setTimeout(() => splat.remove(), SPLAT_DURATION);
 });
+
+//scrollrow stuff
+function scrollRow(btn, direction) {
+  const wrapper = btn.closest('.work-row-wrapper');
+  const row = wrapper.querySelector('.workRow');
+  const scrollAmount = 1400;
+  row.scrollBy({
+    left: direction * scrollAmount,
+    behavior: 'smooth'
+  });
+}
 
 /*phone home nav button*/
 const clickToOpen=document.getElementById("clickToOpen");

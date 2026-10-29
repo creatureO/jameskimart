@@ -596,29 +596,47 @@ figure:hover figcaption{
 /*THIS IS WEHRE YOU PUT YOUR HOME PAGE SHOWS OFF WORK */
 
 /*CLICKABLE IMAGES FUNCTION, Lightboxes ________________________________________________________________________________________________________________________________________________ */
-.hidden {
-  display: none;
+dialog{
+  z-index: 8000;
 }
 
-dialog{ /*for the lightbox overlay*/
-  border:none;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(255, 255, 255, 0.90);
-  z-index: 1000;
+.hidden { display: none; }
+
+#lightbox {
+  /* Only the open state is displayed; the browser handles closed */
+  border: none;
+  padding: 0;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#lightbox[open] {
   display: flex;
-  flex-wrap: wrap;     /* Enables items to wrap onto new lines */
   align-items: center;
   justify-content: center;
 }
 
-#lightbox { /*for the lightbox overlay*/
-  padding:0px;
+#lightbox::backdrop {
+  background: rgba(255, 255, 255, 0.90);
 }
 
-#lightbox.hidden {
-  display: none;   /* now wins over #lightbox's display: flex */
+#lightbox-media img,
+#lightbox-media video {
+  display: block;
+  max-height: 85vh;
+  max-width: 60vw;
+  object-fit: contain;
+}
+
+#lightbox-media iframe {
+  display: block;
+  border: 0;
+  width: 64vw;
+  max-width: 100%;
+  height: 36vw; /* VERY IMPORTANT TO SIZE YOUTUBE FRAME */
 }
 
 #lightbox-content {
@@ -629,12 +647,6 @@ dialog{ /*for the lightbox overlay*/
   max-width: 100%;
   max-height: 100%;
   align-items: center;
-}
-
-#lightbox-img {
-  max-height: 85vh;
-  max-width: 60vw;
-  object-fit: contain;
 }
 
 #lightbox-caption {
@@ -699,6 +711,7 @@ dialog{ /*for the lightbox overlay*/
 #lightbox-prev, #lightbox-next { /*cilckable arrows for multi stack*/
   position: absolute;
   color: black;
+  border:none;
   font-size: 5rem;
   cursor: pointer;
   padding: 50vh 1.5vw;
@@ -720,13 +733,6 @@ dialog{ /*for the lightbox overlay*/
 
 #lightbox-next {
   right: 1vw;
-}
-
-
-#lightbox-youtube{
-  position: static;
-  width: 64vw;
-  height: 36vw;
 }
 /*CLICKABLE IMAGES FUNCTION, Lightboxes*/
 
@@ -831,7 +837,7 @@ footer{
     }
 
   .screenCompatibleFiller{
-    height:100px; 
+    height: 25vh;
     background-color: rgb(220, 220, 220);
   }
 /*FOOTER*/
@@ -878,10 +884,15 @@ main {
 /* click animation ________________________________________________________________________________________________________________________________________________ */
 #click-layer {
   position: fixed;
-  inset: 0;                /* covers just the visible screen */
-  pointer-events: none;    /* never blocks clicks */
-  z-index: 9999;
+  inset: 0;  /* covers just the visible screen */
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
   overflow: hidden;
+  pointer-events: none; /* never blocks clicks */
 }
 
 .splat {
@@ -916,10 +927,58 @@ causing content to spill past the edge of the screen.
     overflow-y: auto;    /* Adds a scrollbar only when content overflows */
     }
 
-    #lightbox {
-      margin-bottom: 100px;
-      }
+    #lightbox[open] {
+      align-items: start;
+    }
     
+    #lightbox-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+      place-items: center;
+      align-items: start;
+          margin-top: 12vh;
+          padding: 1em;
+          column-gap: 2em;
+      max-width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    
+    #lightbox-media img,
+    #lightbox-media video {
+      display: block;
+      max-height: 85vh;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    
+    #lightbox-media iframe {
+      position: static;
+      width: 100vw;
+      height: 50vh;
+    }
+    
+    #lightbox-caption {
+      max-width: 100%;
+      margin-block-end: 100vh;
+      font-size: 1em;
+      line-height: 24px;
+    }
+
+    #lightbox-caption strong{/*title line*/
+      font-size: 1.25em;
+      line-height: 1em;
+    }
+
+    #lightbox-caption a{
+      font-size: 1em;
+    }
+
+    #lightbox-caption:hover a{
+      text-decoration: underline;
+      font-size: 1.5em;
+    }    
+
     #lightbox-prev, #lightbox-next {
       position: absolute;
       top: 2.5vh;
@@ -948,49 +1007,6 @@ causing content to spill past the edge of the screen.
       #lightbox-next {
         right: 0vw;
       }
-    
-    #lightbox-youtube {/* The YouTube lightbox iframe was a fixed 1200px wide box, guaranteed to overflow any phone screen */
-      position: static;
-      width: 100%;
-      height: 50vh;
-    }
-    
-    #lightbox-content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
-      place-items: center;
-      align-items: start;
-          margin-top: 12vh;
-          padding: 1em;
-          column-gap: 2em;
-      max-width: 100%;
-      height: 100%;
-    }
-    
-    #lightbox-img {
-      max-width: 100%;
-    }
-    
-    #lightbox-caption {
-      max-width: 100%;
-      margin-block-end: 100vh;
-      font-size: 1em;
-      line-height: 24px;
-    }
-
-    #lightbox-caption strong{/*title line*/
-      font-size: 1.25em;
-      line-height: 1em;
-    }
-
-    #lightbox-caption a{
-      font-size: 1em;
-    }
-
-    #lightbox-caption:hover a{
-      text-decoration: underline;
-      font-size: 1.5em;
-    }    
 
     #lightbox-close {
       top: 5.5vh;
