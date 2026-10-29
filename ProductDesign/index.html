@@ -27,19 +27,18 @@
 </head>
 
 <body>
-<div id="click-layer"></div>
+  <div id="click-layer" popover="manual"></div>
 <!-- CLICKABLE INTERACTION ITEM, Lightboxes -->
-<dialog id="lightbox" class="hidden">
-  <span id="lightbox-close" onclick="closeLightbox()">&times;</span>
-  <span id="lightbox-prev" onclick="changeSlide(-1)">&#10094;</span>
+<dialog id="lightbox" aria-label="Media viewer">
+  <button type="button" id="lightbox-close" aria-label="Close viewer">&times;</button>
+  <button type="button" id="lightbox-prev" aria-label="Previous slide">&#10094;</button>
+
   <section id="lightbox-content">
-    <img id="lightbox-img" src="" alt="">
-    <video id="lightbox-video" class="hidden" controls></video>
-    <iframe id="lightbox-youtube" class="hidden" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div id="lightbox-media"></div>
     <div id="lightbox-caption"></div>
-    <!-- <div class="gapMaker"></div> -->
   </section>
-  <span id="lightbox-next" onclick="changeSlide(1)">&#10095;</span>
+
+  <button type="button" id="lightbox-next" aria-label="Next slide">&#10095;</button>
 </dialog>
 <!-- CLICKABLE INTERACTION ITEM, lightboxes -->
 <div class="phonePageTitle">
@@ -107,7 +106,7 @@
 <div class="projectDivider">
 <div class="featured-item-section">
     <figure>
-      <img src="../JamesWebsitePhotos/Product Design/Outlook/Display 3.png"  
+      <img src="../JamesWebsitePhotos/Product Design/Outlook/Display 3.png" class="lightbox-trigger" tabindex="0" role="button"
         alt="Displayed Work" style="height:100%; width: 100%;"  
         data-images='[{"type":"image","src":"../JamesWebsitePhotos/Product Design/Outlook/Display 1.jpg"},
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/Outlook/Display 2.png"}, 
@@ -115,42 +114,42 @@
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/Outlook/Iphone Video.png"},
         {"type":"youtube","src":"NfV_HxrOCEQ"}]' 
         data-caption="<strong>Outlook</strong><br> This was a behavioral therapy promotional campaign designed to market the benefits of Exposure Therapy as a treatment, fighting stigma around OCD.<br> I was in charge of the caracter and asset design, PAMPHLETS, POSTERS, and the STYLE GUIDE. 2026." 
-        onclick="openLightbox(this)"/>
+        />
         <figcaption>
           Outlook Display
         </figcaption>
     </figure>
 
     <figure>
-        <img src="../JamesWebsitePhotos/Product Design/Outlook/Low Res Cover 1.png"  
+        <img src="../JamesWebsitePhotos/Product Design/Outlook/Low Res Cover 1.png" class="lightbox-trigger" tabindex="0" role="button"
           alt="Posters" style="height:100%; width: 100%;"  
           data-images='[{"type":"image","src":"../JamesWebsitePhotos/Product Design/Outlook/Poster 1.jpg"},
           {"type":"image","src":"../JamesWebsitePhotos/Product Design/Outlook/Poster 2.jpg"}, 
           {"type":"image","src":"../JamesWebsitePhotos/Product Design/Outlook/Poster 3.png"},
           {"type":"image","src":"../JamesWebsitePhotos/Product Design/Outlook/Poster 4.jpg"}]' 
           data-caption="<strong>Outlook</strong><br> This was a behavioral therapy promotional campaign designed to market the benefits of Exposure Therapy as a treatment, fighting stigma around OCD.<br> I was in charge of the caracter and asset design, PAMPHLETS, POSTERS, and the STYLE GUIDE. 2026." 
-          onclick="openLightbox(this)"/>
+          />
           <figcaption>
             Outlook Posters
           </figcaption>
       </figure>
 
       <figure>
-        <img src="../JamesWebsitePhotos/Product Design/Outlook/Pamphlet 1.jpg"  
+        <img src="../JamesWebsitePhotos/Product Design/Outlook/Pamphlet 1.jpg" class="lightbox-trigger" tabindex="0" role="button"
           alt="Pamphlets" style="height:100%; width: 100%;"  
           data-images='[{"type":"image","src":"../JamesWebsitePhotos/Product Design/Outlook/Pamphlet 1.jpg"},
           {"type":"image","src":"../JamesWebsitePhotos/Product Design/Outlook/Pamphlet 2.jpg"}, 
           {"type":"image","src":"../JamesWebsitePhotos/Product Design/Outlook/Pamphlet 3.jpg"},
           {"type":"image","src":"../JamesWebsitePhotos/Product Design/Outlook/Pamphlet 4.jpg"}]' 
           data-caption="<strong>Outlook</strong><br> This was a behavioral therapy promotional campaign designed to market the benefits of Exposure Therapy as a treatment, fighting stigma around OCD.<br> I was in charge of the caracter and asset design, PAMPHLETS, POSTERS, and the STYLE GUIDE. 2026." 
-          onclick="openLightbox(this)"/>
+          />
           <figcaption>
             Pamphlets
           </figcaption>
       </figure>
 
       <figure>
-        <img src="../JamesWebsitePhotos/Product Design/Outlook/Low Res Cover 3.jpg"  
+        <img src="../JamesWebsitePhotos/Product Design/Outlook/Low Res Cover 3.jpg" class="lightbox-trigger" tabindex="0" role="button"
           alt="Style Guide" style="height:100%; width: 100%;"  
           data-images='[{"type":"image","src":"../JamesWebsitePhotos/Product Design/Outlook/Style Guide Spread 1.jpg"},
           {"type":"image","src":"../JamesWebsitePhotos/Product Design/Outlook/Style Guide Spread 2.jpg"}, 
@@ -162,7 +161,7 @@
           {"type":"image","src":"../JamesWebsitePhotos/Product Design/Outlook/Style Guide Spread 8.jpg"},
           {"type":"image","src":"../JamesWebsitePhotos/Product Design/Outlook/Style Guide Spread 9.jpg"}]'
           data-caption="<strong>Outlook</strong><br> This was a behavioral therapy promotional campaign designed to market the benefits of Exposure Therapy as a treatment, fighting stigma around OCD.<br> I was in charge of the caracter and asset design, PAMPHLETS, POSTERS, and the STYLE GUIDE. 2026." 
-          onclick="openLightbox(this)"/>
+          />
           <figcaption>
             Outlook Style Guide
           </figcaption>
@@ -192,7 +191,7 @@
     <div class="projectDivider">
     <div class="featured-item-section">
         <figure>
-        <img src="../JamesWebsitePhotos/Product Design/Wrath of Reyath/Cover of WOR.jpg"
+        <img src="../JamesWebsitePhotos/Product Design/Wrath of Reyath/Cover of WOR.jpg" class="lightbox-trigger" tabindex="0" role="button"
         alt="TTRPG" style="height:100%; width: 100%;"  
         data-images='[{"type":"youtube","src":"EP4CL4SOmm8"},
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/Wrath of Reyath/box view 1-compressed.png"},
@@ -202,15 +201,15 @@
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/Wrath of Reyath/box view 5-compressed.png"},
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/Wrath of Reyath/Game View.jpg"},
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/Wrath of Reyath/Cover of WOR.jpg"}]'  
-        data-caption="<strong>Wrath of Reyath</strong><br> This was a collaborative project between Me, Emerald Jiang, and my roomate Andrew Liao. We were tasked with visualizing sound data on the street I live, Thayer street, and turn it into an interesting delivery method. My group devised that we make a table top RPG game out of it. We made a project even Wizards of the Coast or Hasbro would be proud of. I was in charge of video documentation and making the cards and part time game rule creation. 2025.<br><a href='https://www.youtube.com/watch?v=EP4CL4SOmm8' target='_blank'> VIDEO LINK </a>" 
-        onclick="openLightbox(this)"/>
+        data-caption="<strong>Wrath of Reyath</strong><br> This was a collaborative project between Me, Emerald Jiang, and my roomate Andrew Liao. We were tasked with visualizing sound data on the street I live, Thayer street, and turn it into an interesting delivery method. My group devised that we make a table top RPG game out of it. We made a project even Wizards of the Coast or Hasbro would be proud of. I was in charge of video documentation and making the cards and part time game rule creation. 2025.<br><a href='https://www.youtube.com/watch?v=EP4CL4SOmm8' target='_blank' rel='noopener'> VIDEO LINK </a>" 
+        />
         <figcaption>
           Box
         </figcaption>    
          </figure>
 
         <figure>
-    <img src="../JamesWebsitePhotos/Product Design/Wrath of Reyath/Line up of Characters on board.jpg"
+    <img src="../JamesWebsitePhotos/Product Design/Wrath of Reyath/Line up of Characters on board.jpg" class="lightbox-trigger" tabindex="0" role="button"
     alt="TTRPG" style="height:100%; width: 100%;"  
     data-images='[{"type":"image","src":"../JamesWebsitePhotos/Product Design/Wrath of Reyath/Line up of Characters on board.jpg"},
     {"type":"image","src":"../JamesWebsitePhotos/Product Design/Wrath of Reyath/Boardgame showdown.jpg"}, 
@@ -220,15 +219,15 @@
     {"type":"image","src":"../JamesWebsitePhotos/Product Design/Wrath of Reyath/Chips 4-compressed.png"},
     {"type":"image","src":"../JamesWebsitePhotos/Product Design/Wrath of Reyath/dice in hand.png"},
     {"type":"image","src":"../JamesWebsitePhotos/Product Design/Wrath of Reyath/Dice-compressed.png"}]'
-    data-caption="<strong>Wrath of Reyath</strong><br> This was a collaborative project between Me, Emerald Jiang, and my roomate Andrew Liao. We were tasked with visualizing sound data on the street I live, Thayer street, and turn it into an interesting delivery method. My group devised that we make a table top RPG game out of it. We made a project even Wizards of the Coast or Hasbro would be proud of. I was in charge of video documentation and making the cards and part time game rule creation. 2025.<br><a href='https://www.youtube.com/watch?v=EP4CL4SOmm8' target='_blank'> VIDEO LINK </a>" 
-    onclick="openLightbox(this)"/>    
+    data-caption="<strong>Wrath of Reyath</strong><br> This was a collaborative project between Me, Emerald Jiang, and my roomate Andrew Liao. We were tasked with visualizing sound data on the street I live, Thayer street, and turn it into an interesting delivery method. My group devised that we make a table top RPG game out of it. We made a project even Wizards of the Coast or Hasbro would be proud of. I was in charge of video documentation and making the cards and part time game rule creation. 2025.<br><a href='https://www.youtube.com/watch?v=EP4CL4SOmm8' target='_blank' rel='noopener'> VIDEO LINK </a>" 
+    />    
     <figcaption>
       Game Pieces
     </figcaption>
         </figure>
         
         <figure>
-        <img src="../JamesWebsitePhotos/Product Design/Wrath of Reyath/Card Spread 4.png"  
+        <img src="../JamesWebsitePhotos/Product Design/Wrath of Reyath/Card Spread 4.png" class="lightbox-trigger" tabindex="0" role="button"
         alt="CARDS" style="height:100%; width: 100%;"  
         data-images='[{"type":"image","src":"../JamesWebsitePhotos/Product Design/Wrath of Reyath/Cards Stack 1.jpg"},
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/Wrath of Reyath/Cards Stack 2.jpg"}, 
@@ -243,15 +242,15 @@
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/Wrath of Reyath/Cards 10.jpg"},
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/Wrath of Reyath/Cards 12.jpg"},
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/Wrath of Reyath/Cards Spread 1.png"}]'
-        data-caption="<strong>Wrath of Reyath</strong><br> This was a collaborative project between Me, Emerald Jiang, and my roomate Andrew Liao. We were tasked with visualizing sound data on the street I live, Thayer street, and turn it into an interesting delivery method. My group devised that we make a table top RPG game out of it. We made a project even Wizards of the Coast or Hasbro would be proud of. I was in charge of video documentation and making the cards and part time game rule creation. 2025.<br><a href='https://www.youtube.com/watch?v=EP4CL4SOmm8' target='_blank'> VIDEO LINK </a>" 
-        onclick="openLightbox(this)"/>
+        data-caption="<strong>Wrath of Reyath</strong><br> This was a collaborative project between Me, Emerald Jiang, and my roomate Andrew Liao. We were tasked with visualizing sound data on the street I live, Thayer street, and turn it into an interesting delivery method. My group devised that we make a table top RPG game out of it. We made a project even Wizards of the Coast or Hasbro would be proud of. I was in charge of video documentation and making the cards and part time game rule creation. 2025.<br><a href='https://www.youtube.com/watch?v=EP4CL4SOmm8' target='_blank' rel='noopener'> VIDEO LINK </a>" 
+        />
         <figcaption>
           Card Stack
         </figcaption>    
         </figure>
         
         <figure>
-        <img src="../JamesWebsitePhotos/Product Design/Wrath of Reyath/Cards Spread 3.png" 
+        <img src="../JamesWebsitePhotos/Product Design/Wrath of Reyath/Cards Spread 3.png" class="lightbox-trigger" tabindex="0" role="button"
         alt="CARDS" style="height:100%; width: 100%;"  
         data-images='[{"type":"image","src":"../JamesWebsitePhotos/Product Design/Wrath of Reyath/Cards 1.jpg"},
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/Wrath of Reyath/Cards 3.jpg"}, 
@@ -259,8 +258,8 @@
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/Wrath of Reyath/Cards 7.jpg"}, 
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/Wrath of Reyath/Cards 9.jpg"}, 
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/Wrath of Reyath/Cards 11.jpg"}]'
-        data-caption="<strong>Wrath of Reyath</strong><br> This was a collaborative project between Me, Emerald Jiang, and my roomate Andrew Liao. We were tasked with visualizing sound data on the street I live, Thayer street, and turn it into an interesting delivery method. My group devised that we make a table top RPG game out of it. We made a project even Wizards of the Coast or Hasbro would be proud of. I was in charge of video documentation and making the cards and part time game rule creation. 2025.<br><a href='https://www.youtube.com/watch?v=EP4CL4SOmm8' target='_blank'> VIDEO LINK </a>" 
-        onclick="openLightbox(this)"/>
+        data-caption="<strong>Wrath of Reyath</strong><br> This was a collaborative project between Me, Emerald Jiang, and my roomate Andrew Liao. We were tasked with visualizing sound data on the street I live, Thayer street, and turn it into an interesting delivery method. My group devised that we make a table top RPG game out of it. We made a project even Wizards of the Coast or Hasbro would be proud of. I was in charge of video documentation and making the cards and part time game rule creation. 2025.<br><a href='https://www.youtube.com/watch?v=EP4CL4SOmm8' target='_blank' rel='noopener'> VIDEO LINK </a>" 
+        />
         <figcaption>
           Cards
         </figcaption>    
@@ -278,21 +277,21 @@
     <div class="projectDivider">
     <div class="featured-item-section">
         <figure>
-        <img src="../JamesWebsitePhotos/Product Design/HiTop Films Magazine/Magazine 4.webp"
+        <img src="../JamesWebsitePhotos/Product Design/HiTop Films Magazine/Magazine 4.webp" class="lightbox-trigger" tabindex="0" role="button"
         alt="Magazine" style="height:100%; width: 100%;"  
         data-images='[{"type":"image","src":"../JamesWebsitePhotos/Product Design/HiTop Films Magazine/Magazine 1.webp"}, 
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/HiTop Films Magazine/Magazine 2.webp"}, 
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/HiTop Films Magazine/Magazine 3.webp"}, 
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/HiTop Films Magazine/Magazine 4.webp"}]'
         data-caption="<strong>Superman Video Essay Magazine</strong><br> I translated a video essay - HITOP FILMS We Needed Superman - to become a film review style magazine. I also included a pack of gum to make the whole thing more pop culture-like. 2025." 
-        onclick="openLightbox(this)"/>
+        />
         <figcaption>
           Magazine Display
         </figcaption>        
         </figure>
 
         <figure>
-        <img src="../JamesWebsitePhotos/Product Design/HiTop Films Magazine/Page Spread in Hand.webp"
+        <img src="../JamesWebsitePhotos/Product Design/HiTop Films Magazine/Page Spread in Hand.webp" class="lightbox-trigger" tabindex="0" role="button"
         alt="Magazine Page Spreads" style="height:100%; width: 100%;"  
         data-images='[{"type":"image","src":"../JamesWebsitePhotos/Product Design/HiTop Films Magazine/Page Spread 1.webp"}, 
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/HiTop Films Magazine/Page Spread 2.webp"}, 
@@ -308,14 +307,14 @@
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/HiTop Films Magazine/Page Spread 12.webp"}, 
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/HiTop Films Magazine/Page Spread 13.webp"}]'
         data-caption="<strong>Superman Video Essay Magazine</strong><br> I translated a video essay - HITOP FILMS We Needed Superman - to become a film review style magazine. I also included a pack of gum to make the whole thing more pop culture-like. 2025." 
-        onclick="openLightbox(this)"/>
+        />
         <figcaption>
           Pages
         </figcaption>  
         </figure>
 
         <figure>
-        <img src="../JamesWebsitePhotos/Product Design/HiTop Films Magazine/Gum box 3.webp" 
+        <img src="../JamesWebsitePhotos/Product Design/HiTop Films Magazine/Gum box 3.webp" class="lightbox-trigger" tabindex="0" role="button"
         alt="CARDS" style="height:100%; width: 100%;"  
         data-images='[{"type":"image","src":"../JamesWebsitePhotos/Product Design/HiTop Films Magazine/Gum box 3.webp"}, 
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/HiTop Films Magazine/Gum box 4.webp"}, 
@@ -323,19 +322,19 @@
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/HiTop Films Magazine/Gum box 6.webp"}, 
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/HiTop Films Magazine/Gum box 7.webp"}]'
         data-caption="<strong>Superman Video Essay Magazine</strong><br> I translated a video essay - HITOP FILMS We Needed Superman - to become a film review style magazine. I also included a pack of gum to make the whole thing more pop culture-like. 2025." 
-        onclick="openLightbox(this)"/>
+        />
         <figcaption>
           Gum Box Display
         </figcaption>    
         </figure>
 
         <figure>
-        <img src="../JamesWebsitePhotos/Product Design/HiTop Films Magazine/Gum box 1.webp" 
+        <img src="../JamesWebsitePhotos/Product Design/HiTop Films Magazine/Gum box 1.webp" class="lightbox-trigger" tabindex="0" role="button"
         alt="CARDS" style="height:100%; width: 100%;"  
         data-images='[{"type":"image","src":"../JamesWebsitePhotos/Product Design/HiTop Films Magazine/Gum box 1.webp"},
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/HiTop Films Magazine/Gum box 2.webp"}]'
         data-caption="<strong>Superman Video Essay Magazine</strong><br> I translated a video essay - HITOP FILMS We Needed Superman - to become a film review style magazine. I also included a pack of gum to make the whole thing more pop culture-like. 2025." 
-        onclick="openLightbox(this)"/>
+        />
         <figcaption>
           Box Design
         </figcaption>    
@@ -353,21 +352,21 @@
     <div class="projectDivider">
     <div class="featured-item-section">
         <figure>
-        <img src="../JamesWebsitePhotos/Product Design/Run to Resist/cover of book.png"
+        <img src="../JamesWebsitePhotos/Product Design/Run to Resist/cover of book.png" class="lightbox-trigger" tabindex="0" role="button"
         alt="Comic" style="height:100%; width: 100%;"  
         data-images='[{"type":"image","src":"../JamesWebsitePhotos/Product Design/Run to Resist/cover of book.png"},
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/Run to Resist/cover of book 3.jpeg"},
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/Run to Resist/cover of book 2.jpeg"},
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/Run to Resist/book and hand-compressed.png"}]'
-        data-caption="<strong>Run to Resist</strong><br> This was my interactive narritive driven campaign to encourage kids aged 12-17 to take up running as a cardio fitness support for heart health. This was my attempt at assisting the NIH (National Institute of Health) at encouraging teenagers to resist the increasingly sedentary culture of modern day life. Inspired by Osmosis Jones and Lazy town combined with Genndy Tartakovsky's action illustrations, I made a narritive that would attarct kids to the cause. 2025.<br><a href='https://globalcomix.com/read/19faf3a7-1b66-4077-bf3a-349fb4370829/1' target='_blank'> CLICK LINK </a>" 
-        onclick="openLightbox(this)"/> 
+        data-caption="<strong>Run to Resist</strong><br> This was my interactive narritive driven campaign to encourage kids aged 12-17 to take up running as a cardio fitness support for heart health. This was my attempt at assisting the NIH (National Institute of Health) at encouraging teenagers to resist the increasingly sedentary culture of modern day life. Inspired by Osmosis Jones and Lazy town combined with Genndy Tartakovsky's action illustrations, I made a narritive that would attarct kids to the cause. 2025.<br><a href='https://globalcomix.com/read/19faf3a7-1b66-4077-bf3a-349fb4370829/1' target='_blank' rel='noopener'> CLICK LINK </a>" 
+        /> 
         <figcaption>
           Book Display
         </figcaption>     
         </figure>
 
         <figure>
-            <img src="../JamesWebsitePhotos/Product Design/Run to Resist/pages cover.jpeg"
+            <img src="../JamesWebsitePhotos/Product Design/Run to Resist/pages cover.jpeg" class="lightbox-trigger" tabindex="0" role="button"
             alt="Comic" style="height:100%; width: 100%;"  
             data-images='[{"type":"image","src":"../JamesWebsitePhotos/Product Design/Run to Resist/pages 0.jpeg"},
             {"type":"image","src":"../JamesWebsitePhotos/Product Design/Run to Resist/pages 1.jpeg"},
@@ -384,14 +383,14 @@
             {"type":"image","src":"../JamesWebsitePhotos/Product Design/Run to Resist/pages 12.jpeg"},
             {"type":"image","src":"../JamesWebsitePhotos/Product Design/Run to Resist/pages 13-compressed.jpg"},
             {"type":"image","src":"../JamesWebsitePhotos/Product Design/Run to Resist/pages 14.jpeg"}]'
-            data-caption="<strong>Run to Resist</strong><br> This was my interactive narritive driven campaign to encourage kids aged 12-17 to take up running as a cardio fitness support for heart health. This was my attempt at assisting the NIH (National Institute of Health) at encouraging teenagers to resist the increasingly sedentary culture of modern day life. Inspired by Osmosis Jones and Lazy town combined with Genndy Tartakovsky's action illustrations, I made a narritive that would attarct kids to the cause. 2025.<br><a href='https://globalcomix.com/read/19faf3a7-1b66-4077-bf3a-349fb4370829/1' target='_blank'> CLICK LINK </a>" 
-            onclick="openLightbox(this)"/>    
+            data-caption="<strong>Run to Resist</strong><br> This was my interactive narritive driven campaign to encourage kids aged 12-17 to take up running as a cardio fitness support for heart health. This was my attempt at assisting the NIH (National Institute of Health) at encouraging teenagers to resist the increasingly sedentary culture of modern day life. Inspired by Osmosis Jones and Lazy town combined with Genndy Tartakovsky's action illustrations, I made a narritive that would attarct kids to the cause. 2025.<br><a href='https://globalcomix.com/read/19faf3a7-1b66-4077-bf3a-349fb4370829/1' target='_blank' rel='noopener'> CLICK LINK </a>" 
+            />    
             <figcaption>
               Pages
             </figcaption>  
             </figure>
     </div>
-        <p class="description">This was my interactive narritive driven campaign to encourage kids aged 12-17 to take up running as a cardio fitness support for heart health. 2025.<br><a href='https://globalcomix.com/read/19faf3a7-1b66-4077-bf3a-349fb4370829/1' target='_blank'><strong> CLICK LINK </strong></a></p>
+        <p class="description">This was my interactive narritive driven campaign to encourage kids aged 12-17 to take up running as a cardio fitness support for heart health. 2025.<br><a href='https://globalcomix.com/read/19faf3a7-1b66-4077-bf3a-349fb4370829/1' target='_blank' rel='noopener'><strong> CLICK LINK </strong></a></p>
     </div>
     </section>
 
@@ -404,28 +403,28 @@
     <div class="projectDivider">
         <div class="featured-item-section">
             <figure>
-            <img src="../JamesWebsitePhotos/Product Design/Got Milk/Milk 5.jpeg"  
+            <img src="../JamesWebsitePhotos/Product Design/Got Milk/Milk 5.jpeg" class="lightbox-trigger" tabindex="0" role="button"
             alt="Got Milk" style="height:100%; width: 100%;"  
             data-images='[{"type":"image","src":"../JamesWebsitePhotos/Product Design/Got Milk/Milk 1-compressed.png"},
             {"type":"image","src":"../JamesWebsitePhotos/Product Design/Got Milk/Milk 2.jpeg"},
             {"type":"image","src":"../JamesWebsitePhotos/Product Design/Got Milk/Milk 3.jpeg"},
             {"type":"image","src":"../JamesWebsitePhotos/Product Design/Got Milk/Milk 4.jpeg"},
             {"type":"image","src":"../JamesWebsitePhotos/Product Design/Got Milk/Milk 5.jpeg"}]'
-            data-caption="<strong>Got Milk?</strong><br>This was my media adaptation project. I used my card making skills from Wrath of Reyath (collaborative board game project) and composed my own parody game of the 90s' TV Got Milk campaign ads. I did this to play into my interest and strength in working with pop culture, mass production, entertainment, and old Americana goods. It's a game that functions similar to Yugioh and uses every character fro mthe 90s' advertisments. 2025.<br><a href='https://youtu.be/xMyls2J2Ydg' target='_blank'> VIDEO LINK </a>" 
-            onclick="openLightbox(this)"/>
+            data-caption="<strong>Got Milk?</strong><br>This was my media adaptation project. I used my card making skills from Wrath of Reyath (collaborative board game project) and composed my own parody game of the 90s' TV Got Milk campaign ads. I did this to play into my interest and strength in working with pop culture, mass production, entertainment, and old Americana goods. It's a game that functions similar to Yugioh and uses every character fro mthe 90s' advertisments. 2025.<br><a href='https://youtu.be/xMyls2J2Ydg' target='_blank' rel='noopener'> VIDEO LINK </a>" 
+            />
             <figcaption>
               Box
             </figcaption>  
             </figure>
         
             <figure>
-            <img src="../JamesWebsitePhotos/Product Design/Got Milk/Milk Cards 1.jpeg"  
+            <img src="../JamesWebsitePhotos/Product Design/Got Milk/Milk Cards 1.jpeg" class="lightbox-trigger" tabindex="0" role="button"
             alt="Superman Poster" style="height:100%; width: 100%;"          
             data-images='[{"type":"image","src":"../JamesWebsitePhotos/Product Design/Got Milk/Milk Cards 1.jpeg"},
             {"type":"image","src":"../JamesWebsitePhotos/Product Design/Got Milk/Milk Cards 2.jpeg"},
             {"type":"youtube","src":"xMyls2J2Ydg"}]'
-            data-caption="<strong>Got Milk?</strong><br>This was my media adaptation project. I used my card making skills from Wrath of Reyath (collaborative board game project) and composed my own parody game of the 90s' TV Got Milk campaign ads. I did this to play into my interest and strength in working with pop culture, mass production, entertainment, and old Americana goods. It's a game that functions similar to Yugioh and uses every character fro mthe 90s' advertisments. 2025.<br><a href='https://youtu.be/xMyls2J2Ydg' target='_blank'> VIDEO LINK </a>" 
-            onclick="openLightbox(this)"/>
+            data-caption="<strong>Got Milk?</strong><br>This was my media adaptation project. I used my card making skills from Wrath of Reyath (collaborative board game project) and composed my own parody game of the 90s' TV Got Milk campaign ads. I did this to play into my interest and strength in working with pop culture, mass production, entertainment, and old Americana goods. It's a game that functions similar to Yugioh and uses every character fro mthe 90s' advertisments. 2025.<br><a href='https://youtu.be/xMyls2J2Ydg' target='_blank' rel='noopener'> VIDEO LINK </a>" 
+            />
             <figcaption>
               Cards
             </figcaption>  
@@ -455,30 +454,30 @@
 <div class="projectDivider">
 <div class="featured-item-section">
   <figure>
-      <img src="../JamesWebsitePhotos/Product Design/Superman/Superman Fanart James Kim.jpg"  
+      <img src="../JamesWebsitePhotos/Product Design/Superman/Superman Fanart James Kim.jpg" class="lightbox-trigger" tabindex="0" role="button"
         alt="Superman Poster" style="height:100%; width: 100%;"  
         data-images='[{"type":"image","src":"../JamesWebsitePhotos/Product Design/Superman/Superman Fanart James Kim.jpg"},
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/Superman/Superman 1.jpeg"}]'
-        data-caption="<strong>Superman Poster</strong><br> Fanart for the Superman movie by James Gunn. Plotter printed. 2024. <br><a href='https://www.instagram.com/p/DMBfbnZBhEp/?img_index=1' target='_blank'> CLICK LINK </a>" 
-        onclick="openLightbox(this)"/>
+        data-caption="<strong>Superman Poster</strong><br> Fanart for the Superman movie by James Gunn. Plotter printed. 2024. <br><a href='https://www.instagram.com/p/DMBfbnZBhEp/?img_index=1' target='_blank' rel='noopener'> CLICK LINK </a>" 
+        />
         <figcaption>
           Superman Poster
         </figcaption>  
     </figure>
 
   <figure>
-      <img src="../JamesWebsitePhotos/Product Design/Superman/Superman 2.jpeg"  
+      <img src="../JamesWebsitePhotos/Product Design/Superman/Superman 2.jpeg" class="lightbox-trigger" tabindex="0" role="button"
         alt="Superman Poster" style="height:100%; width: 100%;"  
         data-images='[{"type":"image","src":"../JamesWebsitePhotos/Product Design/Superman/Superman 2.jpeg"},
         {"type":"image","src":"../JamesWebsitePhotos/Product Design/Superman/Superman 3.jpeg"}]'
-        data-caption="<strong>Superman Poster</strong><br> Fanart for the Superman movie by James Gunn. Plotter printed. 2024. <br><a href='https://www.instagram.com/p/DMBfbnZBhEp/?img_index=1' target='_blank'> CLICK LINK </a>" 
-        onclick="openLightbox(this)"/>
+        data-caption="<strong>Superman Poster</strong><br> Fanart for the Superman movie by James Gunn. Plotter printed. 2024. <br><a href='https://www.instagram.com/p/DMBfbnZBhEp/?img_index=1' target='_blank' rel='noopener'> CLICK LINK </a>" 
+        />
         <figcaption>
           Super Poster Display
         </figcaption>  
     </figure>
 </div>
-  <p class="description"> Fanart for the Superman movie by James Gunn. Plotter printed. 2024. <br><a href='https://www.instagram.com/p/DMBfbnZBhEp/?img_index=1' target='_blank'><strong> CLICK LINK </strong></a></p>
+  <p class="description"> Fanart for the Superman movie by James Gunn. Plotter printed. 2024. <br><a href='https://www.instagram.com/p/DMBfbnZBhEp/?img_index=1' target='_blank' rel='noopener'><strong> CLICK LINK </strong></a></p>
 </div>  
 </section>
 

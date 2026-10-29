@@ -27,19 +27,18 @@
 </head>
 
 <body>
-<div id="click-layer"></div>
+<div id="click-layer" popover="manual"></div>
 <!-- CLICKABLE INTERACTION ITEM, Lightboxes -->
-<dialog id="lightbox" class="hidden">
-  <span id="lightbox-close" onclick="closeLightbox()">&times;</span>
-  <span id="lightbox-prev" onclick="changeSlide(-1)">&#10094;</span>
+<dialog id="lightbox" aria-label="Media viewer">
+  <button type="button" id="lightbox-close" aria-label="Close viewer">&times;</button>
+  <button type="button" id="lightbox-prev" aria-label="Previous slide">&#10094;</button>
+
   <section id="lightbox-content">
-    <img id="lightbox-img" src="" alt="">
-    <video id="lightbox-video" class="hidden" controls></video>
-    <iframe id="lightbox-youtube" class="hidden" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div id="lightbox-media"></div>
     <div id="lightbox-caption"></div>
-    <!-- <div class="gapMaker"></div> -->
   </section>
-  <span id="lightbox-next" onclick="changeSlide(1)">&#10095;</span>
+
+  <button type="button" id="lightbox-next" aria-label="Next slide">&#10095;</button>
 </dialog>
 <!-- CLICKABLE INTERACTION ITEM, lightboxes -->
 <div class="phonePageTitle">
@@ -107,11 +106,11 @@
     <div class="projectDivider">
     <div class="featured-item-section-video">
         <figure class="portfolio-item-video">
-        <img src="https://img.youtube.com/vi/aqkhn1hJqeo/maxresdefault.jpg" 
+        <img src="https://img.youtube.com/vi/aqkhn1hJqeo/maxresdefault.jpg" class="lightbox-trigger" tabindex="0" role="button"
         alt="Motion Graphic"
         data-images='[{"type":"youtube","src":"aqkhn1hJqeo"}]' 
         data-caption="<strong>TYPOGRAPHY MOTION GRAPHIC</strong><br>This is my After Effects Motion Graphic project which I created to give words character. I utilized sound and timing to make a fun but practical display of Text and animation. I discovered my affinity for motion graphics through this video. 2025."
-        onclick="openLightbox(this)">
+        >
         <figcaption>
           TYPOGRAPHY MOTION GRAPHIC
         </figcaption>           
@@ -130,11 +129,11 @@
     <div class="projectDivider">
     <div class="featured-item-section-video">
         <figure class="portfolio-item-video">
-        <img src="https://img.youtube.com/vi/AMyelYe3A8I/maxresdefault.jpg" 
+        <img src="https://img.youtube.com/vi/AMyelYe3A8I/maxresdefault.jpg" class="lightbox-trigger" tabindex="0" role="button"
         alt="Spider-Man Motion Graphic"
         data-images='[{"type":"youtube","src":"AMyelYe3A8I"}]' 
         data-caption="<strong>Spider Man 2 (2004) Type Motion Graphic.</strong><br> This is my work from 2025 in RISD Typography-3. I was assigned to work on any audio clip that would be viewed exclusively through type text and I used Aftereffects to achieve this."
-        onclick="openLightbox(this)">
+        >
         <figcaption>
           Type Motion Graphic.
         </figcaption>           
@@ -153,11 +152,11 @@
     <div class="projectDivider">
     <div class="featured-item-section-video">
         <figure class="portfolio-item-video">
-        <img src="https://img.youtube.com/vi/SNe8uAb50FM/maxresdefault.jpg" 
+        <img src="https://img.youtube.com/vi/SNe8uAb50FM/maxresdefault.jpg" class="lightbox-trigger" tabindex="0" role="button"
         alt="Saffron Motion Graphic"
         data-images='[{"type":"youtube","src":"SNe8uAb50FM"}]'
         data-caption="<strong>Saffron, the Mysterious Colour</strong><br> After Effects video of the history and science behind the color Saffron. 2025."
-        onclick="openLightbox(this)">
+        >
         <figcaption>
           Saffron, the Mysterious Colour
         </figcaption>           
@@ -176,11 +175,11 @@
   <div class="projectDivider">
   <div class="featured-item-section-video">
       <figure class="portfolio-item-video">
-      <img src="https://img.youtube.com/vi/MKpCQCdZ728/maxresdefault.jpg" 
+      <img src="https://img.youtube.com/vi/MKpCQCdZ728/maxresdefault.jpg" class="lightbox-trigger" tabindex="0" role="button"
       alt="Motion Graphic"
       data-images='[{"type":"youtube","src":"MKpCQCdZ728"}]' 
       data-caption="<strong>Poppy Eats Jello!</strong><br>This is my Project for GRAPH 3318 - WKSHP: DIGITAL 3D DESIGN. I made this by learning to use Cinema 4D. By the way, the dog's name is Poppy! 2026."
-      onclick="openLightbox(this)">
+      >
       <figcaption>
         Poppy Eats Jello
       </figcaption>           
@@ -199,11 +198,11 @@
   <div class="projectDivider">
   <div class="featured-item-section-video">
       <figure class="portfolio-item-video">
-      <img src="https://img.youtube.com/vi/-sFxixCKOOE/maxresdefault.jpg" 
+      <img src="https://img.youtube.com/vi/-sFxixCKOOE/maxresdefault.jpg" class="lightbox-trigger" tabindex="0" role="button"
       alt="Motion Graphic"
       data-images='[{"type":"youtube","src":"-sFxixCKOOE"}]' 
       data-caption="<strong>World Hub</strong><br> This Final Project is my first extensive use of Figma, wiring and designing an entire website for story tellers and world builders using easy interface and community building tactics. This mock up was a multi week project meant to provide a safe space for story tellers to organize their fictional inspirations and ideas with their friends to show their work to script writers and creative teams. Shout out to Gabriel Drozdov for his extremely helpful feedback and wireframing lessons! 2026."
-      onclick="openLightbox(this)">
+      >
       <figcaption>
         World Hub
       </figcaption>           
@@ -234,11 +233,11 @@
     <div class="projectDivider">
     <div class="featured-item-section-video">
         <figure class="portfolio-item-video">
-        <img src="../JamesWebsitePhotos/Motion Graphics/Dog Dunk.gif" 
+        <img src="../JamesWebsitePhotos/Motion Graphics/Dog Dunk.gif" class="lightbox-trigger" tabindex="0" role="button"
         alt="Barksketball Gif"
         data-images='[{"type":"image","src":"../JamesWebsitePhotos/Motion Graphics/Dog Dunk.gif"}]' 
         data-caption="<strong>Barksketball</strong><br> In an improvised group project with 3 people, I was tasked with making a motion graphic for our sports/pet product using the only 2 colors a dog could perceive. I specialize in hand drawn GIFs. 2025."
-        onclick="openLightbox(this)">
+        >
         <figcaption>
           Barksketball
         </figcaption>           
@@ -257,11 +256,11 @@
   <div class="projectDivider">
   <div class="featured-item-section-video">
       <figure class="portfolio-item-video">
-      <img src="../JamesWebsitePhotos/Motion Graphics/Growth.gif" 
+      <img src="../JamesWebsitePhotos/Motion Graphics/Growth.gif" class="lightbox-trigger" tabindex="0" role="button"
       alt="Growing Up"
       data-images='[{"type":"image","src":"../JamesWebsitePhotos/Motion Graphics/Growth.gif"}]' 
       data-caption="<strong>Growing Up</strong><br>Motion graphic animation to promote healthy child care in America. After Effects. 2025."
-      onclick="openLightbox(this)">
+      >
       <figcaption>
         Growing Up
       </figcaption>           
@@ -280,11 +279,11 @@
   <div class="projectDivider">
   <div class="featured-item-section-video">
       <figure class="portfolio-item-video">
-      <img src="../JamesWebsitePhotos/Motion Graphics/Spiker-compressed.gif" 
+      <img src="../JamesWebsitePhotos/Motion Graphics/Spiker-compressed.gif" class="lightbox-trigger" tabindex="0" role="button"
       alt="Do not touch"
       data-images='[{"type":"image","src":"../JamesWebsitePhotos/Motion Graphics/Spiker-compressed.gif"}]' 
       data-caption="<strong>DO NOT TOUCH</strong><br> Motion graphic animation to characterize cactus as a concept. After Effects. 2025."
-      onclick="openLightbox(this)">
+      >
       <figcaption>
         DO NOT TOUCH
       </figcaption>           

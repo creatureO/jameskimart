@@ -27,19 +27,18 @@
 </head>
 
 <body>
-<div id="click-layer"></div>
+<div id="click-layer" popover="manual"></div>
 <!-- CLICKABLE INTERACTION ITEM, Lightboxes -->
-<dialog id="lightbox" class="hidden">
-  <span id="lightbox-close" onclick="closeLightbox()">&times;</span>
-  <span id="lightbox-prev" onclick="changeSlide(-1)">&#10094;</span>
+<dialog id="lightbox" aria-label="Media viewer">
+  <button type="button" id="lightbox-close" aria-label="Close viewer">&times;</button>
+  <button type="button" id="lightbox-prev" aria-label="Previous slide">&#10094;</button>
+
   <section id="lightbox-content">
-    <img id="lightbox-img" src="" alt="">
-    <video id="lightbox-video" class="hidden" controls></video>
-    <iframe id="lightbox-youtube" class="hidden" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div id="lightbox-media"></div>
     <div id="lightbox-caption"></div>
-    <!-- <div class="gapMaker"></div> -->
   </section>
-  <span id="lightbox-next" onclick="changeSlide(1)">&#10095;</span>
+
+  <button type="button" id="lightbox-next" aria-label="Next slide">&#10095;</button>
 </dialog>
 <!-- CLICKABLE INTERACTION ITEM, lightboxes -->
 <div class="phonePageTitle">
@@ -108,22 +107,22 @@
 <div class="projectDivider">
 <div class="featured-item-section">
     <figure>
-        <img src="../JamesWebsitePhotos/Marketing/EES.LLC/1.jpg"
+        <img src="../JamesWebsitePhotos/Marketing/EES.LLC/1.jpg" class="lightbox-trigger" tabindex="0" role="button"
         alt="Marketing Add" style="height:100%; width: 100%;"  
         data-images='[{"type":"image","src":"../JamesWebsitePhotos/Marketing/EES.LLC/1.jpg"},
         {"type":"image","src":"../JamesWebsitePhotos/Marketing/EES.LLC/2.jpg"},
         {"type":"image","src":"../JamesWebsitePhotos/Marketing/EES.LLC/3.jpg"},
         {"type":"image","src":"../JamesWebsitePhotos/Marketing/EES.LLC/4.jpg"},
         {"type":"image","src":"../JamesWebsitePhotos/Marketing/EES.LLC/5.jpg"}]'
-        data-caption="<strong>Suzette's Social Media Ads</strong><br> This is the marketing work I did in my spring Junior internship as a Social Media Marketing Intern for the Brooklyn based organization Envisioned Events by Suzette, Etiquette Speaks, and Envisioned Travels. 2026.<br><a href='https://www.instagram.com/p/DWJhTJjDacE/?img_index=1' target='_blank'> CLICK LINK </a>" 
-        onclick="openLightbox(this)"/> 
+        data-caption="<strong>Suzette's Social Media Ads</strong><br> This is the marketing work I did in my spring Junior internship as a Social Media Marketing Intern for the Brooklyn based organization Envisioned Events by Suzette, Etiquette Speaks, and Envisioned Travels. 2026.<br><a href='https://www.instagram.com/p/DWJhTJjDacE/?img_index=1' target='_blank' rel='noopener'> CLICK LINK </a>" 
+        /> 
         <figcaption>
           Envisioned Travels
         </figcaption>
       </figure>
 
     <figure>
-        <img src="../JamesWebsitePhotos/Marketing/EES.LLC/Etiquette 1.jpg"
+        <img src="../JamesWebsitePhotos/Marketing/EES.LLC/Etiquette 1.jpg" class="lightbox-trigger" tabindex="0" role="button"
         alt="Marketing Add" style="height:100%; width: 100%;"  
         data-images='[{"type":"image","src":"../JamesWebsitePhotos/Marketing/EES.LLC/Etiquette 1.jpg"},
         {"type":"image","src":"../JamesWebsitePhotos/Marketing/EES.LLC/Etiquette 2.jpg"},
@@ -131,15 +130,15 @@
         {"type":"image","src":"../JamesWebsitePhotos/Marketing/EES.LLC/Etiquette 4.jpg"},
         {"type":"image","src":"../JamesWebsitePhotos/Marketing/EES.LLC/Etiquette 5.jpg"},
         {"type":"image","src":"../JamesWebsitePhotos/Marketing/EES.LLC/Etiquette 6.jpg"}]'
-        data-caption="<strong>Suzette's Social Media Ads</strong><br> This is the marketing work I did in my spring Junior internship as a Social Media Marketing Intern for the Brooklyn based organization Envisioned Events by Suzette, Etiquette Speaks, and Envisioned Travels. 2026.<br><a href='https://www.instagram.com/p/DWJhTJjDacE/?img_index=1' target='_blank'> CLICK LINK </a>" 
-          onclick="openLightbox(this)"/>
+        data-caption="<strong>Suzette's Social Media Ads</strong><br> This is the marketing work I did in my spring Junior internship as a Social Media Marketing Intern for the Brooklyn based organization Envisioned Events by Suzette, Etiquette Speaks, and Envisioned Travels. 2026.<br><a href='https://www.instagram.com/p/DWJhTJjDacE/?img_index=1' target='_blank' rel='noopener'> CLICK LINK </a>" 
+          />
           <figcaption>
             Etiquette Speaks
           </figcaption>
       </figure>
 
       <figure>
-        <img src="../JamesWebsitePhotos/Marketing/EES.LLC/Events 1.jpg"
+        <img src="../JamesWebsitePhotos/Marketing/EES.LLC/Events 1.jpg" class="lightbox-trigger" tabindex="0" role="button"
         alt="Marketing Add" style="height:100%; width: 100%;"  
         data-images='[{"type":"image","src":"../JamesWebsitePhotos/Marketing/EES.LLC/Events 1.jpg"},
         {"type":"image","src":"../JamesWebsitePhotos/Marketing/EES.LLC/Events 2.jpg"},
@@ -150,15 +149,15 @@
         {"type":"image","src":"../JamesWebsitePhotos/Marketing/EES.LLC/Events 7.jpg"},
         {"type":"image","src":"../JamesWebsitePhotos/Marketing/EES.LLC/Events 8.jpg"},
         {"type":"image","src":"../JamesWebsitePhotos/Marketing/EES.LLC/Events 9.jpg"}]'
-        data-caption="<strong>Suzette's Social Media Ads</strong><br> This is the marketing work I did in my spring Junior internship as a Social Media Marketing Intern for the Brooklyn based organization Envisioned Events by Suzette, Etiquette Speaks, and Envisioned Travels. 2026.<br><a href='https://www.instagram.com/p/DWJhTJjDacE/?img_index=1' target='_blank'> CLICK LINK </a>" 
-          onclick="openLightbox(this)"/>
+        data-caption="<strong>Suzette's Social Media Ads</strong><br> This is the marketing work I did in my spring Junior internship as a Social Media Marketing Intern for the Brooklyn based organization Envisioned Events by Suzette, Etiquette Speaks, and Envisioned Travels. 2026.<br><a href='https://www.instagram.com/p/DWJhTJjDacE/?img_index=1' target='_blank' rel='noopener'> CLICK LINK </a>" 
+          />
           <figcaption>
             Envisioned Events
           </figcaption>
       </figure>
 
       <figure>
-        <img src="../JamesWebsitePhotos/Marketing/EES.LLC/Wedding 1.jpg"
+        <img src="../JamesWebsitePhotos/Marketing/EES.LLC/Wedding 1.jpg" class="lightbox-trigger" tabindex="0" role="button"
         alt="Marketing Add" style="height:100%; width: 100%;"  
         data-images='[{"type":"image","src":"../JamesWebsitePhotos/Marketing/EES.LLC/Wedding 1.jpg"},
         {"type":"image","src":"../JamesWebsitePhotos/Marketing/EES.LLC/Wedding 2.jpg"},
@@ -170,14 +169,14 @@
         {"type":"image","src":"../JamesWebsitePhotos/Marketing/EES.LLC/Wedding 8.jpg"},
         {"type":"image","src":"../JamesWebsitePhotos/Marketing/EES.LLC/Wedding 9.jpg"},
         {"type":"image","src":"../JamesWebsitePhotos/Marketing/EES.LLC/Wedding 10.jpg"}]'
-        data-caption="<strong>Suzette's Social Media Ads</strong><br> This is the marketing work I did in my spring Junior internship as a Social Media Marketing Intern for the Brooklyn based organization Envisioned Events by Suzette, Etiquette Speaks, and Envisioned Travels. 2026.<br><a href='https://www.instagram.com/p/DWJhTJjDacE/?img_index=1' target='_blank'> CLICK LINK </a>" 
-          onclick="openLightbox(this)"/>
+        data-caption="<strong>Suzette's Social Media Ads</strong><br> This is the marketing work I did in my spring Junior internship as a Social Media Marketing Intern for the Brooklyn based organization Envisioned Events by Suzette, Etiquette Speaks, and Envisioned Travels. 2026.<br><a href='https://www.instagram.com/p/DWJhTJjDacE/?img_index=1' target='_blank' rel='noopener'> CLICK LINK </a>" 
+          />
           <figcaption>
             Wedding Planning
           </figcaption>
       </figure>
 </div>
-    <p class="description">This is the marketing work I did in my spring Junior internship as a Social Media Marketing Intern for the Brooklyn based organization Envisioned Events by Suzette, Etiquette Speaks, and Envisioned Travels. 2026.<br><a href='https://www.instagram.com/p/DWJhTJjDacE/?img_index=1' target='_blank'><strong> CLICK LINK </strong></a></p>
+    <p class="description">This is the marketing work I did in my spring Junior internship as a Social Media Marketing Intern for the Brooklyn based organization Envisioned Events by Suzette, Etiquette Speaks, and Envisioned Travels. 2026.<br><a href='https://www.instagram.com/p/DWJhTJjDacE/?img_index=1' target='_blank' rel='noopener'><strong> CLICK LINK </strong></a></p>
 </div>  
 </section>
 
@@ -202,17 +201,17 @@
     <div class="projectDivider" style="column-gap:1vw;">
     <div class="featured-item-section-video">
         <figure class="portfolio-item-video">
-        <img src="https://img.youtube.com/vi/9WbIgzPXhu8/maxresdefault.jpg" 
+        <img src="https://img.youtube.com/vi/9WbIgzPXhu8/maxresdefault.jpg" class="lightbox-trigger" tabindex="0" role="button"
         alt="Project Look"
         data-youtube="9WbIgzPXhu8"
-        data-caption="<strong>Project Look Promo Video</strong><br> Over my summer internship of 2025 I filmed and edited a series of promotional videos for the Palo Alto Art Center, bolstering the awarness of many of the city's artists.<br> This video is the promotional video for the Project Look program which lets K-5th grade students from local schools take tours through the PAACF exhibitions. This video calls for Docent volunteers to guide the children and foster creativity. 2025. <br><a href='https://www.paloalto.gov/Departments/Community-Services/Arts-Sciences/Palo-Alto-Art-Center/Volunteer/School-Tour-Docents' target='_blank'> CLICK LINK </a>"
-        onclick="openLightbox(this)">
+        data-caption="<strong>Project Look Promo Video</strong><br> Over my summer internship of 2025 I filmed and edited a series of promotional videos for the Palo Alto Art Center, bolstering the awarness of many of the city's artists.<br> This video is the promotional video for the Project Look program which lets K-5th grade students from local schools take tours through the PAACF exhibitions. This video calls for Docent volunteers to guide the children and foster creativity. 2025. <br><a href='https://www.paloalto.gov/Departments/Community-Services/Arts-Sciences/Palo-Alto-Art-Center/Volunteer/School-Tour-Docents' target='_blank' rel='noopener'> CLICK LINK </a>"
+        >
         <figcaption>
           Project Look
         </figcaption>           
         </figure>
     </div>
-        <p class="description">Over my summer internship of 2025 I filmed and edited a series of promotional videos for the Palo Alto Art Center, bolstering the awarness of many of the city's artists. 2025.<br><a href='https://www.paloalto.gov/Departments/Community-Services/Arts-Sciences/Palo-Alto-Art-Center/Volunteer/School-Tour-Docents' target='_blank'><strong> CLICK LINK </strong></a></p>
+        <p class="description">Over my summer internship of 2025 I filmed and edited a series of promotional videos for the Palo Alto Art Center, bolstering the awarness of many of the city's artists. 2025.<br><a href='https://www.paloalto.gov/Departments/Community-Services/Arts-Sciences/Palo-Alto-Art-Center/Volunteer/School-Tour-Docents' target='_blank' rel='noopener'><strong> CLICK LINK </strong></a></p>
     </div>
     </section>
 
@@ -225,17 +224,17 @@
     <div class="projectDivider" style="column-gap:0vw;">
     <div class="featured-item-section-video">
         <figure class="portfolio-item-video">
-        <img src="https://img.youtube.com/vi/sbmAD3LfJRo/maxresdefault.jpg" 
+        <img src="https://img.youtube.com/vi/sbmAD3LfJRo/maxresdefault.jpg" class="lightbox-trigger" tabindex="0" role="button"
         alt="Project Look"
         data-youtube="sbmAD3LfJRo"
-        data-caption="<strong>3 Exhibition Artists, 2025 PAACF Instagram Videos</strong><br> This is a promotional video I filmed and edited for 3 Forming Function ceramic artists at my local Palo Alto art center. My internship tasked me with this kind of work to help spread the love of art and design through our community. 2025.<br><a href='https://www.instagram.com/p/DNYo7QxB8fR/?hl=en' target='_blank'> CLICK LINK </a>"
-        onclick="openLightbox(this)">
+        data-caption="<strong>3 Exhibition Artists, 2025 PAACF Instagram Videos</strong><br> This is a promotional video I filmed and edited for 3 Forming Function ceramic artists at my local Palo Alto art center. My internship tasked me with this kind of work to help spread the love of art and design through our community. 2025.<br><a href='https://www.instagram.com/p/DNYo7QxB8fR/?hl=en' target='_blank' rel='noopener'> CLICK LINK </a>"
+        >
         <figcaption>
           2025 PAACF Instagram Videos
         </figcaption>           
         </figure>
     </div>
-        <p class="description">This is a promotional video I filmed and edited for 3 Forming Function ceramic artists at my local Palo Alto art center. My internship tasked me with this kind of work to help spread the love of art and design through our community. 2025.<br><a href='https://www.instagram.com/p/DNYo7QxB8fR/?hl=en' target='_blank'><strong> CLICK LINK </strong></a></p>
+        <p class="description">This is a promotional video I filmed and edited for 3 Forming Function ceramic artists at my local Palo Alto art center. My internship tasked me with this kind of work to help spread the love of art and design through our community. 2025.<br><a href='https://www.instagram.com/p/DNYo7QxB8fR/?hl=en' target='_blank' rel='noopener'><strong> CLICK LINK </strong></a></p>
     </div>
     </section>
 
@@ -248,13 +247,13 @@
     <div class="projectDivider" style="column-gap:0vw;">
     <div class="featured-item-section-video">
         <figure class="portfolio-item-video">
-        <img src="https://img.youtube.com/vi/w_U2AH3gyAE/maxresdefault.jpg" 
+        <img src="https://img.youtube.com/vi/w_U2AH3gyAE/maxresdefault.jpg" class="lightbox-trigger" tabindex="0" role="button"
         alt="Project Look"
         data-images='[{"type":"youtube","src":"w_U2AH3gyAE"},
         {"type":"youtube","src":"QTeC5K7gqIc"},
         {"type":"youtube","src":"b8RxiirN7ak"}]'
         data-caption="<strong>Forming Function Artists, 2025 PAACF Instagram Videos</strong><br> The 2025 summer exhibition of Forming Functions showcased the work of many Palo Alto artists at the PAACF to honor the creative culture of Silicon Valley.<br>I was incharge of videography, editing, and working with the foundation's directors to compose the videos for instagram advertising of the event and it's art pieces.<br>The artists include Jan Schachter, Salley Jackson, and Edward Paas. 2025."
-        onclick="openLightbox(this)">
+        >
         <figcaption>
           Forming Function Artists
         </figcaption>           
@@ -273,47 +272,47 @@
     <div class="projectDivider">
     <div class="featured-item-section">
         <figure>
-        <img src="../JamesWebsitePhotos/Marketing/2025 PAACF/Buttons 1-compressed.jpg"
+        <img src="../JamesWebsitePhotos/Marketing/2025 PAACF/Buttons 1-compressed.jpg" class="lightbox-trigger" tabindex="0" role="button"
         alt="Buttons" style="height:100%; width: 100%;"  
         data-images='[{"type":"image","src":"../JamesWebsitePhotos/Marketing/2025 PAACF/Buttons 1-compressed.jpg"},
         {"type":"image","src":"../JamesWebsitePhotos/Marketing/2025 PAACF/Buttons 2.jpeg"}]'
         data-caption="<strong>2025 Buttons PAACF</strong><br> These were buttons I designed and ordered for manufacturing in my 2025 summer internship. They were well crafted from Aluminium and handed out to all of my coworkers and visitors. 2025." 
-        onclick="openLightbox(this)"/>
+        />
         <figcaption>
           2025 Buttons PAACF
         </figcaption>        
         </figure>
 
         <figure>
-        <img src="../JamesWebsitePhotos/Marketing/2025 PAACF/Buttons 3.jpeg"
+        <img src="../JamesWebsitePhotos/Marketing/2025 PAACF/Buttons 3.jpeg" class="lightbox-trigger" tabindex="0" role="button"
         alt="Buttons" style="height:100%; width: 100%;"  
         data-images='[{"type":"image","src":"../JamesWebsitePhotos/Marketing/2025 PAACF/Buttons 3.jpeg"},
         {"type":"image","src":"../JamesWebsitePhotos/Marketing/2025 PAACF/Buttons 4.jpeg"}]'
         data-caption="<strong>2025 Buttons PAACF</strong><br> These were buttons I designed and ordered for manufacturing in my 2025 summer internship. They were well crafted from Aluminium and handed out to all of my coworkers and visitors. 2025." 
-        onclick="openLightbox(this)"/>
+        />
         <figcaption>
           2025 Buttons PAACF
         </figcaption>        
         </figure>
 
         <figure>
-        <img src="../JamesWebsitePhotos/Marketing/2025 PAACF/Buttons 5.jpeg"
+        <img src="../JamesWebsitePhotos/Marketing/2025 PAACF/Buttons 5.jpeg" class="lightbox-trigger" tabindex="0" role="button"
         alt="Buttons" style="height:100%; width: 100%;"  
         data-images='[{"type":"image","src":"../JamesWebsitePhotos/Marketing/2025 PAACF/Buttons 5.jpeg"},
         {"type":"image","src":"../JamesWebsitePhotos/Marketing/2025 PAACF/Buttons 6.jpeg"}]'
         data-caption="<strong>2025 Buttons PAACF</strong><br> These were buttons I designed and ordered for manufacturing in my 2025 summer internship. They were well crafted from Aluminium and handed out to all of my coworkers and visitors. 2025." 
-        onclick="openLightbox(this)"/>
+        />
         <figcaption>
           2025 Buttons PAACF
         </figcaption>        
         </figure>
 
         <figure>
-        <img src="../JamesWebsitePhotos/Marketing/2025 PAACF/Buttons 7.jpeg"
+        <img src="../JamesWebsitePhotos/Marketing/2025 PAACF/Buttons 7.jpeg" class="lightbox-trigger" tabindex="0" role="button"
         alt="Buttons" style="height:100%; width: 100%;"  
         data-images='[{"type":"image","src":"../JamesWebsitePhotos/Marketing/2025 PAACF/Buttons 7.jpeg"}]'
         data-caption="<strong>2025 Buttons PAACF</strong><br> These were buttons I designed and ordered for manufacturing in my 2025 summer internship. They were well crafted from Aluminium and handed out to all of my coworkers and visitors. 2025." 
-        onclick="openLightbox(this)"/>
+        />
         <figcaption>
           2025 Buttons PAACF
         </figcaption>        
