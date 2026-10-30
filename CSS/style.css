@@ -720,6 +720,11 @@ dialog{
   transition: transform 0.5s ease;
   background: none;
   z-index: 50;
+
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
   }
 
 #lightbox-prev:hover, #lightbox-next:hover {
