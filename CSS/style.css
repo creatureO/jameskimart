@@ -111,7 +111,7 @@ white-space: nowrap; /* this makes sure stuff never breaks into 2 lines*/
   nav li a{
     display:block;
     height: fit-content;       /* stretches to fill the li's full height, including the padding area */
-    padding: 1.5vh 50px;   /*top, right, bottom, and left*/
+    padding: 1vh 50px;   /*top, right, bottom, and left*/
   }
   
   
@@ -237,7 +237,11 @@ hr{
   display:flex;
   overflow-x: auto;
   column-gap:0px;
-  padding:0px;
+  padding-left:0vw;
+  padding-right:0vw;
+  padding-top:0vw;
+  padding-bottom:2vw;
+  border-bottom: 1px solid black;
 }
 
 .about{
@@ -1202,6 +1206,12 @@ causing content to spill past the edge of the screen.
   display: block;
 }
 
+.program-thumbnail-background .description{
+  width:80%;
+  padding:4vh;
+  margin:0px;
+}
+
 .lobby-video {
   display:flex;
   width:50vw;
@@ -1238,6 +1248,7 @@ details summary {
 
 .subCategory{ /*so far only used in Programming.html*/
   padding-bottom:20px;
+  padding-left: 40px;
 }
 
 #description {
