@@ -1028,8 +1028,7 @@ causing content to spill past the edge of the screen.
   }
   
   header{
-  position:sticky;   /* keeps this block pinned once it hits the top of the viewport */
-  top: 0;
+  position:static;
   }
   
   .desktopOption{
@@ -1267,14 +1266,14 @@ details summary {
 
     .featured-item-section{
       display: grid;
-      grid-template-columns: repeat(2, 1fr); /* Creates 3 equal columns */
+      grid-template-columns: repeat(1, 1fr); /* Creates 3 equal columns */
       gap: 5px; /* 10px vertical gap, 20px horizontal gap */
       width: 100%;
     }
 
     figure{
       width: 100%;
-      height: 30vw;
+      height: 15vh;
       position: relative;   /* this line is the key to letting the overlay work on each grid image */
       overflow: hidden;
       border: 0.5px solid black;
