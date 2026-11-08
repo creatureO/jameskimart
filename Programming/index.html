@@ -33,10 +33,10 @@
   <button type="button" id="lightbox-close" aria-label="Close viewer">&times;</button>
   <button type="button" id="lightbox-prev" aria-label="Previous slide">&#10094;</button>
 
-  <section id="lightbox-content">
+  <div id="lightbox-content">
     <div id="lightbox-media"></div>
     <div id="lightbox-caption"></div>
-  </section>
+  </div>
 
   <button type="button" id="lightbox-next" aria-label="Next slide">&#10095;</button>
 </dialog>
@@ -48,10 +48,8 @@
   </div>
   <h2 class="phoneSubTitle" style="margin-right: 5vw;">RISD, Graphic Design, 2027</h2>
 </div>
-<!-- Sticky header wrapper: keeps the logo bar and nav bar pinned to the top as the visitor scrolls -->
-<header>
 
-<!-- home name KIMBRO AVATAR display: inline-block;--> 
+<header>
 <div id="anchorTitle">
 <div style="display:flex; align-items: center; gap:1vw;">
 <a href="../"><img src="../Homepage Images/Kimbro Logo.svg" alt="Kimbro logo" style="height:50px; width: 50px;" class="mainLogo"/></a>
@@ -60,7 +58,9 @@
 <h2 id="subTitle" style="margin-right: 5vw;">RISD, Graphic Design, 2027</h2>
 </div>
 <!-- home name -->
- <nav>
+</header>
+<!-- end sticky header wrapper -->
+<nav>
   <div id="clickToOpen">
       <div class="hamburgerMenu">
         <svg viewBox="0 0 100 80" width="40" fill="currentColor" style="height:4vh;">
@@ -81,15 +81,12 @@
     <li class="desktopOption"><a href="#contactMe">Contact Me</a></li>
   </ul>
 </nav>
-</header>
-<!-- end sticky header wrapper -->
 
 <main> <!-- Overhead paint drop -->
   <img src="../Homepage Images/HomePageDrip.png" alt="" id="gifOverlay"> <!-- Overhead paint drop -->
 
 <div class="gapMaker"></div>
 <div class="lobby-image">
-<!-- <img src="Homepage Images/Homepage Image.jpeg" alt="James Kim in Providence" style="height:100%; width: 100%;"/> -->
 <h2 id="sectionName" style="font-size: 4vw;">PROGRAMMING</h2>
 <img src="../JamesWebsitePhotos/Programming/Gr Game/Programming Cover.webp" alt="Kimbro logo" style="height:80%; width: 50%;"/>
 </div>
@@ -128,7 +125,6 @@
 <div class="work-row-wrapper"> <!--<BUTTON>-->
 <button class="scroll-btn scroll-left" onclick="scrollRow(this,-1)">&#10094;</button><!--<BUTTON>--> 
 <div class="workRow" style="height:fit-content; background-color: rgb(220, 220, 220);"> 
-<div class="projectDivider">
   <div class="lobby-video">
     <!-- IMPORTANT DISPLAY VIDEO -->
       <iframe
@@ -141,9 +137,7 @@
       allowfullscreen>
       </iframe>
     </div>
-</div>  
     
-<div class="projectDivider">
   <div class="lobby-video">
     <!-- IMPORTANT DISPLAY VIDEO -->
       <iframe
@@ -156,9 +150,7 @@
       allowfullscreen>
       </iframe>
     </div>
-</div>
 
-    <div class="projectDivider">
       <div class="lobby-video">
         <!-- IMPORTANT DISPLAY VIDEO -->
       <iframe
@@ -171,9 +163,7 @@
       allowfullscreen>
       </iframe>
     </div>
-</div>
   
-<div class="projectDivider">
   <div class="lobby-video">
     <!-- IMPORTANT DISPLAY VIDEO -->
       <iframe
@@ -186,9 +176,7 @@
       allowfullscreen>
       </iframe>
     </div>
-</div>
    
-<div class="projectDivider">
   <div class="lobby-video">
     <!-- IMPORTANT DISPLAY VIDEO -->
       <iframe
@@ -201,9 +189,7 @@
       allowfullscreen>
       </iframe>
     </div>
-</div>
      
-<div class="projectDivider">
   <div class="lobby-video">
     <!-- IMPORTANT DISPLAY VIDEO -->
       <iframe
@@ -216,9 +202,7 @@
       allowfullscreen>
       </iframe>
     </div>
-</div> 
   
-<div class="projectDivider">
   <div class="lobby-video">
     <!-- IMPORTANT DISPLAY VIDEO -->
       <iframe
@@ -231,9 +215,7 @@
       allowfullscreen>
       </iframe>
     </div>
-</div> 
     
-<div class="projectDivider">
   <div class="lobby-video">
     <!-- IMPORTANT DISPLAY VIDEO -->
       <iframe
@@ -246,9 +228,7 @@
       allowfullscreen>
       </iframe>
     </div>
-</div> 
    
-<div class="projectDivider">
   <div class="lobby-video">
     <!-- IMPORTANT DISPLAY VIDEO -->
       <iframe
@@ -261,9 +241,7 @@
       allowfullscreen>
       </iframe>
     </div>
-</div> 
      
-<div class="projectDivider">
   <div class="lobby-video">
     <!-- IMPORTANT DISPLAY VIDEO -->
       <iframe
@@ -276,9 +254,7 @@
       allowfullscreen>
       </iframe>
     </div>
-</div> 
    
-<div class="projectDivider">
   <div class="lobby-video">
     <!-- IMPORTANT DISPLAY VIDEO -->
       <iframe
@@ -291,7 +267,6 @@
       allowfullscreen>
       </iframe>
     </div>
-</div> 
   
 </div>
 

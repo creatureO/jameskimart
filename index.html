@@ -23,9 +23,6 @@
       text-decoration-color: #0000;       /* Changes underline color independently */
       text-decoration-thickness: 2px;       /* Optional: changes underline thickness */
     }
-    .workRowHome figcaption{
-      font-size:2rem;
-    } 
   </style>
 </head>
 
@@ -36,25 +33,16 @@
   <button type="button" id="lightbox-close" aria-label="Close viewer">&times;</button>
   <button type="button" id="lightbox-prev" aria-label="Previous slide">&#10094;</button>
 
-  <section id="lightbox-content">
+  <div id="lightbox-content">
     <div id="lightbox-media"></div>
     <div id="lightbox-caption"></div>
-  </section>
+  </div>
 
   <button type="button" id="lightbox-next" aria-label="Next slide">&#10095;</button>
 </dialog>
 <!-- CLICKABLE INTERACTION ITEM, lightboxes -->
-<div class="phonePageTitle">
-  <div style="display:flex; align-items: center; gap:1vw;">
-  <a href="./"><img src="Homepage Images/Kimbro Logo.svg" alt="Kimbro logo" style="height:50px; width: 50px;" class="mainLogo"/></a>
-  <h1>James Kim</h1>
-  </div>
-  <h2 class="phoneSubTitle" style="margin-right: 5vw;">RISD, Graphic Design, 2027</h2>
-</div>
-<!-- Sticky header wrapper: keeps the logo bar and nav bar pinned to the top as the visitor scrolls -->
-<header>
 
-<!-- home name KIMBRO AVATAR display: inline-block;--> 
+<header>
 <div id="anchorTitle">
 <div style="display:flex; align-items: center; gap:1vw;">
 <a href="./"><img src="Homepage Images/Kimbro Logo.svg" alt="Kimbro logo" style="height:50px; width: 50px;" class="mainLogo"/></a>
@@ -63,7 +51,9 @@
 <h2 id="subTitle" style="margin-right: 5vw;">RISD, Graphic Design, 2027</h2>
 </div>
 <!-- home name -->
- <nav>
+</header>
+<!-- end sticky header wrapper -->
+<nav>
   <div id="clickToOpen">
       <div class="hamburgerMenu">
         <svg viewBox="0 0 100 80" width="40" fill="currentColor" style="height:4vh;">
@@ -84,14 +74,11 @@
     <li class="desktopOption"><a href="#contactMe">Contact Me</a></li>
   </ul>
 </nav>
-</header>
-<!-- end sticky header wrapper -->
 
 <main> <!-- Overhead paint drop -->
   <img src="Homepage Images/HomePageDrip.png" alt="" id="gifOverlay"> <!-- Overhead paint drop -->
 
 <div class="lobby-image-home">
-<!-- <img src="Homepage Images/Homepage Image.jpeg" alt="James Kim in Providence" style="height:100%; width: 100%;"/> -->
   <video autoplay muted loop playsinline>
   <source src="JamesWebsitePhotos/Lobby Slides/Lobby Slides-compressed2.mp4" type="video/mp4">
   </video>
@@ -107,14 +94,11 @@
 <hr><!--BAR OF SEPARATION-->
 
 
-<!-- <div class="work-row-wrapper"> <BUTTON>-->
-  <!-- <button class="scroll-btn scroll-left" onclick="scrollRow(this,-1)">&#10094;</button> <BUTTON>--> 
 
 <div class="marquee-wrapper">
   <div class="marquee-track">
 
 <div class="workRowHome">
-  <div class="projectDividerHome">
     <figure class="portfolio-item-home">
       <img src="JamesWebsitePhotos/Product Design/Superman/Superman Fanart James Kim.webp" class="lightbox-trigger" tabindex="0" role="button"
       alt="Superman Poster" style="height:100%; width: 100%;"
@@ -128,10 +112,7 @@
         Superman Poster
       </figcaption>
     </figure>
-  </div>
   
-
-  <div class="projectDividerHome">
     <figure class="portfolio-item-home">
       <img src="JamesWebsitePhotos/Motion Graphics/Dog Dunk.webp" class="lightbox-trigger" tabindex="0" role="button"
       alt="GIF" style="height:100%; width: 100%;" 
@@ -141,9 +122,7 @@
         Barksketball
       </figcaption>
     </figure>
-  </div>
 
-  <div class="projectDividerHome">
     <figure class="portfolio-item-home">
     <!--https://img.youtube.com/vi/[VIDEO ID HERE]/maxresdefault.jpg -->
       <img src="https://img.youtube.com/vi/aqkhn1hJqeo/maxresdefault.jpg" class="lightbox-trigger" tabindex="0" role="button"
@@ -155,9 +134,7 @@
           TYPOGRAPHY MOTION GRAPHIC
         </figcaption>
     </figure>
-  </div>
   
-  <div class="projectDividerHome">
     <figure class="portfolio-item-home">
       <img src="JamesWebsitePhotos/Product Design/Wrath of Reyath/Cover of WOR.webp" class="lightbox-trigger" tabindex="0" role="button"
       alt="TTRPG" style="height:100%; width: 100%;"  
@@ -177,9 +154,7 @@
         Wrath of Reyath
       </figcaption>
     </figure>
-  </div>
 
-  <div class="projectDividerHome">
     <figure class="portfolio-item-home">
       <img src="JamesWebsitePhotos/Product Design/Run to Resist/cover of book.webp" class="lightbox-trigger" tabindex="0" role="button"
       alt="Comic" style="height:100%; width: 100%;"  
@@ -195,9 +170,7 @@
         Run to Resist
       </figcaption>
     </figure>
-  </div>
 
-  <div class="projectDividerHome">
     <figure class="portfolio-item-home">
       <img src="JamesWebsitePhotos/Product Design/HiTop Films Magazine/Magazine 4.webp" class="lightbox-trigger" tabindex="0" role="button"
       alt="Magazine" style="height:100%; width: 100%;"   
@@ -212,9 +185,7 @@
         Superman Video Essay Magazine
       </figcaption>
     </figure>
-  </div>
 
-  <div class="projectDividerHome">
     <figure class="portfolio-item-home">
       <img src="JamesWebsitePhotos/Programming/Gr Game/GR Game 1.webp" class="lightbox-trigger" tabindex="0" role="button"
       alt="Video Game" style="height:100%; width: 100%;"  
@@ -232,9 +203,7 @@
         Galactic Ranger
       </figcaption>
     </figure>
-  </div>
   
-  <div class="projectDividerHome">
     <figure class="portfolio-item-home">
       <img src="JamesWebsitePhotos/Motion Graphics/Growth.webp" class="lightbox-trigger" tabindex="0" role="button"
       alt="GIF" style="height:100%; width: 100%;" 
@@ -244,9 +213,7 @@
         Growing Up
       </figcaption>
     </figure>
-  </div>
 
-  <div class="projectDividerHome">
     <figure class="portfolio-item-home">
       <img src="JamesWebsitePhotos/Motion Graphics/Spiker.webp" class="lightbox-trigger" tabindex="0" role="button"
       alt="GIF" style="height:100%; width: 100%;" 
@@ -256,9 +223,7 @@
         DO NOT TOUCH
       </figcaption>
     </figure>
-  </div>
 
-  <div class="projectDividerHome">
     <figure class="portfolio-item-home">
       <img src="JamesWebsitePhotos/Marketing/EES.LLC/1.webp" class="lightbox-trigger" tabindex="0" role="button"
       alt="Marketing Add" style="height:100%; width: 100%;"  
@@ -273,9 +238,7 @@
         Suzette's Travel Ad
       </figcaption>
     </figure>
-  </div>
 
-  <div class="projectDividerHome">
     <figure class="portfolio-item-home">
       <img src="https://img.youtube.com/vi/9WbIgzPXhu8/maxresdefault.jpg" class="lightbox-trigger" tabindex="0" role="button"
       alt="Project Look"
@@ -286,9 +249,7 @@
         Project Look Promo Video
       </figcaption>
     </figure>
-  </div>
 
-  <div class="projectDividerHome">
     <figure class="portfolio-item-home">
       <img src="JamesWebsitePhotos/Product Design/Superman/Superman Fanart James Kim.webp" class="lightbox-trigger" tabindex="0" role="button"
       alt="Superman Poster" style="height:100%; width: 100%;"
@@ -302,9 +263,7 @@
         Superman Poster
       </figcaption>
     </figure>
-  </div>
 
-  <div class="projectDividerHome">
     <figure class="portfolio-item-home">
       <img src="JamesWebsitePhotos/Motion Graphics/Dog Dunk.webp" class="lightbox-trigger" tabindex="0" role="button"
       alt="GIF" style="height:100%; width: 100%;" 
@@ -314,9 +273,7 @@
         Barksketball
       </figcaption>
     </figure>
-  </div>
 
-  <div class="projectDividerHome">
     <figure class="portfolio-item-home">
     <!--https://img.youtube.com/vi/[VIDEO ID HERE]/maxresdefault.jpg -->
       <img src="https://img.youtube.com/vi/aqkhn1hJqeo/maxresdefault.jpg" class="lightbox-trigger" tabindex="0" role="button"
@@ -328,7 +285,6 @@
           TYPOGRAPHY MOTION GRAPHIC
         </figcaption>
     </figure>
-  </div>
   
 </div>
   </div>
@@ -345,12 +301,9 @@
 <h2 class="year">Product Design</h2>
 <details>
   <summary> </summary>
-  <div class="work-row-wrapper"> <!--<BUTTON>-->
-  <button class="scroll-btn scroll-left" onclick="scrollRow(this,-1)">&#10094;</button><!--<BUTTON>--> 
-<div class="workRow"> <!--________v Portfolio Horzontal scroll v________-->
+<div class="workRow"> <!--________v Portfolio Cards v________-->
 <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
     <h2 class="projectTitle">Outlook</h2>    <!-- projectSection Title-->
-<div class="projectDivider">
 <div class="featured-item-section">
     <figure>
       <img src="JamesWebsitePhotos/Product Design/Outlook/Display 3.webp" class="lightbox-trigger" tabindex="0" role="button"  
@@ -415,12 +368,10 @@
       </figure>
 </div>
     <p class="description">This was a behavioral therapy promotional campaign designed to market the benefits of Exposure Therapy as a treatment, fighting stigma around OCD.<br> I was in charge of the caracter and asset design, <strong>PAMPHLETS, POSTERS, and the STYLE GUIDE</strong>. 2026.</p>
-</div>  
 </section>
 
     <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
     <h2 class="projectTitle">Wrath of Reyath</h2>    <!-- projectSection Title-->
-    <div class="projectDivider">
     <div class="featured-item-section">
         <figure>
         <img src="JamesWebsitePhotos/Product Design/Wrath of Reyath/Cover of WOR.webp" class="lightbox-trigger" tabindex="0" role="button"
@@ -498,15 +449,11 @@
       </figure>
     </div>
         <p class="description">This was a collaborative project between Me, Emerald Jiang, and my roomate Andrew Liao. We were tasked with visualizing sound data on the street I live, Thayer street, and turn it into an interesting delivery method. 2025.</p>
-    </div>
     </section>
 
 
-<!-- black bar dividing 1-->
-
     <section>
         <h2 class="projectTitle">Superman Video Essay Magazine</h2>    <!-- projectSection Title-->
-    <div class="projectDivider">
     <div class="featured-item-section">
         <figure>
         <img src="JamesWebsitePhotos/Product Design/HiTop Films Magazine/Magazine 4.webp" class="lightbox-trigger" tabindex="0" role="button"
@@ -573,15 +520,11 @@
         </figure>
     </div>
         <p class="description">I translated a video essay - HITOP FILMS We Needed Superman - to become a film review style magazine. I also included a pack of gum to make the whole thing more pop culture-like. 2025.</p>
-    </div>
     </section>
 
     
-<!-- black bar dividing 2-->
-
     <section>
         <h2 class="projectTitle">Run to Resist</h2>    <!-- projectSection Title-->
-    <div class="projectDivider">
     <div class="featured-item-section">
         <figure>
         <img src="JamesWebsitePhotos/Product Design/Run to Resist/cover of book.webp" class="lightbox-trigger" tabindex="0" role="button"
@@ -623,16 +566,12 @@
             </figure>
     </div>
         <p class="description">This was my interactive narritive driven campaign to encourage kids aged 12-17 to take up running as a cardio fitness support for heart health. 2025.<br><a href='https://globalcomix.com/read/19faf3a7-1b66-4077-bf3a-349fb4370829/1' target='_blank' rel='noopener'><strong> CLICK LINK </strong></a></p>
-    </div>
     </section>
 
 
 
-<!-- black bar dividing 5-->
-
 <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
     <h2 class="projectTitle">Got Milk?</h2>    <!-- projectSection Title-->
-    <div class="projectDivider">
         <div class="featured-item-section">
             <figure>
             <img src="JamesWebsitePhotos/Product Design/Got Milk/Milk 5.webp" class="lightbox-trigger" tabindex="0" role="button"
@@ -662,13 +601,11 @@
             </figcaption>  
             </figure>
         </div>
-        <p class="description">This was my media adaptation project. I used my card making skills from Wrath of Reyath (collaborative board game project) and composed my own parody game of the 90s' TV Got Milk campaign ads. 2025.</p>
-    </div>  
+        <p class="description">This was my media adaptation project. I used my card making skills from Wrath of Reyath (collaborative board game project) and composed my own parody game of the 90s' TV Got Milk campaign ads. 2025.</p> 
     </section>
 
     <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
       <h2 class="projectTitle">Superman Poster</h2>    <!-- projectSection Title-->
-    <div class="projectDivider">
     <div class="featured-item-section">
       <figure>
           <img src="JamesWebsitePhotos/Product Design/Superman/Superman Fanart James Kim.webp" class="lightbox-trigger" tabindex="0" role="button"
@@ -694,28 +631,22 @@
             </figcaption>  
         </figure>
     </div>
-      <p class="description"> Fanart for the Superman movie by James Gunn. Plotter printed. 2024. <br><a href='https://www.instagram.com/p/DMBfbnZBhEp/?img_index=1' target='_blank' rel='noopener'><strong> CLICK LINK </strong></a></p>
-    </div>  
+      <p class="description"> Fanart for the Superman movie by James Gunn. Plotter printed. 2024. <br><a href='https://www.instagram.com/p/DMBfbnZBhEp/?img_index=1' target='_blank' rel='noopener'><strong> CLICK LINK </strong></a></p> 
     </section>
 
-<!--________^ Portfolio Horzontal scroll ^________-->
+<!--________^ Portfolio Portfolio Cards ^________-->
 <!--_________________^ PORTFOLIO ITEMS HERE ^_________________-->
 </div>
-<button class="scroll-btn scroll-right" onclick="scrollRow(this, 1)">&#10095;</button><!--<BUTTON>-->
-</div><!--<BUTTON>-->
 </details> <!-- PRODUCT DESIGN DETAILS -->
 
 
 <h2 class="year">Marketing</h2>
 <details>
   <summary> </summary>
-  <div class="work-row-wrapper"> <!--<BUTTON>-->
-    <button class="scroll-btn scroll-left" onclick="scrollRow(this, -1)">&#10094;</button><!--<BUTTON>-->
-    <div class="workRow"> <!--________v Portfolio Horzontal scroll v________-->
+    <div class="workRow"> <!--________v Portfolio Portfolio Cards v________-->
 
       <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
         <h2 class="projectTitle">Envisioned Events by Suzette</h2>    <!-- projectSection Title-->
-    <div class="projectDivider">
     <div class="featured-item-section">
         <figure>
             <img src="JamesWebsitePhotos/Marketing/EES.LLC/1.webp" class="lightbox-trigger" tabindex="0" role="button"
@@ -787,13 +718,11 @@
               </figcaption>
           </figure>
     </div>
-        <p class="description">This is the marketing work I did in my spring Junior internship as a Social Media Marketing Intern for the Brooklyn based organization Envisioned Events by Suzette, Etiquette Speaks, and Envisioned Travels. 2026.<br><a href='https://www.instagram.com/p/DWJhTJjDacE/?img_index=1' target='_blank' rel='noopener'><strong> CLICK LINK </strong></a></p>
-    </div>  
+        <p class="description">This is the marketing work I did in my spring Junior internship as a Social Media Marketing Intern for the Brooklyn based organization Envisioned Events by Suzette, Etiquette Speaks, and Envisioned Travels. 2026.<br><a href='https://www.instagram.com/p/DWJhTJjDacE/?img_index=1' target='_blank' rel='noopener'><strong> CLICK LINK </strong></a></p> 
     </section>
 
     <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
       <h2 class="projectTitle">Project Look</h2>    <!-- projectSection Title (youtbe video here)-->
-      <div class="projectDivider" style="column-gap:1vw;">
       <div class="featured-item-section-video">
           <figure class="portfolio-item-video">
           <img src="https://img.youtube.com/vi/9WbIgzPXhu8/maxresdefault.jpg" class="lightbox-trigger" tabindex="0" role="button"
@@ -807,12 +736,10 @@
           </figure>
       </div>
           <p class="description">Over my summer internship of 2025 I filmed and edited a series of promotional videos for the Palo Alto Art Center, bolstering the awarness of many of the city's artists. 2025.<br><a href='https://www.paloalto.gov/Departments/Community-Services/Arts-Sciences/Palo-Alto-Art-Center/Volunteer/School-Tour-Docents' target='_blank' rel='noopener'><strong> CLICK LINK </strong></a></p>
-      </div>
     </section>    
 
     <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
       <h2 class="projectTitle">3 Exhibition Artists, 2025 PAACF Instagram Videos</h2>    <!-- projectSection Title (youtbe video here)-->
-      <div class="projectDivider" style="column-gap:0vw;">
       <div class="featured-item-section-video">
           <figure class="portfolio-item-video">
           <img src="https://img.youtube.com/vi/sbmAD3LfJRo/maxresdefault.jpg" class="lightbox-trigger" tabindex="0" role="button"
@@ -826,12 +753,10 @@
           </figure>
       </div>
           <p class="description">This is a promotional video I filmed and edited for 3 Forming Function ceramic artists at my local Palo Alto art center. My internship tasked me with this kind of work to help spread the love of art and design through our community. 2025.<br><a href='https://www.instagram.com/p/DNYo7QxB8fR/?hl=en' target='_blank' rel='noopener'><strong> CLICK LINK </strong></a></p>
-      </div>
     </section>
 
     <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
       <h2 class="projectTitle">Forming Function Artists, 2025 PAACF Instagram Videos</h2>    <!-- projectSection Title (youtbe video here)-->
-      <div class="projectDivider" style="column-gap:0vw;">
       <div class="featured-item-section-video">
           <figure class="portfolio-item-video">
           <img src="https://img.youtube.com/vi/w_U2AH3gyAE/maxresdefault.jpg" class="lightbox-trigger" tabindex="0" role="button"
@@ -847,12 +772,10 @@
           </figure>
       </div>
           <p class="description">The 2025 summer exhibition of Forming Functions showcased the work of many Palo Alto artists at the PAACF to honor the creative culture of Silicon Valley.<br>I was incharge of videography, editing, and working with the foundation's directors to compose the videos for instagram advertising of the event and it's art pieces.<br>The artists include Jan Schachter, Salley Jackson, and Edward Paas. 2025.</p>
-      </div>
     </section>
 
     <section>
       <h2 class="projectTitle">2025 Buttons PAACF</h2>    <!-- projectSection Title-->
-  <div class="projectDivider">
   <div class="featured-item-section">
       <figure>
       <img src="JamesWebsitePhotos/Marketing/2025 PAACF/Buttons 1.webp" class="lightbox-trigger" tabindex="0" role="button"
@@ -903,26 +826,20 @@
   </div>
 
       <p class="description">These were buttons I designed and ordered for manufacturing in my 2025 summer internship. They were well crafted from Aluminium and handed out to all of my coworkers and visitors. 2025.</p>
-  </div>
   </section>
 
-<!--________^ Portfolio Horzontal scroll ^________-->
+<!--________^ Portfolio Cards ^________-->
 <!--_________________^ PORTFOLIO ITEMS HERE ^_________________-->
 </div>
-<button class="scroll-btn scroll-right" onclick="scrollRow(this, 1)">&#10095;</button><!--<BUTTON>-->
-</div><!--<BUTTON>-->
 </details>  <!-- MARKETING DETAILS -->
 
 <h2 class="year">Programming</h2>
 <details>
   <summary> </summary>
-  <div class="work-row-wrapper"> <!--<BUTTON>-->
-  <button class="scroll-btn scroll-left" onclick="scrollRow(this, -1)">&#10094;</button><!--<BUTTON>-->
-<div class="workRow"> <!--________v Portfolio Horzontal scroll v________-->
+<div class="workRow"> <!--________v Portfolio Cards v________-->
 
   <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
     <h2 class="projectTitle">Galactic Ranger</h2>    <!-- projectSection Title (youtbe video here)-->
-    <div class="projectDivider">
     <div class="featured-item-section-video">
         <figure class="portfolio-item-video">
         <img src="JamesWebsitePhotos/Programming/Gr Game/GR Game 1.webp" class="lightbox-trigger" tabindex="0" role="button"
@@ -943,12 +860,10 @@
         </figure>
     </div>
         <p class="description">Sci-Fi action Shooter developed in Unity game engine. The video documentation underneath displays the extent of learning Unity in my Junior year as well as coding and asset design. 3D modeling with Unity and Cinema 4D. 2026. <br><a href='https://kimbrocomics.itch.io/galactic-ranger' target='_blank' rel='noopener'><strong> GAME LINK </strong></a></p>
-    </div>
     </section>
 
     <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
       <h2 class="projectTitle">Star Voyage</h2>    <!-- projectSection Title (youtbe video here)-->
-      <div class="projectDivider">
       <div class="featured-item-section-video">
           <figure class="portfolio-item-video">
           <img src="JamesWebsitePhotos/Programming/Old Websites/Star Voyage 1.webp" class="lightbox-trigger" tabindex="0" role="button"
@@ -965,12 +880,10 @@
           </figure>
       </div>
         <p class="description">I programmed my first website from Javascript using p5.js and Github publishing. I learned <strong>how to code games</strong> and 3D effects using Javascript and html. <br><a href='https://creatureo.github.io/Star-Voyage/' target='_blank' rel='noopener'><strong> CLICK HERE </strong></a></p>
-    </div>
       </section>
 
       <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
         <h2 class="projectTitle">Remember (The Elderly Reading App)</h2>    <!-- projectSection Title (youtbe video here)-->
-        <div class="projectDivider">
         <div class="featured-item-section-video">
             <figure class="portfolio-item-video">
             <img src="https://img.youtube.com/vi/LV227z3b3Ew/maxresdefault.jpg" class="lightbox-trigger" tabindex="0" role="button"
@@ -984,23 +897,17 @@
             </figure>
         </div>
           <p class="description">I used Figma to mock up a reading app for elderly people past the age of 60 to comabat memory loss and worsened vision. I wired this data design for easy UI. 2026.</p>
-      </div>
         </section>
 </div>
-<button class="scroll-btn scroll-right" onclick="scrollRow(this, 1)">&#10095;</button><!--<BUTTON>-->
-</div><!--<BUTTON>-->
 </details> <!-- PROGRAMMING DETAILS -->
 
   <h2 class="year">Motion Graphics</h2>
   <details>
     <summary> </summary>
-<div class="work-row-wrapper"> <!--<BUTTON>-->
-  <button class="scroll-btn scroll-left" onclick="scrollRow(this, -1)">&#10094;</button><!--<BUTTON>-->
   <div class="workRow">
 
     <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
       <h2 class="projectTitle">TYPOGRAPHY MOTION GRAPHIC</h2>    <!-- projectSection Title (youtbe video here)-->
-      <div class="projectDivider">
       <div class="featured-item-section-video">
           <figure class="portfolio-item-video">
           <img src="https://img.youtube.com/vi/aqkhn1hJqeo/maxresdefault.jpg" class="lightbox-trigger" tabindex="0" role="button"
@@ -1014,12 +921,10 @@
           </figure>
       </div>
           <p class="description">This is my After Effects Motion Graphic project which I created to give words character. I utilized sound and timing to make a fun but practical display of Text and animation. I discovered my affinity for motion graphics through this video. 2025.</p>
-      </div>
     </section>
 
     <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
       <h2 class="projectTitle">Spider Man 2 (2004) Type Motion Graphic.</h2>    <!-- projectSection Title (youtbe video here)-->
-      <div class="projectDivider">
       <div class="featured-item-section-video">
           <figure class="portfolio-item-video">
           <img src="https://img.youtube.com/vi/AMyelYe3A8I/maxresdefault.jpg" class="lightbox-trigger" tabindex="0" role="button"
@@ -1033,12 +938,10 @@
           </figure>
       </div>
           <p class="description">This is my work from 2025 in RISD Typography-3. I was assigned to work on any audio clip that would be viewed exclusively through type text and I used Aftereffects to achieve this.</p>
-      </div>
     </section>
 
     <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
       <h2 class="projectTitle">Saffron, the Mysterious Colour</h2>    <!-- projectSection Title (youtbe video here)-->
-      <div class="projectDivider">
       <div class="featured-item-section-video">
           <figure class="portfolio-item-video">
           <img src="https://img.youtube.com/vi/SNe8uAb50FM/maxresdefault.jpg" class="lightbox-trigger" tabindex="0" role="button"
@@ -1052,12 +955,10 @@
           </figure>
       </div>
           <p class="description">After Effects video of the history and science behind the color Saffron. 2025.</p>
-      </div>
     </section>
 
     <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
       <h2 class="projectTitle">Poppy Eats Jello!</h2>    <!-- projectSection Title (youtbe video here)-->
-      <div class="projectDivider">
       <div class="featured-item-section-video">
           <figure class="portfolio-item-video">
           <img src="https://img.youtube.com/vi/MKpCQCdZ728/maxresdefault.jpg" class="lightbox-trigger" tabindex="0" role="button"
@@ -1071,12 +972,10 @@
           </figure>
       </div>
           <p class="description">This is my Project for GRAPH 3318 - WKSHP: DIGITAL 3D DESIGN. I made this by learning to use Cinema 4D. By the way, the dog's name is Poppy! 2026.</p>
-      </div>
     </section>
 
     <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
       <h2 class="projectTitle">World Hub</h2>    <!-- projectSection Title (youtbe video here)-->
-      <div class="projectDivider">
       <div class="featured-item-section-video">
           <figure class="portfolio-item-video">
           <img src="https://img.youtube.com/vi/-sFxixCKOOE/maxresdefault.jpg" class="lightbox-trigger" tabindex="0" role="button"
@@ -1090,12 +989,10 @@
           </figure>
       </div>
           <p class="description">This Final Project is my first extensive use of Figma, wiring and designing an entire website for story tellers and world builders using easy interface and community building tactics. 2026.</p>
-      </div>
     </section>
 
     <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
       <h2 class="projectTitle">Barksketball</h2>    <!-- projectSection Title (youtbe video here)-->
-      <div class="projectDivider">
       <div class="featured-item-section-video">
           <figure class="portfolio-item-video">
           <img src="JamesWebsitePhotos/Motion Graphics/Dog Dunk.webp" class="lightbox-trigger" tabindex="0" role="button"
@@ -1109,12 +1006,10 @@
           </figure>
       </div>
           <p class="description">In an improvised group project with 3 people, I was tasked with making a motion graphic for our sports/pet product using the only 2 colors a dog could perceive. I specialize in hand drawn GIFs. 2025.</p>
-      </div>
     </section>
 
     <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
       <h2 class="projectTitle">Growing Up</h2>    <!-- projectSection Title (youtbe video here)-->
-      <div class="projectDivider">
       <div class="featured-item-section-video">
           <figure class="portfolio-item-video">
           <img src="JamesWebsitePhotos/Motion Graphics/Growth.webp" class="lightbox-trigger" tabindex="0" role="button"
@@ -1128,12 +1023,10 @@
           </figure>
       </div>
           <p class="description">Motion graphic animation to promote healthy child care in America. After Effects. 2025.</p>
-      </div>
     </section>
     
     <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
       <h2 class="projectTitle">DO NOT TOUCH</h2>    <!-- projectSection Title (youtbe video here)-->
-      <div class="projectDivider">
       <div class="featured-item-section-video">
           <figure class="portfolio-item-video">
           <img src="JamesWebsitePhotos/Motion Graphics/Spiker.webp" class="lightbox-trigger" tabindex="0" role="button"
@@ -1147,12 +1040,9 @@
           </figure>
       </div>
           <p class="description">Motion graphic animation to characterize cactus as a concept. After Effects. 2025.</p>
-      </div>
     </section>
        
   </div>
-  <button class="scroll-btn scroll-right" onclick="scrollRow(this, 1)">&#10095;</button><!--<BUTTON>-->
-  </div><!--<BUTTON>-->
   </details> <!-- MOTION GRAPHICS DETAILS -->
 
 
@@ -1176,6 +1066,6 @@
 <img src="Homepage Images/Kimbro Logo.svg" alt="Kimbro logo" style="height:120px; width:120px; margin:0px 2vw;" class="mainLogo"/>
 </footer>
 <div class="screenCompatibleFiller"></div><!--for phone pages that are too tall, use this-->
-<div style="position:relative;"> <p style="font-size: 0.5em; position: absolute; bottom:20px; left:4vh; opacity: 50%;">Edited October 31, 2026, 3:00AM</p>  </div><!-- Visible text blob of edits -->
+<div style="position:relative;"> <p style="font-size: 0.5em; position: absolute; bottom:20px; left:4vh; opacity: 50%;">Edited November 8, 2026, 1:00AM</p>  </div><!-- Visible text blob of edits -->
 </body>
 </html>
