@@ -80,8 +80,8 @@ white-space: nowrap; /* this makes sure stuff never breaks into 2 lines*/
   display:block;
   max-width:100vw;
   height: fit-content;
-      background-color: rgb(220, 220, 220);
-      overflow:hidden;
+  background-color: rgb(220, 220, 220);
+  overflow:hidden;
   padding:0px;
   }
 
@@ -126,7 +126,7 @@ white-space: nowrap; /* this makes sure stuff never breaks into 2 lines*/
 .lobby-image-home {
 position: relative;
 width: 100%;
-height: 83%;      /* same height you already have */
+height: 40vw;      /* same height you already have */
 overflow: hidden;   /* crops whatever spills outside the box */
 display:block;
 }
@@ -144,10 +144,10 @@ position: absolute;
 top: 50%;
 left: 50%;
 width: 100vw;
-height: 56.25vw;      /* maintains 16:9 (9/16 = 0.5625) */
-min-width: 177.78vh;  /* 16/9 = 1.7778 — ensures full width coverage even on tall/narrow screens */
+height: 56.25vw;
+min-width: 177.78vh;
 min-height: 100%;
-transform: translate(-50%, -50%);  /* re-centers after oversizing */
+transform: translate(-50%, -50%);
 border: none;
 pointer-events: none;
 }
@@ -161,14 +161,14 @@ display:flex;
 align-items: center;
 }
 
-.lobby-video {
+/*.lobby-video {
     display:flex;
     align-content: center;
     margin-right: 40px;
     margin-left: 75px;
     margin-top: 40px;
     margin-bottom: 0px;
-    flex-shrink: 0;         /* stops items from shrinking to fit — this is the key line */
+    flex-shrink: 0;     
     overflow-x: hidden;       
     overflow-y: hidden;
   }
@@ -178,7 +178,7 @@ align-items: center;
     height: 300px;
     border: none;
     padding-left:0px;
-  }
+  }*/
 /* LOBBY IMAGES or VIDEOS */
 
 /* Categorization ________________________________________________________________________________________________________________________________________________ */  
@@ -200,9 +200,9 @@ align-items: center;
 #sectionName{
     font-weight: 100;
     white-space: nowrap; /* this makes sure stuff never breaks into 2 lines*/
-    padding: 30px;
-    padding-left: 9.25vw;
-    font-size:4vw;
+    padding: 2vw;
+    padding-left: 10vw;
+    font-size: 4vw;
 }
 
 /* homepage image or video */
@@ -216,10 +216,8 @@ hr{
 
 .year{
   font-weight: 100;
-  margin:0px;
-  padding-left:75px;
-  padding-top: 18px; /*this can close the gap between the gradient top and the black bar at the top*/
-  padding-bottom: 0px;
+  margin: 0px;
+  padding: 0.5em 4vw;
   background-color: rgb(220, 220, 220);
   overflow-x: hidden; /* Stops horizontal side-scrolling */
   pointer-events: none; /* Keeps text from blocking the details */
@@ -233,31 +231,15 @@ hr{
   background-color: rgb(220, 220, 220);
 }
 
-.work-row-wrapper .workRow{
-  display:flex;
-  overflow-x: auto;
-  column-gap:0px;
-  padding-left:0vw;
-  padding-right:0vw;
-  padding-top:0vw;
-  padding-bottom:2vw;
-  border-bottom: 1px solid black;
-}
-
 .about{
   background: rgb(220, 220, 220);
-  margin-left:0px;
-  margin-right:0px;
-  margin-bottom:0px;
-  margin-top:0px;
-  padding-left:75px;
-  padding-top:20px;
-  padding-bottom:20px;
+  margin: 0px;
+  padding: 1vw 4vw;
   }
   
   #description{
   line-height: 30px;
-  padding:40px 75px;
+  padding:2vw 4vw;
   font-size: 1.25em;
   max-width: 35%;
   word-spacing: 5px;
@@ -277,9 +259,9 @@ hr{
   display:grid;
   grid-template-columns: repeat(2, 1fr); /* Creates 3 equal columns */
   place-items: center;
-  column-gap: 1vw;
-  row-gap:6vw;
-  padding: 6vw 4vw;
+  column-gap: 4vw;
+  row-gap:4vw;
+  padding: 2vw 8vw;
   overflow-x: hidden;       
   white-space: nowrap;
   background-color: white;
@@ -314,6 +296,16 @@ hr{
   position: relative;   /* this is the key line — it anchors the buttons below */
 }
 
+.work-row-wrapper .workRow{
+  display:flex;
+  overflow-x: auto;
+  column-gap:0px;
+  padding-left:0vw;
+  padding-right:0vw;
+  padding-top:0vw;
+  padding-bottom:2vw;
+}
+
 .scroll-btn {
   position: absolute;
   top: 50%;
@@ -342,22 +334,12 @@ hr{
   right: 0px;
 }
 /*_____________________^ SCROLL BUTTON ^______________________*/
-
-/*.sideImage{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    object-fit: cover;
-}*/
-
 /*Collapsible Button Stuff */
 details{
   background: rgb(220, 220, 220);
   border-bottom: 1px solid black;
   border-radius: 0px;
-  padding-left: 0px;
-  padding-bottom: 0px;
-  padding-top: 10px;
+  padding: 0vw;
   max-width: 100%;
 }
 
@@ -365,9 +347,10 @@ details{
 details summary {
   cursor: pointer;
   outline: none;
-  margin-top:-59px;
-  padding-left: 75px;
-  padding-top:70px
+  margin-top: -3.4em;
+  padding-top: 4em;
+  padding-left: 4vw;
+  padding-bottom: 1vw;
 }
 
 /* Optional hover state */
@@ -375,26 +358,20 @@ details summary:hover {
   font-weight:bold;
       /* 1. Define the gradient with a steep angle */
       background: linear-gradient(0deg, rgb(160,160,160), white, rgb(160,160,160), white);
-  
       /* 2. Scale up the background so parts of it are hidden */
       background-size: 400% 400%;
-      
       /* 3. Apply an infinite, smooth loop animation */
       animation: gradientShift 1s ease-out;
-  
-      /* Optional sizing properties
-      width: 100%;
-      height: 100vh;*/
 }
 
 /* Styling applied ONLY when the block is expanded */
 details[open] {
-  border-color: transparent;
+  border-bottom: 1px solid black;
 }
 
 details .content {
-  padding-top: 10px;
-  margin-top: 10px;
+  padding-top: 0.5vw;
+  margin-top: 0.5vw;
 }
 
 /*summary animation*/
@@ -411,8 +388,8 @@ summary::before {
   content: ">";              /* your custom arrow/pointer character */
   font-size: xx-large;
   display: inline-block;
-  margin-right: 8px;
-  margin-bottom: 10px;
+  margin-right: 0.5vw;
+  margin-bottom: 0.5vw;
   transition: transform 0.5s ease;
 }
 
@@ -435,23 +412,24 @@ details[open] summary::before {
 /*Collapsible Button Stuff */
 
 section{
-  padding: 1vw;
+  padding: 0.5vw;
   background: rgb(220, 220, 220);
   height:100%;
-  width:90%;
+  width:100%;
 }
 
 .projectTitle{
 font-weight: 100;
 white-space: wrap;
-margin-top: 0em;
+margin-left: 0.25em;
+margin-top: 0.5em;
 margin-bottom: 1em;
 }
 
 .featured-item-section{
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Creates 3 equal columns */
-  gap: 10px;                            /* Adds spacing between items */
+  gap: 5px;                            /* Adds spacing between items */
   width: 100%;
 }
 
@@ -519,12 +497,9 @@ figure img{
   max-width: 65%;
   white-space: wrap;
   font-size: 1.25em;
-  /*border: 2px solid red;*/
+  margin: 1em 0.25em;
 }
 /*___^ VIDEO ITEM ^___*/
-
-
-
 
 figcaption {
   position: absolute;
@@ -742,7 +717,7 @@ dialog{
   display: flex;
   gap: 20px;
   width: fit-content;
-  height:40vh;
+  height:fit-content;
   animation: scroll-left 20s linear infinite;
   }
   
@@ -798,7 +773,7 @@ display: block;
 
 /*FOOTER ________________________________________________________________________________________________________________________________________________ */
 footer{
-  padding:40px 0px;
+  padding: 2vw 0vw;
   background-color: rgb(220, 220, 220); 
   display: flex; 
   flex: 1; 
@@ -808,7 +783,7 @@ footer{
   }
   
   footer h2{
-    padding:0px 2vw;
+    padding:0vw 2vw;
     font-weight: bold;
   }
   
@@ -817,7 +792,7 @@ footer{
     list-style: none;
     line-height: 28px;
     max-width: max-content;
-    padding:15px 25px;
+    padding:0.5vw 1vw;
     margin:0px 0px;
   }
 
@@ -931,9 +906,9 @@ causing content to spill past the edge of the screen.
       grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
       place-items: center;
       align-items: start;
-          margin-top: 12vh;
-          padding: 1em;
-          column-gap: 2em;
+      margin-top: 12vh;
+      padding: 1em;
+      column-gap: 2em;
       max-width: 100%;
       height: 100%;
       overflow: hidden;
@@ -1020,20 +995,20 @@ causing content to spill past the edge of the screen.
 /* PHONE NAV BAR ITEMS BELLOW */
 /* ======================================= */
 /* ======================================= */
-/* ======================================= */
-.mainLogo {
-  scale: 0.6;
-  margin-right: 0px;
-  margin-left: 35px;
-  }
-
-  #anchorTitle{
-    margin-left: -30px;
-  }
-  
+/* ======================================= */  
   header{
   position:static;
   }
+
+  .mainLogo {
+    scale: 0.6;
+    margin-right: 0px;
+    margin-left: 35px;
+    }
+  
+    #anchorTitle{
+      margin-left: -30px;
+    }
   
   .desktopOption{
     display:none;
@@ -1116,8 +1091,8 @@ causing content to spill past the edge of the screen.
       max-width:100vw;
       height:100vh;
       border-bottom: none;
-          border-radius:0vw;
-          overflow:hidden;
+      border-radius:0vw;
+      overflow:hidden;
   }
   
   nav ul{
@@ -1127,12 +1102,12 @@ causing content to spill past the edge of the screen.
     width:100vw;
     font-size: 1em;
     align-items: center;
-      height:fit-content;
-      width:50vw;
-      margin:0vw;
-      padding:0vw;
-      border-radius:0vw;
-      overflow-x: visible;
+    height:fit-content;
+    width:50vw;
+    margin:0vw;
+    padding:0vw;
+    border-radius:0vw;
+    overflow-x: visible;
   }
   
   nav li{
@@ -1166,8 +1141,8 @@ causing content to spill past the edge of the screen.
     #sectionName{
       font-weight: 100;
       white-space: nowrap; /* this makes sure stuff never breaks into 2 lines*/
-      padding: 10px;
-      padding-left: 9.25vw;
+      padding: 2vw;
+      padding-left: 10vw;
       font-size:8vw;
   }
   .lobby-image img{
@@ -1176,12 +1151,20 @@ causing content to spill past the edge of the screen.
 /* LOBBY IMAGE STUFF ON PHONE */    
 
 /* Home specific items ________________________________________________________________________________________________________________________________________________ */
+.lobby-image-home {
+  height: 100%;      /* same height you already have */
+}
+
 .portfolio-item-home{
   width:41vw;
-  max-height: 40vh;
+  height: 40vw;
   overflow: hidden;
   position: relative; 
   overflow: hidden;
+  }
+
+.portfolio-item-home:hover figcaption {
+  font-size:1.4rem;
   }
   
 /*(Progarmming Design) Programming.HTML Main Project thumnail stuff ________________________________________________________________________________________________________________________________________________ */
@@ -1212,34 +1195,34 @@ causing content to spill past the edge of the screen.
   margin:0px;
 }
 
-.lobby-video {
+/*.lobby-video {
   display:flex;
   width:50vw;
   height:20vh;
   margin: 0px;
-  flex-shrink: 0;         /* stops items from shrinking to fit — this is the key line */
+  flex-shrink: 0; 
 }
 
 .lobby-video iframe{
   width:50vw;
   height:20vh;
-}
+}*/
 /*(Progarmming Design) Programming.HTML Main Project thumnail stuff */
 
 /* PORTFOLIO ITEM STUFF ON PHONE ________________________________________________________________________________________________________________________________________________ */    
 details summary {
-  padding-left: 40px;
+  padding-left: 8vw;
 }
 
 .year{
-  padding-left:40px;
+  padding-left:8vw;
 }
 
 .workRow{
   display:grid;
   grid-template-columns: repeat(1, 1fr); /* Creates 3 equal columns */
   row-gap:6vw;
-  padding: 6vw 4vw;
+  padding: 3vw 10vw;
 }
 
 .scroll-btn {
@@ -1259,21 +1242,21 @@ details summary {
 }
 
 .about{
-  padding-left:40px;
+  padding: 2vw 8vw;
   }
 
-      .description{
-        max-width: 80%;
-        white-space: wrap;
-        font-size: 1em;
-        line-height: 24px;
-        /*border: 2px solid red;*/
-        }
-
       section{
-        padding:4vw;
+        padding:4vw 2vw;
         height:fit-content;
       }
+
+      .projectTitle{
+        font-weight: 100;
+        white-space: wrap;
+        margin-left: 0.25em;
+        margin-top: 0em;
+        margin-bottom: 0.5em;
+        }
 
     .featured-item-section{
       display: grid;
@@ -1284,7 +1267,7 @@ details summary {
 
     figure{
       width: 100%;
-      height: 15vh;
+      height: 25vw;
       position: relative;   /* this line is the key to letting the overlay work on each grid image */
       overflow: hidden;
       border: 0.5px solid black;
@@ -1298,6 +1281,15 @@ details summary {
         object-position: center;
         display: block;
       }
+
+      .description{
+        max-width: 80%;
+        white-space: wrap;
+        font-size: 0.8em;
+        line-height: 1.5em;
+        margin: 1em 0.25em
+        /*border: 2px solid red;*/
+        }
 
       /*___V VIDEO SECTION V___*/
 .featured-item-section-video{
@@ -1331,8 +1323,8 @@ details summary {
 
 /*FOOTER ON PHONE ________________________________________________________________________________________________________________________________________________ */
   footer{
-    padding-top:20px;
-    padding-bottom: 40px;
+    padding-top: 1vw;
+    padding-bottom: 2vw;
     background-color: rgb(220, 220, 220); 
     display: block; 
     column-gap:0px; 
@@ -1340,12 +1332,12 @@ details summary {
     }
 
     footer h2{
-    padding-left:40px;
+    padding-left:8vw;
     font-weight: bold;
     }
 
     footer ul{
-      padding:10px 40px;
+      padding:2vw 8vw;
       margin:0px 0px;
     }
 
