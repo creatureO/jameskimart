@@ -976,7 +976,7 @@ causing content to spill past the edge of the screen.
 
     #lightbox-prev, #lightbox-next {
       position: absolute;
-      top: 2.5vh;
+      top: 2vh;
       width: 20vw;
       padding: 0vw 10vw;
       color: black;
