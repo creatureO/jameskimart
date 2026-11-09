@@ -122,6 +122,11 @@ white-space: nowrap; /* this makes sure stuff never breaks into 2 lines*/
 
 /* HOMEPAGE STICKY HEADER STUFF */
 
+main {
+  position: relative;   /* this is the anchor point the gif locks onto */
+  max-width:100vw;
+}
+
 /* LOBBY IMAGES or VIDEOS ________________________________________________________________________________________________________________________________________________ */
 .lobby-image-home {
 position: relative;
@@ -829,10 +834,6 @@ footer{
 /*(Progarmming Design) Programming.HTML Main Project thumnail stuff*/
 
 /* Overlay GIF stuff ________________________________________________________________________________________________________________________________________________ */
-main {
-  position: relative;   /* this is the anchor point the gif locks onto */
-}
-
 #gifOverlay {
   position: fixed;
   top: 0;
