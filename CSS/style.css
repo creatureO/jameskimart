@@ -426,7 +426,8 @@ section{
 .projectTitle{
 font-weight: 100;
 white-space: wrap;
-margin-left: 0.25em;
+margin-left: 1em;
+margin-right: 1em;
 margin-top: 0.5em;
 margin-bottom: 1em;
 }
@@ -502,7 +503,7 @@ figure img{
   max-width: 65%;
   white-space: wrap;
   font-size: 1.25em;
-  margin: 1em 0.25em;
+  margin: 1em;
 }
 /*___^ VIDEO ITEM ^___*/
 
