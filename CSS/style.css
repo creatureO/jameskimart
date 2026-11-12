@@ -892,7 +892,7 @@ causing content to spill past the edge of the screen.
 /* LIGHTBOX STUFF ON PHONE ________________________________________________________________________________________________________________________________________________ */
 
     dialog{ /*for the lightbox overlay*/
-    overflow-y: auto;    /* Adds a scrollbar only when content overflows */
+    overflow-y: hidden;    /* Adds a scrollbar only when content overflows */
     }
 
     #lightbox[open] {
@@ -931,6 +931,7 @@ causing content to spill past the edge of the screen.
       max-width: 100%;
       font-size: 1em;
       line-height: 24px;
+      padding-bottom: 4em;
     }
 
     #lightbox-caption strong{/*title line*/
