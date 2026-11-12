@@ -906,10 +906,11 @@ causing content to spill past the edge of the screen.
       align-items: start;
       align-content: start;
       margin-top: 12vh;
-      padding: 1em 1em 8vh 1em;
+      padding: 1em;
       column-gap: 2em;
       max-width: 100%;
-      overflow: hidden;
+      height: 78vh;
+      overflow-y: auto;
     }
     
     #lightbox-media img,
