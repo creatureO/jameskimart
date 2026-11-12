@@ -674,6 +674,7 @@ dialog{
 
 #lightbox-prev, #lightbox-next { /*cilckable arrows for multi stack*/
   position: absolute;
+  top: 45vh;
   color: black;
   border:none;
   font-size: 5rem;
@@ -772,17 +773,19 @@ display: block;
 
 /*FOOTER ________________________________________________________________________________________________________________________________________________ */
 footer{
-  padding: 2vw 0vw;
+  padding: 4vw;
   background-color: rgb(220, 220, 220); 
-  display: flex; 
+  display: flex;
+  flex-direction: column;
+  align-items: start;
   flex: 1; 
-  column-gap:2vw; 
-  margin-left: 0px;
+  row-gap: 2vw;
   overflow-x: hidden;
   }
   
   footer h2{
-    padding:0vw 2vw;
+    padding: 0vw;
+    margin: 0px;
     font-weight: bold;
   }
   
@@ -791,18 +794,18 @@ footer{
     list-style: none;
     line-height: 28px;
     max-width: max-content;
-    padding:0.5vw 1vw;
-    margin:0px 0px;
+    padding: 0px;
+    margin: 0px 0px;
   }
 
   footer li{
-    line-height: 28px;
+    line-height: 50px;
     padding:0px;
     }
 
   .screenCompatibleFiller{
-    height: 25vh;
-    background-color: rgb(220, 220, 220);
+      height: 10vh;
+      background-color: rgb(220, 220, 220);
   }
 /*FOOTER*/
 
@@ -901,11 +904,11 @@ causing content to spill past the edge of the screen.
       grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
       place-items: center;
       align-items: start;
+      align-content: start;
       margin-top: 12vh;
       padding: 1em;
       column-gap: 2em;
       max-width: 100%;
-      height: 100%;
       overflow: hidden;
     }
     
@@ -925,7 +928,6 @@ causing content to spill past the edge of the screen.
     
     #lightbox-caption {
       max-width: 100%;
-      margin-block-end: 100vh;
       font-size: 1em;
       line-height: 24px;
     }
@@ -1310,22 +1312,18 @@ details summary {
 
 /*FOOTER ON PHONE ________________________________________________________________________________________________________________________________________________ */
   footer{
-    padding-top: 1vw;
-    padding-bottom: 2vw;
+    padding: 8vw;
     background-color: rgb(220, 220, 220); 
-    display: block; 
-    column-gap:0px; 
+    row-gap: 4vw;
     margin-left: 0px;
     }
 
     footer h2{
-    padding-left:8vw;
     font-weight: bold;
     }
 
     footer ul{
-      padding:2vw 8vw;
-      margin:0px 0px;
+      margin:0px;
     }
 
     footer li{
