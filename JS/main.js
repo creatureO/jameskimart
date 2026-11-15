@@ -9,7 +9,14 @@ let currentImages = [];
 let currentIndex = 0;
 let lastTrigger = null;
 
+function resetScroll() {
+  const content = document.getElementById('lightbox-content');
+  if (content) content.scrollTop = 0;
+  lightbox.scrollTop = 0;
+}
+
 function openLightbox(el) {
+  if (!lightbox.showModal) return; // for old browsers, fall back to opening the image in a new tab
   lastTrigger = el;
   captionBox.innerHTML = el.dataset.caption || ''; // caption HTML is your own, so trusted
 
@@ -26,6 +33,7 @@ function openLightbox(el) {
   currentIndex = 0;
   showSlide();
   lightbox.showModal();
+  resetScroll(); // after the dialog is visible, the reset is important for seamless user browsing.
   raiseClickLayer(); // keeps click splatter at the very top
 }
 
@@ -54,7 +62,7 @@ function buildMedia(slide) {
 function showSlide() {
   // Removing the old element stops video/YouTube playback and never leaves an element sitting around with an empty src
   mediaBox.replaceChildren(buildMedia(currentImages[currentIndex]));
-
+  resetScroll(); // <-- add this to make scroll reset.
   const multiple = currentImages.length > 1;
   prevBtn.classList.toggle('hidden', !multiple);
   nextBtn.classList.toggle('hidden', !multiple);
@@ -104,6 +112,7 @@ lightbox.addEventListener('keydown', e => {
   lightbox.addEventListener('close', () => {
   mediaBox.replaceChildren();
   captionBox.innerHTML = '';
+  resetScroll(); // <-- add this to reset scroll of container.
   console.log('closed'); //testing works!
   if (lastTrigger) lastTrigger.focus();
 });
@@ -120,7 +129,9 @@ const SPLAT_DURATION = 400;   // match apng's length in ms
 const preload = new Image();
 preload.src = SPLAT_SRC;
 
-function raiseClickLayer() { //meant to keep the click splatter above everything in the page.
+//meant to keep the click splatter above everything in the page.
+function raiseClickLayer() {
+  if (!clickLayer.showPopover) return; // browser doesn't support popover
   if (clickLayer.matches(':popover-open')) clickLayer.hidePopover();
   clickLayer.showPopover();
 }
